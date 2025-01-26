@@ -4,6 +4,12 @@ import { CharacterAnimations, CharacterConfig } from "../characters/characterCus
 import { openingScreenBuilder } from "../introScene/OpeningScreenBuilder";
 import { FadingBlurFilter } from "../common/filter";
 
+// NOTE: There is a strange waiting time before the game initially
+// loads when more than 1 person is on multiplayer. Not sure why.
+// If you wait on the black screen it WILL eventually load.
+
+// 
+
 /**
  * This interface allows us to require level builders
  * to need playerLimits and builderNames as to be used
@@ -320,7 +326,7 @@ export const loginBuilder: Builder = function (level: number) {
         rigidBody: new BoxBody({ cx: 8, cy: 4.5, width: 4.5, height: 1 }, { scene: stage.hud }),
         gestures: {
           tap: () => {
-            sStore.mutliplayerMode = true;
+            sStore.multiplayerMode = true;
             // TODO: Does this input need to be sanitized? DO NOT USE IN FINAL BUILDS
             let username = window.prompt("What is your username?", "buh"+Math.floor(Math.random()*10000)) || "buh"+Math.floor(Math.random()*10000);
 

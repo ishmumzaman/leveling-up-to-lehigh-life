@@ -282,7 +282,7 @@ export class Stage {
       }
     }
 
-    if (sStore.mutliplayerMode === true) {
+    if (sStore.multiplayerMode === true) {
       // since the player has left a room, tell the network to switch to a new one with the builder's id
       if ((stage.storage.getSession("sStore") as SessionInfo).loginInfo.connected) {
         stage.network.doReqLeave();

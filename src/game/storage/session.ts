@@ -23,7 +23,7 @@ export class SessionInfo {
    */
   loginInfo = { userId: "", userName: "", connected: false, room: {builder: "", id: ""}, remoteActors: new Map<string, RemoteActor>(), myActor: undefined as (Actor | undefined) }
   nextLevel = {nextBuilder: "", playerLimit: 0};
-  mutliplayerMode = false;
+  multiplayerMode = false;
 
   /**
    * Inventory data for the player, NPCs, and shelves

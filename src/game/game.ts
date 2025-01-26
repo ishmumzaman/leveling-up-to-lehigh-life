@@ -1,5 +1,4 @@
 import { initializeAndLaunch, AccelerometerMode, JetLagGameConfig } from "../jetlag";
-import { openingScreenBuilder } from "./introScene/OpeningScreenBuilder";
 import { loginBuilder } from "./multiplayer/loginSystem";
 
 // [mfs] I think some reorganization of the folders would be beneficial.  
