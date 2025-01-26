@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="48" tileheight="48" infinite="1" nextlayerid="11" nextobjectid="1">
+ <tileset firstgid="1" source="../TileSets/old/3DWalls.tsx"/>
+ <tileset firstgid="1321" source="../TileSets/old/Bedroom.tsx"/>
+ <tileset firstgid="2396" source="../TileSets/old/Floors.tsx"/>
+ <tileset firstgid="2996" source="../TileSets/old/Borders.tsx"/>
+ <tileset firstgid="3446" source="../TileSets/old/Condominium.tsx"/>
+ <tileset firstgid="3532" source="../TileSets/old/ClassroomLibraries.tsx"/>
+ <tileset firstgid="3607" source="../TileSets/old/FloorShadows.tsx"/>
+ <tileset firstgid="3687" source="../TileSets/old/Baseboards.tsx"/>
+ <tileset firstgid="3723" source="../TileSets/old/Hospital.tsx"/>
+ <tileset firstgid="4745" source="../TileSets/new/Condominium.tsx"/>
+ <layer id="9" name="floor" width="30" height="20">
+  <data encoding="base64" compression="zlib">
+   <chunk x="-16" y="0" width="16" height="16">
+   eJxjYBgFowA32M6FwKNg+AEAOLICRA==
+  </chunk>
+  </data>
+ </layer>
+ <layer id="3" name="Floor" width="30" height="20">
+  <data encoding="base64" compression="zlib">
+   <chunk x="-16" y="-16" width="16" height="16">
+   eJxjYBgFo2AUDDfAzMTAYIIFszGhqgMAIsIBHA==
+  </chunk>
+   <chunk x="-16" y="0" width="16" height="16">
+   eJxjYMAOpJkYGHywYDkmHBrQgDFQ3XYuTGw2qn9I6K8GqqsB4pfcDAyLhBkYngPpWiC/jkj9o2BoAABROCO3
+  </chunk>
+  </data>
+ </layer>
+ <layer id="8" name="Shadow" width="30" height="20">
+  <data encoding="base64" compression="zlib">
+   <chunk x="-16" y="0" width="16" height="16">
+   eJxjYKAdiObDxENNP7o59LZ/IPWjmzEKhh8AACx4Dy4=
+  </chunk>
+  </data>
+ </layer>
+ <layer id="5" name="Furniture" width="30" height="20">
+  <data encoding="base64" compression="zlib">
+   <chunk x="-16" y="-16" width="16" height="16">
+   eJxjYBgFo2AUDDfAz0OcOgAILAAc
+  </chunk>
+   <chunk x="-16" y="0" width="16" height="16">
+   eJxjYCAMuAWJUIQFeHGisBvIM4V8cI8DP58YMB2oZwYQzyRD7xV2VP41duzqcIHHvIgwO8/LwHCDl3Q3jIJRgA8AAIn1Cdg=
+  </chunk>
+  </data>
+ </layer>
+ <layer id="10" name="trashcan" width="30" height="20">
+  <data encoding="base64" compression="zlib">
+   <chunk x="-16" y="0" width="16" height="16">
+   eJxjYBgFwxXECw60C0bBYAcA868AcQ==
+  </chunk>
+  </data>
+ </layer>
+ <layer id="6" name="Object" width="30" height="20">
+  <data encoding="base64" compression="zlib">
+   <chunk x="-16" y="0" width="16" height="16">
+   eJxjYBi84A0Hgs3EycBwiQO32qEAHgyw+/fwDqz9o2DwAQAx3AOL
+  </chunk>
+  </data>
+ </layer>
+ <layer id="7" name="Lighting" width="30" height="20">
+  <data encoding="base64" compression="zlib">
+   <chunk x="-16" y="0" width="16" height="16">
+   eJxjYBgFtARRnBA6mnNg3TEKRgE2AAALTADI
+  </chunk>
+  </data>
+ </layer>
+</map>
