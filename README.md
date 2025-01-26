@@ -52,19 +52,17 @@ git config --global pull.rebase false
 * For spritesheets use [TexturePacker](https://www.codeandweb.com/texturepacker)
 
 ## Want to run multiplayer?
-> [!IMPORTANT]
+
 > I have included "(CHANGE ME)" tags on each file you need to edit so use those and `Ctrl + F` to find them.
 
 * Run the main game by doing `npm start`. Copy the network address looks like this: 
   * `http://128.180.209.152:4000` (It will not be exactly these numbers)
 * Paste this network address into the `multiplayer-server/src/index.ts` file (Use the change me tags to find where)
-> [!WARNING]
 > The multiplayer server does not refresh automatically after saving like the main game.
 > If you have it running and make a change, you will need to restart it with `Ctrl + C` for changes to apply.
 * Paste the same address into `src/game/multiplayer/loginSystem.ts` but change the port (the number after the colon) to 3000.
 * Now `cd` into `multiplayer-server` and run `npm start`.
 * You should now be able to join through the network address for the main game!
-> [!NOTE]
 > There is sometimes a delay when launching the game where a black screen may be present for some time.
 > This screen may take a while but if you wait, it WILL load.
 
