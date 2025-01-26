@@ -1,0 +1,32 @@
+{
+    "closet": {
+        "default": {
+            "text": "There are way too many mis-matched pairs of socks in here, but that's a future me problem.",
+            "options": []
+        }
+    },
+    "roommateCloset": {
+        "default": {
+            "text": "I don't think it's wise to go through your mate's clo- is that my underwear?",
+            "options": []
+        }
+    },
+    "bed": {
+        "default": {
+            "text": "Don't let the lack of asset variety deceive you; that bed is not made.",
+            "options": []
+        }
+    },
+    "boxes": {
+        "default": {
+            "text": "I like to keep these boxes around for when I have to move out.",
+            "options": []
+        }
+    },
+    "trash": {
+        "default": {
+            "text": "I should take out the trash, but that's also a future me problem.",
+            "options": []
+        }
+    }
+}

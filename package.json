@@ -1,0 +1,36 @@
+{
+    "name": "jetlag",
+    "version": "1.0.0",
+    "description": "A 2D Game Framework for web and mobile, using PIXI.js and Box2D",
+    "scripts": {
+        "start": "node scripts/start.mjs -w",
+        "build": "node scripts/build.mjs",
+        "check": "tsc",
+        "clean": "node scripts/clean.mjs",
+        "help": "node scripts/help.mjs"
+    },
+    "owner": "Michael Spear",
+    "license": "MIT",
+    "type": "module",
+    "dependencies": {
+        "@box2d/core": "^0.10.0",
+        "color-convert": "^2.0.1",
+        "date-fns-tz": "^2.0.1",
+        "fs": "^0.0.1-security",
+        "hammerjs": "^2.0.8",
+        "howler": "^2.2.4",
+        "pixi-filters": "^5.2.1",
+        "pixi.js": "^7.3.2",
+        "socket.io-client": "^4.7.5",
+        "tsimportlib": "^0.0.5"
+    },
+    "devDependencies": {
+        "@types/hammerjs": "^2.0.44",
+        "@types/howler": "^2.2.11",
+        "@types/node": "^20.14.2",
+        "chokidar": "^3.5.3",
+        "cross-env": "^7.0.3",
+        "esbuild-serve": "^1.0.1",
+        "typescript": "^5.1.6"
+    }
+}

@@ -1,0 +1,649 @@
+{"frames": {
+
+"ProfessorIdleE0.png":
+{
+	"frame": {"x":415,"y":1,"w":41,"h":67},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":2,"y":29,"w":41,"h":67},
+	"sourceSize": {"w":48,"h":96}
+},
+"ProfessorIdleE1.png":
+{
+	"frame": {"x":415,"y":1,"w":41,"h":67},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":2,"y":29,"w":41,"h":67},
+	"sourceSize": {"w":48,"h":96}
+},
+"ProfessorIdleE2.png":
+{
+	"frame": {"x":343,"y":90,"w":41,"h":70},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":2,"y":26,"w":41,"h":70},
+	"sourceSize": {"w":48,"h":96}
+},
+"ProfessorIdleE3.png":
+{
+	"frame": {"x":343,"y":133,"w":41,"h":70},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":2,"y":26,"w":41,"h":70},
+	"sourceSize": {"w":48,"h":96}
+},
+"ProfessorIdleE4.png":
+{
+	"frame": {"x":415,"y":44,"w":41,"h":67},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":2,"y":29,"w":41,"h":67},
+	"sourceSize": {"w":48,"h":96}
+},
+"ProfessorIdleE5.png":
+{
+	"frame": {"x":415,"y":87,"w":41,"h":67},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":2,"y":29,"w":41,"h":67},
+	"sourceSize": {"w":48,"h":96}
+},
+"ProfessorIdleN0.png":
+{
+	"frame": {"x":1,"y":217,"w":48,"h":67},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":29,"w":48,"h":67},
+	"sourceSize": {"w":48,"h":96}
+},
+"ProfessorIdleN1.png":
+{
+	"frame": {"x":1,"y":217,"w":48,"h":67},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":29,"w":48,"h":67},
+	"sourceSize": {"w":48,"h":96}
+},
+"ProfessorIdleN2.png":
+{
+	"frame": {"x":1,"y":1,"w":48,"h":70},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":26,"w":48,"h":70},
+	"sourceSize": {"w":48,"h":96}
+},
+"ProfessorIdleN3.png":
+{
+	"frame": {"x":1,"y":73,"w":48,"h":70},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":26,"w":48,"h":70},
+	"sourceSize": {"w":48,"h":96}
+},
+"ProfessorIdleN4.png":
+{
+	"frame": {"x":1,"y":217,"w":48,"h":67},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":29,"w":48,"h":67},
+	"sourceSize": {"w":48,"h":96}
+},
+"ProfessorIdleN5.png":
+{
+	"frame": {"x":1,"y":217,"w":48,"h":67},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":29,"w":48,"h":67},
+	"sourceSize": {"w":48,"h":96}
+},
+"ProfessorIdleS0.png":
+{
+	"frame": {"x":51,"y":145,"w":48,"h":67},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":29,"w":48,"h":67},
+	"sourceSize": {"w":48,"h":96}
+},
+"ProfessorIdleS1.png":
+{
+	"frame": {"x":51,"y":145,"w":48,"h":67},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":29,"w":48,"h":67},
+	"sourceSize": {"w":48,"h":96}
+},
+"ProfessorIdleS2.png":
+{
+	"frame": {"x":51,"y":1,"w":48,"h":70},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":26,"w":48,"h":70},
+	"sourceSize": {"w":48,"h":96}
+},
+"ProfessorIdleS3.png":
+{
+	"frame": {"x":1,"y":145,"w":48,"h":70},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":26,"w":48,"h":70},
+	"sourceSize": {"w":48,"h":96}
+},
+"ProfessorIdleS4.png":
+{
+	"frame": {"x":101,"y":73,"w":48,"h":67},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":29,"w":48,"h":67},
+	"sourceSize": {"w":48,"h":96}
+},
+"ProfessorIdleS5.png":
+{
+	"frame": {"x":151,"y":1,"w":48,"h":67},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":29,"w":48,"h":67},
+	"sourceSize": {"w":48,"h":96}
+},
+"ProfessorIdleW0.png":
+{
+	"frame": {"x":415,"y":130,"w":41,"h":67},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":5,"y":29,"w":41,"h":67},
+	"sourceSize": {"w":48,"h":96}
+},
+"ProfessorIdleW1.png":
+{
+	"frame": {"x":415,"y":130,"w":41,"h":67},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":5,"y":29,"w":41,"h":67},
+	"sourceSize": {"w":48,"h":96}
+},
+"ProfessorIdleW2.png":
+{
+	"frame": {"x":199,"y":139,"w":41,"h":70},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":5,"y":26,"w":41,"h":70},
+	"sourceSize": {"w":48,"h":96}
+},
+"ProfessorIdleW3.png":
+{
+	"frame": {"x":271,"y":139,"w":41,"h":70},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":5,"y":26,"w":41,"h":70},
+	"sourceSize": {"w":48,"h":96}
+},
+"ProfessorIdleW4.png":
+{
+	"frame": {"x":415,"y":173,"w":41,"h":67},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":5,"y":29,"w":41,"h":67},
+	"sourceSize": {"w":48,"h":96}
+},
+"ProfessorIdleW5.png":
+{
+	"frame": {"x":49,"y":286,"w":41,"h":67},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":5,"y":29,"w":41,"h":67},
+	"sourceSize": {"w":48,"h":96}
+},
+"ProfessorPTNod0.png":
+{
+	"frame": {"x":145,"y":212,"w":44,"h":47},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":23,"y":23,"w":44,"h":47},
+	"sourceSize": {"w":96,"h":96}
+},
+"ProfessorPTNod1.png":
+{
+	"frame": {"x":191,"y":225,"w":44,"h":47},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":20,"y":20,"w":44,"h":47},
+	"sourceSize": {"w":96,"h":96}
+},
+"ProfessorPTNod2.png":
+{
+	"frame": {"x":240,"y":225,"w":44,"h":47},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":23,"y":20,"w":44,"h":47},
+	"sourceSize": {"w":96,"h":96}
+},
+"ProfessorPTNod3.png":
+{
+	"frame": {"x":289,"y":225,"w":44,"h":47},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":26,"y":23,"w":44,"h":47},
+	"sourceSize": {"w":96,"h":96}
+},
+"ProfessorPTNod4.png":
+{
+	"frame": {"x":99,"y":214,"w":44,"h":50},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":26,"y":26,"w":44,"h":50},
+	"sourceSize": {"w":96,"h":96}
+},
+"ProfessorPTNod5.png":
+{
+	"frame": {"x":335,"y":222,"w":44,"h":47},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":26,"y":26,"w":44,"h":47},
+	"sourceSize": {"w":96,"h":96}
+},
+"ProfessorPTNod6.png":
+{
+	"frame": {"x":335,"y":222,"w":44,"h":47},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":23,"y":26,"w":44,"h":47},
+	"sourceSize": {"w":96,"h":96}
+},
+"ProfessorPTNod7.png":
+{
+	"frame": {"x":145,"y":261,"w":44,"h":47},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":23,"y":23,"w":44,"h":47},
+	"sourceSize": {"w":96,"h":96}
+},
+"ProfessorPTNod8.png":
+{
+	"frame": {"x":145,"y":212,"w":44,"h":47},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":23,"y":23,"w":44,"h":47},
+	"sourceSize": {"w":96,"h":96}
+},
+"ProfessorPTNod9.png":
+{
+	"frame": {"x":145,"y":212,"w":44,"h":47},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":23,"y":23,"w":44,"h":47},
+	"sourceSize": {"w":96,"h":96}
+},
+"ProfessorPTShake0.png":
+{
+	"frame": {"x":191,"y":271,"w":44,"h":47},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":23,"y":23,"w":44,"h":47},
+	"sourceSize": {"w":96,"h":96}
+},
+"ProfessorPTShake1.png":
+{
+	"frame": {"x":240,"y":271,"w":44,"h":47},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":23,"y":23,"w":44,"h":47},
+	"sourceSize": {"w":96,"h":96}
+},
+"ProfessorPTShake2.png":
+{
+	"frame": {"x":289,"y":274,"w":44,"h":47},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":26,"y":23,"w":44,"h":47},
+	"sourceSize": {"w":96,"h":96}
+},
+"ProfessorPTShake3.png":
+{
+	"frame": {"x":335,"y":271,"w":44,"h":47},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":23,"y":23,"w":44,"h":47},
+	"sourceSize": {"w":96,"h":96}
+},
+"ProfessorPTShake4.png":
+{
+	"frame": {"x":335,"y":320,"w":44,"h":47},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":20,"y":23,"w":44,"h":47},
+	"sourceSize": {"w":96,"h":96}
+},
+"ProfessorPTShake5.png":
+{
+	"frame": {"x":335,"y":271,"w":44,"h":47},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":23,"y":23,"w":44,"h":47},
+	"sourceSize": {"w":96,"h":96}
+},
+"ProfessorPTShake6.png":
+{
+	"frame": {"x":289,"y":274,"w":44,"h":47},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":29,"y":23,"w":44,"h":47},
+	"sourceSize": {"w":96,"h":96}
+},
+"ProfessorPTShake7.png":
+{
+	"frame": {"x":135,"y":310,"w":44,"h":47},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":23,"y":23,"w":44,"h":47},
+	"sourceSize": {"w":96,"h":96}
+},
+"ProfessorPTShake8.png":
+{
+	"frame": {"x":184,"y":323,"w":44,"h":47},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":23,"y":23,"w":44,"h":47},
+	"sourceSize": {"w":96,"h":96}
+},
+"ProfessorPTShake9.png":
+{
+	"frame": {"x":233,"y":323,"w":44,"h":47},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":23,"y":23,"w":44,"h":47},
+	"sourceSize": {"w":96,"h":96}
+},
+"ProfessorPTTalk0.png":
+{
+	"frame": {"x":145,"y":212,"w":44,"h":47},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":23,"y":23,"w":44,"h":47},
+	"sourceSize": {"w":96,"h":96}
+},
+"ProfessorPTTalk1.png":
+{
+	"frame": {"x":145,"y":212,"w":44,"h":47},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":23,"y":23,"w":44,"h":47},
+	"sourceSize": {"w":96,"h":96}
+},
+"ProfessorPTTalk2.png":
+{
+	"frame": {"x":427,"y":308,"w":44,"h":44},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":23,"y":26,"w":44,"h":44},
+	"sourceSize": {"w":96,"h":96}
+},
+"ProfessorPTTalk3.png":
+{
+	"frame": {"x":282,"y":323,"w":44,"h":47},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":23,"y":23,"w":44,"h":47},
+	"sourceSize": {"w":96,"h":96}
+},
+"ProfessorPTTalk4.png":
+{
+	"frame": {"x":381,"y":259,"w":44,"h":47},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":23,"y":23,"w":44,"h":47},
+	"sourceSize": {"w":96,"h":96}
+},
+"ProfessorPTTalk5.png":
+{
+	"frame": {"x":381,"y":308,"w":44,"h":47},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":23,"y":23,"w":44,"h":47},
+	"sourceSize": {"w":96,"h":96}
+},
+"ProfessorPTTalk6.png":
+{
+	"frame": {"x":427,"y":259,"w":44,"h":47},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":23,"y":23,"w":44,"h":47},
+	"sourceSize": {"w":96,"h":96}
+},
+"ProfessorPTTalk7.png":
+{
+	"frame": {"x":381,"y":259,"w":44,"h":47},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":23,"y":23,"w":44,"h":47},
+	"sourceSize": {"w":96,"h":96}
+},
+"ProfessorPTTalk8.png":
+{
+	"frame": {"x":381,"y":308,"w":44,"h":47},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":23,"y":23,"w":44,"h":47},
+	"sourceSize": {"w":96,"h":96}
+},
+"ProfessorPTTalk9.png":
+{
+	"frame": {"x":427,"y":259,"w":44,"h":47},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":23,"y":23,"w":44,"h":47},
+	"sourceSize": {"w":96,"h":96}
+},
+"ProfessorWalkE0.png":
+{
+	"frame": {"x":92,"y":284,"w":41,"h":67},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":2,"y":29,"w":41,"h":67},
+	"sourceSize": {"w":48,"h":96}
+},
+"ProfessorWalkE1.png":
+{
+	"frame": {"x":345,"y":1,"w":44,"h":68},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":2,"y":26,"w":44,"h":68},
+	"sourceSize": {"w":48,"h":96}
+},
+"ProfessorWalkE2.png":
+{
+	"frame": {"x":415,"y":1,"w":41,"h":67},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":2,"y":29,"w":41,"h":67},
+	"sourceSize": {"w":48,"h":96}
+},
+"ProfessorWalkE3.png":
+{
+	"frame": {"x":149,"y":142,"w":41,"h":67},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":2,"y":29,"w":41,"h":67},
+	"sourceSize": {"w":48,"h":96}
+},
+"ProfessorWalkE4.png":
+{
+	"frame": {"x":345,"y":47,"w":41,"h":68},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":2,"y":26,"w":41,"h":68},
+	"sourceSize": {"w":48,"h":96}
+},
+"ProfessorWalkE5.png":
+{
+	"frame": {"x":415,"y":1,"w":41,"h":67},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":2,"y":29,"w":41,"h":67},
+	"sourceSize": {"w":48,"h":96}
+},
+"ProfessorWalkN0.png":
+{
+	"frame": {"x":201,"y":1,"w":46,"h":67},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":29,"w":46,"h":67},
+	"sourceSize": {"w":48,"h":96}
+},
+"ProfessorWalkN1.png":
+{
+	"frame": {"x":51,"y":73,"w":48,"h":70},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":26,"w":48,"h":70},
+	"sourceSize": {"w":48,"h":96}
+},
+"ProfessorWalkN2.png":
+{
+	"frame": {"x":199,"y":70,"w":46,"h":67},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":29,"w":46,"h":67},
+	"sourceSize": {"w":48,"h":96}
+},
+"ProfessorWalkN3.png":
+{
+	"frame": {"x":249,"y":1,"w":46,"h":67},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":2,"y":29,"w":46,"h":67},
+	"sourceSize": {"w":48,"h":96}
+},
+"ProfessorWalkN4.png":
+{
+	"frame": {"x":101,"y":1,"w":48,"h":70},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":26,"w":48,"h":70},
+	"sourceSize": {"w":48,"h":96}
+},
+"ProfessorWalkN5.png":
+{
+	"frame": {"x":247,"y":70,"w":46,"h":67},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":2,"y":29,"w":46,"h":67},
+	"sourceSize": {"w":48,"h":96}
+},
+"ProfessorWalkS0.png":
+{
+	"frame": {"x":1,"y":286,"w":46,"h":68},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":2,"y":26,"w":46,"h":68},
+	"sourceSize": {"w":48,"h":96}
+},
+"ProfessorWalkS1.png":
+{
+	"frame": {"x":297,"y":1,"w":46,"h":67},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":2,"y":29,"w":46,"h":67},
+	"sourceSize": {"w":48,"h":96}
+},
+"ProfessorWalkS2.png":
+{
+	"frame": {"x":51,"y":214,"w":46,"h":68},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":2,"y":26,"w":46,"h":68},
+	"sourceSize": {"w":48,"h":96}
+},
+"ProfessorWalkS3.png":
+{
+	"frame": {"x":101,"y":142,"w":46,"h":68},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":26,"w":46,"h":68},
+	"sourceSize": {"w":48,"h":96}
+},
+"ProfessorWalkS4.png":
+{
+	"frame": {"x":295,"y":70,"w":46,"h":67},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":29,"w":46,"h":67},
+	"sourceSize": {"w":48,"h":96}
+},
+"ProfessorWalkS5.png":
+{
+	"frame": {"x":151,"y":70,"w":46,"h":68},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":26,"w":46,"h":68},
+	"sourceSize": {"w":48,"h":96}
+},
+"ProfessorWalkW0.png":
+{
+	"frame": {"x":192,"y":182,"w":41,"h":67},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":5,"y":29,"w":41,"h":67},
+	"sourceSize": {"w":48,"h":96}
+},
+"ProfessorWalkW1.png":
+{
+	"frame": {"x":343,"y":176,"w":44,"h":68},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":2,"y":26,"w":44,"h":68},
+	"sourceSize": {"w":48,"h":96}
+},
+"ProfessorWalkW2.png":
+{
+	"frame": {"x":415,"y":130,"w":41,"h":67},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":5,"y":29,"w":41,"h":67},
+	"sourceSize": {"w":48,"h":96}
+},
+"ProfessorWalkW3.png":
+{
+	"frame": {"x":261,"y":182,"w":41,"h":67},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":5,"y":29,"w":41,"h":67},
+	"sourceSize": {"w":48,"h":96}
+},
+"ProfessorWalkW4.png":
+{
+	"frame": {"x":413,"y":216,"w":41,"h":68},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":5,"y":26,"w":41,"h":68},
+	"sourceSize": {"w":48,"h":96}
+},
+"ProfessorWalkW5.png":
+{
+	"frame": {"x":415,"y":130,"w":41,"h":67},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":5,"y":29,"w":41,"h":67},
+	"sourceSize": {"w":48,"h":96}
+}},
+"animations": {
+	"ProfessorIdleE": ["ProfessorIdleE0.png","ProfessorIdleE1.png","ProfessorIdleE2.png","ProfessorIdleE3.png","ProfessorIdleE4.png","ProfessorIdleE5.png"],
+	"ProfessorIdleN": ["ProfessorIdleN0.png","ProfessorIdleN1.png","ProfessorIdleN2.png","ProfessorIdleN3.png","ProfessorIdleN4.png","ProfessorIdleN5.png"],
+	"ProfessorIdleS": ["ProfessorIdleS0.png","ProfessorIdleS1.png","ProfessorIdleS2.png","ProfessorIdleS3.png","ProfessorIdleS4.png","ProfessorIdleS5.png"],
+	"ProfessorIdleW": ["ProfessorIdleW0.png","ProfessorIdleW1.png","ProfessorIdleW2.png","ProfessorIdleW3.png","ProfessorIdleW4.png","ProfessorIdleW5.png"],
+	"ProfessorPTNod": ["ProfessorPTNod0.png","ProfessorPTNod1.png","ProfessorPTNod2.png","ProfessorPTNod3.png","ProfessorPTNod4.png","ProfessorPTNod5.png","ProfessorPTNod6.png","ProfessorPTNod7.png","ProfessorPTNod8.png","ProfessorPTNod9.png"],
+	"ProfessorPTShake": ["ProfessorPTShake0.png","ProfessorPTShake1.png","ProfessorPTShake2.png","ProfessorPTShake3.png","ProfessorPTShake4.png","ProfessorPTShake5.png","ProfessorPTShake6.png","ProfessorPTShake7.png","ProfessorPTShake8.png","ProfessorPTShake9.png"],
+	"ProfessorPTTalk": ["ProfessorPTTalk0.png","ProfessorPTTalk1.png","ProfessorPTTalk2.png","ProfessorPTTalk3.png","ProfessorPTTalk4.png","ProfessorPTTalk5.png","ProfessorPTTalk6.png","ProfessorPTTalk7.png","ProfessorPTTalk8.png","ProfessorPTTalk9.png"],
+	"ProfessorWalkE": ["ProfessorWalkE0.png","ProfessorWalkE1.png","ProfessorWalkE2.png","ProfessorWalkE3.png","ProfessorWalkE4.png","ProfessorWalkE5.png"],
+	"ProfessorWalkN": ["ProfessorWalkN0.png","ProfessorWalkN1.png","ProfessorWalkN2.png","ProfessorWalkN3.png","ProfessorWalkN4.png","ProfessorWalkN5.png"],
+	"ProfessorWalkS": ["ProfessorWalkS0.png","ProfessorWalkS1.png","ProfessorWalkS2.png","ProfessorWalkS3.png","ProfessorWalkS4.png","ProfessorWalkS5.png"],
+	"ProfessorWalkW": ["ProfessorWalkW0.png","ProfessorWalkW1.png","ProfessorWalkW2.png","ProfessorWalkW3.png","ProfessorWalkW4.png","ProfessorWalkW5.png"]
+},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.1",
+	"image": "Professor.png",
+	"format": "RGBA8888",
+	"size": {"w":483,"h":368},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:3c18142753a8c21e465a80bd15cc6456:ca9a5aa973b6fd577395d906518bf799:2b616cd00097f28358992d1786365627$"
+}
+}

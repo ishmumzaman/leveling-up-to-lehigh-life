@@ -1,0 +1,36 @@
+{"frames": {
+
+"bag.png":
+{
+	"frame": {"x":181,"y":0,"w":162,"h":162},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":162,"h":162},
+	"sourceSize": {"w":162,"h":162}
+},
+"hudButton.png":
+{
+	"frame": {"x":0,"y":0,"w":181,"h":182},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":181,"h":182},
+	"sourceSize": {"w":181,"h":182}
+},
+"quest.png":
+{
+	"frame": {"x":343,"y":0,"w":144,"h":162},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":144,"h":162},
+	"sourceSize": {"w":144,"h":162}
+}},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.1",
+	"image": "hudElements.png",
+	"format": "RGBA8888",
+	"size": {"w":487,"h":182},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:cdabddaad07d43f80691432b0e0f6848:fbbc529285073c95506776fde5b219b2:54a9c65cabab681aedbf8f41c83b6ad5$"
+}
+}

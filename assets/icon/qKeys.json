@@ -1,0 +1,83 @@
+{
+	"frames": {
+		"qKeys0.png": {
+			"frame": {
+				"x": 1,
+				"y": 1,
+				"w": 152,
+				"h": 168
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 152,
+				"h": 168
+			},
+			"sourceSize": {
+				"w": 152,
+				"h": 168
+			}
+		},
+		"qKeys1.png": {
+			"frame": {
+				"x": 155,
+				"y": 1,
+				"w": 152,
+				"h": 168
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 152,
+				"h": 168
+			},
+			"sourceSize": {
+				"w": 152,
+				"h": 168
+			}
+		},
+		"qKeys2.png": {
+			"frame": {
+				"x": 309,
+				"y": 1,
+				"w": 152,
+				"h": 168
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 152,
+				"h": 168
+			},
+			"sourceSize": {
+				"w": 152,
+				"h": 168
+			}
+		}
+	},
+	"animations": {
+		"qKeys": [
+			"qKeys0.png",
+			"qKeys1.png",
+			"qKeys2.png"
+		]
+	},
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "1.1",
+		"image": "qKeys.png",
+		"format": "RGBA8888",
+		"size": {
+			"w": 462,
+			"h": 170
+		},
+		"scale": "1",
+		"smartupdate": "$TexturePacker:SmartUpdate:f1ff1828d316547beb6464c205546916:ebb889f613bbe8ce0f286684595f84bb:50ab99bceedacfb7503f882cbcc6b161$"
+	}
+}

@@ -1,0 +1,44 @@
+{"frames": {
+
+"hawksNest.png":
+{
+	"frame": {"x":1,"y":1,"w":1488,"h":833},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":1488,"h":833},
+	"sourceSize": {"w":1488,"h":833}
+},
+"mmDorm.png":
+{
+	"frame": {"x":675,"y":836,"w":335,"h":480},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":335,"h":480},
+	"sourceSize": {"w":335,"h":480}
+},
+"mmHall.png":
+{
+	"frame": {"x":1012,"y":836,"w":672,"h":288},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":672,"h":288},
+	"sourceSize": {"w":672,"h":288}
+},
+"mmStairs.png":
+{
+	"frame": {"x":1,"y":836,"w":672,"h":528},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":672,"h":528},
+	"sourceSize": {"w":672,"h":528}
+}},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.1",
+	"image": "mvpLocs.png",
+	"format": "RGBA8888",
+	"size": {"w":1685,"h":1365},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:dcb31273fde2362ec80f71755c4b6ce5:a942a74d7f2c6a4441a78b07bed751b0:5a885b87e16f2bb4cfdec67e09bcce82$"
+}
+}

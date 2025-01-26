@@ -1,0 +1,60 @@
+{"frames": {
+
+"objBackground.png":
+{
+	"frame": {"x":1,"y":861,"w":996,"h":612},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":996,"h":612},
+	"sourceSize": {"w":996,"h":612}
+},
+"objBullets.png":
+{
+	"frame": {"x":1561,"y":861,"w":42,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":42,"h":42},
+	"sourceSize": {"w":42,"h":42}
+},
+"questMenuTitle.png":
+{
+	"frame": {"x":999,"y":861,"w":516,"h":138},
+	"rotated": true,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":516,"h":138},
+	"sourceSize": {"w":516,"h":138}
+},
+"questName.png":
+{
+	"frame": {"x":999,"y":1379,"w":624,"h":84},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":624,"h":84},
+	"sourceSize": {"w":624,"h":84}
+},
+"questOverlayBackground.png":
+{
+	"frame": {"x":1,"y":1,"w":1728,"h":858},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":1728,"h":858},
+	"sourceSize": {"w":1728,"h":858}
+},
+"questSelectBox.png":
+{
+	"frame": {"x":1139,"y":861,"w":420,"h":84},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":84},
+	"sourceSize": {"w":420,"h":84}
+}},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.1",
+	"image": "questMenu.png",
+	"format": "RGBA8888",
+	"size": {"w":1730,"h":1474},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:615561b684e968fe3158a1130b95ee32:4690b502dc9062ec19728fba05e9d697:50e0eeff428955bac358898c458730cc$"
+}
+}

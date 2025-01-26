@@ -1,0 +1,8 @@
+{
+    "otherDoors": {
+        "default": {
+            "text": "This isn't my room.",
+            "options": []
+        }
+    }
+}

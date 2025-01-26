@@ -1,0 +1,14 @@
+{
+    "mailbox": {
+        "default": {
+            "text": "I don't have any mail right now.",
+            "options": []
+        }
+    },
+    "blocked": {
+        "default": {
+            "text": "I don't need to go that way.",
+            "options": []
+        }
+    }
+}

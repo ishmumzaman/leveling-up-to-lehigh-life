@@ -1,0 +1,38 @@
+{
+    "bush": {
+        "default": {
+            "text": "No thanks, I'd rather not get bitten by bugs.",
+            "options": []
+        }
+    },
+    "car": {
+        "default": {
+            "text": "It would be very funny, say, if someone set the car alarm off with a rock or something. Hypothetically.",
+            "options": []
+        }
+    },
+    "blocked": {
+        "default": {
+            "text": "I don't think I'm allowed to go that way.",
+            "options": []
+        }
+    },
+    "tree": {
+        "default": {
+            "text": "https://maps.app.goo.gl/ufHad81MppPhM6hn8",
+            "options": []
+        }
+    },
+    "flower": {
+        "default": {
+            "text": "These flowers look familiar...",
+            "options": []
+        }
+    },
+    "trash": {
+        "default": {
+            "text": "Smell like a Monday morning.",
+            "options": []
+        }
+    }
+}
