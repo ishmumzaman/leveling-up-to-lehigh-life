@@ -20,7 +20,7 @@ The full documentation for the currently utilized JetLag framework can be found 
 
 ### Dependencies Setup
 
-* Use [this](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account) link to setup your SSH key (if you don't have one setup already) and add it to your Github account.
+* Use [this](https://support.atlassian.com/bitbucket-cloud/docs/set-up-personal-ssh-keys-on-macos/) link to setup your SSH key (if you don't have one setup already) and add it to your Github account.
 * If it is your first time using/installing git, do the following commands with any brackets being replaced by your own information:
 ```
 git config --global init.defaultBranch main
@@ -51,6 +51,23 @@ git config --global pull.rebase false
 
 * For spritesheets use [TexturePacker](https://www.codeandweb.com/texturepacker)
 
+## Want to run multiplayer?
+> [!IMPORTANT]
+> I have included "(CHANGE ME)" tags on each file you need to edit so use those and `Ctrl + F` to find them.
+
+* Run the main game by doing `npm start`. Copy the network address looks like this: 
+  * `http://128.180.209.152:4000` (It will not be exactly these numbers)
+* Paste this network address into the `multiplayer-server/src/index.ts` file (Use the change me tags to find where)
+> [!WARNING]
+> The multiplayer server does not refresh automatically after saving like the main game.
+> If you have it running and make a change, you will need to restart it with `Ctrl + C` for changes to apply.
+* Paste the same address into `src/game/multiplayer/loginSystem.ts` but change the port (the number after the colon) to 3000.
+* Now `cd` into `multiplayer-server` and run `npm start`.
+* You should now be able to join through the network address for the main game!
+> [!NOTE]
+> There is sometimes a delay when launching the game where a black screen may be present for some time.
+> This screen may take a while but if you wait, it WILL load.
+
 ## Authors
 
 Faculty Mentor
@@ -61,6 +78,10 @@ Student Developers
 * [Emma Valle](emailto:emv226@lehigh.edu)
 * [Maureen Phelan](emailto:mcp227@lehigh.edu)
 * [Yassine Rafih](emailto:yar227@lehigh.edu)
+* [Hamza Al Farsi](emailto:haa428@lehigh.edu)
+* [Karina Makhani](kamb26@lehigh.edu)
+* [Ishmum Zaman](isz228@lehigh.edu)
+* [Nina Chau](nic627@lehigh.edu)
 
 ## Changelog
 
@@ -82,6 +103,8 @@ Student Developers
    * Egide Ntwari
    * Nana Nyanor
    * Sebastian Chavarro
+   * Anh H. Nguyen
+   * Yassine Rafih
 
 
 🤎🤍 made with love from Lehigh

@@ -289,7 +289,7 @@ export function connectUser(userId: string, userName: string) {
 
   // TODO: hook this up to a permanently hosted server
   // We use a set IP here but this might change in the future
-  stage.network.connect("http://128.180.209.152:3000");
+  stage.network.connect("http://128.180.209.152:3000"); // CHANGE ME
 }
 
 // TODO: make loadingBuilder based on server responses or not necessary please
@@ -314,7 +314,7 @@ export function loadingBuilder(level: number, builderName: string, builder: (lev
   }
 }
 
-// TODO BEFORE MERGE: Make this look prettier to end-user :)
+// TODO: Make this look prettier to end-user :)
 export const loginBuilder: Builder = function (level: number) {
   loadingBuilder(level, loginBuilder.builderName + level, () => {
     if (level == 1) {
@@ -363,7 +363,7 @@ export const loginBuilder: Builder = function (level: number) {
       });
     }
 
-    // TODO BEFORE PUSH: Prettify please :)
+    // TODO: Prettify please :)
     // Loading screen in case user connection is slow or timer is increased in level one
     if (level == 2) {
       new Actor({

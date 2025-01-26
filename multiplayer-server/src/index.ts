@@ -37,8 +37,8 @@ let app = createServer((req, res) => {
   }
 });
 
-// Set up a websocket interface so that players can interact with each other
-let io = new Server(app, { cors: { origin: "http://128.180.209.152:4000" } });
+// Set up a websocket interface so that players can interact with each other 
+let io = new Server(app, { cors: { origin: "http://128.180.209.152:4000" } }); // (CHANGE ME)
 io.on('connection', (socket) => { workflow(socket, users, rooms, sockets); });
 
 // Now call listen to actually start the web server
