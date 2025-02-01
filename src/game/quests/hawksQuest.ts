@@ -72,7 +72,7 @@ export class HawksQuest extends Quest {
       if (this.progress == 0) {
         // Turn off the HUD buttons
         lInfo.hud?.toggleButtons(false);
-        lInfo.hud?.toggleHealth(false);
+        lInfo.hud?.toggleStats(false);
         // Play the stomach grumbling sound effect
         stage.musicLibrary.getSound("MVPDemo/hungry.mp3").play();
         // Pause player controls, to fix a weird timing bug

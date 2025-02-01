@@ -9,20 +9,23 @@ import { DialogueDriver } from "../interactions/dialogue";
 import { give_jake_direction, jake_ask_direction, jake_has_direction, jake_waiting_direction as jake_wait_direction } from "../interactions/jakeDlg";
 import { martina_can_give_direction } from "../interactions/martinaDlg";
 
+/**
+ * This quest is about helping Jake find Rathbone by getting directions from Martina.
+ */
 export class FindRathBone extends Quest {
     /**
      * Track the player's progress through the quest:
      * 0. You have not been asked by Jake about Rathbone
      * 1. Jake has asked you about Rathbones
-     * 2. You have been given Rathbone directions from Martina
-     * 3. You have given Rathbone direction to Jake
+     * 2. Martina has given you direction to Rathbone
+     * 3. You have given Jake direction to Rathbone
      */
     private progress = 0;
-    private footprints: number[] = [];
+    private footprints: Set<number> = new Set();
     // NPCs
-    // FootprintLog is used to track the footprints of all past chosen responses
-    private jake: { npc?: NpcBehavior, driver?: DialogueDriver, footprintLog: number[] } = { footprintLog: [] };
-    private martina: { npc?: NpcBehavior, driver?: DialogueDriver, footprintLog: number[] } = { footprintLog: [] };
+    // footprintLog is used to track the footprints of all past chosen responses for each NPC
+    private jake: { npc?: NpcBehavior, driver?: DialogueDriver, footprintLog: Set<number> } = { footprintLog: new Set() };
+    private martina: { npc?: NpcBehavior, driver?: DialogueDriver, footprintLog: Set<number> } = { footprintLog: new Set() };
 
     constructor() {
         super(QuestNames.FindRathBone, "Get Rathbone's direction", "Jake needs help to get to Rathbone!", []);
@@ -40,9 +43,9 @@ export class FindRathBone extends Quest {
 
         // Make sure both NPCs are loaded before setting up their dialogues
         if (this.jake.npc && this.martina.npc) {
-            let m_endFunc = (footprints_: number[]) => {
+            let m_endFunc = (footprints_: Set<number>) => {
                 // Record the footprints of the chosen responses before changing drivers
-                this.martina.footprintLog = this.mergeLists(footprints_, this.martina.footprintLog);
+                this.martina.footprintLog = new Set([...footprints_, ...this.martina.footprintLog]);
 
                 // Determine the next driver for Martina and Jake based on the progress and footprints
                 if (this.progress == 1) {
@@ -50,7 +53,7 @@ export class FindRathBone extends Quest {
                     this.martina.driver = new DialogueDriver(martina_can_give_direction, "start", m_endFunc);
                 }
 
-                if (this.progress == 1 && this.martina.footprintLog.includes(1) || this.progress == 2) {
+                if (this.progress == 1 && this.martina.footprintLog.has(1) || this.progress == 2) {
                     this.progress = 2;
                     this.jake.driver = new DialogueDriver(give_jake_direction, "start", j_endFunc);
                     this.martina.driver = new DialogueDriver(martina_can_give_direction, "start", m_endFunc);
@@ -60,9 +63,9 @@ export class FindRathBone extends Quest {
                 this.martina.npc!.setNextDialogue(this.martina.driver);
             }
 
-            let j_endFunc = (_footprints: number[]) => {
+            let j_endFunc = (_footprints: Set<number>) => {
                 // Record the footprints of the chosen responses before changing drivers
-                this.jake.footprintLog = this.mergeLists(_footprints, this.jake.footprintLog);
+                this.jake.footprintLog = new Set([..._footprints, ...this.jake.footprintLog]);
 
                 // Determine the next driver for Martina and Jake based on the progress and footprints
                 if (this.progress == 0 || this.progress == 1) {
@@ -75,7 +78,7 @@ export class FindRathBone extends Quest {
                 }
                 this.martina.npc!.setNextDialogue(this.martina.driver);
 
-                if (this.progress == 2 && this.jake.footprintLog.includes(2) || this.progress == 3) {
+                if (this.progress == 2 && this.jake.footprintLog.has(2) || this.progress == 3) {
                     this.progress = 3;
                     this.jake.driver = new DialogueDriver(jake_has_direction, "start", j_endFunc);
                     // Set Martina to back default convo after Jake has the direction
@@ -99,11 +102,11 @@ export class FindRathBone extends Quest {
      * @param existingItems - Array to update with unique items.
      * @returns The updated existingItems array.
      */
-    mergeLists(newItems: number[], existingItems: number[]): number[] {
-        newItems.forEach(item => {
-            if (!existingItems.includes(item))
-                existingItems.push(item);
-        });
-        return existingItems;
-    }
+    // mergeLists(newItems: Set<number>, existingItems: Set<number>): Set<number> {
+    //     newItems.forEach(item => {
+    //         if (!existingItems.includes(item))
+    //             existingItems.push(item);
+    //     });
+    //     return existingItems;
+    // }
 }

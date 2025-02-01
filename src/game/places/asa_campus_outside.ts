@@ -30,7 +30,7 @@ import { Builder } from "../multiplayer/loginSystem";
  *
  * @param level Which level should be displayed
  */
-export const buildAsaPackerOutside:Builder = function(level: number) {
+export const buildAsaPackerOutside: Builder = function (level: number) {
   // Get the session information
   //
   // [mfs]  If we're just going to be "getting", and never starting from this
@@ -42,7 +42,7 @@ export const buildAsaPackerOutside:Builder = function(level: number) {
   let lInfo = new LevelInfo();
   stage.storage.setLevel("levelInfo", lInfo);
   lInfo.hud = new HUD("Outdoors", "University Drive");
-  lInfo.hud.toggleHealth(false); // [mfs] For now...
+  lInfo.hud.toggleStats(false); // [mfs] For now...
 
   // Create player
   let player = makeMainCharacter(80, 20, sStore.playerAppearance!, AnimationState.IDLE_N);

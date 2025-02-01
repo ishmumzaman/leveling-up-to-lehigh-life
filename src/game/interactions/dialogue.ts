@@ -4,11 +4,12 @@ import { Conversation, ConversationMap } from "./conversation";
 /** DialogueDriver handles the movement through a conversation */
 export class DialogueDriver {
   conversation: Conversation; // The current conversation within the map, if any 
-  // The sum footprints of any traversed responses with a footprint when going through the dialogue
-  footprints: number[] = [];
+  // Collects the footprints of any traversed responses when going through the dialogue
+  footprints: Set<number> = new Set();
 
   /** Code to run when the conversation finishes */
-  public endFunc = (footprints_: number[]) => { };
+  // TODO: Use sets instead of arrays for footprints
+  public endFunc = (footprints_: Set<number>) => { };
 
   /**
    * Create a DialogueDriver
@@ -17,7 +18,7 @@ export class DialogueDriver {
    * @param start           The starting point within conversationMap
    * @param endFunc         The function to run when the conversation ends
    */
-  constructor(readonly conversationMap: ConversationMap, private start: string, endFunc?: (footprints_: number[]) => void) {
+  constructor(readonly conversationMap: ConversationMap, private start: string, endFunc?: (footprints_: Set<number>) => void) {
     let convo = this.conversationMap.get(start);
     if (!convo) throw "Error: Conversation Map does not have a 'start' entry";
     this.conversation = convo;
@@ -33,28 +34,20 @@ export class DialogueDriver {
    */
   public advance(responseIdx: number): any {
     let convo: Conversation | undefined;
-    // Get the footprint of the current conversation before updating it
+    // Check if the current conversation has multiple responses or just one and determine the next conversation
     if (this.conversation.responses instanceof Array) {
+      // Get the footprint of the current conversation before updating it
       let newFootprint = this.conversation.responses[responseIdx]?.footprint;
+      if (newFootprint) { this.footprints.add(newFootprint); }
 
-      // Check if newFootprint is already in the array before pushing to avoid duplicates
-      // [anh] This is a safe guard in case people have duped footprints in a conversationMap,
-      //       maybe there is a better way to handle this, or not needed at all.
-      if (newFootprint) {
-        if (this.footprints.includes(newFootprint))
-          throw `Error: Footprint ${newFootprint} already exists in footprints`;
-        else {
-          this.footprints.push(newFootprint);
-        }
-      }
       convo = this.conversationMap.get(this.conversation.responses[responseIdx].next);
       if (!convo) throw `Error: ${this.conversation.responses[responseIdx].next} does not exist in the given map`;
+
     } else {
       convo = this.conversationMap.get(this.conversation.responses);
       if (!convo) throw `Error: ${this.conversation.responses} does not exist in the given map`;
     }
 
-    // Get the next conversation from the map
     this.conversation = convo;
   }
 

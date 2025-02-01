@@ -2,6 +2,7 @@
 
 import { Actor, KeyCodes, ManualMovement, stage, TimedEvent } from "../../jetlag";
 import { renderPlayerInventory } from "../inventory/ui";
+import { SessionInfo } from "../storage/session";
 
 /**
  * KeyboardHandler registers code to run on W/A/S/D key events, and uses them to
@@ -112,59 +113,60 @@ export class KeyboardHandler {
    * @returns Nothing. Simply skip some checks if moving diagonally
    */
   private heroVelocityFixer(keyW: boolean, keyA: boolean, keyS: boolean, keyD: boolean, hero: Actor) {
-    // Update `hero`'s X velocity to `v`
-    function heroXVelocity(v: number, hero: Actor) { (hero.movement as ManualMovement).updateXVelocity(v); }
-
-    // Update `hero`'s Y velocity to `v`
-    function heroYVelocity(v: number, hero: Actor) { (hero.movement as ManualMovement).updateYVelocity(v); }
+    let sStore = stage.storage.getSession("sStore") as SessionInfo;
+    let vX = 0; let vY = 0;
 
     // Step 1:  If the hero collided with a diagonal wall, it might have an
     //          unintentional velocity.  If the corresponding key is not pressed,
     //          disable that velocity.
     let m = hero.movement as ManualMovement;
-    if (m.getYVelocity()! < 0 && keyW === false) heroYVelocity(0, hero);
-    if (m.getYVelocity()! > 0 && keyS === false) heroYVelocity(0, hero);
-    if (m.getXVelocity()! < 0 && keyA === false) heroXVelocity(0, hero);
-    if (m.getXVelocity()! > 0 && keyD === false) heroXVelocity(0, hero);
+    if (m.getYVelocity()! < 0 && keyW === false) vY = 0;
+    if (m.getYVelocity()! > 0 && keyS === false) vY = 0;
+    if (m.getXVelocity()! < 0 && keyA === false) vX = 0;
+    if (m.getXVelocity()! > 0 && keyD === false) vX = 0;
 
     // Step 2:  If two complementary keys are being pressed (e.g., left and down),
     //          then normalize the velocity so that diagonal movement is not
     //          faster than forward movement.
     if (keyW && keyA) {
-      heroYVelocity(-3.8, hero);
-      heroXVelocity(-3.8, hero);
+      vY = -3.8;
+      vX = -3.8;
     }
     else if (keyW && keyD) {
-      heroYVelocity(-3.8, hero);
-      heroXVelocity(3.8, hero);
+      vY = -3.8;
+      vX = 3.8;
     }
     else if (keyS && keyA) {
-      heroYVelocity(3.8, hero);
-      heroXVelocity(-3.8, hero);
+      vY = 3.8;
+      vX = -3.8;
     }
     else if (keyS && keyD) {
-      heroYVelocity(3.8, hero);
-      heroXVelocity(3.8, hero);
+      vY = 3.8;
+      vX = 3.8;
     }
     // Step 3:  Otherwise, go forward in a single direction.  Note that if
     //          antagonistic keys are pressed (like up and down), this hard-codes
     //          a winner through the order of the conditions.  Up and Right win.
     else if (keyW) {
-      heroYVelocity(-5, hero);
+      vY = -5;
     }
     else if (keyS) {
-      heroYVelocity(5, hero);
+      vY = 5;
     }
     else if (keyA) {
-      heroXVelocity(-5, hero);
+      vX = -5;
     }
     else if (keyD) {
-      heroXVelocity(5, hero);
+      vX = 5;
     }
 
-    // [mfs]  If the "if" statements above were just setting values for x and y,
-    //        then we could finish the whole job by just setting the x and y
-    //        velocity here, instead of having all the calls to a helper
-    //        function.
+    // Update `hero`'s X velocity to `v`
+    let velX = sStore.playerStat.energy > 30 ? vX : vX * 0.7;
+    (hero.movement as ManualMovement).updateXVelocity(velX);
+
+
+    // Update `hero`'s Y velocity to `v`
+    let velY = sStore.playerStat.energy > 30 ? vY : vY * 0.7;
+    (hero.movement as ManualMovement).updateYVelocity(velY);
   }
 }
