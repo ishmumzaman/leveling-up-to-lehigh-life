@@ -56,7 +56,7 @@ git config --global pull.rebase false
 > I have included "(CHANGE ME)" tags on each file you need to edit so use those and `Ctrl + F` to find them.
 
 * Run the main game by doing `npm start`. Copy the network address looks like this: 
-  * `http://128.180.209.152:4000` (It will not be exactly these numbers)
+    * `http://128.180.209.152:4000` (It will not be exactly these numbers)
 * Paste this network address into the `multiplayer-server/src/index.ts` file (Use the change me tags to find where)
 > The multiplayer server does not refresh automatically after saving like the main game.
 > If you have it running and make a change, you will need to restart it with `Ctrl + C` for changes to apply.

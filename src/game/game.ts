@@ -78,5 +78,7 @@ class Config implements JetLagGameConfig {
   }
 }
 
+console.log((globalThis as any).MultiPlayerServerAddress);
+
 // Start in the opening screen that shows the instructions
 initializeAndLaunch("game-player", new Config(), () => { loginBuilder(1) });
