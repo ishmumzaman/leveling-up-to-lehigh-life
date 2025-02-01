@@ -32,6 +32,19 @@ export const TYPE_CHECK_FOLDER = "check";
  *              paths
  */
 export function run_dev_server(src, dest) {
+  // Get the multiplayer server address from the command line, if it exists
+  let multiPlayerServerAddress = "undefined";
+  if (process.argv.length != 4) {
+    console.log("WARNING: multiplayer is not supported for this test");
+    console.log("To enable multiplayer, type something like 'npm start 127.0.0.1:7777'");
+    console.log("(You can get the right address by running the multiplayer server with no arguments");
+  }
+  else {
+    // NB: It's got to be a valid value for JSON, so quote it!
+    multiPlayerServerAddress = '"' + process.argv[3] + '"';
+    console.log(`Configuring multiplayer with server at ${multiPlayerServerAddress}`)
+  }
+
   // Erase the destination folder, then re-create it
   fs.rmSync(dest.folder, { recursive: true, force: true });
   fs.mkdirSync(dest.folder);
@@ -42,7 +55,10 @@ export function run_dev_server(src, dest) {
 
   // Build the game into the destination folder
   esbuildServe(
-    { logLevel: "info", entryPoints: [src.ts], bundle: true, outfile: dest.js, minify: false, sourcemap: true },
+    {
+      logLevel: "info", entryPoints: [src.ts], bundle: true, outfile: dest.js, minify: false, sourcemap: true,
+      define: { 'globalThis.MultiPlayerServerAddress': multiPlayerServerAddress }
+    },
     { port: 4000, root: dest.folder }
   );
 
@@ -80,6 +96,19 @@ export function run_dev_server(src, dest) {
  *              paths
  */
 export function production_builder(src, dest) {
+  // Get the multiplayer server address from the command line, if it exists
+  let multiPlayerServerAddress = "undefined";
+  if (process.argv.length != 3) {
+    console.log("WARNING: multiplayer is not supported for this test");
+    console.log("To enable multiplayer, type something like 'npm start 127.0.0.1:7777'");
+    console.log("(You can get the right address by running the multiplayer server with no arguments");
+  }
+  else {
+    // NB: It's got to be a valid value for JSON, so quote it!
+    multiPlayerServerAddress = '"' + process.argv[2] + '"';
+    console.log(`Configuring multiplayer with server at ${multiPlayerServerAddress}`)
+  }
+
   // Try to make the destination folder.  Don't erase it first, since we
   // sometimes build several things into one place
   fs.mkdirSync(dest.folder, { recursive: true });
@@ -98,5 +127,6 @@ export function production_builder(src, dest) {
     outfile: dest.js,
     minify: true,
     sourcemap: false,
+    define: { 'globalThis.MultiPlayerServerAddress': multiPlayerServerAddress }
   });
 }
