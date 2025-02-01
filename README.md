@@ -87,29 +87,33 @@ git config --global pull.rebase false
 Other players can join by using the same **Network Address**.  
 
 ### **Troubleshooting**
-If the login screen gets stuck on "Logging in..." for more than a second, you likely made a mistake. Double-check the following:
-1. Ensure you **did not** include `HTTP://` when starting the multiplayer server.
-2. Verify that you used the **correct IP** for the web server from the multiplayer server.
-3. Confirm that you used the **correct IP** from the web server when starting the multiplayer server.
-4. Make sure you included **an IP at all** for the web server.
+If the login screen gets stuck on "Logging in..." for more than a second, you likely made a mistake. Double-check the following:  
+
+1. Ensure you **did not** include `HTTP://` when starting the multiplayer server.  
+   
+2. Verify that you used the **correct IP** for the web server from the multiplayer server.  
+   
+3. Confirm that you used the **correct IP** from the web server when starting the multiplayer server.  
+   
+4. Make sure you included **an IP at all** for the web server.  
 
 **Note:**  
-The game may take some time to load on a black screen. Be patient—it **will** eventually load.
+The game may take some time to load on a black screen. Be patient—it **will** eventually load.   
 
 ## Authors
 
-Faculty Mentor
-* [Mike Spear](emailto:mfs409@lehigh.edu)
+Faculty Mentor  
+* [Mike Spear](emailto:mfs409@lehigh.edu)  
 
-Student Developers
-* [Anh Nguyen](emailto:ahn227@lehigh.edu)
-* [Emma Valle](emailto:emv226@lehigh.edu)
-* [Maureen Phelan](emailto:mcp227@lehigh.edu)
-* [Yassine Rafih](emailto:yar227@lehigh.edu)
-* [Hamza Al Farsi](emailto:haa428@lehigh.edu)
-* [Karina Makhani](kamb26@lehigh.edu)
-* [Ishmum Zaman](isz228@lehigh.edu)
-* [Nina Chau](nic627@lehigh.edu)
+Student Developers  
+* [Anh Nguyen](emailto:ahn227@lehigh.edu)  
+* [Emma Valle](emailto:emv226@lehigh.edu)  
+* [Maureen Phelan](emailto:mcp227@lehigh.edu)  
+* [Yassine Rafih](emailto:yar227@lehigh.edu)  
+* [Hamza Al Farsi](emailto:haa428@lehigh.edu)  
+* [Karina Makhani](kamb26@lehigh.edu)  
+* [Ishmum Zaman](isz228@lehigh.edu)  
+* [Nina Chau](nic627@lehigh.edu)  
 
 ## Changelog
 
@@ -119,20 +123,20 @@ Student Developers
 ## Acknowledgments
 
 * Jetlag Engine Contributors
-   * Mike Spear
-   * Dan Spear
-   * Greyson Parrelli
-   * Jennifer Bayzick
-   * Rachel Santangelo
-   * Micah Carlisle
-   * Maximilian Hasselbusch
-   * Jimmy Johnson
-   * Marc Soda
-   * Egide Ntwari
-   * Nana Nyanor
-   * Sebastian Chavarro
-   * Anh H. Nguyen
-   * Yassine Rafih
+   * Mike Spear  
+   * Dan Spear  
+   * Greyson Parrelli  
+   * Jennifer Bayzick  
+   * Rachel Santangelo  
+   * Micah Carlisle  
+   * Maximilian Hasselbusch  
+   * Jimmy Johnson  
+   * Marc Soda  
+   * Egide Ntwari  
+   * Nana Nyanor  
+   * Sebastian Chavarro  
+   * Anh H. Nguyen  
+   * Yassine Rafih  
 
 
 🤎🤍 made with love from Lehigh
