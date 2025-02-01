@@ -53,18 +53,48 @@ git config --global pull.rebase false
 
 ## Want to run multiplayer?
 
-> I have included "(CHANGE ME)" tags on each file you need to edit so use those and `Ctrl + F` to find them.
+1. Open a terminal (``Ctrl + Shift + \`` in VSCode) and navigate to the multiplayer folder by running:
+   
+   ```sh
+   cd multiplayer-server
+   ```
 
-* Run the main game by doing `npm start`. Copy the network address looks like this: 
-    * `http://128.180.209.152:4000` (It will not be exactly these numbers)
-* Paste this network address into the `multiplayer-server/src/index.ts` file (Use the change me tags to find where)
-> The multiplayer server does not refresh automatically after saving like the main game.
-> If you have it running and make a change, you will need to restart it with `Ctrl + C` for changes to apply.
-* Paste the same address into `src/game/multiplayer/loginSystem.ts` but change the port (the number after the colon) to 3000.
-* Now `cd` into `multiplayer-server` and run `npm start`.
-* You should now be able to join through the network address for the main game!
-> There is sometimes a delay when launching the game where a black screen may be present for some time.
-> This screen may take a while but if you wait, it WILL load.
+2. Start the multiplayer server by running:
+   
+   ```sh
+   npm start
+   ```
+   
+   The server will immediately crash, but it will display a **MultiPlayerServer Address**. Copy this address.
+
+3. Open a **new terminal tab** (keep the previous one open) and start the game's web server using the copied address:
+   
+   ```sh
+   npm start (MultiPlayerServer Address)
+   ```
+   
+   This will launch the web server and provide a new **Network Address**.
+
+4. Copy the **Network Address** (**DO NOT** include `HTTP://`). Then, return to the multiplayer folder's terminal and run:
+   
+   ```sh
+   npm start (Network Address)
+   ```
+
+5. Open your browser and enter the **Network Address**. Click **Log In**.
+
+### **You are now connected to multiplayer!**  
+Other players can join by using the same **Network Address**.  
+
+### **Troubleshooting**
+If the login screen gets stuck on "Logging in..." for more than a second, you likely made a mistake. Double-check the following:
+1. Ensure you **did not** include `HTTP://` when starting the multiplayer server.
+2. Verify that you used the **correct IP** for the web server from the multiplayer server.
+3. Confirm that you used the **correct IP** from the web server when starting the multiplayer server.
+4. Make sure you included **an IP at all** for the web server.
+
+**Note:**  
+The game may take some time to load on a black screen. Be patient—it **will** eventually load.
 
 ## Authors
 
