@@ -116,7 +116,7 @@ export function makeMainCharacter(cx: number, cy: number, animation: CharacterAn
   });
 
   // sets up multiplayer outfit and move packets
-  if (sStore.mutliplayerMode === true) {
+  if (sStore.multiplayerMode === true) {
     // TODO: change to use server responses
     stage.world.timer.addEvent(new TimedEvent(.1, false, () => { // Waits for server
       stage.network.doOutfitChange(JSON.stringify(new outfitChangePacket(sStore.loginInfo.userId, sStore.playerAppearance?.config || defaultCharacter)))

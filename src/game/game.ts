@@ -1,5 +1,4 @@
 import { initializeAndLaunch, AccelerometerMode, JetLagGameConfig } from "../jetlag";
-import { openingScreenBuilder } from "./introScene/OpeningScreenBuilder";
 import { loginBuilder } from "./multiplayer/loginSystem";
 
 // [mfs] I think some reorganization of the folders would be beneficial.  
@@ -53,7 +52,7 @@ let imageNames = [
  * Screen dimensions and other game configuration, such as the names of all
  * the assets (images and sounds) used by this game.
  */
-class Config implements JetLagGameConfig {
+export class Config implements JetLagGameConfig {
   aspectRatio = { width: 16, height: 9 };
   pixelMeterRatio = 100;
   screenDimensions = { width: 1600, height: 900 };
@@ -63,8 +62,9 @@ class Config implements JetLagGameConfig {
   accelerometerMode = AccelerometerMode.DISABLED;
   // [mfs] This needs to be in a Lehigh domain eventually
   storageKey = "com.github.YassCoding.LUTLL";
-  hitBoxes = false;
+  hitBoxes = true;
   textFont = "kongtext";
+  minuteRate = 60;
 
   resources = {
     prefix: "./assets/",
@@ -78,6 +78,8 @@ class Config implements JetLagGameConfig {
       "mainMenu/Video/nightLoop.mp4"]
   }
 }
+
+console.log((globalThis as any).MultiPlayerServerAddress);
 
 // Start in the opening screen that shows the instructions
 initializeAndLaunch("game-player", new Config(), () => { loginBuilder(1) });

@@ -4,6 +4,12 @@ import { CharacterAnimations, CharacterConfig } from "../characters/characterCus
 import { openingScreenBuilder } from "../introScene/OpeningScreenBuilder";
 import { FadingBlurFilter } from "../common/filter";
 
+// NOTE: There is a strange waiting time before the game initially
+// loads when more than 1 person is on multiplayer. Not sure why.
+// If you wait on the black screen it WILL eventually load.
+
+// 
+
 /**
  * This interface allows us to require level builders
  * to need playerLimits and builderNames as to be used
@@ -231,12 +237,12 @@ export function connectUser(userId: string, userName: string) {
   };
 
   // TODO: Fix hitch that happens on outfitChange
-  stage.network.outfitChange = (msg: string) => { 
+  stage.network.outfitChange = (msg: string) => {
     // When a remote user sends a state update, handle it
     let m = JSON.parse(msg).msg;
     let packet = JSON.parse(m) as outfitChangePacket;
     let a = sStore.loginInfo.remoteActors.get(packet.userId) as RemoteActor; // Find the user's Actor who's outfit is changing
-    if (!a) return; 
+    if (!a) return;
 
     // Create animations based on packet and create appearance object with the animations
     let newAni = new CharacterAnimations(packet.animation);
@@ -283,7 +289,7 @@ export function connectUser(userId: string, userName: string) {
 
   // TODO: hook this up to a permanently hosted server
   // We use a set IP here but this might change in the future
-  stage.network.connect("http://128.180.209.152:3000");
+  stage.network.connect((globalThis as any).MultiPlayerServerAddress);
 }
 
 // TODO: make loadingBuilder based on server responses or not necessary please
@@ -292,12 +298,12 @@ export function connectUser(userId: string, userName: string) {
 // function in stage.ts can automatically switch rooms and builders.
 // This is only done on startup
 export function loadingBuilder(level: number, builderName: string, builder: (level: number) => void) {
-  if (!(stage.storage.getSession("sStore") as SessionInfo).loginInfo.connected) { builder(level); return;};
+  if (!(stage.storage.getSession("sStore") as SessionInfo).loginInfo.connected) { builder(level); return; };
   let sStore = (stage.storage.getSession("sStore") as SessionInfo);
 
   if (sStore.loginInfo?.connected) {
     // checks every frame to see if the server and client are caught up
-    let event = new TimedEvent(.01, true, () => { 
+    let event = new TimedEvent(.01, true, () => {
       if (builderName == sStore.loginInfo?.room.builder) {
         builder(level);
         event.cancelled = true;
@@ -308,7 +314,7 @@ export function loadingBuilder(level: number, builderName: string, builder: (lev
   }
 }
 
-// TODO BEFORE MERGE: Make this look prettier to end-user :)
+// TODO: Make this look prettier to end-user :)
 export const loginBuilder: Builder = function (level: number) {
   loadingBuilder(level, loginBuilder.builderName + level, () => {
     if (level == 1) {
@@ -320,13 +326,13 @@ export const loginBuilder: Builder = function (level: number) {
         rigidBody: new BoxBody({ cx: 8, cy: 4.5, width: 4.5, height: 1 }, { scene: stage.hud }),
         gestures: {
           tap: () => {
-            sStore.mutliplayerMode = true;
+            sStore.multiplayerMode = true;
             // TODO: Does this input need to be sanitized? DO NOT USE IN FINAL BUILDS
-            let username = window.prompt("What is your username?", "buh"+Math.floor(Math.random()*10000)) || "buh"+Math.floor(Math.random()*10000);
+            let username = window.prompt("What is your username?", "buh" + Math.floor(Math.random() * 10000)) || "buh" + Math.floor(Math.random() * 10000);
 
             // Prevents crash on user pressing cancel/esc
-            if (!username){
-              username = "buh"+Math.floor(Math.random()*10000);
+            if (!username) {
+              username = "buh" + Math.floor(Math.random() * 10000);
             }
 
             let id = username;
@@ -335,7 +341,7 @@ export const loginBuilder: Builder = function (level: number) {
             // This makes sure everything is loaded
             // TODO: Change this to work with server responses instead of a fixed timer
             // BUG: If a user's connection is slow, .1 seconds is not enough
-            stage.world.timer.addEvent(new TimedEvent(.01, false, () => { 
+            stage.world.timer.addEvent(new TimedEvent(.01, false, () => {
               connectUser(username, id);
             }))
 
@@ -357,7 +363,7 @@ export const loginBuilder: Builder = function (level: number) {
       });
     }
 
-    // TODO BEFORE PUSH: Prettify please :)
+    // TODO: Prettify please :)
     // Loading screen in case user connection is slow or timer is increased in level one
     if (level == 2) {
       new Actor({

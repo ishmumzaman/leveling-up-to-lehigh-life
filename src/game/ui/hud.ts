@@ -3,7 +3,7 @@
 import { TextSprite, BoxBody, Actor, stage, ImageSprite, TimedEvent } from "../../jetlag";
 import { renderPlayerInventory } from "../inventory/ui";
 import { renderQuestMenu } from "../quests/ui";
-import { renderStat } from "../characters/stats";
+import { SessionInfo } from "../storage/session";
 import { DialogueUI } from "./dialogue";
 
 /**
@@ -12,8 +12,11 @@ import { DialogueUI } from "./dialogue";
  * character is.
  */
 export class HUD {
+  /** The clock for the game */
+  public clock: Actor;
+
   /** The health and wellness statistics for the player */
-  public health: Actor;
+  public stats: Actor;
 
   /** The button that leads to the inventory being shown */
   public inventoryButton: Actor;
@@ -35,8 +38,8 @@ export class HUD {
     this.questNotification.enabled = value;
   }
 
-  /** Show or hide the Health Stats */
-  public toggleHealth(value: boolean) { this.health.enabled = value; }
+  /** Show or hide the Stats */
+  public toggleStats(value: boolean) { this.stats.enabled = value; }
 
   /** Show or hide the buttons */
   public toggleButtons(value: boolean) {
@@ -53,8 +56,10 @@ export class HUD {
    * @param place     The place within that building
    */
   constructor(building: string, place: string) {
-    // Set up the health information
-    this.health = renderStat(stage.hud);
+    let sStore = stage.storage.getSession("sStore") as SessionInfo;
+
+    // Set up the stat information
+    this.stats = sStore.playerStat.renderStat(stage.hud);
 
     this.dialogue = new DialogueUI();
 
@@ -91,6 +96,10 @@ export class HUD {
         new TextSprite({ center: true, face: stage.config.textFont, color: "ffffff00", size: 19, strokeColor: "00000000", strokeWidth: 5, offset: { dx: 0, dy: 0.4 } }, () => place.toUpperCase())],
       rigidBody: new BoxBody({ cx: 8, cy: 4.5, width: 0.1, height: 0.1 }, { scene: stage.hud }),
     });
+
+    // Date and time display
+    this.clock = sStore.clock.drawClock();
+
     // Fade in/out the location display
     //
     // [mfs]  Spamming 25 timers is kind of strange, but I guess it's OK?

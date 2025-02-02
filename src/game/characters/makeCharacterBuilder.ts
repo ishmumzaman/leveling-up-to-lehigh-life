@@ -561,7 +561,7 @@ class UserInterface {
 /**
  * Create the character customization builder
  */
-export const makeCharacterBuilder:Builder = function() {
+export const makeCharacterBuilder: Builder = function () {
   // Make sure we have a session storage object
   //
   // [mfs] This is probably not necessary since we have an opening scene
