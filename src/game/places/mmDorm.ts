@@ -3,11 +3,9 @@
 // [mfs]  We will want to be able to re-arrange the room, and have it stay
 //        re-arranged.
 //
-// [mfs]  When we switch to tilemaps, this will need to change.
-//
 // [mfs]  When we switch the quest system, this will stop needing `level`.
 
-import { AnimationState, stage } from "../../jetlag";
+import { Actor, AnimationState, BoxBody, FilledBox, Obstacle, stage } from "../../jetlag";
 import { InspectSystem } from "../interactions/inspectUi";
 import { boundLine, cornerBoundBox } from "../common/boundBox";
 import { createMap } from "../common/map";
@@ -23,12 +21,16 @@ import { Places } from "./places";
 import { spawnRegularNpc, NpcNames } from "../characters/NPC";
 import { Builder } from "../multiplayer/loginSystem";
 
+// [mfs]  I exported the tilemap as a json, so it can be imported like this.
+//        Note that I didn't do the furniture, because that might change...
+import * as dorm_objects from "../../../tilemaps/TileMaps/mfsDorm.json"
+
 /**
  * Build all levels occurring the m&m dorm
  * 
  * @param level the level to build
  */
-export const mmDormBuilder:Builder = function(level: number) {
+export const mmDormBuilder: Builder = function (level: number) {
   // Set up session and level storage
   if (!stage.storage.getSession("sStore")) stage.storage.setSession("sStore", new SessionInfo());
   let sStore = stage.storage.getSession("sStore") as SessionInfo;
@@ -37,7 +39,27 @@ export const mmDormBuilder:Builder = function(level: number) {
 
   // Map and bounding box and collision boxes
   createMap(335, 480, "mmDorm.png");
-  mmDormBounding();
+  // NB:  Instead of calling mmDormBounding(), use the tilemap to draw some
+  //      walls.
+  // mmDormBounding();
+  for (let layer of dorm_objects.layers) {
+    if (layer.name === "border_objects") {
+      // NB:  createMap says the background is 335x480, with a 50 pixel/meter
+      //      ratio
+      let pmr = 50;
+      for (let o of layer.objects ?? []) {
+        let width = o.width / pmr;
+        let height = o.height / pmr;
+        let cx = o.x / pmr + o.width / pmr / 2;
+        let cy = o.y / pmr + o.height / pmr / 2;
+        new Actor({
+          appearance: new FilledBox({ width: o.width / pmr, height: o.height / pmr, fillColor: "#FF000000" }),
+          rigidBody: new BoxBody({ width, height, cx, cy }),
+          role: new Obstacle()
+        });
+      }
+    }
+  }
 
   // Set current location
   lInfo.hud = new HUD("M&M House", "Your Dorm Room");
