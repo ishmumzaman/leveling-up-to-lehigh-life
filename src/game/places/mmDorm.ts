@@ -5,9 +5,8 @@
 //
 // [mfs]  When we switch the quest system, this will stop needing `level`.
 
-import { Actor, AnimationState, BoxBody, FilledBox, Obstacle, stage } from "../../jetlag";
+import { AnimationState, stage } from "../../jetlag";
 import { InspectSystem } from "../interactions/inspectUi";
-import { boundLine, cornerBoundBox } from "../common/boundBox";
 import { createMap } from "../common/map";
 import { Spawner } from "../common/spawner";
 import { SessionInfo } from "../storage/session";
@@ -20,6 +19,7 @@ import { makeMainCharacter } from "../characters/character";
 import { Places } from "./places";
 import { spawnRegularNpc, NpcNames } from "../characters/NPC";
 import { Builder } from "../multiplayer/loginSystem";
+import { drawObjects } from "./walls";
 
 // [mfs]  I exported the tilemap as a json, so it can be imported like this.
 //        Note that I didn't do the furniture, because that might change...
@@ -37,29 +37,9 @@ export const mmDormBuilder: Builder = function (level: number) {
   let lInfo = new LevelInfo();
   stage.storage.setLevel("levelInfo", lInfo);
 
-  // Map and bounding box and collision boxes
+  // Draw the map, make the walls from the objects in the json
   createMap(335, 480, "mmDorm.png");
-  // NB:  Instead of calling mmDormBounding(), use the tilemap to draw some
-  //      walls.
-  // mmDormBounding();
-  for (let layer of dorm_objects.layers) {
-    if (layer.name === "border_objects") {
-      // NB:  createMap says the background is 335x480, with a 50 pixel/meter
-      //      ratio
-      let pmr = 50;
-      for (let o of layer.objects ?? []) {
-        let width = o.width / pmr;
-        let height = o.height / pmr;
-        let cx = o.x / pmr + o.width / pmr / 2;
-        let cy = o.y / pmr + o.height / pmr / 2;
-        new Actor({
-          appearance: new FilledBox({ width: o.width / pmr, height: o.height / pmr, fillColor: "#FF000000" }),
-          rigidBody: new BoxBody({ width, height, cx, cy }),
-          role: new Obstacle()
-        });
-      }
-    }
-  }
+  dorm_objects.layers.forEach(layer => drawObjects(50, layer.objects ?? []));
 
   // Set current location
   lInfo.hud = new HUD("M&M House", "Your Dorm Room");
@@ -102,20 +82,3 @@ export const mmDormBuilder: Builder = function (level: number) {
 }
 mmDormBuilder.builderName = "mmDorm";
 mmDormBuilder.playerLimit = 1
-
-/**
- * M&M dorm specific dorm boundaries and hitboxes
- */
-function mmDormBounding() {
-  cornerBoundBox(0, 8.7, 2.3, 9.6)
-  cornerBoundBox(4.4, 8.7, 6.7, 9.6)
-  cornerBoundBox(0.9, 3, 1.8, 8.1)
-  boundLine(8.6, 1.9, 0.9, true)
-  boundLine(8.6, 1.9, 5.8, true)
-  cornerBoundBox(4.9, 3, 5.8, 7.9)
-  cornerBoundBox(1, 1.9, 2.8, 2.5)
-  cornerBoundBox(3.9, 1.9, 5.7, 2.5)
-  boundLine(2.8, 3.9, 1.9, false)
-  cornerBoundBox(4.1, 5.8, 4.7, 6.9)
-  cornerBoundBox(1.9, 5.8, 2.4, 7)
-}
