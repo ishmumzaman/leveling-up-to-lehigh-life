@@ -4,7 +4,7 @@
         <key>fileFormatVersion</key>
         <int>6</int>
         <key>texturePackerVersion</key>
-        <string>7.4.0</string>
+        <string>7.6.0</string>
         <key>autoSDSettings</key>
         <array>
             <struct type="AutoSDSettings">
@@ -124,7 +124,7 @@
             <key>data</key>
             <struct type="DataFile">
                 <key>name</key>
-                <filename>../characterSpriteSheets/body03.json</filename>
+                <filename>out.json</filename>
             </struct>
         </map>
         <key>multiPackMode</key>
@@ -173,54 +173,54 @@
         </struct>
         <key>individualSpriteSettings</key>
         <map type="IndividualSpriteSettingsMap">
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/body03/body03IdleE0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/body03/body03IdleE1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/body03/body03IdleE2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/body03/body03IdleE3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/body03/body03IdleE4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/body03/body03IdleE5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/body03/body03IdleN0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/body03/body03IdleN1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/body03/body03IdleN2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/body03/body03IdleN3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/body03/body03IdleN4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/body03/body03IdleN5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/body03/body03IdleS0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/body03/body03IdleS1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/body03/body03IdleS2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/body03/body03IdleS3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/body03/body03IdleS4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/body03/body03IdleS5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/body03/body03IdleW0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/body03/body03IdleW1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/body03/body03IdleW2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/body03/body03IdleW3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/body03/body03IdleW4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/body03/body03IdleW5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/body03/body03WalkE0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/body03/body03WalkE1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/body03/body03WalkE2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/body03/body03WalkE3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/body03/body03WalkE4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/body03/body03WalkE5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/body03/body03WalkN0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/body03/body03WalkN1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/body03/body03WalkN2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/body03/body03WalkN3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/body03/body03WalkN4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/body03/body03WalkN5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/body03/body03WalkS0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/body03/body03WalkS1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/body03/body03WalkS2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/body03/body03WalkS3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/body03/body03WalkS4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/body03/body03WalkS5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/body03/body03WalkW0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/body03/body03WalkW1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/body03/body03WalkW2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/body03/body03WalkW3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/body03/body03WalkW4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/body03/body03WalkW5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/body03/body03IdleE0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/body03/body03IdleE1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/body03/body03IdleE2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/body03/body03IdleE3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/body03/body03IdleE4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/body03/body03IdleE5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/body03/body03IdleN0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/body03/body03IdleN1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/body03/body03IdleN2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/body03/body03IdleN3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/body03/body03IdleN4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/body03/body03IdleN5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/body03/body03IdleS0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/body03/body03IdleS1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/body03/body03IdleS2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/body03/body03IdleS3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/body03/body03IdleS4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/body03/body03IdleS5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/body03/body03IdleW0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/body03/body03IdleW1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/body03/body03IdleW2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/body03/body03IdleW3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/body03/body03IdleW4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/body03/body03IdleW5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/body03/body03WalkE0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/body03/body03WalkE1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/body03/body03WalkE2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/body03/body03WalkE3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/body03/body03WalkE4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/body03/body03WalkE5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/body03/body03WalkN0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/body03/body03WalkN1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/body03/body03WalkN2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/body03/body03WalkN3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/body03/body03WalkN4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/body03/body03WalkN5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/body03/body03WalkS0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/body03/body03WalkS1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/body03/body03WalkS2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/body03/body03WalkS3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/body03/body03WalkS4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/body03/body03WalkS5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/body03/body03WalkW0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/body03/body03WalkW1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/body03/body03WalkW2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/body03/body03WalkW3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/body03/body03WalkW4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/body03/body03WalkW5.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0,0</point_f>
@@ -235,36 +235,36 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/body03/body03PTNod0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/body03/body03PTNod1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/body03/body03PTNod2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/body03/body03PTNod3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/body03/body03PTNod4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/body03/body03PTNod5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/body03/body03PTNod6.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/body03/body03PTNod7.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/body03/body03PTNod8.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/body03/body03PTNod9.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/body03/body03PTShake0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/body03/body03PTShake1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/body03/body03PTShake2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/body03/body03PTShake3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/body03/body03PTShake4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/body03/body03PTShake5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/body03/body03PTShake6.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/body03/body03PTShake7.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/body03/body03PTShake8.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/body03/body03PTShake9.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/body03/body03PTTalk0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/body03/body03PTTalk1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/body03/body03PTTalk2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/body03/body03PTTalk3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/body03/body03PTTalk4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/body03/body03PTTalk5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/body03/body03PTTalk6.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/body03/body03PTTalk7.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/body03/body03PTTalk8.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/body03/body03PTTalk9.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/body03/body03PTNod0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/body03/body03PTNod1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/body03/body03PTNod2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/body03/body03PTNod3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/body03/body03PTNod4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/body03/body03PTNod5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/body03/body03PTNod6.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/body03/body03PTNod7.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/body03/body03PTNod8.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/body03/body03PTNod9.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/body03/body03PTShake0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/body03/body03PTShake1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/body03/body03PTShake2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/body03/body03PTShake3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/body03/body03PTShake4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/body03/body03PTShake5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/body03/body03PTShake6.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/body03/body03PTShake7.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/body03/body03PTShake8.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/body03/body03PTShake9.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/body03/body03PTTalk0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/body03/body03PTTalk1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/body03/body03PTTalk2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/body03/body03PTTalk3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/body03/body03PTTalk4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/body03/body03PTTalk5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/body03/body03PTTalk6.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/body03/body03PTTalk7.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/body03/body03PTTalk8.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/body03/body03PTTalk9.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0,0</point_f>
@@ -286,84 +286,7 @@
             <struct type="SpriteSheet">
                 <key>files</key>
                 <array>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/body03/body03IdleE0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/body03/body03IdleE1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/body03/body03IdleE2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/body03/body03IdleE3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/body03/body03IdleE4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/body03/body03IdleE5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/body03/body03IdleN0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/body03/body03IdleN1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/body03/body03IdleN2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/body03/body03IdleN3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/body03/body03IdleN4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/body03/body03IdleN5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/body03/body03IdleS0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/body03/body03IdleS1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/body03/body03IdleS2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/body03/body03IdleS3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/body03/body03IdleS4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/body03/body03IdleS5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/body03/body03IdleW0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/body03/body03IdleW1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/body03/body03IdleW2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/body03/body03IdleW3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/body03/body03IdleW4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/body03/body03IdleW5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/body03/body03PTNod0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/body03/body03PTNod1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/body03/body03PTNod2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/body03/body03PTNod3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/body03/body03PTNod4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/body03/body03PTNod5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/body03/body03PTNod6.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/body03/body03PTNod7.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/body03/body03PTNod8.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/body03/body03PTNod9.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/body03/body03PTShake0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/body03/body03PTShake1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/body03/body03PTShake2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/body03/body03PTShake3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/body03/body03PTShake4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/body03/body03PTShake5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/body03/body03PTShake6.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/body03/body03PTShake7.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/body03/body03PTShake8.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/body03/body03PTShake9.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/body03/body03PTTalk0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/body03/body03PTTalk1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/body03/body03PTTalk2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/body03/body03PTTalk3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/body03/body03PTTalk4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/body03/body03PTTalk5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/body03/body03PTTalk6.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/body03/body03PTTalk7.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/body03/body03PTTalk8.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/body03/body03PTTalk9.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/body03/body03WalkE0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/body03/body03WalkE1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/body03/body03WalkE2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/body03/body03WalkE3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/body03/body03WalkE4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/body03/body03WalkE5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/body03/body03WalkN0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/body03/body03WalkN1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/body03/body03WalkN2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/body03/body03WalkN3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/body03/body03WalkN4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/body03/body03WalkN5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/body03/body03WalkS0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/body03/body03WalkS1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/body03/body03WalkS2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/body03/body03WalkS3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/body03/body03WalkS4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/body03/body03WalkS5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/body03/body03WalkW0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/body03/body03WalkW1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/body03/body03WalkW2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/body03/body03WalkW3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/body03/body03WalkW4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/body03/body03WalkW5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/body03</filename>
                 </array>
             </struct>
         </map>

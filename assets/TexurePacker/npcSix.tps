@@ -124,7 +124,7 @@
             <key>data</key>
             <struct type="DataFile">
                 <key>name</key>
-                <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSix.json</filename>
+                <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSix.json</filename>
             </struct>
         </map>
         <key>multiPackMode</key>
@@ -173,54 +173,54 @@
         </struct>
         <key>individualSpriteSettings</key>
         <map type="IndividualSpriteSettingsMap">
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixIdleE0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixIdleE1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixIdleE2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixIdleE3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixIdleE4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixIdleE5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixIdleN0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixIdleN1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixIdleN2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixIdleN3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixIdleN4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixIdleN5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixIdleS0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixIdleS1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixIdleS2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixIdleS3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixIdleS4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixIdleS5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixIdleW0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixIdleW1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixIdleW2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixIdleW3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixIdleW4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixIdleW5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixWalkE0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixWalkE1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixWalkE2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixWalkE3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixWalkE4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixWalkE5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixWalkN0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixWalkN1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixWalkN2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixWalkN3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixWalkN4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixWalkN5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixWalkS0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixWalkS1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixWalkS2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixWalkS3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixWalkS4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixWalkS5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixWalkW0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixWalkW1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixWalkW2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixWalkW3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixWalkW4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixWalkW5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixIdleE0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixIdleE1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixIdleE2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixIdleE3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixIdleE4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixIdleE5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixIdleN0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixIdleN1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixIdleN2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixIdleN3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixIdleN4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixIdleN5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixIdleS0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixIdleS1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixIdleS2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixIdleS3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixIdleS4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixIdleS5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixIdleW0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixIdleW1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixIdleW2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixIdleW3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixIdleW4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixIdleW5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixWalkE0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixWalkE1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixWalkE2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixWalkE3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixWalkE4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixWalkE5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixWalkN0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixWalkN1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixWalkN2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixWalkN3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixWalkN4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixWalkN5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixWalkS0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixWalkS1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixWalkS2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixWalkS3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixWalkS4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixWalkS5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixWalkW0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixWalkW1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixWalkW2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixWalkW3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixWalkW4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixWalkW5.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0,0</point_f>
@@ -235,36 +235,36 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixPTNod0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixPTNod1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixPTNod2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixPTNod3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixPTNod4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixPTNod5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixPTNod6.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixPTNod7.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixPTNod8.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixPTNod9.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixPTShake0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixPTShake1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixPTShake2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixPTShake3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixPTShake4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixPTShake5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixPTShake6.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixPTShake7.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixPTShake8.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixPTShake9.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixPTTalk0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixPTTalk1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixPTTalk2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixPTTalk3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixPTTalk4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixPTTalk5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixPTTalk6.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixPTTalk7.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixPTTalk8.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixPTTalk9.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixPTNod0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixPTNod1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixPTNod2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixPTNod3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixPTNod4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixPTNod5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixPTNod6.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixPTNod7.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixPTNod8.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixPTNod9.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixPTShake0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixPTShake1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixPTShake2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixPTShake3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixPTShake4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixPTShake5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixPTShake6.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixPTShake7.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixPTShake8.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixPTShake9.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixPTTalk0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixPTTalk1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixPTTalk2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixPTTalk3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixPTTalk4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixPTTalk5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixPTTalk6.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixPTTalk7.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixPTTalk8.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixPTTalk9.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0,0</point_f>
@@ -286,84 +286,84 @@
             <struct type="SpriteSheet">
                 <key>files</key>
                 <array>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixIdleE0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixIdleE1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixIdleE2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixIdleE3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixIdleE4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixIdleE5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixIdleN0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixIdleN1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixIdleN2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixIdleN3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixIdleN4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixIdleN5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixIdleS0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixIdleS1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixIdleS2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixIdleS3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixIdleS4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixIdleS5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixIdleW0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixIdleW1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixIdleW2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixIdleW3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixIdleW4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixIdleW5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixPTNod0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixPTNod1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixPTNod2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixPTNod3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixPTNod4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixPTNod5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixPTNod6.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixPTNod7.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixPTNod8.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixPTNod9.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixPTShake0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixPTShake1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixPTShake2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixPTShake3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixPTShake4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixPTShake5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixPTShake6.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixPTShake7.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixPTShake8.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixPTShake9.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixPTTalk0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixPTTalk1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixPTTalk2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixPTTalk3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixPTTalk4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixPTTalk5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixPTTalk6.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixPTTalk7.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixPTTalk8.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixPTTalk9.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixWalkE0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixWalkE1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixWalkE2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixWalkE3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixWalkE4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixWalkE5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixWalkN0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixWalkN1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixWalkN2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixWalkN3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixWalkN4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixWalkN5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixWalkS0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixWalkS1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixWalkS2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixWalkS3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixWalkS4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixWalkS5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixWalkW0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixWalkW1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixWalkW2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixWalkW3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixWalkW4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSix/npcSixWalkW5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixIdleE0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixIdleE1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixIdleE2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixIdleE3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixIdleE4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixIdleE5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixIdleN0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixIdleN1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixIdleN2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixIdleN3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixIdleN4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixIdleN5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixIdleS0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixIdleS1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixIdleS2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixIdleS3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixIdleS4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixIdleS5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixIdleW0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixIdleW1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixIdleW2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixIdleW3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixIdleW4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixIdleW5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixPTNod0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixPTNod1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixPTNod2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixPTNod3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixPTNod4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixPTNod5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixPTNod6.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixPTNod7.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixPTNod8.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixPTNod9.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixPTShake0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixPTShake1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixPTShake2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixPTShake3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixPTShake4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixPTShake5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixPTShake6.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixPTShake7.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixPTShake8.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixPTShake9.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixPTTalk0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixPTTalk1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixPTTalk2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixPTTalk3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixPTTalk4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixPTTalk5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixPTTalk6.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixPTTalk7.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixPTTalk8.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixPTTalk9.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixWalkE0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixWalkE1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixWalkE2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixWalkE3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixWalkE4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixWalkE5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixWalkN0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixWalkN1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixWalkN2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixWalkN3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixWalkN4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixWalkN5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixWalkS0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixWalkS1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixWalkS2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixWalkS3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixWalkS4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixWalkS5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixWalkW0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixWalkW1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixWalkW2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixWalkW3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixWalkW4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSix/npcSixWalkW5.png</filename>
                 </array>
             </struct>
         </map>

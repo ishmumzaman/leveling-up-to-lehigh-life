@@ -124,7 +124,7 @@
             <key>data</key>
             <struct type="DataFile">
                 <key>name</key>
-                <filename>../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01.json</filename>
+                <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01.json</filename>
             </struct>
         </map>
         <key>multiPackMode</key>
@@ -173,54 +173,54 @@
         </struct>
         <key>individualSpriteSettings</key>
         <map type="IndividualSpriteSettingsMap">
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01IdleE0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01IdleE1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01IdleE2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01IdleE3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01IdleE4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01IdleE5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01IdleN0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01IdleN1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01IdleN2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01IdleN3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01IdleN4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01IdleN5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01IdleS0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01IdleS1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01IdleS2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01IdleS3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01IdleS4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01IdleS5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01IdleW0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01IdleW1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01IdleW2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01IdleW3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01IdleW4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01IdleW5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01WalkE0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01WalkE1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01WalkE2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01WalkE3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01WalkE4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01WalkE5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01WalkN0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01WalkN1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01WalkN2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01WalkN3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01WalkN4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01WalkN5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01WalkS0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01WalkS1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01WalkS2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01WalkS3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01WalkS4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01WalkS5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01WalkW0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01WalkW1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01WalkW2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01WalkW3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01WalkW4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01WalkW5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01IdleE0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01IdleE1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01IdleE2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01IdleE3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01IdleE4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01IdleE5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01IdleN0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01IdleN1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01IdleN2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01IdleN3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01IdleN4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01IdleN5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01IdleS0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01IdleS1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01IdleS2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01IdleS3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01IdleS4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01IdleS5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01IdleW0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01IdleW1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01IdleW2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01IdleW3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01IdleW4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01IdleW5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01WalkE0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01WalkE1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01WalkE2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01WalkE3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01WalkE4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01WalkE5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01WalkN0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01WalkN1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01WalkN2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01WalkN3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01WalkN4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01WalkN5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01WalkS0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01WalkS1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01WalkS2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01WalkS3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01WalkS4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01WalkS5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01WalkW0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01WalkW1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01WalkW2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01WalkW3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01WalkW4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01WalkW5.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0,0</point_f>
@@ -242,54 +242,54 @@
             <struct type="SpriteSheet">
                 <key>files</key>
                 <array>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01IdleE0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01IdleE1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01IdleE2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01IdleE3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01IdleE4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01IdleE5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01IdleN0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01IdleN1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01IdleN2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01IdleN3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01IdleN4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01IdleN5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01IdleS0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01IdleS1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01IdleS2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01IdleS3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01IdleS4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01IdleS5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01IdleW0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01IdleW1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01IdleW2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01IdleW3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01IdleW4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01IdleW5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01WalkE0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01WalkE1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01WalkE2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01WalkE3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01WalkE4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01WalkE5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01WalkN0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01WalkN1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01WalkN2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01WalkN3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01WalkN4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01WalkN5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01WalkS0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01WalkS1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01WalkS2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01WalkS3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01WalkS4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01WalkS5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01WalkW0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01WalkW1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01WalkW2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01WalkW3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01WalkW4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/outfit01/outfit01WalkW5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01IdleE0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01IdleE1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01IdleE2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01IdleE3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01IdleE4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01IdleE5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01IdleN0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01IdleN1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01IdleN2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01IdleN3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01IdleN4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01IdleN5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01IdleS0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01IdleS1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01IdleS2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01IdleS3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01IdleS4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01IdleS5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01IdleW0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01IdleW1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01IdleW2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01IdleW3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01IdleW4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01IdleW5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01WalkE0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01WalkE1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01WalkE2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01WalkE3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01WalkE4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01WalkE5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01WalkN0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01WalkN1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01WalkN2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01WalkN3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01WalkN4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01WalkN5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01WalkS0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01WalkS1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01WalkS2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01WalkS3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01WalkS4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01WalkS5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01WalkW0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01WalkW1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01WalkW2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01WalkW3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01WalkW4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit01/outfit01WalkW5.png</filename>
                 </array>
             </struct>
         </map>

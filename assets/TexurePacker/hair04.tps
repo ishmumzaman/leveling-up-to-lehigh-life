@@ -124,7 +124,7 @@
             <key>data</key>
             <struct type="DataFile">
                 <key>name</key>
-                <filename>../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04.json</filename>
+                <filename>../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04.json</filename>
             </struct>
         </map>
         <key>multiPackMode</key>
@@ -173,54 +173,54 @@
         </struct>
         <key>individualSpriteSettings</key>
         <map type="IndividualSpriteSettingsMap">
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04IdleE0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04IdleE1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04IdleE2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04IdleE3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04IdleE4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04IdleE5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04IdleN0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04IdleN1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04IdleN2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04IdleN3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04IdleN4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04IdleN5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04IdleS0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04IdleS1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04IdleS2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04IdleS3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04IdleS4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04IdleS5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04IdleW0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04IdleW1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04IdleW2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04IdleW3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04IdleW4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04IdleW5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04WalkE0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04WalkE1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04WalkE2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04WalkE3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04WalkE4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04WalkE5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04WalkN0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04WalkN1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04WalkN2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04WalkN3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04WalkN4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04WalkN5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04WalkS0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04WalkS1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04WalkS2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04WalkS3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04WalkS4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04WalkS5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04WalkW0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04WalkW1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04WalkW2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04WalkW3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04WalkW4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04WalkW5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04IdleE0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04IdleE1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04IdleE2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04IdleE3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04IdleE4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04IdleE5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04IdleN0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04IdleN1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04IdleN2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04IdleN3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04IdleN4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04IdleN5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04IdleS0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04IdleS1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04IdleS2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04IdleS3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04IdleS4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04IdleS5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04IdleW0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04IdleW1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04IdleW2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04IdleW3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04IdleW4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04IdleW5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04WalkE0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04WalkE1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04WalkE2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04WalkE3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04WalkE4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04WalkE5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04WalkN0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04WalkN1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04WalkN2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04WalkN3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04WalkN4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04WalkN5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04WalkS0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04WalkS1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04WalkS2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04WalkS3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04WalkS4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04WalkS5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04WalkW0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04WalkW1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04WalkW2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04WalkW3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04WalkW4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04WalkW5.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0,0</point_f>
@@ -235,36 +235,36 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04PTNod0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04PTNod1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04PTNod2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04PTNod3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04PTNod4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04PTNod5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04PTNod6.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04PTNod7.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04PTNod8.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04PTNod9.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04PTShake0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04PTShake1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04PTShake2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04PTShake3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04PTShake4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04PTShake5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04PTShake6.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04PTShake7.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04PTShake8.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04PTShake9.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04PTTalk0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04PTTalk1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04PTTalk2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04PTTalk3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04PTTalk4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04PTTalk5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04PTTalk6.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04PTTalk7.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04PTTalk8.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04PTTalk9.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04PTNod0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04PTNod1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04PTNod2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04PTNod3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04PTNod4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04PTNod5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04PTNod6.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04PTNod7.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04PTNod8.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04PTNod9.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04PTShake0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04PTShake1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04PTShake2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04PTShake3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04PTShake4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04PTShake5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04PTShake6.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04PTShake7.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04PTShake8.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04PTShake9.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04PTTalk0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04PTTalk1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04PTTalk2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04PTTalk3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04PTTalk4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04PTTalk5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04PTTalk6.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04PTTalk7.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04PTTalk8.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04PTTalk9.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0,0</point_f>
@@ -286,84 +286,84 @@
             <struct type="SpriteSheet">
                 <key>files</key>
                 <array>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04IdleE0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04IdleE1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04IdleE2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04IdleE3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04IdleE4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04IdleE5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04IdleN0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04IdleN1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04IdleN2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04IdleN3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04IdleN4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04IdleN5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04IdleS0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04IdleS1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04IdleS2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04IdleS3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04IdleS4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04IdleS5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04IdleW0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04IdleW1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04IdleW2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04IdleW3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04IdleW4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04IdleW5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04PTNod0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04PTNod1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04PTNod2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04PTNod3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04PTNod4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04PTNod5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04PTNod6.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04PTNod7.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04PTNod8.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04PTNod9.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04PTShake0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04PTShake1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04PTShake2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04PTShake3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04PTShake4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04PTShake5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04PTShake6.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04PTShake7.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04PTShake8.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04PTShake9.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04PTTalk0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04PTTalk1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04PTTalk2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04PTTalk3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04PTTalk4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04PTTalk5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04PTTalk6.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04PTTalk7.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04PTTalk8.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04PTTalk9.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04WalkE0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04WalkE1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04WalkE2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04WalkE3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04WalkE4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04WalkE5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04WalkN0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04WalkN1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04WalkN2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04WalkN3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04WalkN4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04WalkN5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04WalkS0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04WalkS1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04WalkS2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04WalkS3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04WalkS4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04WalkS5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04WalkW0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04WalkW1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04WalkW2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04WalkW3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04WalkW4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/hair04/hair04WalkW5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04IdleE0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04IdleE1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04IdleE2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04IdleE3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04IdleE4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04IdleE5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04IdleN0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04IdleN1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04IdleN2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04IdleN3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04IdleN4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04IdleN5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04IdleS0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04IdleS1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04IdleS2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04IdleS3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04IdleS4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04IdleS5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04IdleW0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04IdleW1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04IdleW2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04IdleW3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04IdleW4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04IdleW5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04PTNod0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04PTNod1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04PTNod2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04PTNod3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04PTNod4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04PTNod5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04PTNod6.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04PTNod7.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04PTNod8.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04PTNod9.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04PTShake0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04PTShake1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04PTShake2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04PTShake3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04PTShake4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04PTShake5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04PTShake6.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04PTShake7.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04PTShake8.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04PTShake9.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04PTTalk0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04PTTalk1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04PTTalk2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04PTTalk3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04PTTalk4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04PTTalk5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04PTTalk6.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04PTTalk7.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04PTTalk8.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04PTTalk9.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04WalkE0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04WalkE1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04WalkE2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04WalkE3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04WalkE4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04WalkE5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04WalkN0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04WalkN1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04WalkN2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04WalkN3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04WalkN4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04WalkN5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04WalkS0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04WalkS1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04WalkS2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04WalkS3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04WalkS4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04WalkS5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04WalkW0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04WalkW1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04WalkW2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04WalkW3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04WalkW4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair04/hair04WalkW5.png</filename>
                 </array>
             </struct>
         </map>

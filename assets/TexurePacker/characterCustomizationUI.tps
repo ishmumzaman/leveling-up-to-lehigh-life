@@ -124,7 +124,7 @@
             <key>data</key>
             <struct type="DataFile">
                 <key>name</key>
-                <filename>../../../ModernInteriors/CharacterSpriteSheet/characterCustomizationUI/characterCustomizationUI.json</filename>
+                <filename>../../tilemaps/assets/CharacterSpriteSheet/characterCustomizationUI/characterCustomizationUI.json</filename>
             </struct>
         </map>
         <key>multiPackMode</key>
@@ -173,7 +173,7 @@
         </struct>
         <key>individualSpriteSettings</key>
         <map type="IndividualSpriteSettingsMap">
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/characterCustomizationUI/attributeNameBox.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/characterCustomizationUI/attributeNameBox.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0,0</point_f>
@@ -188,7 +188,7 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/characterCustomizationUI/attributeSelectBox.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/characterCustomizationUI/attributeSelectBox.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0,0</point_f>
@@ -203,7 +203,7 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/characterCustomizationUI/charCustomBackground.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/characterCustomizationUI/charCustomBackground.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0,0</point_f>
@@ -218,13 +218,13 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/characterCustomizationUI/clearButton0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/characterCustomizationUI/homeButton0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/characterCustomizationUI/leftButton0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/characterCustomizationUI/noButton0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/characterCustomizationUI/randomizeButton0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/characterCustomizationUI/rightButton0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/characterCustomizationUI/yesButton0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/characterCustomizationUI/clearButton0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/characterCustomizationUI/homeButton0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/characterCustomizationUI/leftButton0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/characterCustomizationUI/noButton0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/characterCustomizationUI/randomizeButton0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/characterCustomizationUI/rightButton0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/characterCustomizationUI/yesButton0.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0,0</point_f>
@@ -239,13 +239,13 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/characterCustomizationUI/clearButton1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/characterCustomizationUI/homeButton1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/characterCustomizationUI/leftButton1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/characterCustomizationUI/noButton1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/characterCustomizationUI/randomizeButton1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/characterCustomizationUI/rightButton1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/characterCustomizationUI/yesButton1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/characterCustomizationUI/clearButton1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/characterCustomizationUI/homeButton1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/characterCustomizationUI/leftButton1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/characterCustomizationUI/noButton1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/characterCustomizationUI/randomizeButton1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/characterCustomizationUI/rightButton1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/characterCustomizationUI/yesButton1.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0,0</point_f>
@@ -260,13 +260,13 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/characterCustomizationUI/clearButton2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/characterCustomizationUI/homeButton2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/characterCustomizationUI/leftButton2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/characterCustomizationUI/noButton2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/characterCustomizationUI/randomizeButton2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/characterCustomizationUI/rightButton2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/characterCustomizationUI/yesButton2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/characterCustomizationUI/clearButton2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/characterCustomizationUI/homeButton2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/characterCustomizationUI/leftButton2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/characterCustomizationUI/noButton2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/characterCustomizationUI/randomizeButton2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/characterCustomizationUI/rightButton2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/characterCustomizationUI/yesButton2.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0,0</point_f>
@@ -281,7 +281,7 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/characterCustomizationUI/colorTitleBox.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/characterCustomizationUI/colorTitleBox.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0,0</point_f>
@@ -296,7 +296,7 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/characterCustomizationUI/completeButton.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/characterCustomizationUI/completeButton.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0,0</point_f>
@@ -311,7 +311,7 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/characterCustomizationUI/eye.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/characterCustomizationUI/eye.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0,0</point_f>
@@ -326,7 +326,7 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/characterCustomizationUI/optionNameBox.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/characterCustomizationUI/optionNameBox.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0,0</point_f>
@@ -341,7 +341,7 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/characterCustomizationUI/optionSelectBox.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/characterCustomizationUI/optionSelectBox.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0,0</point_f>
@@ -356,7 +356,7 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/characterCustomizationUI/optionTitleBox.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/characterCustomizationUI/optionTitleBox.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0,0</point_f>
@@ -378,36 +378,36 @@
             <struct type="SpriteSheet">
                 <key>files</key>
                 <array>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/characterCustomizationUI/charCustomBackground.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/characterCustomizationUI/clearButton0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/characterCustomizationUI/clearButton1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/characterCustomizationUI/clearButton2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/characterCustomizationUI/homeButton0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/characterCustomizationUI/homeButton1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/characterCustomizationUI/homeButton2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/characterCustomizationUI/leftButton0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/characterCustomizationUI/leftButton1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/characterCustomizationUI/leftButton2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/characterCustomizationUI/rightButton0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/characterCustomizationUI/rightButton1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/characterCustomizationUI/rightButton2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/characterCustomizationUI/attributeSelectBox.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/characterCustomizationUI/attributeNameBox.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/characterCustomizationUI/colorTitleBox.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/characterCustomizationUI/eye.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/characterCustomizationUI/noButton0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/characterCustomizationUI/noButton1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/characterCustomizationUI/noButton2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/characterCustomizationUI/yesButton0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/characterCustomizationUI/yesButton1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/characterCustomizationUI/yesButton2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/characterCustomizationUI/completeButton.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/characterCustomizationUI/randomizeButton0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/characterCustomizationUI/randomizeButton1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/characterCustomizationUI/randomizeButton2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/characterCustomizationUI/optionNameBox.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/characterCustomizationUI/optionSelectBox.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/characterCustomizationUI/optionTitleBox.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/characterCustomizationUI/charCustomBackground.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/characterCustomizationUI/clearButton0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/characterCustomizationUI/clearButton1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/characterCustomizationUI/clearButton2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/characterCustomizationUI/homeButton0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/characterCustomizationUI/homeButton1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/characterCustomizationUI/homeButton2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/characterCustomizationUI/leftButton0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/characterCustomizationUI/leftButton1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/characterCustomizationUI/leftButton2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/characterCustomizationUI/rightButton0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/characterCustomizationUI/rightButton1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/characterCustomizationUI/rightButton2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/characterCustomizationUI/attributeSelectBox.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/characterCustomizationUI/attributeNameBox.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/characterCustomizationUI/colorTitleBox.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/characterCustomizationUI/eye.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/characterCustomizationUI/noButton0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/characterCustomizationUI/noButton1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/characterCustomizationUI/noButton2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/characterCustomizationUI/yesButton0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/characterCustomizationUI/yesButton1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/characterCustomizationUI/yesButton2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/characterCustomizationUI/completeButton.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/characterCustomizationUI/randomizeButton0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/characterCustomizationUI/randomizeButton1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/characterCustomizationUI/randomizeButton2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/characterCustomizationUI/optionNameBox.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/characterCustomizationUI/optionSelectBox.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/characterCustomizationUI/optionTitleBox.png</filename>
                 </array>
             </struct>
         </map>

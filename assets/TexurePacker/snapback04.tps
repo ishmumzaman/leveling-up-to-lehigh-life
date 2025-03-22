@@ -124,7 +124,7 @@
             <key>data</key>
             <struct type="DataFile">
                 <key>name</key>
-                <filename>../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04.json</filename>
+                <filename>../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04.json</filename>
             </struct>
         </map>
         <key>multiPackMode</key>
@@ -173,54 +173,54 @@
         </struct>
         <key>individualSpriteSettings</key>
         <map type="IndividualSpriteSettingsMap">
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04IdleE0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04IdleE1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04IdleE2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04IdleE3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04IdleE4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04IdleE5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04IdleN0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04IdleN1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04IdleN2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04IdleN3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04IdleN4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04IdleN5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04IdleS0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04IdleS1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04IdleS2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04IdleS3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04IdleS4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04IdleS5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04IdleW0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04IdleW1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04IdleW2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04IdleW3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04IdleW4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04IdleW5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04WalkE0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04WalkE1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04WalkE2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04WalkE3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04WalkE4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04WalkE5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04WalkN0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04WalkN1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04WalkN2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04WalkN3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04WalkN4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04WalkN5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04WalkS0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04WalkS1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04WalkS2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04WalkS3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04WalkS4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04WalkS5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04WalkW0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04WalkW1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04WalkW2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04WalkW3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04WalkW4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04WalkW5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04IdleE0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04IdleE1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04IdleE2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04IdleE3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04IdleE4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04IdleE5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04IdleN0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04IdleN1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04IdleN2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04IdleN3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04IdleN4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04IdleN5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04IdleS0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04IdleS1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04IdleS2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04IdleS3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04IdleS4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04IdleS5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04IdleW0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04IdleW1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04IdleW2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04IdleW3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04IdleW4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04IdleW5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04WalkE0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04WalkE1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04WalkE2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04WalkE3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04WalkE4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04WalkE5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04WalkN0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04WalkN1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04WalkN2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04WalkN3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04WalkN4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04WalkN5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04WalkS0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04WalkS1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04WalkS2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04WalkS3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04WalkS4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04WalkS5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04WalkW0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04WalkW1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04WalkW2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04WalkW3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04WalkW4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04WalkW5.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0,0</point_f>
@@ -235,36 +235,36 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04PTNod0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04PTNod1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04PTNod2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04PTNod3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04PTNod4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04PTNod5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04PTNod6.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04PTNod7.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04PTNod8.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04PTNod9.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04PTShake0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04PTShake1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04PTShake2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04PTShake3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04PTShake4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04PTShake5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04PTShake6.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04PTShake7.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04PTShake8.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04PTShake9.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04PTTalk0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04PTTalk1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04PTTalk2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04PTTalk3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04PTTalk4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04PTTalk5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04PTTalk6.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04PTTalk7.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04PTTalk8.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04PTTalk9.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04PTNod0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04PTNod1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04PTNod2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04PTNod3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04PTNod4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04PTNod5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04PTNod6.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04PTNod7.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04PTNod8.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04PTNod9.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04PTShake0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04PTShake1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04PTShake2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04PTShake3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04PTShake4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04PTShake5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04PTShake6.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04PTShake7.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04PTShake8.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04PTShake9.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04PTTalk0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04PTTalk1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04PTTalk2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04PTTalk3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04PTTalk4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04PTTalk5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04PTTalk6.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04PTTalk7.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04PTTalk8.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04PTTalk9.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0,0</point_f>
@@ -286,84 +286,84 @@
             <struct type="SpriteSheet">
                 <key>files</key>
                 <array>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04IdleE0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04IdleE1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04IdleE2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04IdleE3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04IdleE4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04IdleE5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04IdleN0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04IdleN1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04IdleN2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04IdleN3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04IdleN4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04IdleN5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04IdleS0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04IdleS1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04IdleS2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04IdleS3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04IdleS4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04IdleS5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04IdleW0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04IdleW1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04IdleW2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04IdleW3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04IdleW4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04IdleW5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04PTNod0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04PTNod1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04PTNod2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04PTNod3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04PTNod4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04PTNod5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04PTNod6.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04PTNod7.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04PTNod8.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04PTNod9.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04PTShake0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04PTShake1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04PTShake2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04PTShake3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04PTShake4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04PTShake5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04PTShake6.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04PTShake7.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04PTShake8.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04PTShake9.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04PTTalk0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04PTTalk1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04PTTalk2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04PTTalk3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04PTTalk4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04PTTalk5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04PTTalk6.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04PTTalk7.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04PTTalk8.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04PTTalk9.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04WalkE0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04WalkE1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04WalkE2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04WalkE3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04WalkE4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04WalkE5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04WalkN0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04WalkN1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04WalkN2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04WalkN3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04WalkN4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04WalkN5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04WalkS0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04WalkS1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04WalkS2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04WalkS3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04WalkS4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04WalkS5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04WalkW0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04WalkW1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04WalkW2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04WalkW3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04WalkW4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/snapback04/snapback04WalkW5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04IdleE0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04IdleE1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04IdleE2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04IdleE3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04IdleE4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04IdleE5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04IdleN0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04IdleN1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04IdleN2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04IdleN3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04IdleN4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04IdleN5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04IdleS0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04IdleS1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04IdleS2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04IdleS3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04IdleS4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04IdleS5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04IdleW0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04IdleW1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04IdleW2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04IdleW3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04IdleW4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04IdleW5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04PTNod0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04PTNod1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04PTNod2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04PTNod3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04PTNod4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04PTNod5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04PTNod6.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04PTNod7.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04PTNod8.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04PTNod9.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04PTShake0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04PTShake1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04PTShake2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04PTShake3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04PTShake4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04PTShake5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04PTShake6.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04PTShake7.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04PTShake8.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04PTShake9.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04PTTalk0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04PTTalk1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04PTTalk2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04PTTalk3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04PTTalk4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04PTTalk5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04PTTalk6.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04PTTalk7.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04PTTalk8.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04PTTalk9.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04WalkE0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04WalkE1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04WalkE2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04WalkE3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04WalkE4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04WalkE5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04WalkN0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04WalkN1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04WalkN2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04WalkN3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04WalkN4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04WalkN5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04WalkS0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04WalkS1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04WalkS2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04WalkS3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04WalkS4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04WalkS5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04WalkW0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04WalkW1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04WalkW2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04WalkW3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04WalkW4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/snapback04/snapback04WalkW5.png</filename>
                 </array>
             </struct>
         </map>

@@ -124,7 +124,7 @@
             <key>data</key>
             <struct type="DataFile">
                 <key>name</key>
-                <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFive.json</filename>
+                <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFive.json</filename>
             </struct>
         </map>
         <key>multiPackMode</key>
@@ -173,54 +173,54 @@
         </struct>
         <key>individualSpriteSettings</key>
         <map type="IndividualSpriteSettingsMap">
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveIdleE0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveIdleE1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveIdleE2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveIdleE3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveIdleE4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveIdleE5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveIdleN0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveIdleN1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveIdleN2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveIdleN3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveIdleN4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveIdleN5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveIdleS0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveIdleS1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveIdleS2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveIdleS3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveIdleS4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveIdleS5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveIdleW0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveIdleW1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveIdleW2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveIdleW3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveIdleW4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveIdleW5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveWalkE0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveWalkE1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveWalkE2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveWalkE3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveWalkE4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveWalkE5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveWalkN0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveWalkN1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveWalkN2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveWalkN3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveWalkN4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveWalkN5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveWalkS0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveWalkS1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveWalkS2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveWalkS3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveWalkS4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveWalkS5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveWalkW0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveWalkW1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveWalkW2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveWalkW3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveWalkW4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveWalkW5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveIdleE0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveIdleE1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveIdleE2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveIdleE3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveIdleE4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveIdleE5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveIdleN0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveIdleN1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveIdleN2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveIdleN3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveIdleN4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveIdleN5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveIdleS0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveIdleS1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveIdleS2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveIdleS3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveIdleS4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveIdleS5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveIdleW0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveIdleW1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveIdleW2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveIdleW3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveIdleW4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveIdleW5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveWalkE0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveWalkE1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveWalkE2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveWalkE3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveWalkE4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveWalkE5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveWalkN0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveWalkN1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveWalkN2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveWalkN3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveWalkN4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveWalkN5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveWalkS0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveWalkS1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveWalkS2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveWalkS3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveWalkS4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveWalkS5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveWalkW0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveWalkW1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveWalkW2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveWalkW3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveWalkW4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveWalkW5.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0,0</point_f>
@@ -235,36 +235,36 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFivePTNod0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFivePTNod1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFivePTNod2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFivePTNod3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFivePTNod4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFivePTNod5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFivePTNod6.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFivePTNod7.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFivePTNod8.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFivePTNod9.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFivePTShake0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFivePTShake1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFivePTShake2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFivePTShake3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFivePTShake4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFivePTShake5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFivePTShake6.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFivePTShake7.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFivePTShake8.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFivePTShake9.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFivePTTalk0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFivePTTalk1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFivePTTalk2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFivePTTalk3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFivePTTalk4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFivePTTalk5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFivePTTalk6.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFivePTTalk7.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFivePTTalk8.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFivePTTalk9.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFivePTNod0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFivePTNod1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFivePTNod2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFivePTNod3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFivePTNod4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFivePTNod5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFivePTNod6.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFivePTNod7.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFivePTNod8.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFivePTNod9.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFivePTShake0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFivePTShake1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFivePTShake2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFivePTShake3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFivePTShake4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFivePTShake5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFivePTShake6.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFivePTShake7.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFivePTShake8.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFivePTShake9.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFivePTTalk0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFivePTTalk1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFivePTTalk2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFivePTTalk3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFivePTTalk4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFivePTTalk5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFivePTTalk6.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFivePTTalk7.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFivePTTalk8.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFivePTTalk9.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0,0</point_f>
@@ -286,84 +286,84 @@
             <struct type="SpriteSheet">
                 <key>files</key>
                 <array>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveIdleE0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveIdleE1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveIdleE2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveIdleE3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveIdleE4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveIdleE5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveIdleN0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveIdleN1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveIdleN2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveIdleN3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveIdleN4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveIdleN5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveIdleS0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveIdleS1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveIdleS2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveIdleS3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveIdleS4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveIdleS5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveIdleW0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveIdleW1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveIdleW2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveIdleW3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveIdleW4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveIdleW5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFivePTNod0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFivePTNod1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFivePTNod2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFivePTNod3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFivePTNod4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFivePTNod5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFivePTNod6.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFivePTNod7.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFivePTNod8.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFivePTNod9.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFivePTShake0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFivePTShake1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFivePTShake2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFivePTShake3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFivePTShake4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFivePTShake5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFivePTShake6.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFivePTShake7.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFivePTShake8.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFivePTShake9.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFivePTTalk0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFivePTTalk1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFivePTTalk2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFivePTTalk3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFivePTTalk4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFivePTTalk5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFivePTTalk6.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFivePTTalk7.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFivePTTalk8.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFivePTTalk9.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveWalkE0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveWalkE1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveWalkE2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveWalkE3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveWalkE4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveWalkE5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveWalkN0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveWalkN1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveWalkN2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveWalkN3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveWalkN4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveWalkN5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveWalkS0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveWalkS1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveWalkS2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveWalkS3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveWalkS4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveWalkS5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveWalkW0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveWalkW1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveWalkW2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveWalkW3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveWalkW4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFive/npcFiveWalkW5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveIdleE0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveIdleE1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveIdleE2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveIdleE3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveIdleE4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveIdleE5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveIdleN0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveIdleN1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveIdleN2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveIdleN3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveIdleN4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveIdleN5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveIdleS0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveIdleS1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveIdleS2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveIdleS3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveIdleS4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveIdleS5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveIdleW0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveIdleW1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveIdleW2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveIdleW3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveIdleW4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveIdleW5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFivePTNod0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFivePTNod1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFivePTNod2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFivePTNod3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFivePTNod4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFivePTNod5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFivePTNod6.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFivePTNod7.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFivePTNod8.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFivePTNod9.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFivePTShake0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFivePTShake1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFivePTShake2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFivePTShake3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFivePTShake4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFivePTShake5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFivePTShake6.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFivePTShake7.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFivePTShake8.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFivePTShake9.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFivePTTalk0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFivePTTalk1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFivePTTalk2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFivePTTalk3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFivePTTalk4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFivePTTalk5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFivePTTalk6.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFivePTTalk7.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFivePTTalk8.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFivePTTalk9.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveWalkE0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveWalkE1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveWalkE2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveWalkE3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveWalkE4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveWalkE5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveWalkN0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveWalkN1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveWalkN2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveWalkN3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveWalkN4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveWalkN5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveWalkS0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveWalkS1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveWalkS2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveWalkS3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveWalkS4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveWalkS5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveWalkW0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveWalkW1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveWalkW2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveWalkW3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveWalkW4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFive/npcFiveWalkW5.png</filename>
                 </array>
             </struct>
         </map>
