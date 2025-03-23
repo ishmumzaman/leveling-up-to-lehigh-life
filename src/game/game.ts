@@ -1,7 +1,7 @@
 import { initializeAndLaunch, AccelerometerMode, JetLagGameConfig } from "../jetlag";
 import { loginBuilder } from "./multiplayer/loginSystem";
 
-// [mfs] I think some reorganization of the folders would be beneficial.  
+// [mfs] I think some reorganization of the folders would be beneficial.
 // - One folder should be for "builders" or "worlds".  I think that's MVPDemo
 //   right now, so maybe it just needs to be renamed.
 // - One folder should be for UI things that are used by many builders.  One
@@ -38,10 +38,21 @@ let imageNames = [
   "MVPDemo/bag.png", "MVPDemo/bags.png", "MVPDemo/back.png", "MVPDemo/cart.png",
   "characterSpriteSheets/Alyssa.json", "characterSpriteSheets/Emelia.json",
   "characterSpriteSheets/HughYan.json", "characterSpriteSheets/body03.json",
-  "characterSpriteSheets/eyes01.json", "characterSpriteSheets/hair04.json",
-  "characterSpriteSheets/hair12.json", "characterSpriteSheets/outfit01.json",
-  "characterSpriteSheets/outfit02.json", "characterSpriteSheets/outfit10.json",
-  "characterSpriteSheets/snapback04.json", "advancedErrorInfo.png",
+  "characterSpriteSheets/eyes01.json", "characterSpriteSheets/hair01.json",
+  "characterSpriteSheets/hair03.json", "characterSpriteSheets/hair04.json",
+  "characterSpriteSheets/hair09.json", "characterSpriteSheets/hair10.json",
+  "characterSpriteSheets/hair11.json", "characterSpriteSheets/hair05.json",
+  "characterSpriteSheets/hair12.json", "characterSpriteSheets/hair15.json",
+  "characterSpriteSheets/hair18.json", "characterSpriteSheets/hair19.json",
+  "characterSpriteSheets/hair22.json", "characterSpriteSheets/hair24.json",
+  "characterSpriteSheets/hair25.json",
+  "characterSpriteSheets/outfit01.json", "characterSpriteSheets/outfit02.json",
+  "characterSpriteSheets/outfit03.json", "characterSpriteSheets/outfit10.json",
+  "characterSpriteSheets/outfit04.json", "characterSpriteSheets/outfit07.json",
+  "characterSpriteSheets/outfit11.json", "characterSpriteSheets/outfit14.json",
+  "characterSpriteSheets/snapback04.json", "characterSpriteSheets/beanie01.json",
+  "characterSpriteSheets/beard01.json", "characterSpriteSheets/glasses01.json",
+  "advancedErrorInfo.png",
   "characterSpriteSheets/mainChar.json", "characterSpriteSheets/Professor.json",
   "characterSpriteSheets/Martina.json", "characterSpriteSheets/Jake.json",
   "characterSpriteSheets/Zay.json",

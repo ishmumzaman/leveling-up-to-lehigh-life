@@ -80,4 +80,4 @@ export { TimerService } from './jetlag/Services/Timer';
 export { b2Vec2, b2RevoluteJointDef } from "@box2d/core";
 export { FilterComponent } from "./jetlag/Components/FilterComponent";
 export { AlphaFilter, BlurFilter, NoiseFilter, Container, Sprite as PixiSprite } from "pixi.js";
-export { AsciiFilter, ColorReplaceFilter, GodrayFilter, OldFilmFilter, ColorOverlayFilter, GrayscaleFilter, EmbossFilter, HslAdjustmentFilter } from "pixi-filters";
+export { AsciiFilter, ColorReplaceFilter, MultiColorReplaceFilter, GodrayFilter, OldFilmFilter, ColorOverlayFilter, GrayscaleFilter, EmbossFilter, HslAdjustmentFilter } from "pixi-filters";

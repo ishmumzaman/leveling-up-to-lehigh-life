@@ -1,12 +1,12 @@
 // Reviewed on 2024-09-17
 
-import { AnimationSequence, AnimationState, ColorReplaceFilter, Container, PixiSprite, stage } from "../../jetlag";
+import { AnimationSequence, AnimationState, MultiColorReplaceFilter, Container, PixiSprite, stage } from "../../jetlag";
 
-/** 
+/**
  * A hex color is a hexadecimal number, e.g 0x000000 for black, 0xFFFFFF for white.
  * This type is specifically used for character customization related classes and operations.
  */
-export type HexColor = number;
+export type HexColor = number | number[] | Float32Array;
 
 /**
  * The different attributes that can be customized for a character
@@ -17,7 +17,7 @@ export enum Attribute {
 
 /**
  * ColorPallette main purpose is to give info to the character customization screen.
- * It has a simple color that represents the pallette for display, and an array of new 
+ * It has a simple color that represents the pallette for display, and an array of new
  * colors to apply to a character part texture.
  */
 export class ColorPallette {
@@ -31,7 +31,7 @@ export class ColorPallette {
 }
 
 /**
- * CharacterPart is a simple class that names a texture and describes an set of colors to be replaced 
+ * CharacterPart is a simple class that names a texture and describes an set of colors to be replaced
  * and the new colors to replace them with. We create characters by merging the TextureInfo for all of their parts.
  */
 export class CharacterPart {
@@ -47,7 +47,7 @@ export class CharacterPart {
 
   /**
    * Set the texture, original color, and new color of a CharacterPart
-   * 
+   *
    * @param texture     The name of the image file for this part of the
    *                    character without the file extension. e.g. "outfit01" or "hair02"
    * @param originalColor An array of color that will be replaced in the texture image
@@ -83,7 +83,7 @@ export class CharacterConfig {
 
 /**
  * Make a PixiSprite from a CharacterPart, and apply a color replace filter to it
- * 
+ *
  * @param part      The CharacterPart describing the image and color values
  * @param movement  Walk or Idle
  * @param direction W, E, S, N
@@ -92,16 +92,22 @@ export class CharacterConfig {
  */
 function makeSprite(part: CharacterPart, movement: string, direction: string, frame: number) {
   let sprite = new PixiSprite(stage.imageLibrary.getImageAsTexture(part.texture + movement + direction + frame + ".png").clone());
-  if (part.originalColor.length !== part.newColor.length) { throw ("original and pallette arrays are not the same length"); }
-  for (let i = 0; i < part.originalColor.length; i++) {
-    sprite.filters = [new ColorReplaceFilter(part.originalColor[i], part.newColor[i])];
+  if (part.originalColor.length > 0 && part.newColor.length > 0) {
+    if (part.originalColor.length !== part.newColor.length) { throw ("Original and pallette arrays are not the same length"); }
+
+    let replacements: [HexColor, HexColor][] = []
+    for (let i = 0; i < part.originalColor.length; i++) {
+      replacements.push([part.originalColor[i], part.newColor[i]]);
+    }
+
+    sprite.filters = [new MultiColorReplaceFilter(replacements, 0.001)];
   }
   return sprite;
 }
 
 /**
  * Custom version of makeSprite for *portraits* with emotes
- * 
+ *
  * @param part  The Characterpart describing the image and color values
  * @param emote Talk, Nod, or Shake
  * @param frame The frame number
@@ -109,9 +115,14 @@ function makeSprite(part: CharacterPart, movement: string, direction: string, fr
  */
 function makePortraitSprite(part: CharacterPart, emote: string, frame: number) {
   let sprite = new PixiSprite(stage.imageLibrary.getImageAsTexture(part.texture + "PT" + emote + frame + ".png").clone());
-  if (part.originalColor.length !== part.newColor.length) { throw ("Original and pallette arrays are not the same length"); }
-  for (let i = 0; i < part.originalColor.length; i++) {
-    sprite.filters = [new ColorReplaceFilter(part.originalColor[i], part.newColor[i])];
+  if (part.originalColor.length > 0 && part.newColor.length > 0) {
+    if (part.originalColor.length !== part.newColor.length) { throw ("Original and pallette arrays are not the same length"); }
+
+    let replacements: [HexColor, HexColor][] = []
+    for (let i = 0; i < part.originalColor.length; i++) {
+      replacements.push([part.originalColor[i], part.newColor[i]]);
+    }
+    sprite.filters = [new MultiColorReplaceFilter(replacements, 0.001)];
   }
   return sprite;
 }
@@ -138,7 +149,7 @@ export class CharacterAnimations {
 
   /**
    * Construct a CharacterAnimations object
-   * 
+   *
    * @param config  A CharacterConfig describing how to make the character
    */
   constructor(public config: CharacterConfig) {
@@ -176,7 +187,7 @@ export class CharacterAnimations {
             c.addChild(makeSprite(config.outfit, movement, direction, frame));
           if (config.hair.texture)
             c.addChild(makeSprite(config.hair, movement, direction, frame));
-          if (config.accessory.texture)
+          if (direction !== "N" && config.accessory.texture)
             c.addChild(makeSprite(config.accessory, movement, direction, frame));
 
           let texture = stage.renderer.pixi.renderer.generateTexture(c);
