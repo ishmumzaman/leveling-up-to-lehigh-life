@@ -21,19 +21,12 @@ import { loginBuilder } from "./multiplayer/loginSystem";
 //        things into sprite sheets.  That should wait, since we probably want
 //        to add tile map support first.
 let imageNames = [
-  "mainMenu/Images/menuButton.png", "mainMenu/Images/logo.png", "fatalError.png",
-  "overlay/inventory.png", "overlay/map.jpeg", "overlay/keyBackground.png",
-  "overlay/questMenu.png", "overlay/questMenu.json", "overlay/closeButton.png",
-  "locBg/mvpLocs.png", "locBg/mvpLocs.json", "locBg/hawksPath.png",
-  "locBg/fmlEntrance.png", "icon/iconSS.json", "icon/iconSS.png",
-  "icon/defaultImg.png", "empty.png", "statUI.png", "icon/questNoti.png",
-  "icon/hudElements.json", "icon/wasd.png", "icon/e.png", "icon/q.png",
-  "icon/qKeys.json", "icon/qKeys.png", "icon/indicator.png",
-  "icon/indicator.json", "gymMinigame/basketball.png",
-  "gymMinigame/basketballUsed.png", "MVPDemo/MandMTEMP.jpg", "dialogueBox.png",
-  "portraitBox.png", "characterName.png", "choiceBox.png", "optionChoice.png",
-  "9Sprites/woodOutline.json", "portraitDefaultPTTalk0.png",
-  "dialogueArrow.png", "MVPDemo/hawksNestTEMP.png", "MVPDemo/POSMachine.png",
+  "fatalError.png", "overlay/inventory.png", "overlay/keyBackground.png",
+  "overlay/questMenu.json", "overlay/closeButton.png",
+  "locBg/mvpLocs.json", "locBg/hawksPath.png", "icon/defaultImg.png",
+  "empty.png", "statUI.png", "icon/questNoti.png", "icon/hudElements.json",
+  "icon/wasd.png", "icon/e.png", "icon/qKeys.json",
+  "icon/indicator.json", "MVPDemo/POSMachine.png", "overlay/dialogueMenu.json",
   "MVPDemo/HandSwiper.png", "icon/foodIcon.json", "MVPDemo/shelf.png",
   "MVPDemo/bag.png", "MVPDemo/bags.png", "MVPDemo/back.png", "MVPDemo/cart.png",
   "characterSpriteSheets/Alyssa.json", "characterSpriteSheets/Emelia.json",
@@ -45,18 +38,17 @@ let imageNames = [
   "characterSpriteSheets/hair12.json", "characterSpriteSheets/hair15.json",
   "characterSpriteSheets/hair18.json", "characterSpriteSheets/hair19.json",
   "characterSpriteSheets/hair22.json", "characterSpriteSheets/hair24.json",
-  "characterSpriteSheets/hair25.json",
+  "characterSpriteSheets/hair25.json", "advancedErrorInfo.png",
   "characterSpriteSheets/outfit01.json", "characterSpriteSheets/outfit02.json",
   "characterSpriteSheets/outfit03.json", "characterSpriteSheets/outfit10.json",
   "characterSpriteSheets/outfit04.json", "characterSpriteSheets/outfit07.json",
   "characterSpriteSheets/outfit11.json", "characterSpriteSheets/outfit14.json",
   "characterSpriteSheets/snapback04.json", "characterSpriteSheets/beanie01.json",
   "characterSpriteSheets/beard01.json", "characterSpriteSheets/glasses01.json",
-  "advancedErrorInfo.png",
   "characterSpriteSheets/mainChar.json", "characterSpriteSheets/Professor.json",
   "characterSpriteSheets/Martina.json", "characterSpriteSheets/Jake.json",
+  "characterCustomization/characterCustomizationUI.json", "missingMPChar.png",
   "characterSpriteSheets/Zay.json",
-  "characterCustomization/characterCustomizationUI.json", "missingMPChar.png"
 ];
 
 /**
@@ -82,11 +74,7 @@ export class Config implements JetLagGameConfig {
     musicNames: [],
     soundNames: ["MVPDemo/hungry.mp3"],
     imageNames,
-    // [mfs] Are these still in use?
-    videoNames: ["mainMenu/Video/afternoonLoop.mp4",
-      "mainMenu/Video/midnightLoop.mp4",
-      "mainMenu/Video/morningLoop.mp4",
-      "mainMenu/Video/nightLoop.mp4"]
+    videoNames: [],
   }
 }
 

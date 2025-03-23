@@ -17,8 +17,8 @@ import { Builder } from "../multiplayer/loginSystem";
  *
  * @param level Which level should be displayed (unused)
  */
-export const openingScreenBuilder:Builder = function(_level: number) {
-  
+export const openingScreenBuilder: Builder = function (_level: number) {
+
   // Initialize the session storage
   //
   // [mfs]  This code assumes that it's possible to "go back" to the opening
@@ -80,7 +80,7 @@ export const openingScreenBuilder:Builder = function(_level: number) {
     });
     // 'q' image and text
     new Actor({
-      appearance: [new ImageSprite({ width: 0.9, height: 0.9, img: "icon/q.png" }),
+      appearance: [new ImageSprite({ width: 0.9, height: 0.9, img: "qKeys0.png" }),
       new TextSprite({ center: true, face: stage.config.textFont, color: "black", size: 27, offset: { dx: 4.5, dy: 0 } }, "Interact")],
       rigidBody: new BoxBody({ cx: 4.2, cy: 4.7, width: 0, height: 0 }, { scene: overlay }),
     });

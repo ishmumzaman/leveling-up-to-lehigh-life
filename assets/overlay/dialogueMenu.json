@@ -1,0 +1,60 @@
+{"frames": {
+
+"characterName.png":
+{
+	"frame": {"x":812,"y":229,"w":550,"h":78},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":550,"h":78},
+	"sourceSize": {"w":550,"h":78}
+},
+"choiceBox.png":
+{
+	"frame": {"x":1,"y":229,"w":619,"h":250},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":619,"h":250},
+	"sourceSize": {"w":619,"h":250}
+},
+"dialogueArrow.png":
+{
+	"frame": {"x":622,"y":424,"w":21,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":21,"h":24},
+	"sourceSize": {"w":21,"h":24}
+},
+"dialogueBox.png":
+{
+	"frame": {"x":1,"y":1,"w":1465,"h":226},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":1465,"h":226},
+	"sourceSize": {"w":1465,"h":226}
+},
+"optionChoice.png":
+{
+	"frame": {"x":812,"y":309,"w":559,"h":58},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":559,"h":58},
+	"sourceSize": {"w":559,"h":58}
+},
+"portraitBox.png":
+{
+	"frame": {"x":622,"y":229,"w":188,"h":193},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":188,"h":193},
+	"sourceSize": {"w":188,"h":193}
+}},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.1",
+	"image": "dialogueMenu.png",
+	"format": "RGBA8888",
+	"size": {"w":1467,"h":480},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:1784f62f970a5050720d214b600ede59:1090bbcac4277bd2b3a365d8acede8be:ff100b2167f4ed01675cbba1e3498090$"
+}
+}

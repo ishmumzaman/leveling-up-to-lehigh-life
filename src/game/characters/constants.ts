@@ -117,16 +117,6 @@ export const palletteIconData: Map<Attribute, Map<string, { originalColor: HexCo
             ]
         }],
         ["outfit10", {
-            // [anh] There are some weird color bugs that I have found, here are some color sets as examples:
-            // 1:   originalColor: [0x9DC98D, 0x090A0B] newColor: [0x090A0B, 0xFFFFFF]
-            // 2:   originalColor: [0x9DC98D]           newColor: [0x090A0B]
-            // 3:   originalColor: [0x090A0B]           newColor: [0xFFFFFF]
-            // 4:   originalColor: [0x9DC98D, 0x000000] newColor: [0x000000, 0xFFFFFF]
-            // - Notice how set 1 = set 2 + set 3. Putting in 1 and 3 shows the same result, meaning 1 is ignoring the
-            //   replacement effect you would get with set 2 within it.
-            // - Set 4 is similar to set 1, but with 0x000000 in place of 0x090A0B. The difference is the color filters now
-            //   do nothing when putting in set 4.
-            // There could be more bugs, but I have not found them yetC.
             originalColor: [0x9DC98D],
             pallettes: [
                 new ColorPallette("#000000", [0x090A0B]),
