@@ -7,6 +7,7 @@
 #name of the texture pack we bought) into individual sprites using ImageMagick.
 # These sprites can then be used in junction with pack_texture_char.sh to create
 # a more usable sprite sheet form for the game.
+# If you're looking to split and pack the sprites in one go, use make_textures_char.sh.
 
 # The sprite sheet is split into sets of <=6 sprites. Each set represents a
 # character doing an action and is renamed accordingly.

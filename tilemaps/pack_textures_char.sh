@@ -4,12 +4,14 @@
 # IMPORTANT: If your path to TexturePacker is different, please change the TP variable below.
 
 # This script looks at a folder containing already-split-up sprites and packs them into a workable spritesheet using TexturePacker.
-# split_textures_char.sh should be run before this script to create the individual sprites.
 # The output is a spritesheet and a JSON file that can be used in the game.
+
+# split_textures_char.sh should always be run before this script to create the individual sprites. In that case,
+# use the make_textures_char.sh script to run both scripts in sequence.
 
 usage() {
     echo "Usage: ./pack_textures_char.sh <sprite_name>"
-    echo "  <sprite_name> - Specify the name of the output sprite"
+    echo "  <sprite_name> - Specify the id name of the output sprite"
     echo "Example: ./pack_textures_char.sh \"body09\""
 }
 
@@ -20,14 +22,15 @@ usage() {
 
 # Set the correct TexturePacker path
 TP="/c/Program Files/CodeAndWeb/TexturePacker/bin/TexturePacker.exe"
-spritesname="$1"
 
-#TODO: Add an option to specify the template file as a command line argument
-template="../assets/TexurePacker/body03.tps"
+# The id name for the output sprites, this should follow the naming convention
+# found in the game's assets folder
+# e.g. "body09"
+spritesname="$1"
 
 # Ensure TexturePacker exists
 if [ ! -f "${TP}" ]; then
-    echo "Error: TexturePacker tool not installed in ${TP}"
+    echo "Error: TexturePacker tool not found at ${TP}"
     usage
     exit 1
 fi
