@@ -1,6 +1,22 @@
 #!/bin/bash
 
-# WARNING: This script is intended for use on Windows Git Bash and with TexturePacker installed.
+# IMPORTANT: This script is intended for use on Windows Git Bash and with TexturePacker installed at the path below.
+# IMPORTANT: If your path to TexturePacker is different, please change the TP variable below.
+
+# This script looks at a folder containing already-split-up sprites and packs them into a workable spritesheet using TexturePacker.
+# split_textures_char.sh should be run before this script to create the individual sprites.
+# The output is a spritesheet and a JSON file that can be used in the game.
+
+usage() {
+    echo "Usage: ./pack_textures_char.sh <sprite_name>"
+    echo "  <sprite_name> - Specify the name of the output sprite"
+    echo "Example: ./pack_textures_char.sh \"body09\""
+}
+
+[ -z "$1" ] || [[ " $@ " =~ " -h " ]] && {
+    usage
+    exit 1
+}
 
 # Set the correct TexturePacker path
 TP="/c/Program Files/CodeAndWeb/TexturePacker/bin/TexturePacker.exe"
@@ -12,27 +28,28 @@ template="../assets/TexurePacker/body03.tps"
 # Ensure TexturePacker exists
 if [ ! -f "${TP}" ]; then
     echo "Error: TexturePacker tool not installed in ${TP}"
+    usage
     exit 1
 fi
 
 # Ensure a sprite name is provided
 if [ -z "$spritesname" ]; then
     echo "Error: No sprite name provided."
-    echo "Usage: ./build_sprites.sh <sprite_name>"
+    usage
     exit 1
 fi
 
-# Run TexturePacker command with correct arguments
+# Do some more error checking
 if [ ! -d "./assets/CharacterSpriteSheet/${spritesname}" ]; then
     echo "Error: Folder containing split-up sprites: ./assets/CharacterSpriteSheet/${spritesname} not found"
     exit 1
 elif [ -f "./assets/CharacterSpriteSheet/${spritesname}/${spritesname}.png" ]; then
-    echo -e "Error: There is a spritesheet in your sprites. Please delete the spritesheet before running this script again.\n"
+    echo -e "Error: There seems to be a spritesheet in your sprites. Please delete the spritesheet before running this script again.\n"
     exit 1
 else
-    echo -e "Packing spritesheets for a new sprite body type\n"
+    echo -e "Packing into spritesheet...\n"
 
-    # Run TexturePacker with necessary arguments
+    # Run TexturePacker
     "$TP" --max-size 512 \
         --format "pixijs4" \
         "./assets/CharacterSpriteSheet/${spritesname}" \
@@ -59,9 +76,9 @@ else
 
     echo -e "\nPacking completed!\n"
     echo -e "Output files:"
-    echo -e "\tSprite sheets at: "./assets/CharacterSpriteSheet/${spritesname}/${spritesname}.png", "../assets/characterSpriteSheets/${spritesname}.png""
-    echo -e "\tJSON data at: "./assets/CharacterSpriteSheet/${spritesname}/${spritesname}.json", "../assets/characterSpriteSheets/${spritesname}.json""
-    echo -e "\tTexturePacker template at: "../assets/TexurePacker/${spritesname}.tps""
+    echo -e "Sprite sheets at:            "../assets/characterSpriteSheets/${spritesname}.png""
+    echo -e "JSON data at:                "../assets/characterSpriteSheets/${spritesname}.json""
+    echo -e "TexturePacker template at:   "../assets/TexurePacker/${spritesname}.tps""
 
     exit 0
 fi

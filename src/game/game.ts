@@ -67,7 +67,7 @@ export class Config implements JetLagGameConfig {
   storageKey = "com.github.YassCoding.LUTLL";
   hitBoxes = true;
   textFont = "kongtext";
-  minuteRate = 60;
+  minuteRate = 1;
 
   resources = {
     prefix: "./assets/",
