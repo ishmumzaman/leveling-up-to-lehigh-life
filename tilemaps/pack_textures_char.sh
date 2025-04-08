@@ -82,6 +82,6 @@ else
     echo -e "Sprite sheets at:            "../assets/characterSpriteSheets/${spritesname}.png""
     echo -e "JSON data at:                "../assets/characterSpriteSheets/${spritesname}.json""
     echo -e "TexturePacker template at:   "../assets/TexurePacker/${spritesname}.tps""
-
-    exit 0
 fi
+
+exit 0

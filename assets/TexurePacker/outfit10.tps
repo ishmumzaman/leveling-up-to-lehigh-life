@@ -4,7 +4,7 @@
         <key>fileFormatVersion</key>
         <int>6</int>
         <key>texturePackerVersion</key>
-        <string>7.4.0</string>
+        <string>7.6.0</string>
         <key>autoSDSettings</key>
         <array>
             <struct type="AutoSDSettings">
@@ -124,7 +124,7 @@
             <key>data</key>
             <struct type="DataFile">
                 <key>name</key>
-                <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10.json</filename>
+                <filename>out.json</filename>
             </struct>
         </map>
         <key>multiPackMode</key>
@@ -172,124 +172,14 @@
             <false/>
         </struct>
         <key>individualSpriteSettings</key>
-        <map type="IndividualSpriteSettingsMap">
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10IdleE0.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10IdleE1.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10IdleE2.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10IdleE3.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10IdleE4.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10IdleE5.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10IdleN0.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10IdleN1.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10IdleN2.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10IdleN3.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10IdleN4.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10IdleN5.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10IdleS0.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10IdleS1.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10IdleS2.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10IdleS3.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10IdleS4.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10IdleS5.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10IdleW0.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10IdleW1.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10IdleW2.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10IdleW3.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10IdleW4.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10IdleW5.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10WalkE0.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10WalkE1.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10WalkE2.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10WalkE3.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10WalkE4.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10WalkE5.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10WalkN0.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10WalkN1.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10WalkN2.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10WalkN3.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10WalkN4.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10WalkN5.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10WalkS0.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10WalkS1.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10WalkS2.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10WalkS3.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10WalkS4.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10WalkS5.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10WalkW0.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10WalkW1.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10WalkW2.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10WalkW3.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10WalkW4.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10WalkW5.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0,0</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>12,24,24,48</rect>
-                <key>scale9Paddings</key>
-                <rect>12,24,24,48</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-        </map>
+        <map type="IndividualSpriteSettingsMap"/>
         <key>fileLists</key>
         <map type="SpriteSheetMap">
             <key>default</key>
             <struct type="SpriteSheet">
                 <key>files</key>
                 <array>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10IdleE0.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10IdleE1.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10IdleE2.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10IdleE3.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10IdleE4.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10IdleE5.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10IdleN0.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10IdleN1.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10IdleN2.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10IdleN3.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10IdleN4.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10IdleN5.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10IdleS0.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10IdleS1.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10IdleS2.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10IdleS3.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10IdleS4.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10IdleS5.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10IdleW0.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10IdleW1.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10IdleW2.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10IdleW3.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10IdleW4.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10IdleW5.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10WalkE0.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10WalkE1.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10WalkE2.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10WalkE3.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10WalkE4.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10WalkE5.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10WalkN0.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10WalkN1.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10WalkN2.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10WalkN3.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10WalkN4.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10WalkN5.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10WalkS0.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10WalkS1.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10WalkS2.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10WalkS3.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10WalkS4.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10WalkS5.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10WalkW0.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10WalkW1.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10WalkW2.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10WalkW3.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10WalkW4.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit10/outfit10WalkW5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/outfit10</filename>
                 </array>
             </struct>
         </map>

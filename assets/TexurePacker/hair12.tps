@@ -4,7 +4,7 @@
         <key>fileFormatVersion</key>
         <int>6</int>
         <key>texturePackerVersion</key>
-        <string>7.4.0</string>
+        <string>7.6.0</string>
         <key>autoSDSettings</key>
         <array>
             <struct type="AutoSDSettings">
@@ -124,7 +124,7 @@
             <key>data</key>
             <struct type="DataFile">
                 <key>name</key>
-                <filename>../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12.json</filename>
+                <filename>out.json</filename>
             </struct>
         </map>
         <key>multiPackMode</key>
@@ -172,198 +172,14 @@
             <false/>
         </struct>
         <key>individualSpriteSettings</key>
-        <map type="IndividualSpriteSettingsMap">
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12IdleE0.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12IdleE1.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12IdleE2.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12IdleE3.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12IdleE4.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12IdleE5.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12IdleN0.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12IdleN1.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12IdleN2.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12IdleN3.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12IdleN4.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12IdleN5.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12IdleS0.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12IdleS1.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12IdleS2.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12IdleS3.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12IdleS4.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12IdleS5.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12IdleW0.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12IdleW1.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12IdleW2.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12IdleW3.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12IdleW4.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12IdleW5.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12WalkE0.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12WalkE1.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12WalkE2.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12WalkE3.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12WalkE4.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12WalkE5.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12WalkN0.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12WalkN1.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12WalkN2.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12WalkN3.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12WalkN4.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12WalkN5.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12WalkS0.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12WalkS1.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12WalkS2.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12WalkS3.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12WalkS4.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12WalkS5.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12WalkW0.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12WalkW1.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12WalkW2.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12WalkW3.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12WalkW4.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12WalkW5.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0,0</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>12,24,24,48</rect>
-                <key>scale9Paddings</key>
-                <rect>12,24,24,48</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12PTNod0.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12PTNod1.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12PTNod2.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12PTNod3.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12PTNod4.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12PTNod5.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12PTNod6.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12PTNod7.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12PTNod8.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12PTNod9.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12PTShake0.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12PTShake1.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12PTShake2.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12PTShake3.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12PTShake4.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12PTShake5.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12PTShake6.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12PTShake7.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12PTShake8.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12PTShake9.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12PTTalk0.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12PTTalk1.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12PTTalk2.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12PTTalk3.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12PTTalk4.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12PTTalk5.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12PTTalk6.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12PTTalk7.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12PTTalk8.png</key>
-            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12PTTalk9.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0,0</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>24,24,48,48</rect>
-                <key>scale9Paddings</key>
-                <rect>24,24,48,48</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-        </map>
+        <map type="IndividualSpriteSettingsMap"/>
         <key>fileLists</key>
         <map type="SpriteSheetMap">
             <key>default</key>
             <struct type="SpriteSheet">
                 <key>files</key>
                 <array>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12IdleE0.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12IdleE1.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12IdleE2.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12IdleE3.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12IdleE4.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12IdleE5.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12IdleN0.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12IdleN1.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12IdleN2.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12IdleN3.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12IdleN4.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12IdleN5.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12IdleS0.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12IdleS1.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12IdleS2.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12IdleS3.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12IdleS4.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12IdleS5.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12IdleW0.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12IdleW1.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12IdleW2.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12IdleW3.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12IdleW4.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12IdleW5.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12PTNod0.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12PTNod1.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12PTNod2.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12PTNod3.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12PTNod4.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12PTNod5.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12PTNod6.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12PTNod7.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12PTNod8.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12PTNod9.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12PTShake0.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12PTShake1.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12PTShake2.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12PTShake3.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12PTShake4.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12PTShake5.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12PTShake6.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12PTShake7.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12PTShake8.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12PTShake9.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12PTTalk0.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12PTTalk1.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12PTTalk2.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12PTTalk3.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12PTTalk4.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12PTTalk5.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12PTTalk6.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12PTTalk7.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12PTTalk8.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12PTTalk9.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12WalkE0.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12WalkE1.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12WalkE2.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12WalkE3.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12WalkE4.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12WalkE5.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12WalkN0.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12WalkN1.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12WalkN2.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12WalkN3.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12WalkN4.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12WalkN5.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12WalkS0.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12WalkS1.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12WalkS2.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12WalkS3.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12WalkS4.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12WalkS5.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12WalkW0.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12WalkW1.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12WalkW2.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12WalkW3.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12WalkW4.png</filename>
-                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair12/hair12WalkW5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/hair12</filename>
                 </array>
             </struct>
         </map>
