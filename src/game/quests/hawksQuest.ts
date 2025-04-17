@@ -27,7 +27,7 @@ import { Places } from "../places/places";
 /**
  * HawksQuest is a quest that involves going to Hawks Nest and getting a lot of
  * food.
- * 
+ *
  * [mfs] The last step of updating the quest UI never really happens...
  */
 export class HawksQuest extends Quest {
@@ -71,7 +71,7 @@ export class HawksQuest extends Quest {
       // If we're at progress 0, Jake's job is to kick off the quest
       if (this.progress == 0) {
         // Turn off the HUD buttons
-        lInfo.hud?.toggleButtons(false);
+        lInfo.hud?.toggleHUDButtons(false);
         lInfo.hud?.toggleStats(false);
         // Play the stomach grumbling sound effect
         stage.musicLibrary.getSound("MVPDemo/hungry.mp3").play();
@@ -82,7 +82,7 @@ export class HawksQuest extends Quest {
         // When the conversation is over, reset the UI and move the quest
         // forward
         driver.endFunc = () => {
-          lInfo.hud?.toggleButtons(true);
+          lInfo.hud?.toggleHUDButtons(true);
           lInfo.hud?.toggleQuestNotification(true);
           this.progress = 1;
           this.start();
@@ -192,13 +192,13 @@ export class HawksQuest extends Quest {
 
       // Set up the NPC's interaction
       (npc.extra as FollowingNpcBehavior).setNPCInteraction(() => {
-        // If the inventory is full when interacting queue the full dialogue, 
+        // If the inventory is full when interacting queue the full dialogue,
         if (sStore.inventories.player.isFull()) {
           fullConvoDriver.endFunc = endDialogue;
           (npc.extra as FollowingNpcBehavior).setNextDialogue(fullConvoDriver);
           this.helpingNpcs.push(npc);
         }
-        // Otherwise tell the player they can't help. 
+        // Otherwise tell the player they can't help.
         else {
           (npc.extra as FollowingNpcBehavior).setNextDialogue(notfullConvoDriver)
         }
@@ -207,7 +207,7 @@ export class HawksQuest extends Quest {
     }
   }
 
-  /** 
+  /**
    * When a place is made, this updates / reconfigures it
    *
    * [mfs]  We aren't using any levels, anywhere.  Is that going to change, or
@@ -333,7 +333,7 @@ export class HawksQuest extends Quest {
       // In this stage, the character will swipe their Lehigh card at the
       // register and freak out at their swipes. This is a transition stage.
       else if (this.progress == 2) {
-        lInfo.hud?.toggleButtons(false);
+        lInfo.hud?.toggleHUDButtons(false);
         // After finishing dialogue cutscene, restart player controls and teleport the player to stage 3 of hawk's
         let endDialogue = () => {
           sStore.locX = lInfo.mainCharacter!.rigidBody.getCenter().x
@@ -427,7 +427,7 @@ export class HawksQuest extends Quest {
         new Spawner(15.4, 8.2, 3.3, 4.5, "empty.png", () => { renderShelfInventory(3) }); // Left shelf
         new Spawner(22.9, 8.2, 3.3, 4.5, "empty.png", () => { renderShelfInventory(4) }); // Right Shelf
 
-        // When your inventory is full, tell the player to go talk to an NPC 
+        // When your inventory is full, tell the player to go talk to an NPC
         sStore.inventories.player.onFull = () => {
           let invenFull = new InspectSystem(Inspectable.HAWK_INVENTORY_FULL);
           invenFull.openUi();

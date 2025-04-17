@@ -1,10 +1,12 @@
 // Reviewed on 2024-09-18
 
 import { TextSprite, BoxBody, Actor, stage, ImageSprite, TimedEvent } from "../../jetlag";
-import { renderPlayerInventory } from "../inventory/ui";
+import { PlayerInventoryUI } from "../inventory/ui";
 import { renderQuestMenu } from "../quests/ui";
 import { SessionInfo } from "../storage/session";
 import { DialogueUI } from "./dialogue";
+
+export type HUDModal = "none" | "inventory" | "quest" | "dialogue";
 
 /**
  * The Heads-Up Display (HUD) consists of two buttons (for opening the inventory
@@ -12,11 +14,16 @@ import { DialogueUI } from "./dialogue";
  * character is.
  */
 export class HUD {
+  private modal: HUDModal = "none";
+
   /** The clock for the game */
   public clock: Actor;
 
   /** The health and wellness statistics for the player */
   public stats: Actor;
+
+  /** Player's inventory UI */
+  readonly inventory: PlayerInventoryUI;
 
   /** The button that leads to the inventory being shown */
   public inventoryButton: Actor;
@@ -41,8 +48,8 @@ export class HUD {
   /** Show or hide the Stats */
   public toggleStats(value: boolean) { this.stats.enabled = value; }
 
-  /** Show or hide the buttons */
-  public toggleButtons(value: boolean) {
+  /** Show or hide the different buttons */
+  public toggleHUDButtons(value: boolean) {
     this.inventoryButton.enabled = value;
     this.questButton.enabled = value;
     if (!value)
@@ -63,14 +70,16 @@ export class HUD {
 
     this.dialogue = new DialogueUI();
 
-    // Make the inventory button
+    this.inventory = new PlayerInventoryUI();
+
+    // Draw the toggle inventory button
     this.inventoryButton = new Actor({
       appearance: [new ImageSprite({ width: 1, height: 1, img: "hudButton.png" }), new ImageSprite({ width: 0.7, height: 0.7, img: "bag.png" }),],
       rigidBody: new BoxBody({ cx: 1, cy: 1, width: 1, height: 1 }, { scene: stage.hud }),
-      gestures: { tap: () => { renderPlayerInventory(); return true; } }
+      gestures: { tap: () => { this.inventory.toggle(); return true; } }
     });
 
-    // Make the quest button
+    // Draw the quest button
     this.questButton = new Actor({
       appearance: [new ImageSprite({ width: 1, height: 1, img: "hudButton.png" }), new ImageSprite({ width: 0.7, height: 0.7, img: "quest.png" })],
       rigidBody: new BoxBody({ cx: 1, cy: 2, width: 1, height: 1 }, { scene: stage.hud }),

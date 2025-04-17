@@ -19,7 +19,7 @@ export enum ItemType {
 export class Item {
   /**
    * Where the item is in an inventory (if it is in an inventory), or {row:-1,
-   * col:-1} 
+   * col:-1}
    */
   readonly location = { row: -1, col: -1 };
 
@@ -65,11 +65,11 @@ export class ItemExtra extends Extra {
  * @param toolTipEnabled - Whether the tooltip is enabled.
  */
 // [mfs] TODO: Switch from width/height to a radius, since they're the same?
-export function itemRender(item: Item, width: number, height: number, cx: number, cy: number, scene?: Scene, toolTipEnabled: boolean = false) {
+export function itemRender(item: Item, width: number, height: number, cx: number, cy: number, toolTipEnabled: boolean = false) {
   // Create an actor as a circle
   let actor = new Actor({
     appearance: new ImageSprite({ width, height, img: item.img }),
-    rigidBody: new CircleBody({ cx, cy, radius: width / 2 }, { scene, elasticity: 1 }),
+    rigidBody: new CircleBody({ cx, cy, radius: width / 2 }, { scene: stage.hud, elasticity: 1 }),
     movement: new ManualMovement(),
     role: new Obstacle(),
     extra: new ItemExtra(item)
@@ -92,7 +92,7 @@ export function itemRender(item: Item, width: number, height: number, cx: number
     let boxYFix = cy - 0.3;
 
     let toolTipActor = new Actor({
-      rigidBody: new BoxBody({ cx: boxXFix, cy: boxYFix, width: boxWidth, height: boxHeight }, { scene }),
+      rigidBody: new BoxBody({ cx: boxXFix, cy: boxYFix, width: boxWidth, height: boxHeight }, { scene: stage.hud }),
       appearance: [
         new FilledBox({ width: boxWidth, height: boxHeight, fillColor: "#a8a198", lineWidth: 0.04, lineColor: "#6c5454", z: 2, offset: { dx: 0, dy: -0.65 + boxHeight / 2 } }),
         new TextSprite({ center: false, face: stage.config.textFont, color: "#000000", size: 14, z: 2, offset: { dx: -1.7, dy: -0.60 } }, newName),
@@ -100,7 +100,7 @@ export function itemRender(item: Item, width: number, height: number, cx: number
       ]
     })
 
-    // Initially disable tooltips and the player 
+    // Initially disable tooltips and the player
     // is not holding an item with drag feature
     let holdingItem = false;
     toolTipActor.enabled = false;

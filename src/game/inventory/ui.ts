@@ -19,7 +19,7 @@ import { fillShelvesPartial, Inventory } from "./inventory";
 class InventoryConfig {
   /**
    * Construct an InventoryConfig
-   * 
+   *
    * @param xFix      X coordinate of top left
    * @param yFix      Y coordinate of top left
    * @param dx        X distance between items
@@ -31,86 +31,120 @@ class InventoryConfig {
 }
 
 /**
- * Create an overlay to show the player's inventory 
+ * Create an overlay to show the player's inventory
  *
  * [mfs] Do we really want an *overlay*?  Overlays stop the clock, which is
  *       probably not desirable.
  */
-export function renderPlayerInventory() {
-  let sStore = stage.storage.getSession("sStore") as SessionInfo;
-  let lInfo = stage.storage.getLevel("levelInfo") as LevelInfo;
+export class PlayerInventoryUI {
 
-  // If the inventory isn't showing, and there's no overlay, show the inventory
-  if (!lInfo.playerInvState && !lInfo.overlayShowing) {
-    // For every Item in the inventory, we put its actor here, so we can
-    // un-render and re-render them as needed
-    let itemList: Actor[] = [];
+  private inventory: Inventory;
 
-    // Immediately install the overlay, to pause the game
-    stage.requestOverlay((overlay, screenshot) => {
-      // Track that the inventory is showing
-      lInfo.playerInvState = true;
+  private config: InventoryConfig = new InventoryConfig(5.15, 4.2, 1.139, 1.1, .7, .7);;
 
-      // Draw the screenshot, put a fade filter on it to blur it a bit
-      screenshot!.z = -1;
-      new Actor({ appearance: screenshot!, rigidBody: new BoxBody({ cx: 8, cy: 4.5, width: 0, height: 0 }, { scene: overlay }), });
-      let fadeFilter = new FadingBlurFilter(0, 5, true);
-      fadeFilter.toggled = true;
-      stage.renderer.addZFilter(fadeFilter, -1, SpriteLocation.OVERLAY);
+  private inventoryBox: Actor;
 
-      // Image for the main inventory UI
-      new Actor({
-        appearance: new ImageSprite({ width: 8, height: 4, img: "overlay/inventory.png" }),
-        rigidBody: new BoxBody({ cx: 8, cy: 4.5, width: 16, height: 9 }, { scene: overlay }),
-      });
+  /* For every Item in the inventory, we put its actor here, so we can
+    un-render and re-render them as needed */
+  private items: Actor[] = [];
 
-      // Button for closing the inventory
-      new Actor({
-        appearance: new ImageSprite({ width: 0.34, height: 0.34, img: "overlay/closeButton.png", z: 2 }),
-        rigidBody: new CircleBody({ cx: 4.6, cy: 3, radius: .27 }, { scene: overlay }),
-        gestures: { tap: () => { stage.clearOverlay(); lInfo.playerInvState = false; fadeFilter.toggled = false; return true; } }
-      });
+  private showing = false;
 
-      // Now we can render the inventory
-      let config = new InventoryConfig(5.15, 4.2, 1.139, 1.1, .7, .7);
-      rerenderInventory(itemList, overlay, sStore.inventories.player, config);
+  private closeButton: Actor;
 
-      // Set up a drag gesture for moving things within the inventory
-      //
-      // NB:  This takes the coords of the drop, and the inventory index of the
-      //      dragged item
-      itemDragGestures((x: number, y: number, fromLoc: { row: number, col: number }) => {
-        // Find the inventory slot where we're doing a drop, make sure it's not
-        // the initial actor
-        for (let actor of stage.overlay!.physics!.actorsAt({ x, y })) {
-          if ((actor.extra instanceof ItemExtra) && fromLoc != actor.extra.item.location) {
-            // NB: Must make copies of both locations
-            let from = { ...fromLoc };
-            let to = { ...actor.extra.item.location };
-            let inv = sStore.inventories.player;
-            let tempSwap = inv.items[to.row * inv.cols + to.col];
-            inv.removeAt({ row: to.row, col: to.col });
-            inv.addItem(inv.items[from.row * inv.cols + from.col], { row: to.row, col: to.col });
-            inv.removeAt({ row: from.row, col: from.col });
-            inv.addItem(tempSwap, { row: from.row, col: from.col });
-            break;
-          }
-        }
-        // NB:  Even a bad drop needs redrawing
-        rerenderInventory(itemList, overlay, sStore.inventories.player, config);
-      });
-    }, true);
+  private fadeFilter: FadingBlurFilter;
+
+  constructor() {
+    // Get the inventory from the session storage
+    let sStore = stage.storage.getSession("sStore") as SessionInfo;
+    this.inventory = sStore.inventories.player;
+
+    // Image for the main inventory UI
+    this.inventoryBox = new Actor({
+      appearance: new ImageSprite({ width: 8, height: 4, img: "overlay/inventory.png" }),
+      rigidBody: new BoxBody({ cx: 8, cy: 4.5, width: 16, height: 9 }, { scene: stage.hud }),
+    });
+
+    // Button for closing the inventory
+    this.closeButton = new Actor({
+      appearance: new ImageSprite({ width: 0.34, height: 0.34, img: "overlay/closeButton.png", z: 2 }),
+      rigidBody: new CircleBody({ cx: 4.6, cy: 3, radius: .27 }, { scene: stage.hud }),
+      gestures: { tap: () => { this.close(); return true; } }
+    });
+
+    // Initialize the blur filter to be used later
+    this.fadeFilter = new FadingBlurFilter(0, 5, false);
+    stage.renderer.addFilter(this.fadeFilter, SpriteLocation.WORLD);
+
+    // Hide everything for now
+    this.inventoryBox.enabled = false;
+    this.closeButton.enabled = false;
+
+    for (let i of this.items)
+      i.enabled = false;
   }
 
-  // If the player presses E again, instead of rendering the inventory, turn it off. 
-  else if (lInfo.playerInvState && !lInfo.overlayShowing) {
-    stage.clearOverlay();
-    lInfo.playerInvState = false;
+  toggle() {
+    let sStore = stage.storage.getSession("sStore") as SessionInfo;
+    let lInfo = stage.storage.getLevel("levelInfo") as LevelInfo
+
+    // Don't open the inventory if there's an overlay
+    if (lInfo.overlayShowing) return;
+
+    // If the inventory isn't showing, show the inventory
+    if (!this.showing) this.open()
+
+    // If the inventory is showing, turn it off.
+    else if (this.showing) this.close();
+  }
+
+  private open() {
+    this.showing = true;
+    this.inventoryBox.enabled = true;
+    this.closeButton.enabled = true;
+    stage.renderer.addZFilter(this.fadeFilter, 1, SpriteLocation.WORLD);
+
+    // Now we can render the inventory
+    rerenderInventory(this.items, this.inventory, this.config);
+
+    // Set up a drag gesture for moving things within the inventory
+    //
+    // NB:  This takes the coords of the drop, and the inventory index of the
+    //      dragged item
+    itemDragGestures((x: number, y: number, fromLoc: { row: number, col: number }) => {
+      // Find the inventory slot where we're doing a drop, make sure it's not
+      // the initial actor
+      for (let actor of stage.overlay!.physics!.actorsAt({ x, y })) {
+        if ((actor.extra instanceof ItemExtra) && fromLoc != actor.extra.item.location) {
+          // NB: Must make copies of both locations
+          let from = { ...fromLoc };
+          let to = { ...actor.extra.item.location };
+          let inv = this.inventory;
+          let tempSwap = inv.items[to.row * inv.cols + to.col];
+          inv.removeAt({ row: to.row, col: to.col });
+          inv.addItem(inv.items[from.row * inv.cols + from.col], { row: to.row, col: to.col });
+          inv.removeAt({ row: from.row, col: from.col });
+          inv.addItem(tempSwap, { row: from.row, col: from.col });
+          break;
+        }
+      }
+      // NB:  Even a bad drop needs redrawing
+      rerenderInventory(this.items, this.inventory, this.config);
+    });
+  }
+
+  private close() {
+    this.showing = false;
+    this.fadeFilter.toggled = false;
+    this.inventoryBox.enabled = false;
+    this.closeButton.enabled = false;
+    while (this.items.length > 0)
+      this.items.shift()?.remove();
   }
 }
 
 /** Render an inventory (clears and re-renders when needed) */
-function rerenderInventory(itemList: Actor[], overlay: Scene, inv: Inventory, cfg: InventoryConfig) {
+function rerenderInventory(itemList: Actor[], inv: Inventory, cfg: InventoryConfig) {
   // Remove all of the inventory items' actors
   while (itemList.length > 0)
     itemList.shift()?.remove();
@@ -118,7 +152,7 @@ function rerenderInventory(itemList: Actor[], overlay: Scene, inv: Inventory, cf
   // Render each inventory item and its tooltip, and put them into itemList
   for (let i = 0; i < inv.rows; i++) {
     for (let j = 0; j < inv.cols; j++) {
-      let itemActors = itemRender(inv.items[i * inv.cols + j], cfg.itemWidth, cfg.itemHeight, cfg.xFix + (cfg.dx * j), cfg.yFix + (cfg.dy * i), overlay, true)
+      let itemActors = itemRender(inv.items[i * inv.cols + j], cfg.itemWidth, cfg.itemHeight, cfg.xFix + (cfg.dx * j), cfg.yFix + (cfg.dy * i), true)
       itemList.push(itemActors.actor);
       if (itemActors.toolTipActor) itemList.push(itemActors.toolTipActor);
     }
@@ -181,7 +215,7 @@ export function renderShelfInventory(shelfChoice: number) {
 
       // Now we can render the inventory
       let config = new InventoryConfig(3.5, 1, 1.8, 2, 1.3, 1.3);
-      rerenderInventory(itemList, overlay, shelfInv, config);
+      rerenderInventory(itemList, shelfInv, config);
       itemDragGestures((x: number, y: number, fromLoc: { row: number, col: number }) => {
         for (let actor of stage.overlay!.physics!.actorsAt({ x: x, y: y })) {
           // Handle swapping within the shelf, making sure not to swap with self
@@ -220,7 +254,7 @@ export function renderShelfInventory(shelfChoice: number) {
             }
           }
         }
-        rerenderInventory(itemList, overlay, shelfInv, config);
+        rerenderInventory(itemList, shelfInv, config);
       });
     }, true);
   }
@@ -234,7 +268,7 @@ export function renderShelfInventory(shelfChoice: number) {
 
 /**
  * Set up a HUD region for dragging items
- * 
+ *
  * @param onDrop Code to run when the drag ends
  */
 function itemDragGestures(onDrop: (x: number, y: number, dropLoc: { row: number, col: number }) => void) {
