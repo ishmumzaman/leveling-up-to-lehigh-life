@@ -31,7 +31,7 @@ class InventoryConfig {
 }
 
 /**
- * Create an overlay to show the player's inventory
+ * Create a HUD screen to show the player's inventory, acts like a singleton class
  *
  * [mfs] Do we really want an *overlay*?  Overlays stop the clock, which is
  *       probably not desirable.
@@ -42,7 +42,7 @@ export class PlayerInventoryUI {
 
   private config: InventoryConfig = new InventoryConfig(5.15, 4.2, 1.139, 1.1, .7, .7);;
 
-  private inventoryBox: Actor;
+  private components: Actor[] = [];
 
   /* For every Item in the inventory, we put its actor here, so we can
     un-render and re-render them as needed */
@@ -50,46 +50,32 @@ export class PlayerInventoryUI {
 
   private showing = false;
 
-  private closeButton: Actor;
-
-  private fadeFilter: FadingBlurFilter;
-
   constructor() {
     // Get the inventory from the session storage
     let sStore = stage.storage.getSession("sStore") as SessionInfo;
+    let lInfo = stage.storage.getLevel("levelInfo") as LevelInfo;
+
     this.inventory = sStore.inventories.player;
 
     // Image for the main inventory UI
-    this.inventoryBox = new Actor({
+    this.components.push(new Actor({
       appearance: new ImageSprite({ width: 8, height: 4, img: "overlay/inventory.png" }),
       rigidBody: new BoxBody({ cx: 8, cy: 4.5, width: 16, height: 9 }, { scene: stage.hud }),
-    });
+    }));
 
-    // Button for closing the inventory
-    this.closeButton = new Actor({
+    // Button for closing the inventory, must go through the HUD
+    this.components.push(new Actor({
       appearance: new ImageSprite({ width: 0.34, height: 0.34, img: "overlay/closeButton.png", z: 2 }),
       rigidBody: new CircleBody({ cx: 4.6, cy: 3, radius: .27 }, { scene: stage.hud }),
-      gestures: { tap: () => { this.close(); return true; } }
-    });
-
-    // Initialize the blur filter to be used later
-    this.fadeFilter = new FadingBlurFilter(0, 5, false);
-    stage.renderer.addFilter(this.fadeFilter, SpriteLocation.WORLD);
+      gestures: { tap: () => { lInfo.hud!.toggleModal('inventory'); return true; } }
+    }));
 
     // Hide everything for now
-    this.inventoryBox.enabled = false;
-    this.closeButton.enabled = false;
-
-    for (let i of this.items)
-      i.enabled = false;
+    for (let c of this.components)
+      c.enabled = false;
   }
 
   toggle() {
-    let lInfo = stage.storage.getLevel("levelInfo") as LevelInfo
-
-    // Don't open the inventory if there's an overlay
-    if (lInfo.overlayShowing) return;
-
     // If the inventory isn't showing, show the inventory
     if (!this.showing) this.open()
 
@@ -99,9 +85,8 @@ export class PlayerInventoryUI {
 
   private open() {
     this.showing = true;
-    this.inventoryBox.enabled = true;
-    this.closeButton.enabled = true;
-    stage.renderer.addZFilter(this.fadeFilter, 1, SpriteLocation.WORLD);
+    for (let c of this.components)
+      c.enabled = true;
 
     // Now we can render the inventory
     rerenderInventory(this.items, this.inventory, this.config);
@@ -134,30 +119,29 @@ export class PlayerInventoryUI {
 
   private close() {
     this.showing = false;
-    this.fadeFilter.toggled = false;
-    this.inventoryBox.enabled = false;
-    this.closeButton.enabled = false;
+    for (let c of this.components)
+      c.enabled = false;
+
     while (this.items.length > 0)
       this.items.shift()?.remove();
   }
 }
 
 /** Render an inventory (clears and re-renders when needed) */
-function rerenderInventory(itemList: Actor[], inv: Inventory, cfg: InventoryConfig) {
+function rerenderInventory(items: Actor[], inv: Inventory, cfg: InventoryConfig) {
   // Remove all of the inventory items' actors
-  while (itemList.length > 0)
-    itemList.shift()?.remove();
+  while (items.length > 0)
+    items.shift()?.remove();
 
   // Render each inventory item and its tooltip, and put them into itemList
   for (let i = 0; i < inv.rows; i++) {
     for (let j = 0; j < inv.cols; j++) {
       let itemActors = itemRender(inv.items[i * inv.cols + j], cfg.itemWidth, cfg.itemHeight, cfg.xFix + (cfg.dx * j), cfg.yFix + (cfg.dy * i), true)
-      itemList.push(itemActors.actor);
-      if (itemActors.toolTipActor) itemList.push(itemActors.toolTipActor);
+      items.push(itemActors.actor);
+      if (itemActors.toolTipActor) items.push(itemActors.toolTipActor);
     }
   }
 }
-
 
 /**
  * Create an overlay to show a shelf
@@ -189,7 +173,6 @@ export function renderShelfInventory(shelfChoice: number) {
       new Actor({ appearance: screenshot!, rigidBody: new BoxBody({ cx: 8, cy: 4.5, width: 16, height: 9 }, { scene: overlay }), });
       let fadeFilter = new FadingBlurFilter(0, 5, false);
       stage.renderer.addZFilter(fadeFilter, -2, SpriteLocation.OVERLAY);
-      fadeFilter.toggled = true;
 
       // Image for the main inventory UI
       new Actor({
@@ -201,7 +184,7 @@ export function renderShelfInventory(shelfChoice: number) {
       new Actor({
         appearance: new ImageSprite({ width: 1, height: 1, img: "MVPDemo/back.png" }),
         rigidBody: new BoxBody({ cx: 1.5, cy: .8, width: 1, height: 1 }, { scene: overlay }),
-        gestures: { tap: () => { stage.clearOverlay(); lInfo.overlayShowing = false; fadeFilter.toggled = false; return true; } },
+        gestures: { tap: () => { stage.clearOverlay(); lInfo.overlayShowing = false; fadeFilter.enabled = false; return true; } },
       });
 
       // The bag to drag stuff into
@@ -246,7 +229,7 @@ export function renderShelfInventory(shelfChoice: number) {
               // Close the shelf if player inventory full
               else if (playerInv.count >= playerInv.capacity) {
                 lInfo.overlayShowing = false;
-                fadeFilter.toggled = false;
+                fadeFilter.enabled = false;
                 stage.clearOverlay();
               }
               break;

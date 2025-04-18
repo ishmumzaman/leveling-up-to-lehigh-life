@@ -1,12 +1,15 @@
+import { QuestMenuUI } from './../quests/ui';
 // Reviewed on 2024-09-18
 
-import { TextSprite, BoxBody, Actor, stage, ImageSprite, TimedEvent } from "../../jetlag";
+import { TextSprite, BoxBody, Actor, stage, ImageSprite, TimedEvent, SpriteLocation } from "../../jetlag";
+import { FadingBlurFilter } from "../common/filter";
 import { PlayerInventoryUI } from "../inventory/ui";
-import { renderQuestMenu } from "../quests/ui";
+import { Quest } from "../quests/questLogic";
+import { LevelInfo } from "../storage/level";
 import { SessionInfo } from "../storage/session";
 import { DialogueUI } from "./dialogue";
 
-export type HUDModal = "none" | "inventory" | "quest" | "dialogue";
+export type HUDModal = "none" | "inventory" | "quest" | "dialogue" | "inspect";
 
 /**
  * The Heads-Up Display (HUD) consists of two buttons (for opening the inventory
@@ -15,9 +18,6 @@ export type HUDModal = "none" | "inventory" | "quest" | "dialogue";
  */
 export class HUD {
   public modal: HUDModal = "none";
-
-  /** The unread status of the class to determine the quest notification*/
-  private hasUnreadQuest: boolean = false;
 
   public baseHUD: {
     /** The clock for the game */
@@ -40,10 +40,14 @@ export class HUD {
   }
 
   /** Player's inventory UI */
-  readonly inventory: PlayerInventoryUI;
+  readonly inventory = new PlayerInventoryUI();
 
   /** The (complex) UI for dialogue interactions */
-  readonly dialogue: DialogueUI;
+  readonly dialogue = new DialogueUI();
+
+  readonly quest = new QuestMenuUI();
+
+  private fadeFilter = new FadingBlurFilter(0, 5, false);
 
   /**
    * Constructs a new instance of the HUD class
@@ -53,10 +57,6 @@ export class HUD {
    */
   constructor(building: string, place: string) {
     let sStore = stage.storage.getSession("sStore") as SessionInfo;
-
-    this.dialogue = new DialogueUI();
-
-    this.inventory = new PlayerInventoryUI();
 
     this.baseHUD = {
       // Date and time display
@@ -99,8 +99,8 @@ export class HUD {
       })
     }
 
-    // Turn off the quest notification icon by default
-    this.baseHUD.questNotification.enabled = false;
+    this.baseHUD.questNotification.enabled = sStore.currQuest?.Unread ?? false;
+    stage.renderer.addFilter(this.fadeFilter, SpriteLocation.WORLD);
 
     // Fade in/out the location display
     //
@@ -118,17 +118,13 @@ export class HUD {
   /** Show or hide the stats, mainly because stats look ugly right now */
   public showStats(isVisible: boolean) { this.baseHUD.stats.enabled = isVisible; }
 
-  public get isUnread() { return this.hasUnreadQuest; }
-
-  /** Show that the quest has been read */
-  public readQuest() { this.hasUnreadQuest = false; }
-
   /** Show or hide the base HUD */
   private showBaseHUD(isVisible: boolean) {
+    let sStore = stage.storage.getSession("sStore") as SessionInfo;
     for (let elements of Object.values(this.baseHUD)) elements.enabled = isVisible;
 
     // During toggling, only when the base HUD is visible AND there are unread quests, we show the quest notification
-    this.baseHUD.questNotification.enabled = isVisible && this.hasUnreadQuest;
+    this.baseHUD.questNotification.enabled = isVisible && (sStore.currQuest?.Unread ?? false);
   }
 
   /**
@@ -139,36 +135,48 @@ export class HUD {
    * IMPORTANT:   Due to the fact that this is toggling, if you want to open or close a modal, you need to pass in the same modal name.
    *              E.g. if you want to open the inventory, you need to pass in 'inventory' and then call it again with 'inventory' to close it.
    *              As such, "none" should NEVER be passed in as a parameter.
-   * @param toModal
+   * @param modal
    */
-  public toggleModal(toModal: HUDModal) {
+  public toggleModal(modal: HUDModal) {
+    let lInfo = stage.storage.getLevel("levelInfo") as LevelInfo;
+
     // Check if the modal to toggle is valid
-    if (toModal == 'none')
+    if (modal == 'none')
       throw new Error("Cannot pass in 'none' as a parameter to toggleModal");
 
 
     // This is the case for turning ON different hud screens.
     if (this.modal == 'none') {
-      this.modal = toModal;
+      this.modal = modal;
       this.showBaseHUD(false); // Hide the base HUD
+      if (modal !== 'inspect') this.fadeFilter.enabled = true;
 
-      switch (toModal) {
+      // [mfs]  It seems that sometimes, an Inspectable or Dialogue won't supress
+      //        *all* of the controls, and we can still move around and/or press
+      //        HUD buttons and/or press "E".  Someone should look into this.
+      lInfo.keyboard?.stopPlayerControls();
+
+      switch (modal) {
         case 'inventory': this.inventory.toggle(); break;
-        case 'quest': renderQuestMenu(); break;
+        case 'quest': this.quest.toggle(); break;
         case 'dialogue': break;  // Opening the dialogue UI is handled in the NpcBehavior class, not here.
+        case 'inspect': break;  // Opening the inspect UI is handled in the Inspectable class, not here.
       }
     }
 
     // This is the case for turning OFF different hud screens.
-    else if (this.modal == toModal) {
+    else if (this.modal == modal) {
+      switch (modal) {
+        case 'inventory': this.inventory.toggle(); break;
+        case 'quest': this.quest.toggle(); break;
+        case 'dialogue': break; // Closing the dialogue UI is handled in the NpcBehavior class, not here.
+        case 'inspect': break; // Closing the inspect UI is handled in the Inspectable class, not here.
+      }
+
       this.modal = 'none';
       this.showBaseHUD(true); // Show the base HUD
-
-      switch (toModal) {
-        case 'inventory': this.inventory.toggle(); break;
-        case 'quest': stage.clearOverlay(); break;
-        case 'dialogue': break; // Closing the dialogue UI is handled in the NpcBehavior class, not here.
-      }
+      if (modal !== 'inspect') this.fadeFilter.enabled = false;
+      lInfo.keyboard?.startPlayerControls();
     }
   }
 

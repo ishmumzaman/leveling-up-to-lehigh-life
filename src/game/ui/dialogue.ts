@@ -21,9 +21,6 @@ export class DialogueUI {
   /** The text to show (changes over time to give an animated effect) */
   private textAppearance = "";
 
-  /** For blurring the background when the UI is showing */
-  private fadeFilter: FadingBlurFilter;
-
   /**
    * A receiver for when there are no responses, but a click is needed in order to
    * advance
@@ -103,9 +100,6 @@ export class DialogueUI {
       gestures: { tap: () => { this.next(2); this.closeResponses(); return true; } },
     }));
 
-    // Initialize the blur filter to be used later
-    this.fadeFilter = new FadingBlurFilter(0, 5, false);
-    stage.renderer.addFilter(this.fadeFilter, SpriteLocation.WORLD);
 
     // Hide everything for now
     this.dialogueBox.enabled = false;
@@ -163,16 +157,6 @@ export class DialogueUI {
     this.driver = driver;
 
     if (this.showing) return;
-
-    let lInfo = stage.storage.getLevel("levelInfo") as LevelInfo;
-    // [mfs]  It seems that sometimes, an Inspectable or Dialogue won't supress
-    //        *all* of the controls, and we can still move around and/or press
-    //        HUD buttons and/or press "E".  Someone should look into this.
-    lInfo.keyboard?.stopPlayerControls()
-
-    // Blur the background
-    this.fadeFilter.enabled = true;
-    this.fadeFilter.toggled = true;
 
     // Enable dialogue UI, reset text, start the text animation
     this.dialogueBox.enabled = true;
@@ -251,14 +235,12 @@ export class DialogueUI {
   private closeDialogue() {
     if (!this.showing) return;
 
-    this.fadeFilter.toggled = false;
     this.dialogueBox.enabled = false;
     this.textActor.enabled = false;
     this.showing = false;
 
     let lInfo = stage.storage.getLevel("levelInfo") as LevelInfo;
     lInfo.hud!.toggleModal('dialogue');
-    lInfo.keyboard?.startPlayerControls();
     this.driver!.endFunc(this.driver!.footprints);
   }
 

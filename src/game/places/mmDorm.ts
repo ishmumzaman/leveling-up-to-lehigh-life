@@ -55,19 +55,19 @@ export const mmDormBuilder: Builder = function (level: number) {
 
   // Create interactable items within our dorm room
   let closet = new InspectSystem(Inspectable.MM_DORM_CLOSET);
-  new Spawner(4.8, 2.3, 1.3, 0.5, "empty.png", () => { closet.openUi() });
+  new Spawner(4.8, 2.3, 1.3, 0.5, "empty.png", () => { closet.open() });
 
   let roommateCloset = new InspectSystem(Inspectable.MM_DORM_ROOMMATE_CLOSET);
-  new Spawner(1.9, 2.3, 1.3, 0.5, "empty.png", () => { roommateCloset.openUi() });
+  new Spawner(1.9, 2.3, 1.3, 0.5, "empty.png", () => { roommateCloset.open() });
 
   let bed = new InspectSystem(Inspectable.MM_DORM_BED);
-  new Spawner(5.3, 5.1, 1, 1.4, "empty.png", () => { bed.openUi() });
+  new Spawner(5.3, 5.1, 1, 1.4, "empty.png", () => { bed.open() });
 
   let trash = new InspectSystem(Inspectable.MM_DORM_TRASH);
-  new Spawner(1.4, 7.6, 0.8, 0.8, "empty.png", () => { trash.openUi() });
+  new Spawner(1.4, 7.6, 0.8, 0.8, "empty.png", () => { trash.open() });
 
   let boxes = new InspectSystem(Inspectable.MM_DORM_BOXES);
-  new Spawner(5.2, 7.6, 0.8, 0.8, "empty.png", () => { boxes.openUi() });
+  new Spawner(5.2, 7.6, 0.8, 0.8, "empty.png", () => { boxes.open() });
 
   // Door for the player to exit into the hallway
   new Spawner(3.3, 10, 2, 0.8, "empty.png", () => {

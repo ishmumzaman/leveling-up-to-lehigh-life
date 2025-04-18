@@ -11,6 +11,7 @@ import { martina_can_give_direction } from "../interactions/martinaDlg";
 
 /**
  * This quest is about helping Jake find Rathbone by getting directions from Martina.
+ * The actual purpose of the quest is to test the foorprints system from the dialogue system.
  */
 export class FindRathBone extends Quest {
     /**

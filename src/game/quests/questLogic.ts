@@ -65,6 +65,9 @@ export abstract class Quest {
   /** The index of the current objective */
   private currObjective = 0;
 
+  /** The unread status of the class to determine the quest notification*/
+  private unread = true;
+
   /**
    * Creates a new Quest instance.
    *
@@ -133,4 +136,8 @@ export abstract class Quest {
 
   /** Code to run when an NPC actor is being created */
   abstract onMakeNpc(place: Places, level: number, npc: Actor): void;
+
+  public readQuest() { this.unread = false; }
+
+  public get Unread() { return this.unread; }
 }

@@ -3,7 +3,7 @@
 import { Actor, stage, TimedEvent } from "../../jetlag";
 import { HUD } from "../ui/hud";
 import { KeyboardHandler } from "../ui/keyboard";
-import { SessionInfo } from "./session";
+import { SessionInfo } from "./session"; 222
 
 /**
  * The level storage holds things that every level has, but some levels might
@@ -28,7 +28,7 @@ export class LevelInfo {
      * Track if there is any overlay showing... right now this is just for
      * shelves, but that will change when we get the player's closet working.
      */
-    overlayShowing = false;
+    //overlayShowing = false;
 
     /** Track if the player's inventory is showing */
     playerInvState = false;

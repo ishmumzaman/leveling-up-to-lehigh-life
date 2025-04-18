@@ -174,7 +174,7 @@ export class HawksQuest extends Quest {
 
           // Play dialogue to let player know the minigame is ending
           let doneShopping = new InspectSystem(Inspectable.HAWK_DONE_SHOPPING);
-          doneShopping.openUi();
+          doneShopping.open();
 
           // Fade out and then switch to hawk's path builder
           stage.world.timer.addEvent(new TimedEvent(2.25, false, () => {
@@ -314,7 +314,7 @@ export class HawksQuest extends Quest {
       if (this.progress == 1) {
         // Kick off the dialogue
         let walkInDialogue = new InspectSystem(Inspectable.HAWK_ENTER_QUEST);
-        walkInDialogue.openUi();
+        walkInDialogue.open();
 
         // Set up the checkout machines:
         let checkout_machine_behavior = () => {
@@ -341,7 +341,6 @@ export class HawksQuest extends Quest {
         lInfo.keyboard?.stopPlayerControls();
         stage.renderer.addFilter(fadeFilter, SpriteLocation.WORLD);
         fadeFilter.enabled = true;
-        fadeFilter.toggled = true;
 
         // Set up the point-of-sale kiosk
         let tapped = false;
@@ -426,7 +425,7 @@ export class HawksQuest extends Quest {
         // When your inventory is full, tell the player to go talk to an NPC
         sStore.inventories.player.onFull = () => {
           let invenFull = new InspectSystem(Inspectable.HAWK_INVENTORY_FULL);
-          invenFull.openUi();
+          invenFull.open();
         };
       }
     }

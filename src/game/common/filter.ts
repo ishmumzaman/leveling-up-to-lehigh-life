@@ -12,7 +12,7 @@ export class ColorFilter implements FilterComponent {
 
   /**
    * A constructor to make a color overlay filter
-   * 
+   *
    * @param color   Color of the filter in hex
    * @param alpha   The "transparency" or how strong the color is [0.0 -- 1.0]
    * @param enabled A boolean for toggling this component
@@ -42,7 +42,7 @@ export class AlarmFilter implements FilterComponent {
 
   /**
    * A constructor to make an alarm filter
-   * 
+   *
    * @param color   Color of the filter in hex
    * @param enabled A boolean for toggling this component
    */
@@ -57,8 +57,8 @@ export class AlarmFilter implements FilterComponent {
   /** Update the filter on each render step, and report if it's active */
   preRender(elapsedMs: number) {
     // If the filter is enabled, for every render, it will
-    // check what the alpha is and if it should be increasing or 
-    // decreasing based off of that. 
+    // check what the alpha is and if it should be increasing or
+    // decreasing based off of that.
     if (this.enabled) {
       if (this.alarm_filter.alpha >= 0.3) {
         this.increasing = false;
@@ -78,14 +78,12 @@ export class AlarmFilter implements FilterComponent {
 }
 
 /**
- * The fading blur filter creates a fade in 
- * or out blur effect to blur backgrounds when 
+ * The fading blur filter creates a fade in
+ * or out blur effect to blur backgrounds when
  * UI takes focus
  */
 export class FadingBlurFilter implements FilterComponent {
   private blur_Filter: BlurFilter;
-  // [mfs] "toggled" is a confusing name.  What does it mean?
-  public toggled: boolean = false;
 
   /**
    * Create a fading blur filter
@@ -101,31 +99,25 @@ export class FadingBlurFilter implements FilterComponent {
 
   /**
    * get pixi.js filter components
-   * 
+   *
    * @returns The Pixi filter components
    */
   public getFilters() { return [this.blur_Filter]; }
 
   public preRender(elapsedMs: number): boolean {
-    // When the filter is enabled and toggled, slowly increase the blur until it reaches 15
-    if (this.enabled) {
-      if (this.toggled) {
-        if (this.blur_Filter.blur < 15) {
-          this.blur_Filter.blur += elapsedMs / 20;
-        }
-      }
-      // When the filter is enabled and not toggled, slowly decrease the blur until it reaches 0
-      else {
-        if (this.blur_Filter.blur > 0) {
-          this.blur_Filter.blur -= .5;
-        }
-        if (this.blur_Filter.blur <= 1) {
-          this.enabled = false;
-        }
-      }
+    // When the filter is enabled, slowly increase the blur until it reaches 15
+    if (this.enabled && this.blur_Filter.blur < 15) {
+      this.blur_Filter.blur += .5;
+      return true;
     }
 
-    return this.enabled;
+    // If the filter is not enabled, slowly decrease the blur until it reaches 0
+    if (this.blur_Filter.blur > 0) {
+      this.blur_Filter.blur -= .5;
+      return true;
+    }
+
+    return false;
   }
 }
 

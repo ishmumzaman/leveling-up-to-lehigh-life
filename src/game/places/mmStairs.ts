@@ -21,10 +21,9 @@ import { Places } from "./places";
 import { Builder } from "../multiplayer/loginSystem";
 import { DialogueDriver } from "../interactions/dialogue";
 import { martina_eminem_reference } from "../interactions/martinaDlg";
-import { HawksQuest } from "../quests/hawksQuest";
 
 /*** Build the stairs in M&M */
-export const mmStairsBuilder:Builder = function(level: number) {
+export const mmStairsBuilder: Builder = function (level: number) {
   // session storage
   if (!stage.storage.getSession("sStore")) stage.storage.setSession("sStore", new SessionInfo());
   let sStore = stage.storage.getSession("sStore") as SessionInfo;
@@ -48,12 +47,12 @@ export const mmStairsBuilder:Builder = function(level: number) {
 
   // mailbox spawnables
   let mailbox = new InspectSystem(Inspectable.MM_STAIR_MAILBOX);
-  new Spawner(7, 4.4, 4.5, 0.8, "empty.png", () => { mailbox.openUi() });
+  new Spawner(7, 4.4, 4.5, 0.8, "empty.png", () => { mailbox.open() });
 
   // blocked doors spawnables
   let blocked = new InspectSystem(Inspectable.MM_STAIR_BLOCKED);
-  new Spawner(2.9, 10.9, 1.5, 0.8, "empty.png", () => { blocked.openUi() });
-  new Spawner(10.6, 10.9, 1.5, 0.8, "empty.png", () => { blocked.openUi() });
+  new Spawner(2.9, 10.9, 1.5, 0.8, "empty.png", () => { blocked.open() });
+  new Spawner(10.6, 10.9, 1.5, 0.8, "empty.png", () => { blocked.open() });
 
   // stairs and doors spawnables
   new Spawner(6.7, 10, 1.5, 0.8, "empty.png", () => { sStore.locX = 97.6; sStore.locY = 20.2; stage.switchTo(buildAsaPackerOutside, 1); });

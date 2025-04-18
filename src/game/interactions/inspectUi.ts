@@ -47,7 +47,7 @@ export class InspectSystem {
 
   /**
    * Creates an instance of InspectSystem
-   * 
+   *
    * @param inspectable An object with the text to show
    */
   constructor(inspectable: Inspectable) {
@@ -86,7 +86,7 @@ export class InspectSystem {
       rigidBody: new BoxBody({ cx: 8, cy: 7.3, width: 15, height: 3 }, { scene: stage.hud }),
       gestures: {
         tap: () => {
-          this.closeUi();
+          this.close();
           return true;
         }
       }
@@ -101,7 +101,7 @@ export class InspectSystem {
 
   /**
    * Change the dialogue portrait to a different emotion
-   * 
+   *
    * @param emote the emote to switch to - current options: Talk, Nod, Shake
    */
   private changePortrait(emote: string) {
@@ -137,11 +137,11 @@ export class InspectSystem {
   /**
    * Open a MessageBox
    */
-  public openUi(emote: "Talk" | "Shake" | "Nod" = "Talk") {
+  public open(emote: "Talk" | "Shake" | "Nod" = "Talk") {
     if (!this.showing) {
-      // Turn off the keyboard controls
       let lInfo = stage.storage.getLevel("levelInfo") as LevelInfo;
-      lInfo.keyboard?.stopPlayerControls();
+      lInfo.hud!.toggleModal('inspect');
+
 
       // Turn on the UI parts
       this.containingBox.enabled = true;
@@ -173,11 +173,10 @@ export class InspectSystem {
   /**
    * Close the MessageBox
    */
-  private closeUi() {
+  private close() {
     if (this.showing) {
-      // Turn off the keyboard controls
       let lInfo = stage.storage.getLevel("levelInfo") as LevelInfo;
-      lInfo.keyboard?.startPlayerControls();
+      lInfo.hud!.toggleModal('inspect');
 
       this.containingBox.enabled = false;
       this.animatedText.enabled = false;
