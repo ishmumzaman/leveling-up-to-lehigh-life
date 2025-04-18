@@ -25,7 +25,7 @@ import { Builder } from "../multiplayer/loginSystem";
  *
  * [mfs]  This should be more general, so that it's not just for building the
  *        outside world as part of the Hawks quest.
- * 
+ *
  * [mfs]  Switch to a tile map for making the outside world
  *
  * @param level Which level should be displayed
@@ -42,7 +42,7 @@ export const buildAsaPackerOutside: Builder = function (level: number) {
   let lInfo = new LevelInfo();
   stage.storage.setLevel("levelInfo", lInfo);
   lInfo.hud = new HUD("Outdoors", "University Drive");
-  lInfo.hud.toggleStats(false); // [mfs] For now...
+  lInfo.hud.showStats(false); // [mfs] For now...
 
   // Create player
   let player = makeMainCharacter(80, 20, sStore.playerAppearance!, AnimationState.IDLE_N);

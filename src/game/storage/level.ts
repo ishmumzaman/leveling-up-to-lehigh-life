@@ -9,6 +9,9 @@ import { SessionInfo } from "./session";
  * The level storage holds things that every level has, but some levels might
  * need to interact with from code that is not part of the builder.
  *
+ * Note: To get the level storage, use a line like this:
+ *       `let lInfo = stage.storage.getLevel("levelInfo") as LevelInfo`
+ *
  * [mfs] Consider a redesign that avoids having optional fields
  */
 export class LevelInfo {

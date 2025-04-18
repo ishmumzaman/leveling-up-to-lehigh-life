@@ -1,6 +1,6 @@
 // Reviewed on 2024-09-23
 
-import { ImageSprite, TextSprite, BoxBody, CircleBody, Actor, Scene, ManualMovement, Obstacle, FilledBox, stage } from "../../jetlag";
+import { ImageSprite, TextSprite, BoxBody, CircleBody, Actor, ManualMovement, Obstacle, FilledBox, stage } from "../../jetlag";
 import { Extra } from "../../jetlag/Entities/Actor";
 import { textSlicer } from '../common/textFormatting';
 

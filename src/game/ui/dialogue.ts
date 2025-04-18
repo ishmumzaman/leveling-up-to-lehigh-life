@@ -48,7 +48,7 @@ export class DialogueUI {
   /** The driver for advancing the conversation */
   private driver?: DialogueDriver;
 
-  /** 
+  /**
    * Construct the DialogueUI
    *
    * [mfs] We don't enforce that this is a singleton, even though it is.
@@ -121,7 +121,7 @@ export class DialogueUI {
 
   /**
    * Change the dialogue portrait to a different emotion
-   * 
+   *
    * @param emote the emote to switch to (Talk, Nod, Shake)
    */
   private changePortrait(emote: string) {
@@ -137,7 +137,7 @@ export class DialogueUI {
     // Add portrait
     let portrait = new AnimatedSprite({ width: 2.6, height: 2.6, animations: makeEmoteAnimation(this.npc!.portrait, emote), offset: { dx: -5.9, dy: 0.18 }, z: 2 });
     this.dialogueBox.appearance.push(portrait); // Add the new portrait
-    portrait.actor = this.dialogueBox; // There is a two way link between an AppearanceComponent and Actor so assign the appearance component an actor. 
+    portrait.actor = this.dialogueBox; // There is a two way link between an AppearanceComponent and Actor so assign the appearance component an actor.
   }
 
   /**
@@ -257,6 +257,7 @@ export class DialogueUI {
     this.showing = false;
 
     let lInfo = stage.storage.getLevel("levelInfo") as LevelInfo;
+    lInfo.hud!.toggleModal('dialogue');
     lInfo.keyboard?.startPlayerControls();
     this.driver!.endFunc(this.driver!.footprints);
   }

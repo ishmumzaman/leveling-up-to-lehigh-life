@@ -85,7 +85,6 @@ export class PlayerInventoryUI {
   }
 
   toggle() {
-    let sStore = stage.storage.getSession("sStore") as SessionInfo;
     let lInfo = stage.storage.getLevel("levelInfo") as LevelInfo
 
     // Don't open the inventory if there's an overlay
@@ -95,7 +94,7 @@ export class PlayerInventoryUI {
     if (!this.showing) this.open()
 
     // If the inventory is showing, turn it off.
-    else if (this.showing) this.close();
+    else this.close();
   }
 
   private open() {

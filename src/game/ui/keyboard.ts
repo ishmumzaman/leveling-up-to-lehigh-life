@@ -1,7 +1,6 @@
 // Reviewed on 2024-09-25
 
 import { Actor, KeyCodes, ManualMovement, stage, TimedEvent } from "../../jetlag";
-import { PlayerInventoryUI } from "../inventory/ui";
 import { LevelInfo } from "../storage/level";
 import { SessionInfo } from "../storage/session";
 
@@ -69,7 +68,7 @@ export class KeyboardHandler {
     //
     // [mfs]  It looks like stopPlayerControls doesn't have any effect on these.
     //        Is that OK?
-    stage.keyboard.setKeyDownHandler(KeyCodes.KEY_E, () => (lInfo.hud!.inventory.toggle()));
+    stage.keyboard.setKeyDownHandler(KeyCodes.KEY_E, () => (lInfo.hud!.toggleModal("inventory")));
     stage.keyboard.setKeyDownHandler(KeyCodes.KEY_Q, () => { this.currInteraction(); });
 
     // [mfs]  I *really* want an escape key for dismissing a completed dialog, and

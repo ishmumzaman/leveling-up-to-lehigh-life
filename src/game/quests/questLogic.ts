@@ -8,7 +8,7 @@ import { Actor } from "../../jetlag";
 export class Step {
   /**
    * Create a step for an objective
-   * 
+   *
    * @param displayText The text to show when this is the current step
    * @param onReach     The function to run when this step is reached
    */
@@ -67,7 +67,7 @@ export abstract class Quest {
 
   /**
    * Creates a new Quest instance.
-   * 
+   *
    * @param which       The Id of the quest
    * @param name        The display name of the quest
    * @param description The description of the quest

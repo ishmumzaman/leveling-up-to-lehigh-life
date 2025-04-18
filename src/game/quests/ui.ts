@@ -22,7 +22,7 @@ export function renderQuestMenu() {
   //
   // [mfs]  If someone switches *builders* before opening the quest, the
   //        notification goes away.  That will need some extra UI code to fix.
-  lInfo.hud!.toggleQuestNotification(false);
+
 
   // Initialize the fading blur filter
   let fadeFilter = new FadingBlurFilter(0, 5, false);
