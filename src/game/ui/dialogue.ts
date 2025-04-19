@@ -1,8 +1,7 @@
 // Reviewed on 2024-10-02
 
-import { Actor, AnimatedSprite, BoxBody, FilledBox, ImageSprite, SpriteLocation, stage, TextSprite, TimedEvent } from "../../jetlag";
+import { Actor, AnimatedSprite, BoxBody, FilledBox, ImageSprite, stage, TextSprite, TimedEvent } from "../../jetlag";
 import { NpcConfig } from "../characters/NPC";
-import { FadingBlurFilter } from "../common/filter";
 import { textSlicer } from '../common/textFormatting';
 import { makeEmoteAnimation } from "../characters/character";
 import { LevelInfo } from "../storage/level";
@@ -240,7 +239,7 @@ export class DialogueUI {
     this.showing = false;
 
     let lInfo = stage.storage.getLevel("levelInfo") as LevelInfo;
-    lInfo.hud!.toggleModal('dialogue');
+    lInfo.hud!.toggleMode('dialogue');
     this.driver!.endFunc(this.driver!.footprints);
   }
 

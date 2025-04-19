@@ -37,7 +37,7 @@ export class Objective {
   /** Starts the objective */
   public start() {
     this.currStep = 0;
-    this.steps[0].onReach();
+    this.steps[this.currStep].onReach();
   }
 
   /**
@@ -50,7 +50,7 @@ export class Objective {
     // Advancing might finish, in which case we run the endFunc instead of
     // advanceFunc.
     this.currStep++;
-    this.steps[0].onReach();
+    this.steps[this.currStep].onReach();
   }
 
   /** Return the status text of the objective */
@@ -58,6 +58,13 @@ export class Objective {
 
   /** Report if the objective is completed */
   public isComplete() { return this.currStep == this.steps.length - 1; }
+
+  public activeStep() {
+    return (this.isComplete()) ? undefined : this.steps[this.currStep];
+  }
+
+  /** Return the index of the currently active step */
+  public activeStepIndex() { return this.currStep; }
 }
 
 /** A Quest consists of multiple objectives that need to be achieved */
@@ -94,13 +101,14 @@ export abstract class Quest {
    * and move to the next.  It might also finish the quest.
    *
    * [mfs]  There was a note: "If you want to instantly start the next objective
-   *        when the current one is completed, call qAdvance() twice".  I'm not
+   *        when the current one is completed, call advance() twice".  I'm not
    *        sure I understand.  Why wouldn't we start the next objective
    *        immediately?
    */
   public advance() {
     if (this.isComplete()) return;
 
+    // If adavancing the current objective finishes it, we need to start the next one.
     if (this.objectives[this.currObjective].isComplete()) {
       this.currObjective++;
       // Is there another objective to start?
@@ -112,7 +120,9 @@ export abstract class Quest {
         if (this.endFunc) this.endFunc();
         if (this.rewardFunc) this.rewardFunc();
       }
-    } else {
+    }
+    // Otherwise, just advance the current objective
+    else {
       this.objectives[this.currObjective].advance();
     }
   }

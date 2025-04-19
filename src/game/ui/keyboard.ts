@@ -68,7 +68,7 @@ export class KeyboardHandler {
     //
     // [mfs]  It looks like stopPlayerControls doesn't have any effect on these.
     //        Is that OK?
-    stage.keyboard.setKeyDownHandler(KeyCodes.KEY_E, () => { lInfo.hud!.toggleModal("inventory"); });
+    stage.keyboard.setKeyDownHandler(KeyCodes.KEY_E, () => { lInfo.hud!.toggleMode("inventory"); });
     stage.keyboard.setKeyDownHandler(KeyCodes.KEY_Q, () => { this.currInteraction(); });
 
     // [mfs]  I *really* want an escape key for dismissing a completed dialog, and
@@ -102,8 +102,8 @@ export class KeyboardHandler {
     }
 
     let lInfo = stage.storage.getLevel("levelInfo") as LevelInfo;
-    if (lInfo.hud!.getModal() != 'inventory') stage.keyboard.setKeyDownHandler(KeyCodes.KEY_E, () => { });
-    if (lInfo.hud!.getModal() == 'inventory' || lInfo.hud!.getModal() == 'dialogue')
+    if (lInfo.hud!.getMode() != 'inventory') stage.keyboard.setKeyDownHandler(KeyCodes.KEY_E, () => { });
+    if (lInfo.hud!.getMode() == 'inventory' || lInfo.hud!.getMode() == 'dialogue')
       stage.keyboard.setKeyDownHandler(KeyCodes.KEY_Q, () => { });
   }
   /**

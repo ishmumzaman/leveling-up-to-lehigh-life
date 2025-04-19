@@ -140,7 +140,7 @@ export class InspectSystem {
   public open(emote: "Talk" | "Shake" | "Nod" = "Talk") {
     if (!this.showing) {
       let lInfo = stage.storage.getLevel("levelInfo") as LevelInfo;
-      lInfo.hud!.toggleModal('inspect');
+      lInfo.hud!.toggleMode('inspect');
 
 
       // Turn on the UI parts
@@ -176,7 +176,7 @@ export class InspectSystem {
   private close() {
     if (this.showing) {
       let lInfo = stage.storage.getLevel("levelInfo") as LevelInfo;
-      lInfo.hud!.toggleModal('inspect');
+      lInfo.hud!.toggleMode('inspect');
 
       this.containingBox.enabled = false;
       this.animatedText.enabled = false;

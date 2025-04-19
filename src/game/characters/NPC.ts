@@ -136,7 +136,7 @@ export class NpcBehavior extends Extra {
     else {
       lInfo.hud!.dialogue.newDialogue(this.config, this.config.defaultDialogue.clone());
     }
-    lInfo.hud!.toggleModal('dialogue');
+    lInfo.hud!.toggleMode('dialogue');
   }
 
   /**

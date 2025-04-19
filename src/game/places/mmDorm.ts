@@ -24,6 +24,7 @@ import { drawObjects } from "./walls";
 // [mfs]  I exported the tilemap as a json, so it can be imported like this.
 //        Note that I didn't do the furniture, because that might change...
 import * as dorm_objects from "../../../tilemaps/TileMaps/mfsDorm.json"
+import { hawksNestBuilder } from "./hawksNest";
 
 /**
  * Build all levels occurring the m&m dorm
@@ -71,7 +72,7 @@ export const mmDormBuilder: Builder = function (level: number) {
     // Where the player should spawn
     sStore.locX = 5.3;
     sStore.locY = 2.5;
-    stage.switchTo(mmHallBuilder, 1);
+    stage.switchTo(hawksNestBuilder, 1);
   });
 
   let jake = spawnRegularNpc(NpcNames.Jake, 2.1, 4.7, AnimationState.IDLE_E);

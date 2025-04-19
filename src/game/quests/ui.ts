@@ -1,7 +1,7 @@
 // Reviewed on 2024-09-25
 
 import { SessionInfo } from '../storage/session';
-import { Actor, BoxBody, ImageSprite, TextSprite, stage } from "../../jetlag";
+import { Actor, BoxBody, ImageSprite, TextSprite, TimedEvent, stage } from "../../jetlag";
 import { textSlicer } from '../common/textFormatting';
 import { LevelInfo } from '../storage/level';
 
@@ -30,7 +30,7 @@ export class QuestMenuUI {
       rigidBody: new BoxBody({ cx: 3.09, cy: 2.38, width: 0.6, height: 0.6 }, { scene: stage.hud }),
       gestures: {
         tap: () => {
-          lInfo.hud?.toggleModal("quest");
+          lInfo.hud?.toggleMode("quest");
           return true;
         }
       }
@@ -79,7 +79,7 @@ export class QuestMenuUI {
     }));
     let extraSpace = yAnchor + 0.3 + slicedData.totalLines * 0.2; // extra space for the next text component
 
-    // Formats objectives information
+    // Formats objectives and steps information
     for (let i = 0; i < (this.quest?.numObjectives() ?? 1); i++) {
       // Formats objective name
       slicedData = textSlicer(30, this.quest?.objectives[i].name ?? "objName");

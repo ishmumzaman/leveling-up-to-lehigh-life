@@ -169,8 +169,7 @@ export class HawksQuest extends Quest {
         // If all possible NPCs are following, fade out and leave
         if (this.helpingNpcs.length >= 4) {
           // Update quest information
-          if (sStore.currQuest?.activeObjectiveIndex() == 1 && !sStore.currQuest?.activeObjective()?.isComplete())
-            sStore.currQuest?.advance();
+          if (this.activeObjectiveIndex() == 1) this.advance();
 
           // Play dialogue to let player know the minigame is ending
           let doneShopping = new InspectSystem(Inspectable.HAWK_DONE_SHOPPING);
@@ -312,6 +311,7 @@ export class HawksQuest extends Quest {
       // This is the first thing the player see's when first walking into Hawk's
       // Nest, before swiping their ID and before the minigame
       if (this.progress == 1) {
+        if (this.activeObjectiveIndex() == 0) { this.advance(); this.advance(); }
         // Kick off the dialogue
         let walkInDialogue = new InspectSystem(Inspectable.HAWK_ENTER_QUEST);
         walkInDialogue.open();
@@ -385,9 +385,6 @@ export class HawksQuest extends Quest {
       // This level contains the main mini-game for hawk's nest. Players will go
       // shelf to shelf grabbing items and getting help from various NPCs.
       else if (this.progress == 3) {
-        // Advance the quest info that goes into the UI
-        if (sStore.currQuest?.activeObjectiveIndex() == 0 && !sStore.currQuest?.activeObjective()?.isComplete()) sStore.currQuest?.advance();
-
         // Put up the red alarm
         let filter = new AlarmFilter(0xFF0000, true);
         stage.renderer.addFilter(filter, SpriteLocation.WORLD);
@@ -416,6 +413,7 @@ export class HawksQuest extends Quest {
           sStore.inventories.shelves.push(inventory)
         }
 
+        let currshelf: ShelfInventoryUI;
         let shelf0 = new ShelfInventoryUI(0);
         let shelf1 = new ShelfInventoryUI(1);
         let shelf2 = new ShelfInventoryUI(2);
@@ -430,11 +428,13 @@ export class HawksQuest extends Quest {
         new Spawner(22.9, 8.2, 3.3, 4.5, "empty.png", () => { openshelf(shelf4, 4) }); // Right Shelf
 
         function openshelf(shelf: ShelfInventoryUI, shelfNum: number) {
-          if (sStore.inventories.shelves[shelfNum].count != 0) lInfo.hud?.toggleModal("otherContainer", shelf);
+          if (sStore.inventories.shelves[shelfNum].count != 0) lInfo.hud?.toggleMode("otherContainer", shelf);
+          currshelf = shelf;
         }
 
         // When your inventory is full, tell the player to go talk to an NPC
         sStore.inventories.player.onFull = () => {
+          lInfo.hud?.toggleMode("otherContainer", currshelf);
           let invenFull = new InspectSystem(Inspectable.HAWK_INVENTORY_FULL);
           invenFull.open();
         };

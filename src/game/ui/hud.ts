@@ -8,7 +8,7 @@ import { LevelInfo } from "../storage/level";
 import { SessionInfo } from "../storage/session";
 import { DialogueUI } from "./dialogue";
 
-export type HUDModal = "none" | "inventory" | "quest" | "dialogue" | "inspect" | "otherContainer";
+export type HUDmode = "none" | "inventory" | "quest" | "dialogue" | "inspect" | "otherContainer" | "cutscene";
 
 /**
  * The Heads-Up Display (HUD) consists of two buttons (for opening the inventory
@@ -16,7 +16,7 @@ export type HUDModal = "none" | "inventory" | "quest" | "dialogue" | "inspect" |
  * character is.
  */
 export class HUD {
-  private modal: HUDModal = "none";
+  private mode: HUDmode = "none";
 
   public baseHUD: {
     /** The clock for the game */
@@ -39,12 +39,12 @@ export class HUD {
   }
 
   /** Player's inventory UI */
-  readonly inventory = new PlayerInventoryUI();
+  private inventory = new PlayerInventoryUI();
 
   /** The (complex) UI for dialogue interactions */
   readonly dialogue = new DialogueUI();
 
-  readonly quest = new QuestMenuUI();
+  private quest = new QuestMenuUI();
 
   private fadeFilter = new FadingBlurFilter(0, 5, false);
 
@@ -68,7 +68,7 @@ export class HUD {
       inventoryButton: new Actor({
         appearance: [new ImageSprite({ width: 1, height: 1, img: "hudButton.png" }), new ImageSprite({ width: 0.7, height: 0.7, img: "bag.png" }),],
         rigidBody: new BoxBody({ cx: 1, cy: 1, width: 1, height: 1 }, { scene: stage.hud }),
-        gestures: { tap: () => { this.toggleModal('inventory'); return true; } }
+        gestures: { tap: () => { this.toggleMode('inventory'); return true; } }
       }),
 
       // Draw the quest button
@@ -77,7 +77,7 @@ export class HUD {
         rigidBody: new BoxBody({ cx: 1, cy: 2, width: 1, height: 1 }, { scene: stage.hud }),
         gestures: {
           tap: () => {
-            this.toggleModal('quest');
+            this.toggleMode('quest');
             return true;
           }
         }
@@ -127,35 +127,35 @@ export class HUD {
   }
 
   /**
-   * The primary controller for different HUD elements and HUD modals.
+   * The primary controller for different HUD elements and HUD modes.
    * This allow us to centralize and certify the act of toggling on and off different HUD screens,
-   * through the checking of the current modal and the modal to change to.
+   * through the checking of the current mode and the mode to change to.
    *
-   * IMPORTANT:   Due to the fact that this is toggling, if you want to open or close a modal, you need to pass in the same modal name.
+   * IMPORTANT:   Due to the fact that this is toggling, if you want to open or close a mode, you need to pass in the same mode name.
    *              E.g. if you want to open the inventory, you need to pass in 'inventory' and then call it again with 'inventory' to close it.
    *              As such, "none" should NEVER be passed in as a parameter.
-   * @param modal
+   * @param mode
    */
-  public toggleModal(modal: HUDModal, otherContainer?: InventoryUI) {
+  public toggleMode(mode: HUDmode, otherContainer?: InventoryUI) {
     let lInfo = stage.storage.getLevel("levelInfo") as LevelInfo;
 
-    // Check if the modal to toggle is valid
-    if (modal == 'none')
-      throw new Error("Cannot pass in 'none' as a parameter to toggleModal");
+    // Check if the mode to toggle is valid
+    if (mode == 'none')
+      throw new Error("Cannot pass in 'none' as a parameter to togglemode");
 
     // This is the case for turning ON different hud screens.
-    if (this.modal == 'none') {
-      switch (modal) {
+    if (this.mode == 'none') {
+      switch (mode) {
         case 'otherContainer': otherContainer?.toggle(); break;
         case 'inventory': this.inventory.toggle(); break;
-        case 'quest': this.quest.toggle(); break;
+        case 'quest': this.quest = new QuestMenuUI(); this.quest.toggle(); break; // Quest menu needs to be re-created before opening to accommodate quest changes
         case 'dialogue': break;  // Opening the dialogue UI is handled in the NpcBehavior class, not here.
         case 'inspect': break;  // Opening the inspect UI is handled in the Inspectable class, not here.
       }
 
-      this.modal = modal;
+      this.mode = mode;
       this.showBaseHUD(false); // Hide the base HUD
-      if (modal !== 'inspect') this.fadeFilter.enabled = true;
+      if (mode !== 'inspect') this.fadeFilter.enabled = true;
 
       // [mfs]  It seems that sometimes, an Inspectable or Dialogue won't supress
       //        *all* of the controls, and we can still move around and/or press
@@ -164,8 +164,8 @@ export class HUD {
     }
 
     // This is the case for turning OFF different hud screens.
-    else if (this.modal == modal) {
-      switch (modal) {
+    else if (this.mode == mode) {
+      switch (mode) {
         case 'otherContainer':
           if (otherContainer == undefined)
             throw new Error("Expecting an inventoryUI to be passed in, but got undefined.");
@@ -177,14 +177,14 @@ export class HUD {
         case 'inspect': break; // Closing the inspect UI is handled in the Inspectable class, not here.
       }
 
-      this.modal = 'none';
+      this.mode = 'none';
       this.showBaseHUD(true); // Show the base HUD
-      if (modal !== 'inspect') this.fadeFilter.enabled = false;
+      if (mode !== 'inspect') this.fadeFilter.enabled = false;
       lInfo.keyboard?.startPlayerControls();
     }
   }
 
-  public getModal() { return this.modal; }
+  public getMode() { return this.mode; }
 
   /**
    * Calculates the color with fading opacity based on the frame number.

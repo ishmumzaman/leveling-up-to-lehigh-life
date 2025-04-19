@@ -29,6 +29,9 @@ class InventoryConfig {
   constructor(readonly xFix: number, readonly yFix: number, readonly dx: number, readonly dy: number, readonly itemWidth: number, readonly itemHeight: number) { }
 }
 
+/**
+ * InventoryUI defines the structure for rendering inventories UI, specfically the player's and shelves' inventories.
+ */
 export abstract class InventoryUI {
   /** The inventory to show */
   protected abstract inventory: Inventory;
@@ -106,7 +109,7 @@ export class PlayerInventoryUI extends InventoryUI {
     this.components.push(new Actor({
       appearance: new ImageSprite({ width: 0.34, height: 0.34, img: "overlay/closeButton.png", z: 2 }),
       rigidBody: new CircleBody({ cx: 4.6, cy: 3, radius: .27 }, { scene: stage.hud }),
-      gestures: { tap: () => { lInfo.hud!.toggleModal('inventory'); return true; } }
+      gestures: { tap: () => { lInfo.hud!.toggleMode('inventory'); return true; } }
     }));
 
     // Hide everything for now
@@ -207,7 +210,7 @@ export class ShelfInventoryUI extends InventoryUI {
     this.components.push(new Actor({
       appearance: new ImageSprite({ width: 1, height: 1, img: "MVPDemo/back.png" }),
       rigidBody: new BoxBody({ cx: 1.5, cy: .8, width: 1, height: 1 }, { scene: stage.hud }),
-      gestures: { tap: () => { lInfo.hud?.toggleModal("otherContainer", this); return true; } },
+      gestures: { tap: () => { lInfo.hud?.toggleMode("otherContainer", this); return true; } },
     }))
 
     // The bag to drag stuff into
@@ -262,13 +265,13 @@ export class ShelfInventoryUI extends InventoryUI {
             this.inventory.removeAt({ row: from.row, col: from.col });
             // Close the shelf if empty, and start cooling down
             if (this.inventory.count == 0) {
-              lInfo.hud?.toggleModal("otherContainer", this);
+              lInfo.hud?.toggleMode("otherContainer", this);
               this.inventory.onCooldown = true;
               stage.world.timer.addEvent(new TimedEvent(7.5, false, () => { this.inventory.onCooldown = false; fillShelvesPartial(this.inventory, false) }));
             }
             // Close the shelf if player inventory full
             else if (this.playerInv.count >= this.playerInv.capacity) {
-              lInfo.hud?.toggleModal("otherContainer", this);
+              lInfo.hud?.toggleMode("otherContainer", this);
             }
           }
         }
