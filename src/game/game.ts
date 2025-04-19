@@ -1,6 +1,5 @@
 import { initializeAndLaunch, AccelerometerMode, JetLagGameConfig } from "../jetlag";
 import { loginBuilder } from "./multiplayer/loginSystem";
-import { mmDormBuilder } from "./places/mmDorm";
 
 // [mfs] I think some reorganization of the folders would be beneficial.
 // - One folder should be for "builders" or "worlds".  I think that's MVPDemo
@@ -82,4 +81,4 @@ export class Config implements JetLagGameConfig {
 console.log((globalThis as any).MultiPlayerServerAddress);
 
 // Start in the opening screen that shows the instructions
-initializeAndLaunch("game-player", new Config(), () => { mmDormBuilder(1) });
+initializeAndLaunch("game-player", new Config(), () => { loginBuilder(1) });

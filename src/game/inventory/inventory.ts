@@ -28,7 +28,7 @@ export class Inventory {
 
   /**
    * Create a new inventory
-   * 
+   *
    * @param rows    number of rows that one can imagine the inventory having
    * @param cols    number of columns that one can imagine the inventory having
    * @param name    A name for the inventory
@@ -73,7 +73,7 @@ export class Inventory {
    *
    * @param item  The item to be added.
    * @param slot  An optional parameter specifying where an item should go
-   *              instead of putting it the first empty
+   *              instead of putting it the first empty slot
    *
    * @returns True if the item is added, false otherwise.
    */
@@ -131,9 +131,9 @@ export class Inventory {
 
   /**
    * Given a row and a column, remove the item at that spot
-   * 
+   *
    * @param slot  the row and column of the array
-   * 
+   *
    * @returns true if removed, false otherwise
    */
   public removeAt(slot: { row: number, col: number }) {

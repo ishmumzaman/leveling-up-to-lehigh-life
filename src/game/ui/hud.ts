@@ -3,13 +3,12 @@ import { QuestMenuUI } from './../quests/ui';
 
 import { TextSprite, BoxBody, Actor, stage, ImageSprite, TimedEvent, SpriteLocation } from "../../jetlag";
 import { FadingBlurFilter } from "../common/filter";
-import { PlayerInventoryUI } from "../inventory/ui";
-import { Quest } from "../quests/questLogic";
+import { InventoryUI, PlayerInventoryUI } from "../inventory/ui";
 import { LevelInfo } from "../storage/level";
 import { SessionInfo } from "../storage/session";
 import { DialogueUI } from "./dialogue";
 
-export type HUDModal = "none" | "inventory" | "quest" | "dialogue" | "inspect";
+export type HUDModal = "none" | "inventory" | "quest" | "dialogue" | "inspect" | "otherContainer";
 
 /**
  * The Heads-Up Display (HUD) consists of two buttons (for opening the inventory
@@ -17,7 +16,7 @@ export type HUDModal = "none" | "inventory" | "quest" | "dialogue" | "inspect";
  * character is.
  */
 export class HUD {
-  public modal: HUDModal = "none";
+  private modal: HUDModal = "none";
 
   public baseHUD: {
     /** The clock for the game */
@@ -137,16 +136,23 @@ export class HUD {
    *              As such, "none" should NEVER be passed in as a parameter.
    * @param modal
    */
-  public toggleModal(modal: HUDModal) {
+  public toggleModal(modal: HUDModal, otherContainer?: InventoryUI) {
     let lInfo = stage.storage.getLevel("levelInfo") as LevelInfo;
 
     // Check if the modal to toggle is valid
     if (modal == 'none')
       throw new Error("Cannot pass in 'none' as a parameter to toggleModal");
 
-
     // This is the case for turning ON different hud screens.
     if (this.modal == 'none') {
+      switch (modal) {
+        case 'otherContainer': otherContainer?.toggle(); break;
+        case 'inventory': this.inventory.toggle(); break;
+        case 'quest': this.quest.toggle(); break;
+        case 'dialogue': break;  // Opening the dialogue UI is handled in the NpcBehavior class, not here.
+        case 'inspect': break;  // Opening the inspect UI is handled in the Inspectable class, not here.
+      }
+
       this.modal = modal;
       this.showBaseHUD(false); // Hide the base HUD
       if (modal !== 'inspect') this.fadeFilter.enabled = true;
@@ -155,18 +161,16 @@ export class HUD {
       //        *all* of the controls, and we can still move around and/or press
       //        HUD buttons and/or press "E".  Someone should look into this.
       lInfo.keyboard?.stopPlayerControls();
-
-      switch (modal) {
-        case 'inventory': this.inventory.toggle(); break;
-        case 'quest': this.quest.toggle(); break;
-        case 'dialogue': break;  // Opening the dialogue UI is handled in the NpcBehavior class, not here.
-        case 'inspect': break;  // Opening the inspect UI is handled in the Inspectable class, not here.
-      }
     }
 
     // This is the case for turning OFF different hud screens.
     else if (this.modal == modal) {
       switch (modal) {
+        case 'otherContainer':
+          if (otherContainer == undefined)
+            throw new Error("Expecting an inventoryUI to be passed in, but got undefined.");
+          otherContainer.toggle();
+          break;
         case 'inventory': this.inventory.toggle(); break;
         case 'quest': this.quest.toggle(); break;
         case 'dialogue': break; // Closing the dialogue UI is handled in the NpcBehavior class, not here.
@@ -179,6 +183,8 @@ export class HUD {
       lInfo.keyboard?.startPlayerControls();
     }
   }
+
+  public getModal() { return this.modal; }
 
   /**
    * Calculates the color with fading opacity based on the frame number.

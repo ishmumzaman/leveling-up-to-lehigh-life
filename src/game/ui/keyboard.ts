@@ -48,7 +48,6 @@ export class KeyboardHandler {
     let keyA: boolean;
     let keyS: boolean;
     let keyD: boolean;
-    let keyE: boolean;
     stage.keyboard.setKeyUpHandler(KeyCodes.KEY_W, () => { keyW = false; });
     stage.keyboard.setKeyUpHandler(KeyCodes.KEY_S, () => { keyS = false; });
     stage.keyboard.setKeyUpHandler(KeyCodes.KEY_A, () => { keyA = false; });
@@ -69,9 +68,8 @@ export class KeyboardHandler {
     //
     // [mfs]  It looks like stopPlayerControls doesn't have any effect on these.
     //        Is that OK?
-    stage.keyboard.setKeyDownHandler(KeyCodes.KEY_E, () => { keyE = true; lInfo.hud!.toggleModal("inventory"); });
-    stage.keyboard.setKeyUpHandler(KeyCodes.KEY_E, () => { keyE = false; });
-    stage.keyboard.setKeyDownHandler(KeyCodes.KEY_Q, () => { if (!keyE) this.currInteraction(); });
+    stage.keyboard.setKeyDownHandler(KeyCodes.KEY_E, () => { lInfo.hud!.toggleModal("inventory"); });
+    stage.keyboard.setKeyDownHandler(KeyCodes.KEY_Q, () => { this.currInteraction(); });
 
     // [mfs]  I *really* want an escape key for dismissing a completed dialog, and
     //        a space key for rapidly finishing the dialog text.
@@ -102,8 +100,12 @@ export class KeyboardHandler {
       (this.actor.movement as ManualMovement).updateXVelocity(0);
       (this.actor.movement as ManualMovement).updateYVelocity(0);
     }
-  }
 
+    let lInfo = stage.storage.getLevel("levelInfo") as LevelInfo;
+    if (lInfo.hud!.getModal() != 'inventory') stage.keyboard.setKeyDownHandler(KeyCodes.KEY_E, () => { });
+    if (lInfo.hud!.getModal() == 'inventory' || lInfo.hud!.getModal() == 'dialogue')
+      stage.keyboard.setKeyDownHandler(KeyCodes.KEY_Q, () => { });
+  }
   /**
    * Handle all movement quirks when they happen while normalizing diagonal movement
    *

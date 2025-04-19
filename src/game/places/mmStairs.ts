@@ -21,6 +21,7 @@ import { Places } from "./places";
 import { Builder } from "../multiplayer/loginSystem";
 import { DialogueDriver } from "../interactions/dialogue";
 import { martina_eminem_reference } from "../interactions/martinaDlg";
+import { GameItems, Items } from "../inventory/item";
 
 /*** Build the stairs in M&M */
 export const mmStairsBuilder: Builder = function (level: number) {

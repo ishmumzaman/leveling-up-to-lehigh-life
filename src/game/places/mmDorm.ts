@@ -5,7 +5,7 @@
 //
 // [mfs]  When we switch the quest system, this will stop needing `level`.
 
-import { AnimationState, stage, TimedEvent } from "../../jetlag";
+import { AnimationState, stage } from "../../jetlag";
 import { InspectSystem } from "../interactions/inspectUi";
 import { createMap } from "../common/map";
 import { Spawner } from "../common/spawner";
@@ -43,9 +43,6 @@ export const mmDormBuilder: Builder = function (level: number) {
 
   // Set current location
   lInfo.hud = new HUD("M&M House", "Your Dorm Room");
-  stage.world.timer.addEvent(new TimedEvent(0.2, true, () => {
-    console.log(lInfo.hud?.modal)
-  }));
 
   // Create player and keyboard handler
   let player = makeMainCharacter(3.4, 4.8, sStore.playerAppearance!, AnimationState.IDLE_W);

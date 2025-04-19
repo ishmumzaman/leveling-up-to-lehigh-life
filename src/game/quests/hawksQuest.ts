@@ -11,7 +11,7 @@ import { mmDormBuilder } from "../places/mmDorm";
 import { FadeOutFilterComponent, FadeInFilterComponent, AlarmFilter, FadingBlurFilter } from "../common/filter";
 import { hawksNestBuilder } from "../places/hawksNest";
 import { fillShelvesPartial, Inventory } from "../inventory/inventory";
-import { renderShelfInventory } from "../inventory/ui";
+import { ShelfInventoryUI } from "../inventory/ui";
 import { Spawner } from "../common/spawner";
 import { Inspectable } from "../interactions/inspectables";
 import { LevelInfo } from "../storage/level";
@@ -415,12 +415,23 @@ export class HawksQuest extends Quest {
           fillShelvesPartial(inventory, false);
           sStore.inventories.shelves.push(inventory)
         }
+
+        let shelf0 = new ShelfInventoryUI(0);
+        let shelf1 = new ShelfInventoryUI(1);
+        let shelf2 = new ShelfInventoryUI(2);
+        let shelf3 = new ShelfInventoryUI(3);
+        let shelf4 = new ShelfInventoryUI(4);
+
         // Make each shelf interactable
-        new Spawner(8.75, 2.16, 13.5, 2.2, "empty.png", () => { renderShelfInventory(0) }); // Top Shelf
-        new Spawner(1.51, 5.95, .7, 7, "empty.png", () => { renderShelfInventory(1) }); // Fridge
-        new Spawner(9.61, 14.41, 1.35, 3.75, "empty.png", () => { renderShelfInventory(2) }); // Entrance Chips
-        new Spawner(15.4, 8.2, 3.3, 4.5, "empty.png", () => { renderShelfInventory(3) }); // Left shelf
-        new Spawner(22.9, 8.2, 3.3, 4.5, "empty.png", () => { renderShelfInventory(4) }); // Right Shelf
+        new Spawner(8.75, 2.16, 13.5, 2.2, "empty.png", () => { openshelf(shelf0, 0) }); // Top Shelf
+        new Spawner(1.51, 5.95, .7, 7, "empty.png", () => { openshelf(shelf1, 1) }); // Fridge
+        new Spawner(9.61, 14.41, 1.35, 3.75, "empty.png", () => { openshelf(shelf2, 2) }); // Entrance Chips
+        new Spawner(15.4, 8.2, 3.3, 4.5, "empty.png", () => { openshelf(shelf3, 3) }); // Left shelf
+        new Spawner(22.9, 8.2, 3.3, 4.5, "empty.png", () => { openshelf(shelf4, 4) }); // Right Shelf
+
+        function openshelf(shelf: ShelfInventoryUI, shelfNum: number) {
+          if (sStore.inventories.shelves[shelfNum].count != 0) lInfo.hud?.toggleModal("otherContainer", shelf);
+        }
 
         // When your inventory is full, tell the player to go talk to an NPC
         sStore.inventories.player.onFull = () => {

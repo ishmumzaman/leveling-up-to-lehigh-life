@@ -3,7 +3,7 @@
 import { Actor, stage, TimedEvent } from "../../jetlag";
 import { HUD } from "../ui/hud";
 import { KeyboardHandler } from "../ui/keyboard";
-import { SessionInfo } from "./session"; 222
+import { SessionInfo } from "./session";
 
 /**
  * The level storage holds things that every level has, but some levels might
@@ -23,15 +23,6 @@ export class LevelInfo {
 
     /** The heads-up display, which contains buttons and other UI elements */
     hud?: HUD;
-
-    /**
-     * Track if there is any overlay showing... right now this is just for
-     * shelves, but that will change when we get the player's closet working.
-     */
-    //overlayShowing = false;
-
-    /** Track if the player's inventory is showing */
-    playerInvState = false;
 
     constructor() {
         let sStore = stage.storage.getSession("sStore") as SessionInfo;
