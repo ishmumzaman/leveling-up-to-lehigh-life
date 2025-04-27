@@ -3,7 +3,7 @@
 import { Inventory } from '../inventory/inventory';
 import { Actor, AdvancedCollisionService, AnimatedSprite, AnimationSequence, AnimationState, BoxBody, ChaseMovement, MovementComponent, Obstacle, stage } from "../../jetlag";
 import { DialogueDriver } from "../interactions/dialogue";
-import { makeSetCharAnimation } from "./character";
+import { makeNPCAnimation } from "./character";
 import { Spawner } from "../common/spawner";
 import { SessionInfo } from "../storage/session";
 import { b2BodyType } from '@box2d/core';
@@ -56,7 +56,7 @@ export class NpcConfig {
   constructor(readonly name: string, readonly spriteName: string, readonly defaultConvo: ConversationMap,) {
     this.portrait = spriteName + "PT";
     this.defaultDialogue = new DialogueDriver(defaultConvo, "start");
-    this.npcAnimation = makeSetCharAnimation(spriteName);
+    this.npcAnimation = makeNPCAnimation(spriteName);
   }
 }
 
@@ -118,7 +118,7 @@ export class NpcBehavior extends Extra {
     sStore.inventories.npcs.push(this.inventory);
 
     // give the NPC a hitbox for interactions
-    this.staticSpawner = new Spawner(3, 6, 0.6, 0.8, "empty.png", () => { this.nextDialogue() });
+    this.staticSpawner = new Spawner(3, 6, 0.6, 0.8, () => { this.nextDialogue() });
     this.staticSpawner.sensorOff();
     this.staticSpawner.obstacle.enabled = false;
   }
@@ -163,7 +163,7 @@ export class NpcBehavior extends Extra {
 export function spawnRegularNpc(which: NpcNames, xPos: number, yPos: number, direction: AnimationState, movement?: MovementComponent) {
   // Create an NpcBehavior and hook it up to an actor
   let details = new NpcBehavior(which);
-  let npcAnimation = makeSetCharAnimation(details.config.spriteName);
+  let npcAnimation = makeNPCAnimation(details.config.spriteName);
   let npcActor = new Actor({
     appearance: new AnimatedSprite({ initialDir: direction, width: 0.8, height: 1.6, ...npcAnimation, offset: { dx: 0, dy: -0.6 } }),
     rigidBody: new BoxBody({ cx: xPos, cy: yPos, width: 0.5, height: 0.5 }, { disableRotation: true, collisionsEnabled: true, passThroughId: [1], dynamic: false }),
@@ -276,7 +276,7 @@ export function spawnFollowingNpc(which: NpcNames, xPos: number, yPos: number, d
   // Get rid of the NPC's initial appearance to change direction and
   // give them a new appearance with correct animation and direction
   npcActor.appearance.pop();
-  let npcAnimation = makeSetCharAnimation(details.config.spriteName);
+  let npcAnimation = makeNPCAnimation(details.config.spriteName);
   let newAppearance = new AnimatedSprite({ initialDir: direction, width: 0.8, height: 1.6, animations: npcAnimation.animations, remap: npcAnimation.remap, offset: { dx: 0, dy: -0.6 } })
   npcActor.appearance.push(newAppearance);
   newAppearance.actor = npcActor; // You need to link the actor with its appearance ALWAYS or else it doesn't work.

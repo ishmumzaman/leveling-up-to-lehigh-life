@@ -1,4 +1,4 @@
-import { ColorPallette, HexColor, Attribute } from "./characterCustomization";
+import { ColorPallette, Attribute, TxID } from "./characterCustomization";
 
 /**
  * Information about how to display an icon for a character customization attribute
@@ -8,14 +8,14 @@ class IconDisplay {
     /**
      * Create a new IconDisplay
      *
-     * @param file the image file to display
+     * @param img the image file to display
      * @param w the width of the icon
      * @param h the height of the icon
      * @param ox the x offset of the icon
      * @param oy the y offset of the icon
      * @param displayName the name to display for the icon
      */
-    constructor(public file: string, public w: number, public h: number, public ox: number, public oy: number, public displayName?: string) { }
+    constructor(public img: string, public w: number, public h: number, public ox: number, public oy: number, public displayName?: string) { }
 }
 
 /** Contains all information about the atribute icons in character customization */
@@ -28,52 +28,52 @@ export const attributeIconData: Map<Attribute, IconDisplay> = new Map([
 ]);
 
 /** Contains all information about the option icons under a selected attribute in character customization */
-export const optionIconData: Map<Attribute, Map<string, IconDisplay>> = new Map([
+export const optionIconData: Map<Attribute, Map<TxID, IconDisplay>> = new Map([
     [Attribute.BODY, new Map()],
     [Attribute.EYES, new Map()],
     [Attribute.OUTFIT, new Map([
-        ["outfit01", new IconDisplay("outfit01IdleS0.png", 0.8, 1.6, 0, -0.5, "T-Shirt")],
-        ["outfit02", new IconDisplay("outfit02IdleS0.png", 0.8, 1.6, 0, -0.5, "Jacket")],
-        ["outfit03", new IconDisplay("outfit03IdleS0.png", 0.8, 1.6, 0, -0.5, "T-Shirt")],
-        ["outfit04", new IconDisplay("outfit04IdleS0.png", 0.8, 1.6, 0, -0.5, "T-Shirt")],
-        ["outfit07", new IconDisplay("outfit07IdleS0.png", 0.8, 1.6, 0, -0.5, "Jacket")],
-        ["outfit10", new IconDisplay("outfit10IdleS0.png", 0.8, 1.6, 0, -0.5, "Hoodie")],
-        ["outfit11", new IconDisplay("outfit11IdleS0.png", 0.8, 1.6, 0, -0.5, "Shirt")],
-        ["outfit14", new IconDisplay("outfit14IdleS0.png", 0.8, 1.6, 0, -0.5, "T-Shirt")],
+        [TxID.Outfit01, new IconDisplay("outfit01IdleS0.png", 0.8, 1.6, 0, -0.5, "T-Shirt")],
+        [TxID.Outfit02, new IconDisplay("outfit02IdleS0.png", 0.8, 1.6, 0, -0.5, "Jacket")],
+        [TxID.Outfit03, new IconDisplay("outfit03IdleS0.png", 0.8, 1.6, 0, -0.5, "T-Shirt")],
+        [TxID.Outfit04, new IconDisplay("outfit04IdleS0.png", 0.8, 1.6, 0, -0.5, "T-Shirt")],
+        [TxID.Outfit07, new IconDisplay("outfit07IdleS0.png", 0.8, 1.6, 0, -0.5, "Jacket")],
+        [TxID.Outfit10, new IconDisplay("outfit10IdleS0.png", 0.8, 1.6, 0, -0.5, "Hoodie")],
+        [TxID.Outfit11, new IconDisplay("outfit11IdleS0.png", 0.8, 1.6, 0, -0.5, "Shirt")],
+        [TxID.Outfit14, new IconDisplay("outfit14IdleS0.png", 0.8, 1.6, 0, -0.5, "T-Shirt")],
     ])],
     [Attribute.HAIR, new Map([
-        ["", new IconDisplay("overlay/closeButton.png", 0.5, 0.5, 0, 0.01)],
-        ["hair01", new IconDisplay("hair01PTTalk0.png", 1.5, 1.5, 0.05, 0.1)],
-        ["hair03", new IconDisplay("hair03PTTalk0.png", 1.5, 1.5, 0.05, 0.1)],
-        ["hair04", new IconDisplay("hair04PTTalk0.png", 1.2, 1.2, 0.04, 0.08)],
-        ["hair05", new IconDisplay("hair05PTTalk0.png", 1.5, 1.5, 0.05, 0.1)],
-        ["hair09", new IconDisplay("hair09PTTalk0.png", 1.5, 1.5, 0.05, 0.1)],
-        ["hair10", new IconDisplay("hair10PTTalk0.png", 1.5, 1.5, 0.05, 0.1)],
-        ["hair11", new IconDisplay("hair11PTTalk0.png", 1.5, 1.5, 0.05, 0.1)],
-        ["hair12", new IconDisplay("hair12PTTalk0.png", 1.5, 1.5, 0.05, 0.1)],
-        ["hair15", new IconDisplay("hair15PTTalk0.png", 1.5, 1.5, 0.05, 0.1)],
-        ["hair18", new IconDisplay("hair18PTTalk0.png", 1.5, 1.5, 0.05, 0.1)],
-        ["hair19", new IconDisplay("hair19PTTalk0.png", 1.5, 1.5, 0.05, 0.1)],
-        ["hair22", new IconDisplay("hair22PTTalk0.png", 1.5, 1.5, 0.05, 0.1)],
-        ["hair24", new IconDisplay("hair24PTTalk0.png", 1.5, 1.5, 0.05, 0.1)],
-        ["hair25", new IconDisplay("hair25PTTalk0.png", 1.5, 1.5, 0.05, 0.1)],
+        [TxID.None, new IconDisplay("overlay/closeButton.png", 0.5, 0.5, 0, 0.01)],
+        [TxID.Hair01, new IconDisplay("hair01PTTalk0.png", 1.5, 1.5, 0.05, 0.1)],
+        [TxID.Hair03, new IconDisplay("hair03PTTalk0.png", 1.5, 1.5, 0.05, 0.1)],
+        [TxID.Hair04, new IconDisplay("hair04PTTalk0.png", 1.2, 1.2, 0.04, 0.08)],
+        [TxID.Hair05, new IconDisplay("hair05PTTalk0.png", 1.5, 1.5, 0.05, 0.1)],
+        [TxID.Hair09, new IconDisplay("hair09PTTalk0.png", 1.5, 1.5, 0.05, 0.1)],
+        [TxID.Hair10, new IconDisplay("hair10PTTalk0.png", 1.5, 1.5, 0.05, 0.1)],
+        [TxID.Hair11, new IconDisplay("hair11PTTalk0.png", 1.5, 1.5, 0.05, 0.1)],
+        [TxID.Hair12, new IconDisplay("hair12PTTalk0.png", 1.5, 1.5, 0.05, 0.1)],
+        [TxID.Hair15, new IconDisplay("hair15PTTalk0.png", 1.5, 1.5, 0.05, 0.1)],
+        [TxID.Hair18, new IconDisplay("hair18PTTalk0.png", 1.5, 1.5, 0.05, 0.1)],
+        [TxID.Hair19, new IconDisplay("hair19PTTalk0.png", 1.5, 1.5, 0.05, 0.1)],
+        [TxID.Hair22, new IconDisplay("hair22PTTalk0.png", 1.5, 1.5, 0.05, 0.1)],
+        [TxID.Hair24, new IconDisplay("hair24PTTalk0.png", 1.5, 1.5, 0.05, 0.1)],
+        [TxID.Hair25, new IconDisplay("hair25PTTalk0.png", 1.5, 1.5, 0.05, 0.1)],
     ])],
     [Attribute.ACCESSORY, new Map([
-        ["", new IconDisplay("overlay/closeButton.png", 0.5, 0.5, 0, 0.01)],
-        ["snapback04", new IconDisplay("snapback04PTTalk0.png", 1.5, 1.5, 0.12, 0.3)],
-        ["beanie01", new IconDisplay("beanie01PTTalk0.png", 1.5, 1.5, 0.12, 0.3)],
-        ["beard01", new IconDisplay("beard01PTTalk0.png", 1.5, 1.5, 0.12, 0.3)],
-        ["glasses01", new IconDisplay("glasses01PTTalk0.png", 1.5, 1.5, 0.12, 0.3)],
+        [TxID.None, new IconDisplay("overlay/closeButton.png", 0.5, 0.5, 0, 0.01)],
+        [TxID.Snapback04, new IconDisplay("snapback04PTTalk0.png", 1.5, 1.5, 0.12, 0.3)],
+        [TxID.Beanie01, new IconDisplay("beanie01PTTalk0.png", 1.5, 1.5, 0.12, 0.3)],
+        [TxID.Beard01, new IconDisplay("beard01PTTalk0.png", 1.5, 1.5, 0.12, 0.3)],
+        [TxID.Glasses01, new IconDisplay("glasses01PTTalk0.png", 1.5, 1.5, 0.12, 0.3)],
     ])]
 ]);
 
 /** Contains all information about the pallette icons under a selected option in character customization
- * For body and eyes, "" signify a default pallette because they do not have options.
- * For hair, and accessory, "" signify no option has been selected and there is no pallettes.
+ * For body and eyes, TxID.None signify a default pallette because they do not have options.
+ * For hair, and accessory, TxID.None signify no option has been selected and there is no pallettes.
  */
-export const palletteIconData: Map<Attribute, Map<string, { originalColor: HexColor[], pallettes: ColorPallette[] }>> = new Map([
+export const palletteIconData = new Map([
     [Attribute.BODY, new Map([
-        ["", {
+        [TxID.None, {
             // We're using body03 asd our default body
             // The 5 orginal color values below make up the different shadings on that body, from the lightess to the darkess shade
             originalColor: [0xffcca8, 0xffb893, 0xf69784, 0xe07070, 0xbe6864],
@@ -87,7 +87,7 @@ export const palletteIconData: Map<Attribute, Map<string, { originalColor: HexCo
         }]
     ])],
     [Attribute.EYES, new Map([
-        ["", {
+        [TxID.None, {
             originalColor: [0x674d49, 0x7b5852],
             pallettes: [
                 new ColorPallette("#674d49", [0x674d49, 0x7b5852]), //eyes01
@@ -102,21 +102,21 @@ export const palletteIconData: Map<Attribute, Map<string, { originalColor: HexCo
         }],
     ])],
     [Attribute.OUTFIT, new Map([
-        ["outfit01", {
+        [TxID.Outfit01, {
             originalColor: [0xC1D2EE, 0xA6B6E9],
             pallettes: [
                 new ColorPallette("#A65211", [0xA65211, 0xEC8E45]),
                 new ColorPallette("#6A49AB", [0x6A49AB, 0xC4A1E3])
             ]
         }],
-        ["outfit02", {
+        [TxID.Outfit02, {
             originalColor: [0x2EC0D9, 0x4497A9],
             pallettes: [
                 new ColorPallette("#A4ADB6", [0xA4ADB6, 0xE7EBEE]),
                 new ColorPallette("#17642A", [0x17642A, 0x3DB65B])
             ]
         }],
-        ["outfit10", {
+        [TxID.Outfit02, {
             originalColor: [0x9DC98D],
             pallettes: [
                 new ColorPallette("#000000", [0x090A0B]),
@@ -124,17 +124,17 @@ export const palletteIconData: Map<Attribute, Map<string, { originalColor: HexCo
         }],
     ])],
     [Attribute.HAIR, new Map([
-        ["", {
+        [TxID.None, {
             originalColor: [],
             pallettes: []
         }],
     ])],
     [Attribute.ACCESSORY, new Map([
-        ["", {
+        [TxID.None, {
             originalColor: [],
             pallettes: []
         }],
-        ["snapback04", {
+        [TxID.Snapback04, {
             originalColor: [0xB1BAC8, 0x3A3A50],
             pallettes: [
                 new ColorPallette("#1A2B3C", [0x1A2B3C, 0x1A2B3C]),

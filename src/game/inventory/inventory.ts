@@ -31,16 +31,16 @@ export class Inventory {
    *
    * @param rows    number of rows that one can imagine the inventory having
    * @param cols    number of columns that one can imagine the inventory having
-   * @param name    A name for the inventory
+   * @param onlyAccept    the type of item that the inventory is restricted to
    * @param onEmpty code to run when the inventory is empty
    * @param onFull  code to run when the inventory is full
    */
-  constructor(readonly rows: number, readonly cols: number, public onEmpty?: () => void, public onFull?: () => void) {
+  constructor(readonly rows: number, readonly cols: number, readonly onlyAccept?: ItemType, public onEmpty?: () => void, public onFull?: () => void) {
     // Fill the 2D array with empty items and set their location within the array
     for (let row = 0; row < rows; row++) {
       for (let col = 0; col < cols; col++) {
         this.items[row * cols + col] = GameItems.getItem(Items.empty);
-        this.items[row * cols + col].setLocation(row, col);
+        this.items[row * cols + col].setLocation(this, row, col);
       }
     }
     // Set other parameters
@@ -84,7 +84,7 @@ export class Inventory {
 
     if (slot) {
       if (this.items[slot.row * this.cols + slot.col].type === ItemType.Empty) { // Check if the slot is empty
-        item.setLocation(slot.row, slot.col); // Change the item's meta location
+        item.setLocation(this, slot.row, slot.col); // Change the item's meta location
         this.items[slot.row * this.cols + slot.col] = item; // set the slot to that item
         this.incrementItemCount(); // Increase how many items are in the inventory
         return true;
@@ -96,7 +96,7 @@ export class Inventory {
     for (let i = 0; i < this.rows; i++) {
       for (let j = 0; j < this.cols; j++) {
         if (this.items[i * this.cols + j].type === ItemType.Empty) {
-          item.setLocation(i, j);
+          item.setLocation(this, i, j);
           this.items[i * this.cols + j] = item;
           this.incrementItemCount();
           return true;
@@ -120,7 +120,7 @@ export class Inventory {
         // [mfs] Is a "name match" sufficient, or do we want more?
         if (this.items[i * this.cols + j].name === item.name) {
           this.items[i * this.cols + j] = GameItems.getItem(Items.empty);
-          this.items[i * this.cols + j].setLocation(i, j);
+          this.items[i * this.cols + j].setLocation(this, i, j);
           this.decrementItemCount();
           return true;
         }
@@ -134,18 +134,21 @@ export class Inventory {
    *
    * @param slot  the row and column of the array
    *
-   * @returns true if removed, false otherwise
+   * @returns The item that was removed, or undefined if the slot was empty.
    */
   public removeAt(slot: { row: number, col: number }) {
     if (this.items[slot.row * this.cols + slot.col].type === ItemType.Empty)
       return undefined;
 
-    // Sets the array slot to empty and updates the empty item's location
-    let res = this.items[slot.row * this.cols + slot.col];
+    // Get the item at the specified slot and set its location to null
+    let item = this.items[slot.row * this.cols + slot.col];
+    item.setLocation(null, -1, -1); // Set the item's location to null
+
+    // Sets the array slot to the empty item and updates the empty item's location
     this.items[slot.row * this.cols + slot.col] = GameItems.getItem(Items.empty);
-    this.items[slot.row * this.cols + slot.col].setLocation(slot.row, slot.col);
+    this.items[slot.row * this.cols + slot.col].setLocation(this, slot.row, slot.col);
     this.decrementItemCount();
-    return res;
+    return item;
   }
 
   /**
@@ -154,10 +157,9 @@ export class Inventory {
    * @param to  The target inventory to transfer items to.
    */
   public transferAll(to: Inventory) {
-    for (let i = 0; i < this.items.length; ++i)
-      if (this.items[i].type !== ItemType.Empty)
-        if (to.addItem(this.items[i]))
-          this.removeAt({ row: Math.floor(i / this.cols), col: i % this.cols });
+    for (let i = 0; i < this.items.length; ++i)// TODO: Maybe this isn't necessary
+      if (to.addItem(this.items[i]))
+        this.removeAt({ row: Math.floor(i / this.cols), col: i % this.cols });
   }
 }
 

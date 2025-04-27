@@ -39,7 +39,7 @@ export class HUD {
   }
 
   /** Player's inventory UI */
-  private inventory = new PlayerInventoryUI();
+  public inventory = new PlayerInventoryUI();
 
   /** The (complex) UI for dialogue interactions */
   readonly dialogue = new DialogueUI();
@@ -118,7 +118,7 @@ export class HUD {
   public showStats(isVisible: boolean) { this.baseHUD.stats.enabled = isVisible; }
 
   /** Show or hide the base HUD */
-  private showBaseHUD(isVisible: boolean) {
+  public showBaseHUD(isVisible: boolean) {
     let sStore = stage.storage.getSession("sStore") as SessionInfo;
     for (let elements of Object.values(this.baseHUD)) elements.enabled = isVisible;
 

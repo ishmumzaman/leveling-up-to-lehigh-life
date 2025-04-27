@@ -7,7 +7,7 @@
 
 import { AnimationState, stage } from "../../jetlag";
 import { InspectSystem } from "../interactions/inspectUi";
-import { createMap } from "../common/map";
+import { createMap, PIXEL_TO_METER_RATIO } from "../common/map";
 import { Spawner } from "../common/spawner";
 import { SessionInfo } from "../storage/session";
 import { mmHallBuilder } from "./mmHall";
@@ -15,7 +15,7 @@ import { Inspectable } from "../interactions/inspectables";
 import { LevelInfo } from "../storage/level";
 import { HUD } from "../ui/hud";
 import { KeyboardHandler } from "../ui/keyboard";
-import { makeMainCharacter } from "../characters/character";
+import { getRegularDir, makeMainCharacter } from "../characters/character";
 import { Places } from "./places";
 import { spawnRegularNpc, NpcNames } from "../characters/NPC";
 import { Builder } from "../multiplayer/loginSystem";
@@ -25,6 +25,9 @@ import { drawObjects } from "./walls";
 //        Note that I didn't do the furniture, because that might change...
 import * as dorm_objects from "../../../tilemaps/TileMaps/mfsDorm.json"
 import { hawksNestBuilder } from "./hawksNest";
+import { partToItem } from "../characters/characterChange";
+import { CharacterPart, TxID } from "../characters/characterCustomization";
+import { GameItems, Items } from "../inventory/item";
 
 /**
  * Build all levels occurring the m&m dorm
@@ -40,7 +43,7 @@ export const mmDormBuilder: Builder = function (level: number) {
 
   // Draw the map, make the walls from the objects in the json
   createMap(335, 480, "mmDorm.png");
-  dorm_objects.layers.forEach(layer => drawObjects(50, layer.objects ?? []));
+  dorm_objects.layers.forEach(layer => drawObjects(PIXEL_TO_METER_RATIO, layer.objects ?? []));
 
   // Set current location
   lInfo.hud = new HUD("M&M House", "Your Dorm Room");
@@ -51,27 +54,32 @@ export const mmDormBuilder: Builder = function (level: number) {
   lInfo.mainCharacter = player;
   lInfo.keyboard = new KeyboardHandler(player);
 
+  sStore.inventories.player.main.addItem(partToItem(new CharacterPart(TxID.Outfit02, [0x2EC0D9, 0x4497A9], [0xA4ADB6, 0xE7EBEE])))
+  sStore.inventories.player.main.addItem(GameItems.getItem(Items.chocoBar));
+
+
   // Create interactable items within our dorm room
   let closet = new InspectSystem(Inspectable.MM_DORM_CLOSET);
-  new Spawner(4.8, 2.3, 1.3, 0.5, "empty.png", () => { closet.open() });
+  new Spawner(4.8, 2.3, 1.3, 0.5, () => { closet.open() });
 
   let roommateCloset = new InspectSystem(Inspectable.MM_DORM_ROOMMATE_CLOSET);
-  new Spawner(1.9, 2.3, 1.3, 0.5, "empty.png", () => { roommateCloset.open() });
+  new Spawner(1.9, 2.3, 1.3, 0.5, () => { roommateCloset.open() });
 
   let bed = new InspectSystem(Inspectable.MM_DORM_BED);
-  new Spawner(5.3, 5.1, 1, 1.4, "empty.png", () => { bed.open() });
+  new Spawner(5.3, 5.1, 1, 1.4, () => { bed.open() });
 
   let trash = new InspectSystem(Inspectable.MM_DORM_TRASH);
-  new Spawner(1.4, 7.6, 0.8, 0.8, "empty.png", () => { trash.open() });
+  new Spawner(1.4, 7.6, 0.8, 0.8, () => { trash.open() });
 
   let boxes = new InspectSystem(Inspectable.MM_DORM_BOXES);
-  new Spawner(5.2, 7.6, 0.8, 0.8, "empty.png", () => { boxes.open() });
+  new Spawner(5.2, 7.6, 0.8, 0.8, () => { boxes.open() });
 
   // Door for the player to exit into the hallway
-  new Spawner(3.3, 10, 2, 0.8, "empty.png", () => {
+  new Spawner(3.3, 10, 2, 0.8, () => {
+    sStore.dir = getRegularDir(player);
     // Where the player should spawn
-    sStore.locX = 5.3;
-    sStore.locY = 2.5;
+    sStore.goToX = 5.3;
+    sStore.goToY = 2.5;
     stage.switchTo(hawksNestBuilder, 1);
   });
 

@@ -107,8 +107,8 @@ export const openingScreenBuilder: Builder = function (_level: number) {
           tap: () => {
             stage.clearOverlay();
             fadeFilter.toggled = false;
-            sStore.locX = 3.4;
-            sStore.locY = 4.7
+            sStore.goToX = 3.4;
+            sStore.goToY = 4.7
             stage.switchTo(makeCharacterBuilder, 1);
             return true;
           }

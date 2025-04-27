@@ -1,6 +1,6 @@
 import { initializeAndLaunch, AccelerometerMode, JetLagGameConfig } from "../jetlag";
+import { makeCharacterBuilder } from "./characters/makeCharacterBuilder";
 import { loginBuilder } from "./multiplayer/loginSystem";
-import { mmDormBuilder } from "./places/mmDorm";
 
 // [mfs] I think some reorganization of the folders would be beneficial.
 // - One folder should be for "builders" or "worlds".  I think that's MVPDemo
@@ -66,7 +66,7 @@ export class Config implements JetLagGameConfig {
   accelerometerMode = AccelerometerMode.DISABLED;
   // [mfs] This needs to be in a Lehigh domain eventually
   storageKey = "com.github.YassCoding.LUTLL";
-  hitBoxes = true;
+  hitBoxes = false;
   textFont = "kongtext";
   minuteRate = 1;
 
@@ -82,4 +82,4 @@ export class Config implements JetLagGameConfig {
 console.log((globalThis as any).MultiPlayerServerAddress);
 
 // Start in the opening screen that shows the instructions
-initializeAndLaunch("game-player", new Config(), () => { mmDormBuilder(1) });
+initializeAndLaunch("game-player", new Config(), () => { makeCharacterBuilder(1) });

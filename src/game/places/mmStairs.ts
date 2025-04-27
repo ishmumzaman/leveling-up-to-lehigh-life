@@ -15,13 +15,12 @@ import { AnimationState } from "../../jetlag";
 import { NpcBehavior, NpcNames, spawnRegularNpc } from "../characters/NPC";
 import { Inspectable } from "../interactions/inspectables";
 import { LevelInfo } from "../storage/level";
-import { makeMainCharacter } from "../characters/character";
+import { getRegularDir, makeMainCharacter } from "../characters/character";
 import { KeyboardHandler } from "../ui/keyboard";
 import { Places } from "./places";
 import { Builder } from "../multiplayer/loginSystem";
 import { DialogueDriver } from "../interactions/dialogue";
 import { martina_eminem_reference } from "../interactions/martinaDlg";
-import { GameItems, Items } from "../inventory/item";
 
 /*** Build the stairs in M&M */
 export const mmStairsBuilder: Builder = function (level: number) {
@@ -48,17 +47,17 @@ export const mmStairsBuilder: Builder = function (level: number) {
 
   // mailbox spawnables
   let mailbox = new InspectSystem(Inspectable.MM_STAIR_MAILBOX);
-  new Spawner(7, 4.4, 4.5, 0.8, "empty.png", () => { mailbox.open() });
+  new Spawner(7, 4.4, 4.5, 0.8, () => { mailbox.open() });
 
   // blocked doors spawnables
   let blocked = new InspectSystem(Inspectable.MM_STAIR_BLOCKED);
-  new Spawner(2.9, 10.9, 1.5, 0.8, "empty.png", () => { blocked.open() });
-  new Spawner(10.6, 10.9, 1.5, 0.8, "empty.png", () => { blocked.open() });
+  new Spawner(2.9, 10.9, 1.5, 0.8, () => { blocked.open() });
+  new Spawner(10.6, 10.9, 1.5, 0.8, () => { blocked.open() });
 
   // stairs and doors spawnables
-  new Spawner(6.7, 10, 1.5, 0.8, "empty.png", () => { sStore.locX = 97.6; sStore.locY = 20.2; stage.switchTo(buildAsaPackerOutside, 1); });
-  new Spawner(2.9, 1.7, 1.5, 0.8, "empty.png", () => { sStore.locX = 2.9; sStore.locY = 5; stage.switchTo(mmHallBuilder, 1); });
-  new Spawner(10.6, 1.7, 1.5, 0.8, "empty.png", () => { sStore.locX = 10.5; sStore.locY = 5; stage.switchTo(mmHallBuilder, 1); });
+  new Spawner(6.7, 10, 1.5, 0.8, () => { sStore.dir = getRegularDir(player); sStore.goToX = 97.6; sStore.goToY = 20.2; stage.switchTo(buildAsaPackerOutside, 1); });
+  new Spawner(2.9, 1.7, 1.5, 0.8, () => { sStore.dir = getRegularDir(player); sStore.goToX = 2.9; sStore.goToY = 5; stage.switchTo(mmHallBuilder, 1); });
+  new Spawner(10.6, 1.7, 1.5, 0.8, () => { sStore.dir = getRegularDir(player); sStore.goToX = 10.5; sStore.goToY = 5; stage.switchTo(mmHallBuilder, 1); });
 
   sStore.currQuest?.onBuildPlace(Places.MM_STAIRS, level);
   sStore.currQuest?.onMakeNpc(Places.MM_STAIRS, level, martina);

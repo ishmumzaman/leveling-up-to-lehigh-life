@@ -1,7 +1,7 @@
 // Reviewed on 2024-09-29
 
 import { AnimatedSprite, Obstacle } from "../../jetlag";
-import { Actor, AdvancedCollisionService, BoxBody, FilledBox, ImageSprite, Sensor, stage } from "../../jetlag";
+import { Actor, AdvancedCollisionService, BoxBody, FilledBox, Sensor, stage } from "../../jetlag";
 import { makeSimpleAnimation } from "../characters/character";
 import { LevelInfo } from "../storage/level";
 
@@ -52,16 +52,15 @@ export class Spawner {
    * @param cy    center y coordinate of the spawnable
    * @param w     width of the spawnable
    * @param h     height of the spawnable
-   * @param img   image file for the spawnable
    * @param func  The function to be called when interacted with.  Must be
    *              editable.
    */
-  constructor(private cx: number, private cy: number, private w: number, private h: number, private img: string, public func: () => void = () => { }) {
+  constructor(private cx: number, private cy: number, private w: number, private h: number, public func: () => void = () => { }) {
     let lInfo = stage.storage.getLevel("levelInfo") as LevelInfo;
 
     // Create the obstacle
     this.obstacle = new Actor({
-      appearance: new ImageSprite({ width: this.w, height: this.h, img: this.img }),
+      appearance: new FilledBox({ width: 0, height: 0, fillColor: "#00FFFFFF" }),
       // [mfs]  Why passThroughId[2]?  Nothing else has this ID, so it seems not
       //        useful?
       rigidBody: new BoxBody({ cx: this.cx, cy: this.cy, width: this.w, height: this.h }, { passThroughId: [2], collisionsEnabled: true }),

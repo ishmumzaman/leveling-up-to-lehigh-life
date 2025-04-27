@@ -5,7 +5,9 @@
 //        the closet), we can revisit.
 
 import { ImageSprite, BoxBody, CircleBody, FilledBox, Actor, stage, ManualMovement, Obstacle, TimedEvent } from "../../jetlag";
-import { ItemExtra, itemRender } from "../inventory/item";
+import { changePlayerAppearance } from "../characters/characterChange";
+import { CharacterPart } from "../characters/characterCustomization";
+import { ItemExtra, itemRender, ItemType } from "../inventory/item";
 import { LevelInfo } from "../storage/level";
 import { SessionInfo } from "../storage/session";
 import { fillShelvesPartial, Inventory } from "./inventory";
@@ -23,10 +25,9 @@ class InventoryConfig {
    * @param yFix      Y coordinate of top left
    * @param dx        X distance between items
    * @param dy        Y distance between items
-   * @param itemWidth Width of items
-   * @param itemHeight Height of items
+   * @param itemScaler Width of items
    */
-  constructor(readonly xFix: number, readonly yFix: number, readonly dx: number, readonly dy: number, readonly itemWidth: number, readonly itemHeight: number) { }
+  constructor(readonly xFix: number, readonly yFix: number, readonly dx: number, readonly dy: number, readonly itemScaler: number = 1) { }
 }
 
 /**
@@ -65,8 +66,8 @@ export abstract class InventoryUI {
     let cfg = this.cfg; //alias
     for (let i = 0; i < inv.rows; i++) {
       for (let j = 0; j < inv.cols; j++) {
-        let itemActors = itemRender(inv.items[i * inv.cols + j], cfg.itemWidth,
-          cfg.itemHeight, cfg.xFix + (cfg.dx * j), cfg.yFix + (cfg.dy * i), true);
+        let itm = inv.items[i * inv.cols + j];
+        let itemActors = itemRender(itm, cfg.xFix + (cfg.dx * j), cfg.yFix + (cfg.dy * i), cfg.itemScaler, true);
         this.items.push(itemActors.actor);
         if (itemActors.toolTipActor) this.items.push(itemActors.toolTipActor);
       }
@@ -81,13 +82,24 @@ export class PlayerInventoryUI extends InventoryUI {
 
   protected inventory: Inventory;
 
-  protected cfg: InventoryConfig = new InventoryConfig(5.15, 4.2, 1.139, 1.1, .7, .7);;
-
-  protected components: Actor[] = [];
+  protected cfg: InventoryConfig = new InventoryConfig(5.15, 4.2, 1.139, 1.1);
 
   /* For every Item in the inventory, we put its actor here, so we can
-    un-render and re-render them as needed */
+  un-render and re-render them as needed */
   protected items: Actor[] = [];
+
+  private outfit: Inventory;
+
+  private accessory: Inventory;
+
+  protected clothesCfg: InventoryConfig = new InventoryConfig(2.15, 4.2, 1.139, 1.1);
+
+  protected clothes: Actor[] = [];
+
+  /** All of the visual components of the UI */
+  protected components: Actor[] = [];
+
+  public canChangeOutfit: boolean = false;
 
   protected showing = false;
 
@@ -97,7 +109,9 @@ export class PlayerInventoryUI extends InventoryUI {
     let sStore = stage.storage.getSession("sStore") as SessionInfo;
     let lInfo = stage.storage.getLevel("levelInfo") as LevelInfo;
 
-    this.inventory = sStore.inventories.player;
+    this.inventory = sStore.inventories.player.main;
+    this.outfit = sStore.inventories.player.outfit;
+    this.accessory = sStore.inventories.player.accessory;
 
     // Image for the main inventory UI
     this.components.push(new Actor({
@@ -132,12 +146,13 @@ export class PlayerInventoryUI extends InventoryUI {
 
     // Now we can render the inventory
     this.rerenderInventory();
+    this.rerenderClothes();
 
     // Set up a drag gesture for moving things within the inventory
     //
     // NB:  This takes the coords of the drop, and the inventory index of the
     //      dragged item
-    itemDragGestures((x: number, y: number, fromLoc: { row: number, col: number }) => {
+    itemDragGestures((x: number, y: number, fromLoc: { inv: Inventory | null, row: number, col: number }) => {
       // Find the inventory slot where we're doing a drop, make sure it's not
       // the initial actor
       for (let actor of stage.hud!.physics!.actorsAt({ x, y })) {
@@ -145,19 +160,63 @@ export class PlayerInventoryUI extends InventoryUI {
           // NB: Must make copies of both locations
           let from = { ...fromLoc };
           let to = { ...actor.extra.item.location };
-          let inv = this.inventory;
-          let tempSwap = inv.items[to.row * inv.cols + to.col];
-          inv.removeAt({ row: to.row, col: to.col });
-          inv.addItem(inv.items[from.row * inv.cols + from.col], { row: to.row, col: to.col });
-          inv.removeAt({ row: from.row, col: from.col });
-          inv.addItem(tempSwap, { row: from.row, col: from.col });
-          break;
+
+          // Here is we swap any two items that were dropped on each other
+          // The two items could be from the same inventory or different inventories, doesn't matter
+          if (from.inv && to.inv) {
+            let fromItem = from.inv.items[from.row * from.inv.cols + from.col].clone(); // The clone of the item that was dragged
+            let toItem = actor.extra.item.clone() // The clone of the item that was dropped on
+
+            // Don't allow the swap if the inventory doesn't accept it
+            if (to.inv.onlyAccept && to.inv.onlyAccept != fromItem.type && fromItem.type != ItemType.Empty) break;
+            if (from.inv.onlyAccept && from.inv.onlyAccept != toItem.type && toItem.type != ItemType.Empty) break;
+
+            // Special case of not allowing the player to just take off their outfit without swapping it with another
+            // TODO:  There should be a better to compare items than just by name, as we might have multiple items with the same name in the future
+            if ((fromItem.name === this.outfit.items[0].name || toItem.name === this.outfit.items[0].name) && !this.canChangeOutfit &&
+              from.inv !== to.inv) { break; }
+
+            // Swap the items in the same inventory or different inventories
+            to.inv.removeAt({ row: to.row, col: to.col });
+            to.inv.addItem(fromItem, { row: to.row, col: to.col });
+            from.inv.removeAt({ row: from.row, col: from.col });
+            from.inv.addItem(toItem, { row: from.row, col: from.col });
+            break;
+          }
         }
       }
       // NB:  Even a bad drop needs redrawing
       // This check prevents the visual bug when the inventory is closed during item dragging
-      if (this.showing) this.rerenderInventory();
+      if (this.showing) { this.rerenderInventory(); this.rerenderClothes(); }
     });
+  }
+
+  private rerenderClothes() {
+    // Before disabling the items' actor, process their clothing texture info
+    // If new textures are detected, update the player's appearance
+    while (this.clothes.length > 0)
+      this.clothes.shift()?.remove();
+
+    let newAccessory: CharacterPart | undefined;
+    let newOutfit: CharacterPart | undefined;
+
+    if (this.accessory.items[0].type !== ItemType.Empty) newAccessory = this.accessory.items[0].charPart;
+    if (this.outfit.items[0].type !== ItemType.Empty) newOutfit = this.outfit.items[0].charPart;
+    // Detect new clothes and update the player's appearance
+    changePlayerAppearance(undefined, newAccessory, newOutfit); // Update the player's appearance
+
+    // Render each inventory item and its tooltip, and put them into clothes[]
+    let cfg = this.clothesCfg; //alias
+    let a = itemRender(this.accessory.items[0], cfg.xFix, cfg.yFix, this.clothesCfg.itemScaler, true);
+    let o = itemRender(this.outfit.items[0], cfg.xFix, cfg.yFix + cfg.dy, this.clothesCfg.itemScaler, true);
+
+    this.clothes.push(a.actor);
+    this.clothes.push(o.actor);
+
+    if (a.toolTipActor) this.clothes.push(a.toolTipActor);
+    if (o.toolTipActor) this.clothes.push(o.toolTipActor);
+
+
   }
 
   protected close() {
@@ -167,6 +226,8 @@ export class PlayerInventoryUI extends InventoryUI {
 
     while (this.items.length > 0)
       this.items.shift()?.remove();
+    while (this.clothes.length > 0)
+      this.clothes.shift()?.remove();
   }
 }
 
@@ -182,7 +243,7 @@ export class ShelfInventoryUI extends InventoryUI {
 
   protected inventory: Inventory;
 
-  protected cfg: InventoryConfig = new InventoryConfig(3.5, 1, 1.8, 2, 1.3, 1.3);
+  protected cfg: InventoryConfig = new InventoryConfig(3.5, 1, 1.8, 2, 1.3);
 
   protected items: Actor[] = [];
 
@@ -198,7 +259,7 @@ export class ShelfInventoryUI extends InventoryUI {
     super();
 
     this.inventory = sStore.inventories.shelves[shelfChoice];
-    this.playerInv = sStore.inventories.player;
+    this.playerInv = sStore.inventories.player.main;
 
     // Image for the main inventory UI
     this.components.push(new Actor({
@@ -295,7 +356,7 @@ export class ShelfInventoryUI extends InventoryUI {
  *
  * @param onDrop Code to run when the drag ends
  */
-function itemDragGestures(onDrop: (x: number, y: number, dropLoc: { row: number, col: number }) => void) {
+function itemDragGestures(onDrop: (x: number, y: number, fromLoc: { inv: Inventory | null, row: number, col: number }) => void) {
   // the actor being dragged
   let foundActor: Actor | undefined;
 
@@ -306,6 +367,7 @@ function itemDragGestures(onDrop: (x: number, y: number, dropLoc: { row: number,
     for (let actor of stage.hud!.physics!.actorsAt(world_coords)) {
       if ((actor.extra instanceof ItemExtra) && actor.extra.item.draggable) {
         foundActor = actor;
+        foundActor.appearance[0].z = 2; // bring the item being dragged to the front
         return true;
       }
     }

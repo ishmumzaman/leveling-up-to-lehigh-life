@@ -1,7 +1,7 @@
 // Reviewed on 2024-09-25
 
 import { SessionInfo } from '../storage/session';
-import { Actor, BoxBody, ImageSprite, TextSprite, TimedEvent, stage } from "../../jetlag";
+import { Actor, BoxBody, ImageSprite, TextSprite, stage } from "../../jetlag";
 import { textSlicer } from '../common/textFormatting';
 import { LevelInfo } from '../storage/level';
 

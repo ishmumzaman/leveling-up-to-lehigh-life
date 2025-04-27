@@ -12,13 +12,14 @@ import { SessionInfo } from "../storage/session";
 import { AnimationState, TimedEvent } from "../../jetlag";
 import { LevelInfo } from "../storage/level";
 import { HUD } from "../ui/hud";
-import { makeMainCharacter } from "../characters/character";
+import { getRegularDir, makeMainCharacter } from "../characters/character";
 import { KeyboardHandler } from "../ui/keyboard";
 import { Spawner } from "../common/spawner";
 import { buildAsaPackerOutside } from "./asa_campus_outside";
 import { Places } from "./places";
 import { spawnFollowingNpc, NpcNames, FollowingNpcBehavior } from "../characters/NPC";
 import { Builder } from "../multiplayer/loginSystem";
+import { makeChangeZone } from "../characters/characterChange";
 
 /**
  * Create Hawks Nest portion of the game
@@ -63,10 +64,11 @@ export const hawksNestBuilder: Builder = function (level: number) {
   // [mfs]  Do we want to have a way to disable the door so you can't leave
   //        mid-quest?  That would require an "onMakeSpawner", which could be
   //        complex, but it's probably a good idea.
-  new Spawner(4.7, 16.9, 3, 1, "empty.png", () => {
-    sStore.locX = 29.7; sStore.locY = 48.3;
-    stage.switchTo(buildAsaPackerOutside, 1);
-  });
+  new Spawner(4.7, 16.9, 3, 1, () => { sStore.dir = getRegularDir(player); sStore.goToX = 29.7; sStore.goToY = 48.3; stage.switchTo(buildAsaPackerOutside, 1); });
+  makeChangeZone(7.07, 8.87, 3, 3)
+  stage.world.timer.addEvent(new TimedEvent(0.1, true, () => {
+    console.log(lInfo.hud!.inventory.canChangeOutfit)
+  }))
 
   // Make the NPCs
   let emelia = spawnFollowingNpc(NpcNames.Emelia, 27.1, 13.1, AnimationState.IDLE_S, lInfo.mainCharacter!);

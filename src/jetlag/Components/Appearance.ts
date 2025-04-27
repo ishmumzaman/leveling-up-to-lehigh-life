@@ -302,7 +302,7 @@ export class AnimatedSprite implements IStateObserver {
 
   /**
    * The animation sequences to use (they correspond to different
-   * AnimationStates) 
+   * AnimationStates)
    */
   animations: Map<AnimationState, AnimationSequence>;
 
@@ -314,6 +314,8 @@ export class AnimatedSprite implements IStateObserver {
 
   /** An offset between the AnimatedSprite's center and the RigidBody's center */
   offset: { dx: number, dy: number };
+
+  private currDir: AnimationState
 
   /**
    * Skip to the `index`th cell of the animation, and move forward within it by
@@ -369,6 +371,7 @@ export class AnimatedSprite implements IStateObserver {
 
     this.current_ani = this.animations.get(opts.initialDir ?? AnimationState.IDLE_E)!;
     this.offset = opts.offset ?? { dx: 0, dy: 0 };
+    this.currDir = opts.initialDir ?? AnimationState.IDLE_E;
   }
 
   /** Restart the current animation */
@@ -423,6 +426,7 @@ export class AnimatedSprite implements IStateObserver {
       newState.last_ew = DIRECTION.W;
     let st = this.stateSelector(oldState, newState);
     let newAni = this.animations.get(st);
+    this.currDir = st;
     // NB:  We need to process TOSS_Y even when the animatoin doesn't change, or
     //      else we'll never run the code for triggering a TOSS_N, and
     //      newState.tossing will never get cleared.
@@ -702,6 +706,15 @@ export class AnimatedSprite implements IStateObserver {
     this.width *= scale;
     this.height *= scale;
   }
+
+  /**
+   * Return the current direction of the animation.
+   *
+   * @returns The current direction of the animation
+   */
+  getCurrDirection() {
+    return this.currDir;
+  }
 }
 
 /**
@@ -837,8 +850,8 @@ export class FilledBox {
   /**
    * Build a FilledBox
    *
-   * @param opts.width      Width of the box 
-   * @param opts.height     Height of the box 
+   * @param opts.width      Width of the box
+   * @param opts.height     Height of the box
    * @param opts.lineWidth  Optional width of the border
    * @param opts.lineColor  Optional color for the border
    * @param opts.fillColor  Color to fill the box
@@ -915,8 +928,8 @@ export class FilledRoundedBox {
   /**
    * Build a FilledRoundedBox
    *
-   * @param opts.width      Width of the box 
-   * @param opts.height     Height of the box 
+   * @param opts.width      Width of the box
+   * @param opts.height     Height of the box
    * @param opts.radius     Radius of the corners
    * @param opts.lineWidth  Optional width of the border
    * @param opts.lineColor  Optional color for the border
@@ -994,7 +1007,7 @@ export class FilledCircle {
 
   /**
    * Build a FilledCircle
-   * 
+   *
    * @param opts.radius     Radius of the circle
    * @param opts.lineWidth  Width of the border
    * @param opts.lineColor  Color for the border
