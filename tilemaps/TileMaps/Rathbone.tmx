@@ -319,7 +319,7 @@
 </chunk>
   </data>
  </layer>
- <objectgroup id="13" name="Wall objects">
+ <objectgroup id="13" name="Wall objects" visible="0">
   <object id="1" x="1775.08" y="767.607" width="47.0924" height="783.918"/>
   <object id="2" x="1726.64" y="1535.45" width="48.0095" height="15.6292"/>
   <object id="3" x="1679.48" y="1535.45" width="47.1598" height="192.463"/>
@@ -552,7 +552,7 @@
 </chunk>
   </data>
  </layer>
- <objectgroup id="14" name="Booth objects">
+ <objectgroup id="14" name="Booth objects" visible="0">
   <object id="22" x="670.758" y="287.103" width="48.6669" height="286.712"/>
   <object id="23" x="286.712" y="288.161" width="48.6669" height="285.654"/>
   <object id="24" x="334.321" y="481.771" width="335.379" height="92.044"/>
@@ -958,7 +958,7 @@
 </chunk>
   </data>
  </layer>
- <objectgroup id="15" name="Temp borders">
+ <objectgroup id="15" name="Temp borders" visible="0">
   <object id="45" x="45.4042" y="914.002" width="146.179" height="569.214"/>
   <object id="46" x="244.723" y="977.693" width="181.633" height="75.8445"/>
   <object id="47" x="244.721" y="1120.82" width="181.082" height="78.5993"/>

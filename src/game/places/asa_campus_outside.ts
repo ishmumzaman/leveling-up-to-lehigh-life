@@ -60,7 +60,8 @@ export const buildAsaPackerOutside: Builder = function (level: number) {
   // Door Spawnables
   new Spawner(97.5, 19, 2, 0.8, "empty.png", () => { sStore.locX = 6.7; sStore.locY = 8.9; stage.switchTo(mmStairsBuilder, 1); });
   new Spawner(28.3, 47.9, 1, 1.5, "empty.png", () => { sStore.locX = 4.7; sStore.locY = 15.5; stage.switchTo(hawksNestBuilder, 1); });
-  //Spawner for rathbone when we implement it
+
+  //Temp spawner for rathbone when we implement it
   //new Spawner(97.5, 22, 2, 0.8, "empty.png", () => { sStore.locX = 32.7; sStore.locY = 34; stage.switchTo(rathboneBuilder, 1); });
 
   // Bush Spawnables

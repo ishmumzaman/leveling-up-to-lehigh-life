@@ -19,6 +19,7 @@ import { makeMainCharacter } from "../characters/character";
 import { Places } from "./places";
 import { spawnRegularNpc, NpcNames } from "../characters/NPC";
 import { Builder } from "../multiplayer/loginSystem";
+import { buildAsaPackerOutside } from "./asa_campus_outside";
 import { drawObjects } from "./walls";
 
 // [mfs]  I exported the tilemap as a json, so it can be imported like this.
@@ -49,6 +50,9 @@ export const rathboneBuilder: Builder = function (level: number) {
   stage.world.camera.setCameraFocus(player);
   lInfo.mainCharacter = player;
   lInfo.keyboard = new KeyboardHandler(player);
+
+  //door to leave rathbone (Currently just takes back to temp spawner location in asa_campus_outside.ts)
+  new Spawner(32.6, 34.6, 2, 0.8, "empty.png", () => { sStore.locX = 97.5; sStore.locY = 21.3; stage.switchTo(buildAsaPackerOutside, 1); });
 
   /*
   // Create interactable items within our dorm room

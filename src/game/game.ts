@@ -62,7 +62,7 @@ export class Config implements JetLagGameConfig {
   accelerometerMode = AccelerometerMode.DISABLED;
   // [mfs] This needs to be in a Lehigh domain eventually
   storageKey = "com.github.YassCoding.LUTLL";
-  hitBoxes = false;
+  hitBoxes = true;
   textFont = "kongtext";
   minuteRate = 60;
 
