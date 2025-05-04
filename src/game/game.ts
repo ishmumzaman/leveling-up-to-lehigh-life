@@ -24,7 +24,7 @@ let imageNames = [
   "mainMenu/Images/menuButton.png", "mainMenu/Images/logo.png", "fatalError.png",
   "overlay/inventory.png", "overlay/map.jpeg", "overlay/keyBackground.png",
   "overlay/questMenu.png", "overlay/questMenu.json", "overlay/closeButton.png",
-  "locBg/mvpLocs.png", "locBg/mvpLocs.json", "locBg/hawksPath.png",
+  "locBg/mvpLocs.png", "locBg/mvpLocs.json", "locBg/hawksPath.png", "locBg/rathbone.png", 
   "locBg/fmlEntrance.png", "icon/iconSS.json", "icon/iconSS.png",
   "icon/defaultImg.png", "empty.png", "statUI.png", "icon/questNoti.png",
   "icon/hudElements.json", "icon/wasd.png", "icon/e.png", "icon/q.png",
@@ -62,7 +62,7 @@ export class Config implements JetLagGameConfig {
   accelerometerMode = AccelerometerMode.DISABLED;
   // [mfs] This needs to be in a Lehigh domain eventually
   storageKey = "com.github.YassCoding.LUTLL";
-  hitBoxes = true;
+  hitBoxes = false;
   textFont = "kongtext";
   minuteRate = 60;
 
