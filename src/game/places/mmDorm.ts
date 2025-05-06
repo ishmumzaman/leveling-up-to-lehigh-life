@@ -24,10 +24,6 @@ import { drawObjects } from "./walls";
 // [mfs]  I exported the tilemap as a json, so it can be imported like this.
 //        Note that I didn't do the furniture, because that might change...
 import * as dorm_objects from "../../../tilemaps/TileMaps/mfsDorm.json"
-import { hawksNestBuilder } from "./hawksNest";
-import { partToItem } from "../characters/characterChange";
-import { CharacterPart, TxID } from "../characters/characterCustomization";
-import { GameItems, Items } from "../inventory/item";
 
 /**
  * Build all levels occurring the m&m dorm
@@ -54,10 +50,6 @@ export const mmDormBuilder: Builder = function (level: number) {
   lInfo.mainCharacter = player;
   lInfo.keyboard = new KeyboardHandler(player);
 
-  sStore.inventories.player.main.addItem(partToItem(new CharacterPart(TxID.Outfit02, [0x2EC0D9, 0x4497A9], [0xA4ADB6, 0xE7EBEE])))
-  sStore.inventories.player.main.addItem(GameItems.getItem(Items.chocoBar));
-
-
   // Create interactable items within our dorm room
   let closet = new InspectSystem(Inspectable.MM_DORM_CLOSET);
   new Spawner(4.8, 2.3, 1.3, 0.5, () => { closet.open() });
@@ -80,7 +72,7 @@ export const mmDormBuilder: Builder = function (level: number) {
     // Where the player should spawn
     sStore.goToX = 5.3;
     sStore.goToY = 2.5;
-    stage.switchTo(hawksNestBuilder, 1);
+    stage.switchTo(mmHallBuilder, 1);
   });
 
   let jake = spawnRegularNpc(NpcNames.Jake, 2.1, 4.7, AnimationState.IDLE_E);

@@ -163,7 +163,6 @@ export function connectUser(userId: string, userName: string) {
       // Enable the blur filter we created earlier on the screenshot we created
       stage.renderer.addZFilter(fadeFilter, -2, SpriteLocation.OVERLAY);
       fadeFilter.enabled = true;
-      fadeFilter.toggled = true;
     }, true)
 
     // TODO: Consider booting the user the offline instead of disconnecting them

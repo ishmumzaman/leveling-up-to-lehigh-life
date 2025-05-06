@@ -9,7 +9,7 @@ import { stage } from "../../jetlag/Stage";
 import { cornerBoundBox } from "../common/boundBox";
 import { createMap } from "../common/map";
 import { SessionInfo } from "../storage/session";
-import { AnimationState, TimedEvent } from "../../jetlag";
+import { AnimationState } from "../../jetlag";
 import { LevelInfo } from "../storage/level";
 import { HUD } from "../ui/hud";
 import { getRegularDir, makeMainCharacter } from "../characters/character";
@@ -19,7 +19,6 @@ import { buildAsaPackerOutside } from "./asa_campus_outside";
 import { Places } from "./places";
 import { spawnFollowingNpc, NpcNames, FollowingNpcBehavior } from "../characters/NPC";
 import { Builder } from "../multiplayer/loginSystem";
-import { makeChangeZone } from "../characters/characterChange";
 
 /**
  * Create Hawks Nest portion of the game
@@ -65,10 +64,6 @@ export const hawksNestBuilder: Builder = function (level: number) {
   //        mid-quest?  That would require an "onMakeSpawner", which could be
   //        complex, but it's probably a good idea.
   new Spawner(4.7, 16.9, 3, 1, () => { sStore.dir = getRegularDir(player); sStore.goToX = 29.7; sStore.goToY = 48.3; stage.switchTo(buildAsaPackerOutside, 1); });
-  makeChangeZone(7.07, 8.87, 3, 3)
-  stage.world.timer.addEvent(new TimedEvent(0.1, true, () => {
-    console.log(lInfo.hud!.inventory.canChangeOutfit)
-  }))
 
   // Make the NPCs
   let emelia = spawnFollowingNpc(NpcNames.Emelia, 27.1, 13.1, AnimationState.IDLE_S, lInfo.mainCharacter!);

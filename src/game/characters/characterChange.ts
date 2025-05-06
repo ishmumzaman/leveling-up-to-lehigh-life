@@ -21,7 +21,7 @@ export function makeChangeZone(cx: number, cy: number, w: number, h: number) {
         appearance: [new FilledBox({ width: 0, height: 0, fillColor: "#00FFFFFF" })],
         rigidBody: new BoxBody({ cx: cx, cy: cy, width: w, height: h }),
         role: new Sensor({
-            heroCollision: (a, c) => {
+            heroCollision: (_a, c) => {
                 lInfo.hud!.inventory.canChangeOutfit = true;
                 (stage.world.physics as AdvancedCollisionService).addEndContactHandler(zone, lInfo.mainCharacter!, () => {
                     lInfo.hud!.inventory.canChangeOutfit = lInfo.mainCharacter !== c;

@@ -168,13 +168,12 @@ export class PlayerInventoryUI extends InventoryUI {
             let toItem = actor.extra.item.clone() // The clone of the item that was dropped on
 
             // Don't allow the swap if the inventory doesn't accept it
-            if (to.inv.onlyAccept && to.inv.onlyAccept != fromItem.type && fromItem.type != ItemType.Empty) break;
-            if (from.inv.onlyAccept && from.inv.onlyAccept != toItem.type && toItem.type != ItemType.Empty) break;
+            if (to.inv.onlyAccept && to.inv.onlyAccept != fromItem.type) break;
+            if (from.inv.onlyAccept && from.inv.onlyAccept != toItem.type) break;
 
-            // Special case of not allowing the player to just take off their outfit without swapping it with another
-            // TODO:  There should be a better to compare items than just by name, as we might have multiple items with the same name in the future
-            if ((fromItem.name === this.outfit.items[0].name || toItem.name === this.outfit.items[0].name) && !this.canChangeOutfit &&
-              from.inv !== to.inv) { break; }
+            // Special cases of not allowing the player to just take off their outfit without swapping it with another
+            if (!this.canChangeOutfit && (from.inv === this.outfit || to.inv === this.outfit)) break;
+            if (from.inv === this.outfit && toItem.type === ItemType.Empty) break;
 
             // Swap the items in the same inventory or different inventories
             to.inv.removeAt({ row: to.row, col: to.col });
@@ -368,6 +367,7 @@ function itemDragGestures(onDrop: (x: number, y: number, fromLoc: { inv: Invento
       if ((actor.extra instanceof ItemExtra) && actor.extra.item.draggable) {
         foundActor = actor;
         foundActor.appearance[0].z = 2; // bring the item being dragged to the front
+        console.log(actor.extra.item.name)
         return true;
       }
     }

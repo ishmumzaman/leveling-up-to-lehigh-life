@@ -1,5 +1,4 @@
 import { initializeAndLaunch, AccelerometerMode, JetLagGameConfig } from "../jetlag";
-import { makeCharacterBuilder } from "./characters/makeCharacterBuilder";
 import { loginBuilder } from "./multiplayer/loginSystem";
 
 // [mfs] I think some reorganization of the folders would be beneficial.
@@ -82,4 +81,4 @@ export class Config implements JetLagGameConfig {
 console.log((globalThis as any).MultiPlayerServerAddress);
 
 // Start in the opening screen that shows the instructions
-initializeAndLaunch("game-player", new Config(), () => { makeCharacterBuilder(1) });
+initializeAndLaunch("game-player", new Config(), () => { loginBuilder(1) });

@@ -1,6 +1,6 @@
 // Reviewed on 2024-09-18
 
-import { TimedEvent, stage, FilledBox, ImageSprite, TextSprite, BoxBody, Actor, Scene, SpriteLocation } from "../../jetlag";
+import { TimedEvent, stage, FilledBox, ImageSprite, TextSprite, BoxBody, Actor, Scene, SpriteLocation, AnimationState } from "../../jetlag";
 import { SessionInfo } from "../storage/session";
 import { LevelInfo } from "../storage/level";
 import { createMap } from "../common/map";
@@ -40,7 +40,7 @@ export const openingScreenBuilder: Builder = function (_level: number) {
   //
   // [mfs]  It would be better for Player() to just return an object, and this
   //        code to put it into the session storage.
-  let player = makeMainCharacter(74.4, 48.7, sStore.playerAppearance ?? new CharacterAnimations(defaultCharacter.clone()));
+  let player = makeMainCharacter(74.4, 48.7, sStore.playerAppearance ?? new CharacterAnimations(defaultCharacter.clone()), AnimationState.IDLE_W);
   stage.world.camera.setCameraFocus(player);
 
   let lInfo = new LevelInfo();
@@ -57,7 +57,6 @@ export const openingScreenBuilder: Builder = function (_level: number) {
   let fadeFilter = new FadingBlurFilter(0, 5, false);
   stage.renderer.addZFilter(fadeFilter, -1, SpriteLocation.OVERLAY);
   fadeFilter.enabled = true;
-  fadeFilter.toggled = true;
 
   // make the overlay for the controls screen
   //
@@ -106,7 +105,7 @@ export const openingScreenBuilder: Builder = function (_level: number) {
         gestures: {
           tap: () => {
             stage.clearOverlay();
-            fadeFilter.toggled = false;
+            fadeFilter.enabled = false;
             sStore.goToX = 3.4;
             sStore.goToY = 4.7
             stage.switchTo(makeCharacterBuilder, 1);

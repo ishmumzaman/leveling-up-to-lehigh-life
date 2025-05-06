@@ -104,7 +104,7 @@ export class FadingBlurFilter implements FilterComponent {
    */
   public getFilters() { return [this.blur_Filter]; }
 
-  public preRender(elapsedMs: number): boolean {
+  public preRender(_elapsedMs: number): boolean {
     // When the filter is enabled, slowly increase the blur until it reaches 15
     if (this.enabled && this.blur_Filter.blur < 15) {
       this.blur_Filter.blur += .5;
