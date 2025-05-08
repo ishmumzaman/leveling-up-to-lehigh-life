@@ -65,16 +65,20 @@ export class Config implements JetLagGameConfig {
   accelerometerMode = AccelerometerMode.DISABLED;
   // [mfs] This needs to be in a Lehigh domain eventually
   storageKey = "com.github.YassCoding.LUTLL";
-  hitBoxes = false;
+  hitBoxes = true;
   textFont = "kongtext";
-  minuteRate = 1;
+  minuteRate = 60;
 
   resources = {
     prefix: "./assets/",
     musicNames: [],
     soundNames: ["MVPDemo/hungry.mp3"],
     imageNames,
-    videoNames: [],
+    // [mfs] Are these still in use?
+    videoNames: ["mainMenu/Video/afternoonLoop.mp4",
+      "mainMenu/Video/midnightLoop.mp4",
+      "mainMenu/Video/morningLoop.mp4",
+      "mainMenu/Video/nightLoop.mp4"]
   }
 }
 
