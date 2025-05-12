@@ -124,7 +124,7 @@
             <key>data</key>
             <struct type="DataFile">
                 <key>name</key>
-                <filename>../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThree.json</filename>
+                <filename>../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThree.json</filename>
             </struct>
         </map>
         <key>multiPackMode</key>
@@ -173,54 +173,54 @@
         </struct>
         <key>individualSpriteSettings</key>
         <map type="IndividualSpriteSettingsMap">
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeIdleE0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeIdleE1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeIdleE2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeIdleE3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeIdleE4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeIdleE5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeIdleN0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeIdleN1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeIdleN2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeIdleN3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeIdleN4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeIdleN5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeIdleS0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeIdleS1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeIdleS2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeIdleS3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeIdleS4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeIdleS5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeIdleW0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeIdleW1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeIdleW2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeIdleW3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeIdleW4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeIdleW5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeWalkE0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeWalkE1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeWalkE2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeWalkE3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeWalkE4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeWalkE5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeWalkN0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeWalkN1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeWalkN2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeWalkN3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeWalkN4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeWalkN5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeWalkS0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeWalkS1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeWalkS2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeWalkS3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeWalkS4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeWalkS5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeWalkW0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeWalkW1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeWalkW2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeWalkW3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeWalkW4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeWalkW5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeIdleE0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeIdleE1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeIdleE2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeIdleE3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeIdleE4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeIdleE5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeIdleN0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeIdleN1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeIdleN2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeIdleN3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeIdleN4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeIdleN5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeIdleS0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeIdleS1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeIdleS2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeIdleS3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeIdleS4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeIdleS5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeIdleW0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeIdleW1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeIdleW2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeIdleW3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeIdleW4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeIdleW5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeWalkE0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeWalkE1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeWalkE2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeWalkE3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeWalkE4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeWalkE5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeWalkN0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeWalkN1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeWalkN2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeWalkN3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeWalkN4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeWalkN5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeWalkS0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeWalkS1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeWalkS2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeWalkS3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeWalkS4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeWalkS5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeWalkW0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeWalkW1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeWalkW2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeWalkW3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeWalkW4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeWalkW5.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0,0</point_f>
@@ -235,36 +235,36 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreePTNod0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreePTNod1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreePTNod2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreePTNod3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreePTNod4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreePTNod5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreePTNod6.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreePTNod7.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreePTNod8.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreePTNod9.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreePTShake0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreePTShake1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreePTShake2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreePTShake3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreePTShake4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreePTShake5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreePTShake6.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreePTShake7.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreePTShake8.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreePTShake9.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreePTTalk0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreePTTalk1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreePTTalk2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreePTTalk3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreePTTalk4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreePTTalk5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreePTTalk6.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreePTTalk7.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreePTTalk8.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreePTTalk9.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreePTNod0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreePTNod1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreePTNod2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreePTNod3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreePTNod4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreePTNod5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreePTNod6.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreePTNod7.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreePTNod8.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreePTNod9.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreePTShake0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreePTShake1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreePTShake2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreePTShake3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreePTShake4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreePTShake5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreePTShake6.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreePTShake7.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreePTShake8.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreePTShake9.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreePTTalk0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreePTTalk1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreePTTalk2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreePTTalk3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreePTTalk4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreePTTalk5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreePTTalk6.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreePTTalk7.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreePTTalk8.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreePTTalk9.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0,0</point_f>
@@ -286,84 +286,84 @@
             <struct type="SpriteSheet">
                 <key>files</key>
                 <array>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeIdleE0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeIdleE1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeIdleE2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeIdleE3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeIdleE4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeIdleE5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeIdleN0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeIdleN1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeIdleN2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeIdleN3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeIdleN4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeIdleN5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeIdleS0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeIdleS1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeIdleS2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeIdleS3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeIdleS4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeIdleS5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeIdleW0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeIdleW1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeIdleW2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeIdleW3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeIdleW4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeIdleW5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreePTNod0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreePTNod1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreePTNod2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreePTNod3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreePTNod4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreePTNod5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreePTNod6.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreePTNod7.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreePTNod8.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreePTNod9.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreePTShake0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreePTShake1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreePTShake2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreePTShake3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreePTShake4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreePTShake5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreePTShake6.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreePTShake7.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreePTShake8.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreePTShake9.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreePTTalk0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreePTTalk1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreePTTalk2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreePTTalk3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreePTTalk4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreePTTalk5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreePTTalk6.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreePTTalk7.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreePTTalk8.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreePTTalk9.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeWalkE0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeWalkE1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeWalkE2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeWalkE3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeWalkE4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeWalkE5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeWalkN0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeWalkN1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeWalkN2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeWalkN3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeWalkN4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeWalkN5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeWalkS0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeWalkS1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeWalkS2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeWalkS3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeWalkS4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeWalkS5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeWalkW0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeWalkW1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeWalkW2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeWalkW3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeWalkW4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcThree/npcThreeWalkW5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeIdleE0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeIdleE1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeIdleE2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeIdleE3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeIdleE4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeIdleE5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeIdleN0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeIdleN1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeIdleN2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeIdleN3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeIdleN4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeIdleN5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeIdleS0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeIdleS1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeIdleS2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeIdleS3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeIdleS4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeIdleS5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeIdleW0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeIdleW1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeIdleW2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeIdleW3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeIdleW4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeIdleW5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreePTNod0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreePTNod1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreePTNod2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreePTNod3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreePTNod4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreePTNod5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreePTNod6.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreePTNod7.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreePTNod8.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreePTNod9.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreePTShake0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreePTShake1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreePTShake2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreePTShake3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreePTShake4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreePTShake5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreePTShake6.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreePTShake7.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreePTShake8.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreePTShake9.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreePTTalk0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreePTTalk1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreePTTalk2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreePTTalk3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreePTTalk4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreePTTalk5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreePTTalk6.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreePTTalk7.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreePTTalk8.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreePTTalk9.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeWalkE0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeWalkE1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeWalkE2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeWalkE3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeWalkE4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeWalkE5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeWalkN0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeWalkN1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeWalkN2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeWalkN3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeWalkN4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeWalkN5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeWalkS0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeWalkS1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeWalkS2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeWalkS3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeWalkS4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeWalkS5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeWalkW0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeWalkW1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeWalkW2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeWalkW3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeWalkW4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcThree/npcThreeWalkW5.png</filename>
                 </array>
             </struct>
         </map>

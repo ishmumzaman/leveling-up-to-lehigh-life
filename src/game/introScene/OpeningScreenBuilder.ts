@@ -1,6 +1,6 @@
 // Reviewed on 2024-09-18
 
-import { TimedEvent, stage, FilledBox, ImageSprite, TextSprite, BoxBody, Actor, Scene, SpriteLocation } from "../../jetlag";
+import { TimedEvent, stage, FilledBox, ImageSprite, TextSprite, BoxBody, Actor, Scene, SpriteLocation, AnimationState } from "../../jetlag";
 import { SessionInfo } from "../storage/session";
 import { LevelInfo } from "../storage/level";
 import { createMap } from "../common/map";
@@ -17,8 +17,8 @@ import { Builder } from "../multiplayer/loginSystem";
  *
  * @param level Which level should be displayed (unused)
  */
-export const openingScreenBuilder:Builder = function(_level: number) {
-  
+export const openingScreenBuilder: Builder = function (_level: number) {
+
   // Initialize the session storage
   //
   // [mfs]  This code assumes that it's possible to "go back" to the opening
@@ -40,7 +40,7 @@ export const openingScreenBuilder:Builder = function(_level: number) {
   //
   // [mfs]  It would be better for Player() to just return an object, and this
   //        code to put it into the session storage.
-  let player = makeMainCharacter(74.4, 48.7, sStore.playerAppearance ?? new CharacterAnimations(defaultCharacter.clone()));
+  let player = makeMainCharacter(74.4, 48.7, sStore.playerAppearance ?? new CharacterAnimations(defaultCharacter.clone()), AnimationState.IDLE_W);
   stage.world.camera.setCameraFocus(player);
 
   let lInfo = new LevelInfo();
@@ -57,7 +57,6 @@ export const openingScreenBuilder:Builder = function(_level: number) {
   let fadeFilter = new FadingBlurFilter(0, 5, false);
   stage.renderer.addZFilter(fadeFilter, -1, SpriteLocation.OVERLAY);
   fadeFilter.enabled = true;
-  fadeFilter.toggled = true;
 
   // make the overlay for the controls screen
   //
@@ -80,7 +79,7 @@ export const openingScreenBuilder:Builder = function(_level: number) {
     });
     // 'q' image and text
     new Actor({
-      appearance: [new ImageSprite({ width: 0.9, height: 0.9, img: "icon/q.png" }),
+      appearance: [new ImageSprite({ width: 0.9, height: 0.9, img: "qKeys0.png" }),
       new TextSprite({ center: true, face: stage.config.textFont, color: "black", size: 27, offset: { dx: 4.5, dy: 0 } }, "Interact")],
       rigidBody: new BoxBody({ cx: 4.2, cy: 4.7, width: 0, height: 0 }, { scene: overlay }),
     });
@@ -106,9 +105,9 @@ export const openingScreenBuilder:Builder = function(_level: number) {
         gestures: {
           tap: () => {
             stage.clearOverlay();
-            fadeFilter.toggled = false;
-            sStore.locX = 3.4;
-            sStore.locY = 4.7
+            fadeFilter.enabled = false;
+            sStore.goToX = 3.4;
+            sStore.goToY = 4.7
             stage.switchTo(makeCharacterBuilder, 1);
             return true;
           }

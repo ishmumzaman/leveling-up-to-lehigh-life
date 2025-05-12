@@ -4,7 +4,7 @@
         <key>fileFormatVersion</key>
         <int>6</int>
         <key>texturePackerVersion</key>
-        <string>7.4.0</string>
+        <string>7.6.0</string>
         <key>autoSDSettings</key>
         <array>
             <struct type="AutoSDSettings">
@@ -124,7 +124,7 @@
             <key>data</key>
             <struct type="DataFile">
                 <key>name</key>
-                <filename>../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01.json</filename>
+                <filename>out.json</filename>
             </struct>
         </map>
         <key>multiPackMode</key>
@@ -172,150 +172,14 @@
             <false/>
         </struct>
         <key>individualSpriteSettings</key>
-        <map type="IndividualSpriteSettingsMap">
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01IdleE0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01IdleE1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01IdleE2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01IdleE3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01IdleE4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01IdleE5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01IdleS0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01IdleS1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01IdleS2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01IdleS3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01IdleS4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01IdleS5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01IdleW0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01IdleW1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01IdleW2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01IdleW3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01IdleW4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01IdleW5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01WalkE0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01WalkE1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01WalkE2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01WalkE3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01WalkE4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01WalkE5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01WalkS0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01WalkS1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01WalkS2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01WalkS3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01WalkS4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01WalkS5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01WalkW0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01WalkW1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01WalkW2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01WalkW3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01WalkW4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01WalkW5.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0,0</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>12,24,24,48</rect>
-                <key>scale9Paddings</key>
-                <rect>12,24,24,48</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01PTNod0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01PTNod1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01PTNod2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01PTNod7.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01PTNod8.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01PTNod9.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01PTShake0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01PTShake1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01PTShake9.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01PTTalk0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01PTTalk1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01PTTalk3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01PTTalk4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01PTTalk5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01PTTalk6.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01PTTalk7.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01PTTalk8.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01PTTalk9.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0,0</point_f>
-                <key>spriteScale</key>
-                <double>1</double>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>24,24,48,48</rect>
-                <key>scale9Paddings</key>
-                <rect>24,24,48,48</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-        </map>
+        <map type="IndividualSpriteSettingsMap"/>
         <key>fileLists</key>
         <map type="SpriteSheetMap">
             <key>default</key>
             <struct type="SpriteSheet">
                 <key>files</key>
                 <array>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01IdleE0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01IdleE1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01IdleE2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01IdleE3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01IdleE4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01IdleE5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01IdleS0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01IdleS1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01IdleS2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01IdleS3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01IdleS4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01IdleS5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01IdleW0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01IdleW1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01IdleW2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01IdleW3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01IdleW4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01IdleW5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01PTNod0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01PTNod1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01PTNod2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01PTNod7.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01PTNod8.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01PTNod9.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01PTShake0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01PTShake1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01PTShake9.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01PTTalk0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01PTTalk1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01PTTalk3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01PTTalk4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01PTTalk5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01PTTalk6.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01PTTalk7.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01PTTalk8.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01PTTalk9.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01WalkE0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01WalkE1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01WalkE2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01WalkE3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01WalkE4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01WalkE5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01WalkS0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01WalkS1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01WalkS2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01WalkS3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01WalkS4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01WalkS5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01WalkW0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01WalkW1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01WalkW2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01WalkW3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01WalkW4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/eyes01/eyes01WalkW5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/eyes01</filename>
                 </array>
             </struct>
         </map>

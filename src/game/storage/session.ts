@@ -1,3 +1,4 @@
+import { ItemType } from './../inventory/item';
 // Reviewed on 2024-09-27
 
 import { Quest } from '../quests/questLogic';
@@ -7,7 +8,7 @@ import { PrepareInspectables } from "../interactions/inspectables"
 import { makeNpcDirectory } from '../characters/NPC';
 import { HawksQuest } from '../quests/hawksQuest';
 import { RemoteActor } from '../multiplayer/loginSystem';
-import { Actor } from '../../jetlag';
+import { Actor, AnimationState } from '../../jetlag';
 import { defaultCharacter } from '../characters/makeCharacterBuilder';
 import { WorldClock } from '../common/clock';
 import { Stats } from '../characters/stats';
@@ -30,11 +31,11 @@ export class SessionInfo {
 
   /**
    * Inventory data for the player, NPCs, and shelves
-   * 
+   *
    * [mfs] This needs to be split out a bit, but it's OK for now.
    */
   inventories = {
-    player: new Inventory(2, 6),
+    player: { main: new Inventory(2, 6), outfit: new Inventory(1, 1, ItemType.Outfit), accessory: new Inventory(1, 1, ItemType.Accessory) },
     npcs: [] as Inventory[], // This should be in the quest object
     shelves: [] as Inventory[], // This should be in the quest object
   };
@@ -46,12 +47,13 @@ export class SessionInfo {
   // [mfs]  I think it would suffice to have a way of knowing which builder and
   //        which level the player is coming from, then the builder can decide
   //        for itself.
-  locX?: number;
-  locY?: number;
+  goToX?: number;
+  goToY?: number;
+  dir = AnimationState.IDLE_S
 
   /**
    * Player statistics
-   * 
+   *
    * [mfs] These aren't fully in use yet, but they're good to have
    */
   playerStat = new Stats(100);

@@ -1,8 +1,7 @@
 // Reviewed on 2024-10-02
 
-import { Actor, AnimatedSprite, BoxBody, FilledBox, ImageSprite, SpriteLocation, stage, TextSprite, TimedEvent } from "../../jetlag";
+import { Actor, AnimatedSprite, BoxBody, FilledBox, ImageSprite, stage, TextSprite, TimedEvent } from "../../jetlag";
 import { NpcConfig } from "../characters/NPC";
-import { FadingBlurFilter } from "../common/filter";
 import { textSlicer } from '../common/textFormatting';
 import { makeEmoteAnimation } from "../characters/character";
 import { LevelInfo } from "../storage/level";
@@ -20,9 +19,6 @@ export class DialogueUI {
 
   /** The text to show (changes over time to give an animated effect) */
   private textAppearance = "";
-
-  /** For blurring the background when the UI is showing */
-  private fadeFilter: FadingBlurFilter;
 
   /**
    * A receiver for when there are no responses, but a click is needed in order to
@@ -48,7 +44,7 @@ export class DialogueUI {
   /** The driver for advancing the conversation */
   private driver?: DialogueDriver;
 
-  /** 
+  /**
    * Construct the DialogueUI
    *
    * [mfs] We don't enforce that this is a singleton, even though it is.
@@ -103,9 +99,6 @@ export class DialogueUI {
       gestures: { tap: () => { this.next(2); this.closeResponses(); return true; } },
     }));
 
-    // Initialize the blur filter to be used later
-    this.fadeFilter = new FadingBlurFilter(0, 5, false);
-    stage.renderer.addFilter(this.fadeFilter, SpriteLocation.WORLD);
 
     // Hide everything for now
     this.dialogueBox.enabled = false;
@@ -121,7 +114,7 @@ export class DialogueUI {
 
   /**
    * Change the dialogue portrait to a different emotion
-   * 
+   *
    * @param emote the emote to switch to (Talk, Nod, Shake)
    */
   private changePortrait(emote: string) {
@@ -137,7 +130,7 @@ export class DialogueUI {
     // Add portrait
     let portrait = new AnimatedSprite({ width: 2.6, height: 2.6, animations: makeEmoteAnimation(this.npc!.portrait, emote), offset: { dx: -5.9, dy: 0.18 }, z: 2 });
     this.dialogueBox.appearance.push(portrait); // Add the new portrait
-    portrait.actor = this.dialogueBox; // There is a two way link between an AppearanceComponent and Actor so assign the appearance component an actor. 
+    portrait.actor = this.dialogueBox; // There is a two way link between an AppearanceComponent and Actor so assign the appearance component an actor.
   }
 
   /**
@@ -163,16 +156,6 @@ export class DialogueUI {
     this.driver = driver;
 
     if (this.showing) return;
-
-    let lInfo = stage.storage.getLevel("levelInfo") as LevelInfo;
-    // [mfs]  It seems that sometimes, an Inspectable or Dialogue won't supress
-    //        *all* of the controls, and we can still move around and/or press
-    //        HUD buttons and/or press "E".  Someone should look into this.
-    lInfo.keyboard?.stopPlayerControls()
-
-    // Blur the background
-    this.fadeFilter.enabled = true;
-    this.fadeFilter.toggled = true;
 
     // Enable dialogue UI, reset text, start the text animation
     this.dialogueBox.enabled = true;
@@ -251,13 +234,12 @@ export class DialogueUI {
   private closeDialogue() {
     if (!this.showing) return;
 
-    this.fadeFilter.toggled = false;
     this.dialogueBox.enabled = false;
     this.textActor.enabled = false;
     this.showing = false;
 
     let lInfo = stage.storage.getLevel("levelInfo") as LevelInfo;
-    lInfo.keyboard?.startPlayerControls();
+    lInfo.hud!.toggleMode('dialogue');
     this.driver!.endFunc(this.driver!.footprints);
   }
 

@@ -3,7 +3,7 @@
 import { Inventory } from '../inventory/inventory';
 import { Actor, AdvancedCollisionService, AnimatedSprite, AnimationSequence, AnimationState, BoxBody, ChaseMovement, MovementComponent, Obstacle, stage } from "../../jetlag";
 import { DialogueDriver } from "../interactions/dialogue";
-import { makeSetCharAnimation } from "./character";
+import { makeNPCAnimation } from "./character";
 import { Spawner } from "../common/spawner";
 import { SessionInfo } from "../storage/session";
 import { b2BodyType } from '@box2d/core';
@@ -56,7 +56,7 @@ export class NpcConfig {
   constructor(readonly name: string, readonly spriteName: string, readonly defaultConvo: ConversationMap,) {
     this.portrait = spriteName + "PT";
     this.defaultDialogue = new DialogueDriver(defaultConvo, "start");
-    this.npcAnimation = makeSetCharAnimation(spriteName);
+    this.npcAnimation = makeNPCAnimation(spriteName);
   }
 }
 
@@ -79,7 +79,7 @@ export function makeNpcDirectory() {
   ]);
 }
 
-/** 
+/**
  * Configuration and behavior information that is needed for any NPC who is
  * drawn in the world.  This version doesn't do anything special with movement,
  * and just triggers a dialogue on any Q interaction.
@@ -117,8 +117,8 @@ export class NpcBehavior extends Extra {
     this.inventory = new Inventory(2, 6);
     sStore.inventories.npcs.push(this.inventory);
 
-    // give the NPC a hitbox for interactions 
-    this.staticSpawner = new Spawner(3, 6, 0.6, 0.8, "empty.png", () => { this.nextDialogue() });
+    // give the NPC a hitbox for interactions
+    this.staticSpawner = new Spawner(3, 6, 0.6, 0.8, () => { this.nextDialogue() });
     this.staticSpawner.sensorOff();
     this.staticSpawner.obstacle.enabled = false;
   }
@@ -130,18 +130,19 @@ export class NpcBehavior extends Extra {
     let lInfo = stage.storage.getLevel("levelInfo") as LevelInfo;
     if (this.nextDialogueDriver) {
       let dlgData = this.nextDialogueDriver;
-      this.nextDialogueDriver = undefined; // Reset the next dialogue after using it
+      this.nextDialogueDriver = undefined; // Reset the next dialogue driver after using it
       lInfo.hud!.dialogue.newDialogue(this.config, dlgData);
     }
     else {
       lInfo.hud!.dialogue.newDialogue(this.config, this.config.defaultDialogue.clone());
     }
+    lInfo.hud!.toggleMode('dialogue');
   }
 
   /**
    * Add a dialogue for the NPC to use when talking to the player next,
    * if undefined, the default dialogue will be used
-   * 
+   *
    * @param driver  A DialogueDriver of the dialogue
    */
   public setNextDialogue(driver: DialogueDriver | undefined) {
@@ -156,13 +157,13 @@ export class NpcBehavior extends Extra {
  * @param xPos      The NPC's X coordinate
  * @param yPos      The NPC's Y coordinate
  * @param direction The direction to face
- * 
+ *
  * @returns An actor, with a NpcBehavior as its extra
  */
 export function spawnRegularNpc(which: NpcNames, xPos: number, yPos: number, direction: AnimationState, movement?: MovementComponent) {
   // Create an NpcBehavior and hook it up to an actor
   let details = new NpcBehavior(which);
-  let npcAnimation = makeSetCharAnimation(details.config.spriteName);
+  let npcAnimation = makeNPCAnimation(details.config.spriteName);
   let npcActor = new Actor({
     appearance: new AnimatedSprite({ initialDir: direction, width: 0.8, height: 1.6, ...npcAnimation, offset: { dx: 0, dy: -0.6 } }),
     rigidBody: new BoxBody({ cx: xPos, cy: yPos, width: 0.5, height: 0.5 }, { disableRotation: true, collisionsEnabled: true, passThroughId: [1], dynamic: false }),
@@ -192,8 +193,8 @@ export class FollowingNpcBehavior extends NpcBehavior {
   public chasing = false;
 
   /**
-   * Construct a FollowingNpcBehavior 
-   * 
+   * Construct a FollowingNpcBehavior
+   *
    * @param name    The NPC type that is being created
    * @param follow  The actor to follow
    */
@@ -207,16 +208,16 @@ export class FollowingNpcBehavior extends NpcBehavior {
 
   /**
    * Set the code to run when the NPC is interacted with
-   * 
+   *
    * @param func the code you want to run when the NPC is interacted with
    */
   public setNPCInteraction(func: any) {
     this.staticSpawner.func = func;
   }
 
-  /** 
-   * Follow a target actor 
-   * 
+  /**
+   * Follow a target actor
+   *
    * @param target An optional actor, allowing changing which actor to chase
    */
   public followActor(target?: Actor) {
@@ -244,7 +245,7 @@ export class FollowingNpcBehavior extends NpcBehavior {
  * @param yPos      The NPC's Y coordinate
  * @param direction The direction to face
  * @param followed  The actor to follow
- * 
+ *
  * @returns An actor, with a NpcBehavior as its extra
  */
 export function spawnFollowingNpc(which: NpcNames, xPos: number, yPos: number, direction: AnimationState, followed: Actor) {
@@ -272,10 +273,10 @@ export function spawnFollowingNpc(which: NpcNames, xPos: number, yPos: number, d
     }
   });
 
-  // Get rid of the NPC's initial appearance to change direction and 
+  // Get rid of the NPC's initial appearance to change direction and
   // give them a new appearance with correct animation and direction
   npcActor.appearance.pop();
-  let npcAnimation = makeSetCharAnimation(details.config.spriteName);
+  let npcAnimation = makeNPCAnimation(details.config.spriteName);
   let newAppearance = new AnimatedSprite({ initialDir: direction, width: 0.8, height: 1.6, animations: npcAnimation.animations, remap: npcAnimation.remap, offset: { dx: 0, dy: -0.6 } })
   npcActor.appearance.push(newAppearance);
   newAppearance.actor = npcActor; // You need to link the actor with its appearance ALWAYS or else it doesn't work.

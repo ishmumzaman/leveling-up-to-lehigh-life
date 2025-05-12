@@ -124,7 +124,7 @@
             <key>data</key>
             <struct type="DataFile">
                 <key>name</key>
-                <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFour.json</filename>
+                <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFour.json</filename>
             </struct>
         </map>
         <key>multiPackMode</key>
@@ -173,54 +173,54 @@
         </struct>
         <key>individualSpriteSettings</key>
         <map type="IndividualSpriteSettingsMap">
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourIdleE0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourIdleE1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourIdleE2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourIdleE3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourIdleE4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourIdleE5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourIdleN0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourIdleN1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourIdleN2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourIdleN3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourIdleN4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourIdleN5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourIdleS0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourIdleS1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourIdleS2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourIdleS3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourIdleS4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourIdleS5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourIdleW0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourIdleW1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourIdleW2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourIdleW3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourIdleW4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourIdleW5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourWalkE0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourWalkE1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourWalkE2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourWalkE3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourWalkE4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourWalkE5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourWalkN0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourWalkN1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourWalkN2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourWalkN3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourWalkN4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourWalkN5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourWalkS0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourWalkS1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourWalkS2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourWalkS3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourWalkS4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourWalkS5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourWalkW0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourWalkW1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourWalkW2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourWalkW3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourWalkW4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourWalkW5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourIdleE0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourIdleE1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourIdleE2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourIdleE3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourIdleE4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourIdleE5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourIdleN0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourIdleN1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourIdleN2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourIdleN3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourIdleN4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourIdleN5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourIdleS0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourIdleS1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourIdleS2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourIdleS3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourIdleS4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourIdleS5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourIdleW0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourIdleW1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourIdleW2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourIdleW3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourIdleW4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourIdleW5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourWalkE0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourWalkE1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourWalkE2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourWalkE3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourWalkE4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourWalkE5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourWalkN0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourWalkN1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourWalkN2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourWalkN3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourWalkN4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourWalkN5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourWalkS0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourWalkS1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourWalkS2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourWalkS3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourWalkS4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourWalkS5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourWalkW0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourWalkW1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourWalkW2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourWalkW3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourWalkW4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourWalkW5.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0,0</point_f>
@@ -235,36 +235,36 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourPTNod0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourPTNod1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourPTNod2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourPTNod3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourPTNod4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourPTNod5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourPTNod6.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourPTNod7.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourPTNod8.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourPTNod9.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourPTShake0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourPTShake1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourPTShake2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourPTShake3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourPTShake4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourPTShake5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourPTShake6.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourPTShake7.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourPTShake8.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourPTShake9.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourPTTalk0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourPTTalk1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourPTTalk2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourPTTalk3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourPTTalk4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourPTTalk5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourPTTalk6.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourPTTalk7.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourPTTalk8.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourPTTalk9.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourPTNod0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourPTNod1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourPTNod2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourPTNod3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourPTNod4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourPTNod5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourPTNod6.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourPTNod7.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourPTNod8.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourPTNod9.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourPTShake0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourPTShake1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourPTShake2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourPTShake3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourPTShake4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourPTShake5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourPTShake6.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourPTShake7.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourPTShake8.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourPTShake9.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourPTTalk0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourPTTalk1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourPTTalk2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourPTTalk3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourPTTalk4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourPTTalk5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourPTTalk6.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourPTTalk7.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourPTTalk8.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourPTTalk9.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0,0</point_f>
@@ -286,84 +286,84 @@
             <struct type="SpriteSheet">
                 <key>files</key>
                 <array>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourIdleE0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourIdleE1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourIdleE2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourIdleE3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourIdleE4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourIdleE5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourIdleN0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourIdleN1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourIdleN2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourIdleN3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourIdleN4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourIdleN5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourIdleS0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourIdleS1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourIdleS2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourIdleS3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourIdleS4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourIdleS5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourIdleW0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourIdleW1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourIdleW2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourIdleW3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourIdleW4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourIdleW5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourPTNod0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourPTNod1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourPTNod2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourPTNod3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourPTNod4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourPTNod5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourPTNod6.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourPTNod7.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourPTNod8.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourPTNod9.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourPTShake0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourPTShake1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourPTShake2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourPTShake3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourPTShake4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourPTShake5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourPTShake6.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourPTShake7.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourPTShake8.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourPTShake9.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourPTTalk0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourPTTalk1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourPTTalk2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourPTTalk3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourPTTalk4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourPTTalk5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourPTTalk6.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourPTTalk7.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourPTTalk8.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourPTTalk9.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourWalkE0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourWalkE1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourWalkE2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourWalkE3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourWalkE4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourWalkE5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourWalkN0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourWalkN1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourWalkN2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourWalkN3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourWalkN4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourWalkN5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourWalkS0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourWalkS1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourWalkS2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourWalkS3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourWalkS4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourWalkS5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourWalkW0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourWalkW1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourWalkW2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourWalkW3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourWalkW4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcFour/npcFourWalkW5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourIdleE0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourIdleE1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourIdleE2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourIdleE3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourIdleE4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourIdleE5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourIdleN0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourIdleN1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourIdleN2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourIdleN3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourIdleN4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourIdleN5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourIdleS0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourIdleS1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourIdleS2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourIdleS3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourIdleS4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourIdleS5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourIdleW0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourIdleW1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourIdleW2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourIdleW3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourIdleW4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourIdleW5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourPTNod0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourPTNod1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourPTNod2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourPTNod3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourPTNod4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourPTNod5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourPTNod6.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourPTNod7.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourPTNod8.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourPTNod9.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourPTShake0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourPTShake1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourPTShake2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourPTShake3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourPTShake4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourPTShake5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourPTShake6.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourPTShake7.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourPTShake8.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourPTShake9.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourPTTalk0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourPTTalk1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourPTTalk2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourPTTalk3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourPTTalk4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourPTTalk5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourPTTalk6.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourPTTalk7.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourPTTalk8.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourPTTalk9.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourWalkE0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourWalkE1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourWalkE2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourWalkE3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourWalkE4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourWalkE5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourWalkN0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourWalkN1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourWalkN2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourWalkN3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourWalkN4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourWalkN5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourWalkS0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourWalkS1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourWalkS2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourWalkS3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourWalkS4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourWalkS5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourWalkW0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourWalkW1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourWalkW2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourWalkW3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourWalkW4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcFour/npcFourWalkW5.png</filename>
                 </array>
             </struct>
         </map>

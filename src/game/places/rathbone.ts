@@ -6,18 +6,13 @@
 // [mfs]  When we switch the quest system, this will stop needing `level`.
 
 import { AnimationState, stage } from "../../jetlag";
-import { InspectSystem } from "../interactions/inspectUi";
 import { createMap } from "../common/map";
 import { Spawner } from "../common/spawner";
 import { SessionInfo } from "../storage/session";
-import { mmHallBuilder } from "./mmHall";
-import { Inspectable } from "../interactions/inspectables";
 import { LevelInfo } from "../storage/level";
 import { HUD } from "../ui/hud";
 import { KeyboardHandler } from "../ui/keyboard";
 import { makeMainCharacter } from "../characters/character";
-import { Places } from "./places";
-import { spawnRegularNpc, NpcNames } from "../characters/NPC";
 import { Builder } from "../multiplayer/loginSystem";
 import { buildAsaPackerOutside } from "./asa_campus_outside";
 import { drawObjects } from "./walls";
@@ -28,10 +23,10 @@ import * as hall_objects from "../../../tilemaps/TileMaps/rathbone.json"
 
 /**
  * Build all levels occurring in rathbone
- * 
+ *
  * @param level the level to build
  */
-export const rathboneBuilder: Builder = function (level: number) {
+export const rathboneBuilder: Builder = function (_level: number) {
   // Set up session and level storage
   if (!stage.storage.getSession("sStore")) stage.storage.setSession("sStore", new SessionInfo());
   let sStore = stage.storage.getSession("sStore") as SessionInfo;
@@ -52,43 +47,7 @@ export const rathboneBuilder: Builder = function (level: number) {
   lInfo.keyboard = new KeyboardHandler(player);
 
   //door to leave rathbone (Currently just takes back to temp spawner location in asa_campus_outside.ts)
-  new Spawner(32.6, 34.6, 2, 0.8, "empty.png", () => { sStore.locX = 97.5; sStore.locY = 21.3; stage.switchTo(buildAsaPackerOutside, 1); });
-
-  /*
-  // Create interactable items within our dorm room
-  let closet = new InspectSystem(Inspectable.MM_DORM_CLOSET);
-  new Spawner(4.8, 2.3, 1.3, 0.5, "empty.png", () => { closet.openUi() });
-
-  let roommateCloset = new InspectSystem(Inspectable.MM_DORM_ROOMMATE_CLOSET);
-  new Spawner(1.9, 2.3, 1.3, 0.5, "empty.png", () => { roommateCloset.openUi() });
-
-  let bed = new InspectSystem(Inspectable.MM_DORM_BED);
-  new Spawner(5.3, 5.1, 1, 1.4, "empty.png", () => { bed.openUi() });
-
-  let trash = new InspectSystem(Inspectable.MM_DORM_TRASH);
-  new Spawner(1.4, 7.6, 0.8, 0.8, "empty.png", () => { trash.openUi() });
-
-  let boxes = new InspectSystem(Inspectable.MM_DORM_BOXES);
-  new Spawner(5.2, 7.6, 0.8, 0.8, "empty.png", () => { boxes.openUi() });
-  */
-
-  /*
-  // Door for the player to exit into the hallway
-  new Spawner(3.3, 10, 2, 0.8, "empty.png", () => {
-    // Where the player should spawn
-    sStore.locX = 5.3;
-    sStore.locY = 2.5;
-    stage.switchTo(mmHallBuilder, 1);
-  });
-  */
- 
-  /*
-  let jake = spawnRegularNpc(NpcNames.Jake, 2.1, 4.7, AnimationState.IDLE_E);
-  
-  // Update the map and NPC based on the current quest, if any
-  sStore.currQuest?.onBuildPlace(Places.RATHBONE, level);
-  sStore.currQuest?.onMakeNpc(Places.RATHBONE, level, jake);
-  */
+  new Spawner(32.6, 34.6, 2, 0.8, () => { sStore.goToX = 97.5; sStore.goToY = 21.3; stage.switchTo(buildAsaPackerOutside, 1); });
 }
 rathboneBuilder.builderName = "rathbone";
 rathboneBuilder.playerLimit = 15

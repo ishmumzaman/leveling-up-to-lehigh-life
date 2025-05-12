@@ -3,17 +3,17 @@ import { Conversation, ConversationMap } from "./conversation";
 
 /** DialogueDriver handles the movement through a conversation */
 export class DialogueDriver {
-  conversation: Conversation; // The current conversation within the map, if any 
+  conversation: Conversation; // The current conversation within the map, if any
   // Collects the footprints of any traversed responses when going through the dialogue
   footprints: Set<number> = new Set();
 
   /** Code to run when the conversation finishes */
   // TODO: Use sets instead of arrays for footprints
-  public endFunc = (footprints_: Set<number>) => { };
+  public endFunc = (_footprints: Set<number>) => { };
 
   /**
    * Create a DialogueDriver
-   * 
+   *
    * @param conversationMap The conversation objects to use for this dialogue
    * @param start           The starting point within conversationMap
    * @param endFunc         The function to run when the conversation ends
@@ -53,7 +53,7 @@ export class DialogueDriver {
 
   /**
    * Make a copy of this DialogueDriver
-   * 
+   *
    * @returns A copy of this DialogueDriver
    */
   public clone() {

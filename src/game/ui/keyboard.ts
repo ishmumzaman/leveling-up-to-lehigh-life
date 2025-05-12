@@ -1,7 +1,7 @@
 // Reviewed on 2024-09-25
 
 import { Actor, KeyCodes, ManualMovement, stage, TimedEvent } from "../../jetlag";
-import { renderPlayerInventory } from "../inventory/ui";
+import { LevelInfo } from "../storage/level";
 import { SessionInfo } from "../storage/session";
 
 /**
@@ -18,7 +18,7 @@ export class KeyboardHandler {
 
   /**
    * Construct a KeyboardHandler handler
-   * 
+   *
    * @param actor The actor to control
    */
   constructor(private actor: Actor) {
@@ -41,6 +41,7 @@ export class KeyboardHandler {
    * @returns The event used to continuously check for the player's movement
    */
   private keyHandler(hero: Actor) {
+    let lInfo = stage.storage.getLevel("levelInfo") as LevelInfo;
     // Set up some keyboard listeners so that we always know which keys are down
     // and which are up:
     let keyW: boolean;
@@ -67,7 +68,7 @@ export class KeyboardHandler {
     //
     // [mfs]  It looks like stopPlayerControls doesn't have any effect on these.
     //        Is that OK?
-    stage.keyboard.setKeyDownHandler(KeyCodes.KEY_E, () => (renderPlayerInventory()));
+    stage.keyboard.setKeyDownHandler(KeyCodes.KEY_E, () => { lInfo.hud!.toggleMode("inventory"); });
     stage.keyboard.setKeyDownHandler(KeyCodes.KEY_Q, () => { this.currInteraction(); });
 
     // [mfs]  I *really* want an escape key for dismissing a completed dialog, and
@@ -99,8 +100,12 @@ export class KeyboardHandler {
       (this.actor.movement as ManualMovement).updateXVelocity(0);
       (this.actor.movement as ManualMovement).updateYVelocity(0);
     }
-  }
 
+    let lInfo = stage.storage.getLevel("levelInfo") as LevelInfo;
+    if (lInfo.hud!.getMode() != 'inventory') stage.keyboard.setKeyDownHandler(KeyCodes.KEY_E, () => { });
+    if (lInfo.hud!.getMode() == 'inventory' || lInfo.hud!.getMode() == 'dialogue')
+      stage.keyboard.setKeyDownHandler(KeyCodes.KEY_Q, () => { });
+  }
   /**
    * Handle all movement quirks when they happen while normalizing diagonal movement
    *

@@ -4,22 +4,23 @@ import { Scene } from '../../jetlag/Entities/Scene';
 import { stage } from "../../jetlag/Stage";
 import { SessionInfo, } from "../storage/session";
 import { Actor, AnimatedSprite, AnimationState, BoxBody, FilledBox, ImageSprite, SpriteLocation, TextSprite, TimedEvent } from "../../jetlag";
-import { Attribute, CharacterAnimations, CharacterConfig, CharacterPart } from "./characterCustomization";
+import { Attribute, CharacterAnimations, CharacterConfig, CharacterPart, TxID } from "./characterCustomization";
 import { makeSimpleAnimation } from "./character";
 import { mmDormBuilder } from "../places/mmDorm";
 import { FadingBlurFilter } from "../common/filter";
 import { attributeIconData as aData, optionIconData as oData, palletteIconData as pData } from "./constants";
 import { Builder } from '../multiplayer/loginSystem';
+import { partToItem } from './characterChange';
 
 /**
  * The defaults for the character creation UI page
  */
 export const defaultCharacter = new CharacterConfig(
-  new CharacterPart("body03", [], []),
-  new CharacterPart("eyes01", [], []),
-  new CharacterPart("outfit01", [], []),
-  new CharacterPart("hair04", [], []),
-  new CharacterPart("", [], [])
+  new CharacterPart(TxID.Body03, [], []),
+  new CharacterPart(TxID.Eyes01, [], []),
+  new CharacterPart(TxID.Outfit01, [], []),
+  new CharacterPart(TxID.Hair04, [], []),
+  new CharacterPart(TxID.None, [], [])
 );
 
 /**
@@ -28,8 +29,8 @@ export const defaultCharacter = new CharacterConfig(
  *
  * This is a stateful UI component.  As its actors are clicked, it modifies a
  * local `state` object, which makes (or remakes) the configuration of the
- * character. 
- * 
+ * character.
+ *
  * The heriarchy of operations to create a character goes from Attribute -> Option -> Pallette
  * You need to select an attribute, then an option, then a pallette to change the character's appearance.
  *
@@ -80,14 +81,14 @@ class UserInterface {
     currPage: number;
     /**
      * This is the currently selected attribute, so we know what to draw in the
-     * options section of the UI 
+     * options section of the UI
      */
     selection: Attribute;
   } = { icons: [], currPage: 1, selection: Attribute.NONE };
 
-  /** 
+  /**
    * The UI has a section where we draw the options for the currently selected
-   * attribute 
+   * attribute
    */
   options: {
     /** The set of options from which to chose, in a 2d grid */
@@ -105,17 +106,17 @@ class UserInterface {
     titleText?: Actor;
     /** A text box for the page number (1/1, etc) */
     pageText?: Actor;
-    /** 
+    /**
      * Though not currently in use, we can have several pages of options, so we
      * need to know which page we're on (always starts at 1)
      */
     currPage: number;
     /**
-     * This is the currently selected attribute, so we know what to draw in the
-     * options section of the UI 
+     * This is the currently selected clothing item, so we know what to draw in the
+     * options section of the UI
      */
-    selection: string;
-  } = { icons: [], currPage: 1, selection: "" };
+    selection: TxID;
+  } = { icons: [], currPage: 1, selection: TxID.None };
 
   /**
    * The UI has a section where we draw some pallettes that can be chosen to
@@ -195,7 +196,7 @@ class UserInterface {
         let icon = new Actor({
           appearance: [
             new ImageSprite({ width: 1.6, height: 1.6, img: "attributeSelectBox.png" }),
-            new ImageSprite({ width: value.w, height: value.h, img: value.file, offset: { dx: value.ox, dy: value.oy } })
+            new ImageSprite({ width: value.w, height: value.h, img: value.img, offset: { dx: value.ox, dy: value.oy } })
           ],
           rigidBody: new BoxBody({ cx: xFix + (dx * (i % 5)), cy: yFix, width: 1.6, height: 1.6 }),
           gestures: {
@@ -306,13 +307,14 @@ class UserInterface {
               let sIcon = new Actor({
                 appearance: [
                   new ImageSprite({ width: 1, height: 1, img: "optionSelectBox.png" }),
-                  new ImageSprite({ width: value.w, height: value.h, img: value.file, offset: { dx: value.ox, dy: value.oy } })
+                  new ImageSprite({ width: value.w, height: value.h, img: value.img, offset: { dx: value.ox, dy: value.oy } })
                 ],
                 rigidBody: new BoxBody({ cx: xFix + (dx * j), cy: yFix + (dy * i), width: 1, height: 1 }),
                 gestures: {
                   tap: () => {
                     // Like above, but for key so we know which option was chosen
-                    let optionKey = Array.from(oData.get(this.attributes.selection)!.keys())[currIndex + startIndex];
+                    let optionKey = Array.from(oData.get(this.attributes.selection)!.keys())[currIndex + startIndex] as TxID;
+
                     // Tapping will update the `state` and immediately re-generate the previews
                     switch (this.attributes.selection) {
                       case Attribute.OUTFIT: this.state.config.outfit.set(optionKey, [], []); break;
@@ -332,7 +334,7 @@ class UserInterface {
                     this.makePallettePage();
                     this.options.titleText = new Actor({
                       appearance: new TextSprite({ center: true, face: stage.config.textFont, color: "000000", size: 18 },
-                        () => value.displayName ? value.displayName : value.file),
+                        () => value.displayName ? value.displayName : value.img),
                       rigidBody: new BoxBody({ cx: 13.15, cy: 5.4, width: 0.6, height: 0.6 }),
                     })
                     return true;
@@ -385,7 +387,7 @@ class UserInterface {
         appearance: new TextSprite({ center: true, face: stage.config.textFont, color: "#262626", size: 25 }, () => "No options\navailable"),
         rigidBody: new BoxBody({ cx: 13.15, cy: 3, width: 0, height: 0 }),
       });
-      this.options.selection = "";
+      this.options.selection = TxID.None; // Reset the selection to none
       this.makePallettePage();
     }
   }
@@ -432,7 +434,7 @@ class UserInterface {
               }
             }
           });
-          this.pallettes.push(pIcon); // Add each icon actor to the icons array 
+          this.pallettes.push(pIcon); // Add each icon actor to the icons array
         }
       }
     } else {
@@ -457,7 +459,6 @@ class UserInterface {
     let fadeFilter = new FadingBlurFilter(0, 5, false);
     stage.renderer.addZFilter(fadeFilter, -2, SpriteLocation.OVERLAY);
     fadeFilter.enabled = true;
-    fadeFilter.toggled = true;
     // Start an overlay
     stage.requestOverlay((overlay, screenshot) => {
       screenshot!.z = -2;
@@ -477,7 +478,7 @@ class UserInterface {
         rigidBody: new BoxBody({ cx: 6.5, cy: 6, width: 0.9, height: 0.9 }, { scene: overlay }),
         gestures: {
           tap: () => {
-            fadeFilter.toggled = false;
+            fadeFilter.enabled = false;
             this.animateButton(no, overlay);
             stage.clearOverlay();
             return true;
@@ -492,7 +493,7 @@ class UserInterface {
         gestures: {
           tap: () => {
             func();
-            fadeFilter.toggled = false;
+            fadeFilter.enabled = false;
             this.animateButton(yes, overlay);
             stage.clearOverlay();
             return true;
@@ -536,7 +537,7 @@ class UserInterface {
       let options = Array.from(oData.get(this.attributes.selection)!.keys());
       let randOption = options[Math.floor(Math.random() * options.length)];
 
-      // Get the original color and pallettes from the random option and pick 
+      // Get the original color and pallettes from the random option and pick
       // from it a random pallette (if applicable)
       let og = pData.get(this.attributes.selection)!.get(randOption)?.originalColor;
       let plts = pData.get(this.attributes.selection)!.get(randOption)?.pallettes;
@@ -668,8 +669,13 @@ export const makeCharacterBuilder: Builder = function () {
         ui.makeYNOverlay("Save Character?", () => {
           let sStore = stage.storage.getSession("sStore") as SessionInfo;
           sStore.playerAppearance = ui.state.animations;
+
+          if (ui.state.config.accessory.texture !== TxID.None)
+            sStore.inventories.player.accessory.addItem(partToItem(ui.state.config.accessory))
+          sStore.inventories.player.outfit.addItem(partToItem(ui.state.config.outfit))
+
           stage.switchTo(mmDormBuilder, 1);
-        });
+        })
         return true;
       }
     }

@@ -12,7 +12,7 @@ import { SessionInfo } from "../storage/session";
 import { AnimationState } from "../../jetlag";
 import { LevelInfo } from "../storage/level";
 import { HUD } from "../ui/hud";
-import { makeMainCharacter } from "../characters/character";
+import { getRegularDir, makeMainCharacter } from "../characters/character";
 import { KeyboardHandler } from "../ui/keyboard";
 import { Spawner } from "../common/spawner";
 import { buildAsaPackerOutside } from "./asa_campus_outside";
@@ -24,7 +24,7 @@ import { Builder } from "../multiplayer/loginSystem";
  * Create Hawks Nest portion of the game
  * @param level Which level should be displayed
  */
-export const hawksNestBuilder:Builder = function(level: number) {
+export const hawksNestBuilder: Builder = function (level: number) {
   // Level and session storage setup
   if (!stage.storage.getSession("sStore")) stage.storage.setSession("sStore", new SessionInfo());
   let sStore = stage.storage.getSession("sStore") as SessionInfo;
@@ -56,17 +56,14 @@ export const hawksNestBuilder:Builder = function(level: number) {
   cornerBoundBox(21.42, 5.91, 24.61, 10.53); // Right Shelf
   cornerBoundBox(20.23, 1.914, 28.847, 4.80); // Stairs
   cornerBoundBox(1.05, 9.69, 1.83, 11.42); // Left Checkout
-  cornerBoundBox(10.65, 4.884, 11.425, 6.6); // Middle Checkout 
+  cornerBoundBox(10.65, 4.884, 11.425, 6.6); // Middle Checkout
 
   // make the door, for exiting
   //
   // [mfs]  Do we want to have a way to disable the door so you can't leave
   //        mid-quest?  That would require an "onMakeSpawner", which could be
   //        complex, but it's probably a good idea.
-  new Spawner(4.7, 16.9, 3, 1, "empty.png", () => {
-    sStore.locX = 29.7; sStore.locY = 48.3;
-    stage.switchTo(buildAsaPackerOutside, 1);
-  });
+  new Spawner(4.7, 16.9, 3, 1, () => { sStore.dir = getRegularDir(player); sStore.goToX = 29.7; sStore.goToY = 48.3; stage.switchTo(buildAsaPackerOutside, 1); });
 
   // Make the NPCs
   let emelia = spawnFollowingNpc(NpcNames.Emelia, 27.1, 13.1, AnimationState.IDLE_S, lInfo.mainCharacter!);

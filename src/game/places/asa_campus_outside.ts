@@ -11,10 +11,9 @@ import { NpcBehavior, NpcNames, spawnRegularNpc } from '../characters/NPC';
 import { Spawner } from '../common/spawner';
 import { mmStairsBuilder } from './mmStairs';
 import { hawksNestBuilder } from './hawksNest';
-import { rathboneBuilder } from './rathbone';
 import { Inspectable } from "../interactions/inspectables";
 import { LevelInfo } from "../storage/level";
-import { makeMainCharacter } from "../characters/character";
+import { getRegularDir, makeMainCharacter } from "../characters/character";
 import { KeyboardHandler } from "../ui/keyboard";
 import { professor_first_time } from "../interactions/professorDlg";
 import { DialogueDriver } from "../interactions/dialogue";
@@ -26,7 +25,7 @@ import { Builder } from "../multiplayer/loginSystem";
  *
  * [mfs]  This should be more general, so that it's not just for building the
  *        outside world as part of the Hawks quest.
- * 
+ *
  * [mfs]  Switch to a tile map for making the outside world
  *
  * @param level Which level should be displayed
@@ -43,7 +42,7 @@ export const buildAsaPackerOutside: Builder = function (level: number) {
   let lInfo = new LevelInfo();
   stage.storage.setLevel("levelInfo", lInfo);
   lInfo.hud = new HUD("Outdoors", "University Drive");
-  lInfo.hud.toggleStats(false); // [mfs] For now...
+  lInfo.hud.showStats(false); // [mfs] For now...
 
   // Create player
   let player = makeMainCharacter(80, 20, sStore.playerAppearance!, AnimationState.IDLE_N);
@@ -58,34 +57,34 @@ export const buildAsaPackerOutside: Builder = function (level: number) {
   (professor.extra as NpcBehavior).setNextDialogue(new DialogueDriver(professor_first_time, "start"));
 
   // Door Spawnables
-  new Spawner(97.5, 19, 2, 0.8, "empty.png", () => { sStore.locX = 6.7; sStore.locY = 8.9; stage.switchTo(mmStairsBuilder, 1); });
-  new Spawner(28.3, 47.9, 1, 1.5, "empty.png", () => { sStore.locX = 4.7; sStore.locY = 15.5; stage.switchTo(hawksNestBuilder, 1); });
+  new Spawner(97.5, 19, 2, 0.8, () => { sStore.dir = getRegularDir(player); sStore.goToX = 6.7; sStore.goToY = 8.9; stage.switchTo(mmStairsBuilder, 1); });
+  new Spawner(28.3, 47.9, 1, 1.5, () => { sStore.dir = getRegularDir(player); sStore.goToX = 4.7; sStore.goToY = 15.5; stage.switchTo(hawksNestBuilder, 1); });
 
   //Temp spawner for rathbone when we implement it
   //new Spawner(97.5, 22, 2, 0.8, "empty.png", () => { sStore.locX = 32.7; sStore.locY = 34; stage.switchTo(rathboneBuilder, 1); });
 
   // Bush Spawnables
   let bush = new InspectSystem(Inspectable.ASA_BUSH);
-  new Spawner(93.08, 21.2, 1.7, 1.7, "empty.png", () => { bush.openUi() });
-  new Spawner(102.72, 22.19, 1.7, 1.7, "empty.png", () => { bush.openUi() });
+  new Spawner(93.08, 21.2, 1.7, 1.7, () => { bush.open() });
+  new Spawner(102.72, 22.19, 1.7, 1.7, () => { bush.open() });
 
   // Car Spawnables
   let car = new InspectSystem(Inspectable.ASA_CAR);
-  new Spawner(89.3, 37.1, 3.6, 2, "empty.png", () => { car.openUi() });
-  new Spawner(84.4, 37.1, 3.6, 2, "empty.png", () => { car.openUi() });
+  new Spawner(89.3, 37.1, 3.6, 2, () => { car.open() });
+  new Spawner(84.4, 37.1, 3.6, 2, () => { car.open() });
 
   // Tree Spawnables
   let tree = new InspectSystem(Inspectable.ASA_TREE);
-  new Spawner(44, 37.6, 7, 1, "empty.png", () => { tree.openUi() });
+  new Spawner(44, 37.6, 7, 1, () => { tree.open() });
 
   // Flower Spawnables
   let flower = new InspectSystem(Inspectable.ASA_FLOWER);
-  let flower1 = new Spawner(96, 27.5, 1, 1, "empty.png", () => { flower.openUi() });
-  let flower2 = new Spawner(98.9, 30.4, 1, 1, "empty.png", () => { flower.openUi() });
-  let flower3 = new Spawner(95, 29.5, 1, 1, "empty.png", () => { flower.openUi() });
-  let flower4 = new Spawner(99.8, 28.4, 1, 1, "empty.png", () => { flower.openUi() });
-  let flower5 = new Spawner(88.3, 32.6, 1, 1, "empty.png", () => { flower.openUi() });
-  let flower6 = new Spawner(84.4, 33.6, 1, 1, "empty.png", () => { flower.openUi() });
+  let flower1 = new Spawner(96, 27.5, 1, 1, () => { flower.open() });
+  let flower2 = new Spawner(98.9, 30.4, 1, 1, () => { flower.open() });
+  let flower3 = new Spawner(95, 29.5, 1, 1, () => { flower.open() });
+  let flower4 = new Spawner(99.8, 28.4, 1, 1, () => { flower.open() });
+  let flower5 = new Spawner(88.3, 32.6, 1, 1, () => { flower.open() });
+  let flower6 = new Spawner(84.4, 33.6, 1, 1, () => { flower.open() });
   flower1.obstacle.enabled = false;
   flower2.obstacle.enabled = false;
   flower3.obstacle.enabled = false;
@@ -95,20 +94,20 @@ export const buildAsaPackerOutside: Builder = function (level: number) {
 
   // Trash Spawnable
   let trash = new InspectSystem(Inspectable.ASA_TRASH);
-  new Spawner(29.7, 45.3, 1.5, 1.5, "empty.png", () => { trash.openUi() });
+  new Spawner(29.7, 45.3, 1.5, 1.5, () => { trash.open() });
 
   // Blocked Path Spawnables
   let blocked = new InspectSystem(Inspectable.ASA_BLOCKED);
-  new Spawner(84.9, 27.7, 3, 1.5, "empty.png", () => { blocked.openUi() });
-  new Spawner(110, 27.6, 3, 1.5, "empty.png", () => { blocked.openUi() });
-  new Spawner(114.4, 37.2, 3, 12, "empty.png", () => { blocked.openUi() });
-  new Spawner(77.2, 28, 1, 1, "empty.png", () => { blocked.openUi() });
-  new Spawner(85.9, 43.7, 2, 1, "empty.png", () => { blocked.openUi() });
-  new Spawner(97.4, 43.7, 2, 1, "empty.png", () => { blocked.openUi() });
-  new Spawner(60.4, 37.6, 3, 1, "empty.png", () => { blocked.openUi() });
-  new Spawner(52.9, 41.9, 3, 1, "empty.png", () => { blocked.openUi() });
-  new Spawner(20.5, 40.6, 1, 5, "empty.png", () => { blocked.openUi() });
-  new Spawner(39.7, 49.7, 3, 1, "empty.png", () => { blocked.openUi() });
+  new Spawner(84.9, 27.7, 3, 1.5, () => { blocked.open() });
+  new Spawner(110, 27.6, 3, 1.5, () => { blocked.open() });
+  new Spawner(114.4, 37.2, 3, 12, () => { blocked.open() });
+  new Spawner(77.2, 28, 1, 1, () => { blocked.open() });
+  new Spawner(85.9, 43.7, 2, 1, () => { blocked.open() });
+  new Spawner(97.4, 43.7, 2, 1, () => { blocked.open() });
+  new Spawner(60.4, 37.6, 3, 1, () => { blocked.open() });
+  new Spawner(52.9, 41.9, 3, 1, () => { blocked.open() });
+  new Spawner(20.5, 40.6, 1, 5, () => { blocked.open() });
+  new Spawner(39.7, 49.7, 3, 1, () => { blocked.open() });
 
   // Notify the quest that we built this place
   sStore.currQuest?.onBuildPlace(Places.ASA_CAMPUS_OUTSIDE, level);

@@ -1,10 +1,14 @@
+import { QuestMenuUI } from './../quests/ui';
 // Reviewed on 2024-09-18
 
-import { TextSprite, BoxBody, Actor, stage, ImageSprite, TimedEvent } from "../../jetlag";
-import { renderPlayerInventory } from "../inventory/ui";
-import { renderQuestMenu } from "../quests/ui";
+import { TextSprite, BoxBody, Actor, stage, ImageSprite, TimedEvent, SpriteLocation } from "../../jetlag";
+import { FadingBlurFilter } from "../common/filter";
+import { InventoryUI, PlayerInventoryUI } from "../inventory/ui";
+import { LevelInfo } from "../storage/level";
 import { SessionInfo } from "../storage/session";
 import { DialogueUI } from "./dialogue";
+
+export type HUDmode = "none" | "inventory" | "quest" | "dialogue" | "inspect" | "otherContainer" | "cutscene";
 
 /**
  * The Heads-Up Display (HUD) consists of two buttons (for opening the inventory
@@ -12,42 +16,37 @@ import { DialogueUI } from "./dialogue";
  * character is.
  */
 export class HUD {
-  /** The clock for the game */
-  public clock: Actor;
+  private mode: HUDmode = "none";
 
-  /** The health and wellness statistics for the player */
-  public stats: Actor;
+  public baseHUD: {
+    /** The clock for the game */
+    clock: Actor,
 
-  /** The button that leads to the inventory being shown */
-  public inventoryButton: Actor;
+    /** The health and wellness statistics for the player */
+    stats: Actor,
 
-  /** The button that leads to the quests being shown */
-  public questButton: Actor;
+    /** The button that leads to the inventory being shown */
+    inventoryButton: Actor,
 
-  /** A "new quest" notification that goes on the quest button */
-  public questNotification: Actor;
+    /** The button that leads to the quests being shown */
+    questButton: Actor,
 
-  /** Text that announces the player's location */
-  private locationText: Actor;
+    /** A "new quest" notification that goes on the quest button */
+    questNotification: Actor,
+
+    /** Text that announces the player's location */
+    locationText: Actor,
+  }
+
+  /** Player's inventory UI */
+  public inventory = new PlayerInventoryUI();
 
   /** The (complex) UI for dialogue interactions */
-  readonly dialogue: DialogueUI;
+  readonly dialogue = new DialogueUI();
 
-  /** Show or hide the Quest Notification icon */
-  public toggleQuestNotification(value: boolean) {
-    this.questNotification.enabled = value;
-  }
+  private quest = new QuestMenuUI();
 
-  /** Show or hide the Stats */
-  public toggleStats(value: boolean) { this.stats.enabled = value; }
-
-  /** Show or hide the buttons */
-  public toggleButtons(value: boolean) {
-    this.inventoryButton.enabled = value;
-    this.questButton.enabled = value;
-    if (!value)
-      this.questNotification.enabled = false;
-  }
+  private fadeFilter = new FadingBlurFilter(0, 5, false);
 
   /**
    * Constructs a new instance of the HUD class
@@ -58,60 +57,134 @@ export class HUD {
   constructor(building: string, place: string) {
     let sStore = stage.storage.getSession("sStore") as SessionInfo;
 
-    // Set up the stat information
-    this.stats = sStore.playerStat.renderStat(stage.hud);
+    this.baseHUD = {
+      // Date and time display
+      clock: sStore.clock.drawClock(),
 
-    this.dialogue = new DialogueUI();
+      // Set up the stat information
+      stats: sStore.playerStat.renderStat(stage.hud),
 
-    // Make the inventory button
-    this.inventoryButton = new Actor({
-      appearance: [new ImageSprite({ width: 1, height: 1, img: "hudButton.png" }), new ImageSprite({ width: 0.7, height: 0.7, img: "bag.png" }),],
-      rigidBody: new BoxBody({ cx: 1, cy: 1, width: 1, height: 1 }, { scene: stage.hud }),
-      gestures: { tap: () => { renderPlayerInventory(); return true; } }
-    });
+      // Draw the toggle inventory button
+      inventoryButton: new Actor({
+        appearance: [new ImageSprite({ width: 1, height: 1, img: "hudButton.png" }), new ImageSprite({ width: 0.7, height: 0.7, img: "bag.png" }),],
+        rigidBody: new BoxBody({ cx: 1, cy: 1, width: 1, height: 1 }, { scene: stage.hud }),
+        gestures: { tap: () => { this.toggleMode('inventory'); return true; } }
+      }),
 
-    // Make the quest button
-    this.questButton = new Actor({
-      appearance: [new ImageSprite({ width: 1, height: 1, img: "hudButton.png" }), new ImageSprite({ width: 0.7, height: 0.7, img: "quest.png" })],
-      rigidBody: new BoxBody({ cx: 1, cy: 2, width: 1, height: 1 }, { scene: stage.hud }),
-      gestures: {
-        tap: () => {
-          renderQuestMenu();
-          return true;
+      // Draw the quest button
+      questButton: new Actor({
+        appearance: [new ImageSprite({ width: 1, height: 1, img: "hudButton.png" }), new ImageSprite({ width: 0.7, height: 0.7, img: "quest.png" })],
+        rigidBody: new BoxBody({ cx: 1, cy: 2, width: 1, height: 1 }, { scene: stage.hud }),
+        gestures: {
+          tap: () => {
+            this.toggleMode('quest');
+            return true;
+          }
         }
-      }
-    });
+      }),
 
-    // The quest notification button, which we usually hide...
-    this.questNotification = new Actor({
-      appearance: new ImageSprite({ width: 0.43, height: 0.5, img: "icon/questNoti.png", offset: { dx: 0.5, dy: -0.4 } }),
-      rigidBody: new BoxBody({ cx: 1, cy: 2, width: 1, height: 1 }, { scene: stage.hud })
-    });
-    this.questNotification.enabled = false;
+      // The quest notification button, which we usually hide...
+      questNotification: new Actor({
+        appearance: new ImageSprite({ width: 0.43, height: 0.5, img: "icon/questNoti.png", offset: { dx: 0.5, dy: -0.4 } }),
+        rigidBody: new BoxBody({ cx: 1, cy: 2, width: 1, height: 1 }, { scene: stage.hud })
+      }),
 
-    // Location display when entering a new building or place
-    this.locationText = new Actor({
-      appearance:
-        [new TextSprite({ center: true, face: stage.config.textFont, color: "ffffff00", size: 24, strokeColor: "00000000", strokeWidth: 5 }, () => building.toUpperCase()),
-        new TextSprite({ center: true, face: stage.config.textFont, color: "ffffff00", size: 19, strokeColor: "00000000", strokeWidth: 5, offset: { dx: 0, dy: 0.4 } }, () => place.toUpperCase())],
-      rigidBody: new BoxBody({ cx: 8, cy: 4.5, width: 0.1, height: 0.1 }, { scene: stage.hud }),
-    });
+      // Location display when entering a new building or place
+      locationText: new Actor({
+        appearance:
+          [new TextSprite({ center: true, face: stage.config.textFont, color: "ffffff00", size: 24, strokeColor: "00000000", strokeWidth: 5 }, () => building.toUpperCase()),
+          new TextSprite({ center: true, face: stage.config.textFont, color: "ffffff00", size: 19, strokeColor: "00000000", strokeWidth: 5, offset: { dx: 0, dy: 0.4 } }, () => place.toUpperCase())],
+        rigidBody: new BoxBody({ cx: 8, cy: 4.5, width: 0.1, height: 0.1 }, { scene: stage.hud }),
+      })
+    }
 
-    // Date and time display
-    this.clock = sStore.clock.drawClock();
+    this.baseHUD.questNotification.enabled = sStore.currQuest?.Unread ?? false;
+    stage.renderer.addFilter(this.fadeFilter, SpriteLocation.WORLD);
 
     // Fade in/out the location display
     //
     // [mfs]  Spamming 25 timers is kind of strange, but I guess it's OK?
     for (let i = 0; i < 25; i++) {
       stage.hud.timer.addEvent(new TimedEvent(i * 0.1, false, () => {
-        (this.locationText.appearance[0] as TextSprite).color = this.textFade("ffffff", i);
-        (this.locationText.appearance[0] as TextSprite).text.text.style.fill = this.textFade("ffffff", i);
-        (this.locationText.appearance[1] as TextSprite).color = this.textFade("ffffff", i);
-        (this.locationText.appearance[1] as TextSprite).text.text.style.fill = this.textFade("ffffff", i);
+        (this.baseHUD.locationText.appearance[0] as TextSprite).color = this.textFade("ffffff", i);
+        (this.baseHUD.locationText.appearance[0] as TextSprite).text.text.style.fill = this.textFade("ffffff", i);
+        (this.baseHUD.locationText.appearance[1] as TextSprite).color = this.textFade("ffffff", i);
+        (this.baseHUD.locationText.appearance[1] as TextSprite).text.text.style.fill = this.textFade("ffffff", i);
       }));
     }
   }
+
+  /** Show or hide the stats, mainly because stats look ugly right now */
+  public showStats(isVisible: boolean) { this.baseHUD.stats.enabled = isVisible; }
+
+  /** Show or hide the base HUD */
+  public showBaseHUD(isVisible: boolean) {
+    let sStore = stage.storage.getSession("sStore") as SessionInfo;
+    for (let elements of Object.values(this.baseHUD)) elements.enabled = isVisible;
+
+    // During toggling, only when the base HUD is visible AND there are unread quests, we show the quest notification
+    this.baseHUD.questNotification.enabled = isVisible && (sStore.currQuest?.Unread ?? false);
+  }
+
+  /**
+   * The primary controller for different HUD elements and HUD modes.
+   * This allow us to centralize and certify the act of toggling on and off different HUD screens,
+   * through the checking of the current mode and the mode to change to.
+   *
+   * IMPORTANT:   Due to the fact that this is toggling, if you want to open or close a mode, you need to pass in the same mode name.
+   *              E.g. if you want to open the inventory, you need to pass in 'inventory' and then call it again with 'inventory' to close it.
+   *              As such, "none" should NEVER be passed in as a parameter.
+   * @param mode
+   */
+  public toggleMode(mode: HUDmode, otherContainer?: InventoryUI) {
+    let lInfo = stage.storage.getLevel("levelInfo") as LevelInfo;
+
+    // Check if the mode to toggle is valid
+    if (mode == 'none')
+      throw new Error("Cannot pass in 'none' as a parameter to togglemode");
+
+    // This is the case for turning ON different hud screens.
+    if (this.mode == 'none') {
+      switch (mode) {
+        case 'otherContainer': otherContainer?.toggle(); break;
+        case 'inventory': this.inventory.toggle(); break;
+        case 'quest': this.quest = new QuestMenuUI(); this.quest.toggle(); break; // Quest menu needs to be re-created before opening to accommodate quest changes
+        case 'dialogue': break;  // Opening the dialogue UI is handled in the NpcBehavior class, not here.
+        case 'inspect': break;  // Opening the inspect UI is handled in the Inspectable class, not here.
+      }
+
+      this.mode = mode;
+      this.showBaseHUD(false); // Hide the base HUD
+      if (mode !== 'inspect') this.fadeFilter.enabled = true;
+
+      // [mfs]  It seems that sometimes, an Inspectable or Dialogue won't supress
+      //        *all* of the controls, and we can still move around and/or press
+      //        HUD buttons and/or press "E".  Someone should look into this.
+      lInfo.keyboard?.stopPlayerControls();
+    }
+
+    // This is the case for turning OFF different hud screens.
+    else if (this.mode == mode) {
+      switch (mode) {
+        case 'otherContainer':
+          if (otherContainer == undefined)
+            throw new Error("Expecting an inventoryUI to be passed in, but got undefined.");
+          otherContainer.toggle();
+          break;
+        case 'inventory': this.inventory.toggle(); break;
+        case 'quest': this.quest.toggle(); break;
+        case 'dialogue': break; // Closing the dialogue UI is handled in the NpcBehavior class, not here.
+        case 'inspect': break; // Closing the inspect UI is handled in the Inspectable class, not here.
+      }
+
+      this.mode = 'none';
+      this.showBaseHUD(true); // Show the base HUD
+      if (mode !== 'inspect') this.fadeFilter.enabled = false;
+      lInfo.keyboard?.startPlayerControls();
+    }
+  }
+
+  public getMode() { return this.mode; }
 
   /**
    * Calculates the color with fading opacity based on the frame number.

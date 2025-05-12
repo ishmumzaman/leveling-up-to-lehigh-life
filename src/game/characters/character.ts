@@ -16,7 +16,7 @@ import { defaultCharacter } from "./makeCharacterBuilder";
  *
  * @returns A Map of animations and a Map for the animation remappings
  */
-export function makeSetCharAnimation(characterSprite: string) {
+export function makeNPCAnimation(characterSprite: string) {
   // Create WALK and IDLE animations in the 4 cardinal directions
   let animations = new Map<AnimationState, AnimationSequence>();
   animations.set(AnimationState.WALK_W, new AnimationSequence(true).to(characterSprite + "WalkW0.png", 135).to(characterSprite + "WalkW1.png", 135).to(characterSprite + "WalkW2.png", 135).to(characterSprite + "WalkW3.png", 135).to(characterSprite + "WalkW4.png", 135).to(characterSprite + "WalkW5.png", 135));
@@ -101,13 +101,13 @@ export function makeEmoteAnimation(portrait: string, emote: string): Map<Animati
  *
  * @returns The actor that was created
  */
-export function makeMainCharacter(cx: number, cy: number, animation: CharacterAnimations = new CharacterAnimations(defaultCharacter), initialDir: AnimationState = AnimationState.IDLE_E) {
+export function makeMainCharacter(cx: number, cy: number, animation: CharacterAnimations = new CharacterAnimations(defaultCharacter), initialDir: AnimationState) {
   let sStore = stage.storage.getSession("sStore") as SessionInfo;
   // Make the actor
   //
   // NB: Always prioritize the player's spawn point from the session storage
-  let cX = sStore.locX ?? cx;
-  let cY = sStore.locY ?? cy;
+  let cX = sStore.goToX ?? cx;
+  let cY = sStore.goToY ?? cy;
   let actor = new Actor({
     appearance: [new AnimatedSprite({ initialDir, width: 0.8, height: 1.6, ...animation, offset: { dx: 0, dy: -0.6 }, z: 2 })],
     rigidBody: new BoxBody({ cx: cX, cy: cY, width: 0.5, height: 0.5 }, { disableRotation: true, passThroughId: [3] }),
@@ -131,4 +131,24 @@ export function makeMainCharacter(cx: number, cy: number, animation: CharacterAn
 
   sStore.loginInfo.myActor = actor; // Might not be needed check if anythign uses it
   return actor;
+}
+
+export function getRegularDir(actor: Actor) {
+  let dir = (actor.appearance[0] as AnimatedSprite).getCurrDirection();
+  switch (dir) {
+    case AnimationState.WALK_N:
+      return AnimationState.IDLE_N;
+    case AnimationState.WALK_S:
+      return AnimationState.IDLE_S;
+    case AnimationState.WALK_W:
+    case AnimationState.WALK_NW:
+    case AnimationState.WALK_SW:
+      return AnimationState.IDLE_W;
+    case AnimationState.WALK_E:
+    case AnimationState.WALK_NE:
+    case AnimationState.WALK_SE:
+      return AnimationState.IDLE_E;
+    default:
+      return dir;
+  }
 }

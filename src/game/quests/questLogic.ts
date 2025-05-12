@@ -8,7 +8,7 @@ import { Actor } from "../../jetlag";
 export class Step {
   /**
    * Create a step for an objective
-   * 
+   *
    * @param displayText The text to show when this is the current step
    * @param onReach     The function to run when this step is reached
    */
@@ -37,7 +37,7 @@ export class Objective {
   /** Starts the objective */
   public start() {
     this.currStep = 0;
-    this.steps[0].onReach();
+    this.steps[this.currStep].onReach();
   }
 
   /**
@@ -50,7 +50,7 @@ export class Objective {
     // Advancing might finish, in which case we run the endFunc instead of
     // advanceFunc.
     this.currStep++;
-    this.steps[0].onReach();
+    this.steps[this.currStep].onReach();
   }
 
   /** Return the status text of the objective */
@@ -58,6 +58,13 @@ export class Objective {
 
   /** Report if the objective is completed */
   public isComplete() { return this.currStep == this.steps.length - 1; }
+
+  public activeStep() {
+    return (this.isComplete()) ? undefined : this.steps[this.currStep];
+  }
+
+  /** Return the index of the currently active step */
+  public activeStepIndex() { return this.currStep; }
 }
 
 /** A Quest consists of multiple objectives that need to be achieved */
@@ -65,9 +72,12 @@ export abstract class Quest {
   /** The index of the current objective */
   private currObjective = 0;
 
+  /** The unread status of the class to determine the quest notification*/
+  private unread = true;
+
   /**
    * Creates a new Quest instance.
-   * 
+   *
    * @param which       The Id of the quest
    * @param name        The display name of the quest
    * @param description The description of the quest
@@ -91,13 +101,14 @@ export abstract class Quest {
    * and move to the next.  It might also finish the quest.
    *
    * [mfs]  There was a note: "If you want to instantly start the next objective
-   *        when the current one is completed, call qAdvance() twice".  I'm not
+   *        when the current one is completed, call advance() twice".  I'm not
    *        sure I understand.  Why wouldn't we start the next objective
    *        immediately?
    */
   public advance() {
     if (this.isComplete()) return;
 
+    // If adavancing the current objective finishes it, we need to start the next one.
     if (this.objectives[this.currObjective].isComplete()) {
       this.currObjective++;
       // Is there another objective to start?
@@ -109,7 +120,9 @@ export abstract class Quest {
         if (this.endFunc) this.endFunc();
         if (this.rewardFunc) this.rewardFunc();
       }
-    } else {
+    }
+    // Otherwise, just advance the current objective
+    else {
       this.objectives[this.currObjective].advance();
     }
   }
@@ -133,4 +146,8 @@ export abstract class Quest {
 
   /** Code to run when an NPC actor is being created */
   abstract onMakeNpc(place: Places, level: number, npc: Actor): void;
+
+  public readQuest() { this.unread = false; }
+
+  public get Unread() { return this.unread; }
 }

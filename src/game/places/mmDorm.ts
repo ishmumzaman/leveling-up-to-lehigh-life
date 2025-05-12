@@ -7,7 +7,7 @@
 
 import { AnimationState, stage } from "../../jetlag";
 import { InspectSystem } from "../interactions/inspectUi";
-import { createMap } from "../common/map";
+import { createMap, PIXEL_TO_METER_RATIO } from "../common/map";
 import { Spawner } from "../common/spawner";
 import { SessionInfo } from "../storage/session";
 import { mmHallBuilder } from "./mmHall";
@@ -15,7 +15,7 @@ import { Inspectable } from "../interactions/inspectables";
 import { LevelInfo } from "../storage/level";
 import { HUD } from "../ui/hud";
 import { KeyboardHandler } from "../ui/keyboard";
-import { makeMainCharacter } from "../characters/character";
+import { getRegularDir, makeMainCharacter } from "../characters/character";
 import { Places } from "./places";
 import { spawnRegularNpc, NpcNames } from "../characters/NPC";
 import { Builder } from "../multiplayer/loginSystem";
@@ -27,7 +27,7 @@ import * as dorm_objects from "../../../tilemaps/TileMaps/mfsDorm.json"
 
 /**
  * Build all levels occurring the m&m dorm
- * 
+ *
  * @param level the level to build
  */
 export const mmDormBuilder: Builder = function (level: number) {
@@ -39,7 +39,7 @@ export const mmDormBuilder: Builder = function (level: number) {
 
   // Draw the map, make the walls from the objects in the json
   createMap(335, 480, "mmDorm.png");
-  dorm_objects.layers.forEach(layer => drawObjects(50, layer.objects ?? []));
+  dorm_objects.layers.forEach(layer => drawObjects(PIXEL_TO_METER_RATIO, layer.objects ?? []));
 
   // Set current location
   lInfo.hud = new HUD("M&M House", "Your Dorm Room");
@@ -52,25 +52,26 @@ export const mmDormBuilder: Builder = function (level: number) {
 
   // Create interactable items within our dorm room
   let closet = new InspectSystem(Inspectable.MM_DORM_CLOSET);
-  new Spawner(4.8, 2.3, 1.3, 0.5, "empty.png", () => { closet.openUi() });
+  new Spawner(4.8, 2.3, 1.3, 0.5, () => { closet.open() });
 
   let roommateCloset = new InspectSystem(Inspectable.MM_DORM_ROOMMATE_CLOSET);
-  new Spawner(1.9, 2.3, 1.3, 0.5, "empty.png", () => { roommateCloset.openUi() });
+  new Spawner(1.9, 2.3, 1.3, 0.5, () => { roommateCloset.open() });
 
   let bed = new InspectSystem(Inspectable.MM_DORM_BED);
-  new Spawner(5.3, 5.1, 1, 1.4, "empty.png", () => { bed.openUi() });
+  new Spawner(5.3, 5.1, 1, 1.4, () => { bed.open() });
 
   let trash = new InspectSystem(Inspectable.MM_DORM_TRASH);
-  new Spawner(1.4, 7.6, 0.8, 0.8, "empty.png", () => { trash.openUi() });
+  new Spawner(1.4, 7.6, 0.8, 0.8, () => { trash.open() });
 
   let boxes = new InspectSystem(Inspectable.MM_DORM_BOXES);
-  new Spawner(5.2, 7.6, 0.8, 0.8, "empty.png", () => { boxes.openUi() });
+  new Spawner(5.2, 7.6, 0.8, 0.8, () => { boxes.open() });
 
   // Door for the player to exit into the hallway
-  new Spawner(3.3, 10, 2, 0.8, "empty.png", () => {
+  new Spawner(3.3, 10, 2, 0.8, () => {
+    sStore.dir = getRegularDir(player);
     // Where the player should spawn
-    sStore.locX = 5.3;
-    sStore.locY = 2.5;
+    sStore.goToX = 5.3;
+    sStore.goToY = 2.5;
     stage.switchTo(mmHallBuilder, 1);
   });
 

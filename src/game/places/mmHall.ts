@@ -18,7 +18,7 @@ import { mmStairsBuilder } from "./mmStairs";
 import { AnimationState } from "../../jetlag";
 import { Inspectable } from "../interactions/inspectables";
 import { LevelInfo } from "../storage/level";
-import { makeMainCharacter } from "../characters/character";
+import { getRegularDir, makeMainCharacter } from "../characters/character";
 import { KeyboardHandler } from "../ui/keyboard";
 import { Places } from "./places";
 import { Builder } from "../multiplayer/loginSystem";
@@ -26,7 +26,7 @@ import { Builder } from "../multiplayer/loginSystem";
 /**
  * Build the hallway in M&M
  */
-export const mmHallBuilder:Builder = function(level: number) {
+export const mmHallBuilder: Builder = function (level: number) {
   // session storage
   if (!stage.storage.getSession("sStore")) stage.storage.setSession("sStore", new SessionInfo());
   let sStore = stage.storage.getSession("sStore") as SessionInfo;
@@ -44,13 +44,13 @@ export const mmHallBuilder:Builder = function(level: number) {
   lInfo.keyboard = new KeyboardHandler(player);
   // blocked doors spawnables
   let otherDoors = new InspectSystem(Inspectable.MM_HALL_OTHER_DOORS);
-  new Spawner(2.4, 1.4, 1.5, 0.8, "empty.png", () => { otherDoors.openUi() });
-  new Spawner(8.15, 1.4, 1.5, 0.8, "empty.png", () => { otherDoors.openUi() });
-  new Spawner(11.1, 1.4, 1.5, 0.8, "empty.png", () => { otherDoors.openUi() });
+  new Spawner(2.4, 1.4, 1.5, 0.8, () => { otherDoors.open() });
+  new Spawner(8.15, 1.4, 1.5, 0.8, () => { otherDoors.open() });
+  new Spawner(11.1, 1.4, 1.5, 0.8, () => { otherDoors.open() });
   // doors and stairs spawnables
-  new Spawner(5.3, 1.4, 1.5, 0.8, "empty.png", () => { sStore.locX = 3.35; sStore.locY = 9; stage.switchTo(mmDormBuilder, 1); });
-  new Spawner(2.9, 6.2, 1.5, 0.8, "empty.png", () => { sStore.locX = 2.9; sStore.locY = 2.9; stage.switchTo(mmStairsBuilder, 1); });
-  new Spawner(10.6, 6.2, 1.5, 0.8, "empty.png", () => { sStore.locX = 10.6; sStore.locY = 2.9; stage.switchTo(mmStairsBuilder, 1); });
+  new Spawner(5.3, 1.4, 1.5, 0.8, () => { sStore.dir = getRegularDir(player); sStore.goToX = 3.35; sStore.goToY = 9; stage.switchTo(mmDormBuilder, 1); });
+  new Spawner(2.9, 6.2, 1.5, 0.8, () => { sStore.dir = getRegularDir(player); sStore.goToX = 2.9; sStore.goToY = 2.9; stage.switchTo(mmStairsBuilder, 1); });
+  new Spawner(10.6, 6.2, 1.5, 0.8, () => { sStore.dir = getRegularDir(player); sStore.goToX = 10.6; sStore.goToY = 2.9; stage.switchTo(mmStairsBuilder, 1); });
 
   sStore.currQuest?.onBuildPlace(Places.MM_HALL, level);
 }

@@ -8,7 +8,7 @@ import { FadingBlurFilter } from "../common/filter";
 // loads when more than 1 person is on multiplayer. Not sure why.
 // If you wait on the black screen it WILL eventually load.
 
-// 
+//
 
 /**
  * This interface allows us to require level builders
@@ -41,7 +41,7 @@ export class RemoteActor {
 }
 
 /**
- * A network packet with all movement information 
+ * A network packet with all movement information
  * to be sent repeatedly whenever a user joins a room.
  * Triggered within character.ts
  */
@@ -59,7 +59,7 @@ export class movementPacket {
 }
 
 /**
- * A network packet with all outfit information 
+ * A network packet with all outfit information
  * to be sent whenever a user joins a room or
  * whenever an outfit is changed from an inventory
  */
@@ -75,7 +75,7 @@ export class outfitChangePacket {
 
 /**
  * Make an "empty" actor to represent a remote actor and return it
- * to be assigned to a specific user. This user will be assigned a 
+ * to be assigned to a specific user. This user will be assigned a
  * transparent texture icon as it will be manually assigned later on.
  * This actor's movement will be controlled by the server.
 */
@@ -163,7 +163,6 @@ export function connectUser(userId: string, userName: string) {
       // Enable the blur filter we created earlier on the screenshot we created
       stage.renderer.addZFilter(fadeFilter, -2, SpriteLocation.OVERLAY);
       fadeFilter.enabled = true;
-      fadeFilter.toggled = true;
     }, true)
 
     // TODO: Consider booting the user the offline instead of disconnecting them
@@ -231,7 +230,7 @@ export function connectUser(userId: string, userName: string) {
     }
   };
 
-  stage.network.broadcast = (msg: string) => {
+  stage.network.broadcast = (_msg: string) => {
     // This serves as an example for any future events.
     // Also see multiplayer-server/workflow,types and jetlag/Devices/Network
   };
@@ -255,13 +254,13 @@ export function connectUser(userId: string, userName: string) {
   }
 
   stage.network.move = (msg: string) => {
-    // When a remote user sends a state update, handle it 
+    // When a remote user sends a state update, handle it
     let m = JSON.parse(msg).msg;
     let packet = JSON.parse(m) as movementPacket;
     let a = sStore.loginInfo.remoteActors.get(packet.userId) as RemoteActor;
     if (!a) return;
 
-    // TODO: Research and implement server-client latency prediction and compensation 
+    // TODO: Research and implement server-client latency prediction and compensation
     // Check for desync and adjust if so
     // This is not perfect and results in a slight rubber banding effect on bad network conditions
     if (a.actor.rigidBody.getCenter().x != packet.cx || a.actor.rigidBody.getCenter().y != packet.cy) {

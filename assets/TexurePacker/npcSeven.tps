@@ -124,7 +124,7 @@
             <key>data</key>
             <struct type="DataFile">
                 <key>name</key>
-                <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSeven.json</filename>
+                <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSeven.json</filename>
             </struct>
         </map>
         <key>multiPackMode</key>
@@ -173,54 +173,54 @@
         </struct>
         <key>individualSpriteSettings</key>
         <map type="IndividualSpriteSettingsMap">
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenIdleE0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenIdleE1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenIdleE2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenIdleE3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenIdleE4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenIdleE5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenIdleN0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenIdleN1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenIdleN2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenIdleN3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenIdleN4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenIdleN5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenIdleS0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenIdleS1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenIdleS2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenIdleS3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenIdleS4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenIdleS5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenIdleW0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenIdleW1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenIdleW2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenIdleW3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenIdleW4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenIdleW5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenWalkE0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenWalkE1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenWalkE2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenWalkE3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenWalkE4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenWalkE5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenWalkN0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenWalkN1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenWalkN2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenWalkN3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenWalkN4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenWalkN5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenWalkS0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenWalkS1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenWalkS2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenWalkS3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenWalkS4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenWalkS5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenWalkW0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenWalkW1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenWalkW2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenWalkW3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenWalkW4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenWalkW5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenIdleE0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenIdleE1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenIdleE2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenIdleE3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenIdleE4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenIdleE5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenIdleN0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenIdleN1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenIdleN2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenIdleN3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenIdleN4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenIdleN5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenIdleS0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenIdleS1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenIdleS2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenIdleS3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenIdleS4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenIdleS5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenIdleW0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenIdleW1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenIdleW2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenIdleW3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenIdleW4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenIdleW5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenWalkE0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenWalkE1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenWalkE2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenWalkE3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenWalkE4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenWalkE5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenWalkN0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenWalkN1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenWalkN2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenWalkN3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenWalkN4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenWalkN5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenWalkS0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenWalkS1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenWalkS2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenWalkS3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenWalkS4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenWalkS5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenWalkW0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenWalkW1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenWalkW2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenWalkW3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenWalkW4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenWalkW5.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0,0</point_f>
@@ -235,36 +235,36 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenPTNod0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenPTNod1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenPTNod2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenPTNod3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenPTNod4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenPTNod5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenPTNod6.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenPTNod7.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenPTNod8.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenPTNod9.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenPTShake0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenPTShake1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenPTShake2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenPTShake3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenPTShake4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenPTShake5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenPTShake6.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenPTShake7.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenPTShake8.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenPTShake9.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenPTTalk0.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenPTTalk1.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenPTTalk2.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenPTTalk3.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenPTTalk4.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenPTTalk5.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenPTTalk6.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenPTTalk7.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenPTTalk8.png</key>
-            <key type="filename">../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenPTTalk9.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenPTNod0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenPTNod1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenPTNod2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenPTNod3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenPTNod4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenPTNod5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenPTNod6.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenPTNod7.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenPTNod8.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenPTNod9.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenPTShake0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenPTShake1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenPTShake2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenPTShake3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenPTShake4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenPTShake5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenPTShake6.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenPTShake7.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenPTShake8.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenPTShake9.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenPTTalk0.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenPTTalk1.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenPTTalk2.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenPTTalk3.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenPTTalk4.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenPTTalk5.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenPTTalk6.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenPTTalk7.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenPTTalk8.png</key>
+            <key type="filename">../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenPTTalk9.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0,0</point_f>
@@ -286,84 +286,84 @@
             <struct type="SpriteSheet">
                 <key>files</key>
                 <array>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenIdleE0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenIdleE1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenIdleE2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenIdleE3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenIdleE4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenIdleE5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenIdleN0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenIdleN1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenIdleN2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenIdleN3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenIdleN4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenIdleN5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenIdleS0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenIdleS1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenIdleS2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenIdleS3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenIdleS4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenIdleS5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenIdleW0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenIdleW1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenIdleW2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenIdleW3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenIdleW4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenIdleW5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenPTNod0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenPTNod1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenPTNod2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenPTNod3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenPTNod4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenPTNod5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenPTNod6.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenPTNod7.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenPTNod8.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenPTNod9.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenPTShake0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenPTShake1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenPTShake2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenPTShake3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenPTShake4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenPTShake5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenPTShake6.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenPTShake7.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenPTShake8.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenPTShake9.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenPTTalk0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenPTTalk1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenPTTalk2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenPTTalk3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenPTTalk4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenPTTalk5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenPTTalk6.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenPTTalk7.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenPTTalk8.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenPTTalk9.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenWalkE0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenWalkE1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenWalkE2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenWalkE3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenWalkE4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenWalkE5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenWalkN0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenWalkN1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenWalkN2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenWalkN3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenWalkN4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenWalkN5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenWalkS0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenWalkS1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenWalkS2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenWalkS3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenWalkS4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenWalkS5.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenWalkW0.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenWalkW1.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenWalkW2.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenWalkW3.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenWalkW4.png</filename>
-                    <filename>../../../ModernInteriors/CharacterSpriteSheet/npcSeven/npcSevenWalkW5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenIdleE0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenIdleE1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenIdleE2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenIdleE3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenIdleE4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenIdleE5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenIdleN0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenIdleN1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenIdleN2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenIdleN3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenIdleN4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenIdleN5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenIdleS0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenIdleS1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenIdleS2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenIdleS3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenIdleS4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenIdleS5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenIdleW0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenIdleW1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenIdleW2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenIdleW3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenIdleW4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenIdleW5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenPTNod0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenPTNod1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenPTNod2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenPTNod3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenPTNod4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenPTNod5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenPTNod6.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenPTNod7.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenPTNod8.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenPTNod9.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenPTShake0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenPTShake1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenPTShake2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenPTShake3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenPTShake4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenPTShake5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenPTShake6.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenPTShake7.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenPTShake8.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenPTShake9.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenPTTalk0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenPTTalk1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenPTTalk2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenPTTalk3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenPTTalk4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenPTTalk5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenPTTalk6.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenPTTalk7.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenPTTalk8.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenPTTalk9.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenWalkE0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenWalkE1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenWalkE2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenWalkE3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenWalkE4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenWalkE5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenWalkN0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenWalkN1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenWalkN2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenWalkN3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenWalkN4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenWalkN5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenWalkS0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenWalkS1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenWalkS2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenWalkS3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenWalkS4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenWalkS5.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenWalkW0.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenWalkW1.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenWalkW2.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenWalkW3.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenWalkW4.png</filename>
+                    <filename>../../tilemaps/assets/CharacterSpriteSheet/npcSeven/npcSevenWalkW5.png</filename>
                 </array>
             </struct>
         </map>

@@ -11,7 +11,7 @@ import { mmDormBuilder } from "../places/mmDorm";
 import { FadeOutFilterComponent, FadeInFilterComponent, AlarmFilter, FadingBlurFilter } from "../common/filter";
 import { hawksNestBuilder } from "../places/hawksNest";
 import { fillShelvesPartial, Inventory } from "../inventory/inventory";
-import { renderShelfInventory } from "../inventory/ui";
+import { ShelfInventoryUI } from "../inventory/ui";
 import { Spawner } from "../common/spawner";
 import { Inspectable } from "../interactions/inspectables";
 import { LevelInfo } from "../storage/level";
@@ -27,7 +27,7 @@ import { Places } from "../places/places";
 /**
  * HawksQuest is a quest that involves going to Hawks Nest and getting a lot of
  * food.
- * 
+ *
  * [mfs] The last step of updating the quest UI never really happens...
  */
 export class HawksQuest extends Quest {
@@ -71,19 +71,17 @@ export class HawksQuest extends Quest {
       // If we're at progress 0, Jake's job is to kick off the quest
       if (this.progress == 0) {
         // Turn off the HUD buttons
-        lInfo.hud?.toggleButtons(false);
-        lInfo.hud?.toggleStats(false);
+        lInfo.hud?.showStats(false);
         // Play the stomach grumbling sound effect
         stage.musicLibrary.getSound("MVPDemo/hungry.mp3").play();
         // Pause player controls, to fix a weird timing bug
         lInfo.keyboard?.stopPlayerControls();
+        lInfo.hud?.showBaseHUD(false);
         // Give Jake some extra dialogue:
         let driver = new DialogueDriver(jake_dorm_cut_scene, "start");
         // When the conversation is over, reset the UI and move the quest
         // forward
         driver.endFunc = () => {
-          lInfo.hud?.toggleButtons(true);
-          lInfo.hud?.toggleQuestNotification(true);
           this.progress = 1;
           this.start();
         };
@@ -167,17 +165,16 @@ export class HawksQuest extends Quest {
         // [mfs]  This looks like it's not using the NPC's inventory in sStore.
         //        That's going to mess stuff up if we ever want to actually use
         //        the stuff the character just picked up.
-        sStore.inventories.player.transferAll((npc.extra as FollowingNpcBehavior).inventory);
+        sStore.inventories.player.main.transferAll((npc.extra as FollowingNpcBehavior).inventory);
 
         // If all possible NPCs are following, fade out and leave
         if (this.helpingNpcs.length >= 4) {
           // Update quest information
-          if (sStore.currQuest?.activeObjectiveIndex() == 1 && !sStore.currQuest?.activeObjective()?.isComplete())
-            sStore.currQuest?.advance();
+          if (this.activeObjectiveIndex() == 1) this.advance();
 
           // Play dialogue to let player know the minigame is ending
           let doneShopping = new InspectSystem(Inspectable.HAWK_DONE_SHOPPING);
-          doneShopping.openUi();
+          doneShopping.open();
 
           // Fade out and then switch to hawk's path builder
           stage.world.timer.addEvent(new TimedEvent(2.25, false, () => {
@@ -192,13 +189,13 @@ export class HawksQuest extends Quest {
 
       // Set up the NPC's interaction
       (npc.extra as FollowingNpcBehavior).setNPCInteraction(() => {
-        // If the inventory is full when interacting queue the full dialogue, 
-        if (sStore.inventories.player.isFull()) {
+        // If the inventory is full when interacting queue the full dialogue,
+        if (sStore.inventories.player.main.isFull()) {
           fullConvoDriver.endFunc = endDialogue;
           (npc.extra as FollowingNpcBehavior).setNextDialogue(fullConvoDriver);
           this.helpingNpcs.push(npc);
         }
-        // Otherwise tell the player they can't help. 
+        // Otherwise tell the player they can't help.
         else {
           (npc.extra as FollowingNpcBehavior).setNextDialogue(notfullConvoDriver)
         }
@@ -207,7 +204,7 @@ export class HawksQuest extends Quest {
     }
   }
 
-  /** 
+  /**
    * When a place is made, this updates / reconfigures it
    *
    * [mfs]  We aren't using any levels, anywhere.  Is that going to change, or
@@ -315,29 +312,29 @@ export class HawksQuest extends Quest {
       // This is the first thing the player see's when first walking into Hawk's
       // Nest, before swiping their ID and before the minigame
       if (this.progress == 1) {
+        if (this.activeObjectiveIndex() == 0) { this.advance(); this.advance(); }
         // Kick off the dialogue
         let walkInDialogue = new InspectSystem(Inspectable.HAWK_ENTER_QUEST);
-        walkInDialogue.openUi();
+        walkInDialogue.open();
 
         // Set up the checkout machines:
         let checkout_machine_behavior = () => {
           this.progress = 2;
-          sStore.locX = lInfo.mainCharacter!.rigidBody.getCenter().x;
-          sStore.locY = lInfo.mainCharacter!.rigidBody.getCenter().y;
+          sStore.goToX = lInfo.mainCharacter!.rigidBody.getCenter().x;
+          sStore.goToY = lInfo.mainCharacter!.rigidBody.getCenter().y;
           stage.switchTo(hawksNestBuilder, 1);
         };
-        new Spawner(1.3, 10.5, 1, 1.75, "empty.png", checkout_machine_behavior);
-        new Spawner(11.05, 5.75, .75, 1.75, "empty.png", checkout_machine_behavior);
+        new Spawner(1.3, 10.5, 1, 1.75, checkout_machine_behavior);
+        new Spawner(11.05, 5.75, .75, 1.75, checkout_machine_behavior);
       }
 
       // In this stage, the character will swipe their Lehigh card at the
       // register and freak out at their swipes. This is a transition stage.
       else if (this.progress == 2) {
-        lInfo.hud?.toggleButtons(false);
         // After finishing dialogue cutscene, restart player controls and teleport the player to stage 3 of hawk's
         let endDialogue = () => {
-          sStore.locX = lInfo.mainCharacter!.rigidBody.getCenter().x
-          sStore.locY = lInfo.mainCharacter!.rigidBody.getCenter().y
+          sStore.goToX = lInfo.mainCharacter!.rigidBody.getCenter().x
+          sStore.goToY = lInfo.mainCharacter!.rigidBody.getCenter().y
           stage.switchTo(hawksNestBuilder, 1)
         }
 
@@ -345,7 +342,6 @@ export class HawksQuest extends Quest {
         lInfo.keyboard?.stopPlayerControls();
         stage.renderer.addFilter(fadeFilter, SpriteLocation.WORLD);
         fadeFilter.enabled = true;
-        fadeFilter.toggled = true;
 
         // Set up the point-of-sale kiosk
         let tapped = false;
@@ -390,9 +386,6 @@ export class HawksQuest extends Quest {
       // This level contains the main mini-game for hawk's nest. Players will go
       // shelf to shelf grabbing items and getting help from various NPCs.
       else if (this.progress == 3) {
-        // Advance the quest info that goes into the UI
-        if (sStore.currQuest?.activeObjectiveIndex() == 0 && !sStore.currQuest?.activeObjective()?.isComplete()) sStore.currQuest?.advance();
-
         // Put up the red alarm
         let filter = new AlarmFilter(0xFF0000, true);
         stage.renderer.addFilter(filter, SpriteLocation.WORLD);
@@ -420,17 +413,31 @@ export class HawksQuest extends Quest {
           fillShelvesPartial(inventory, false);
           sStore.inventories.shelves.push(inventory)
         }
-        // Make each shelf interactable
-        new Spawner(8.75, 2.16, 13.5, 2.2, "empty.png", () => { renderShelfInventory(0) }); // Top Shelf
-        new Spawner(1.51, 5.95, .7, 7, "empty.png", () => { renderShelfInventory(1) }); // Fridge
-        new Spawner(9.61, 14.41, 1.35, 3.75, "empty.png", () => { renderShelfInventory(2) }); // Entrance Chips
-        new Spawner(15.4, 8.2, 3.3, 4.5, "empty.png", () => { renderShelfInventory(3) }); // Left shelf
-        new Spawner(22.9, 8.2, 3.3, 4.5, "empty.png", () => { renderShelfInventory(4) }); // Right Shelf
 
-        // When your inventory is full, tell the player to go talk to an NPC 
-        sStore.inventories.player.onFull = () => {
+        let currshelf: ShelfInventoryUI;
+        let shelf0 = new ShelfInventoryUI(0);
+        let shelf1 = new ShelfInventoryUI(1);
+        let shelf2 = new ShelfInventoryUI(2);
+        let shelf3 = new ShelfInventoryUI(3);
+        let shelf4 = new ShelfInventoryUI(4);
+
+        // Make each shelf interactable
+        new Spawner(8.75, 2.16, 13.5, 2.2, () => { openshelf(shelf0, 0) }); // Top Shelf
+        new Spawner(1.51, 5.95, .7, 7, () => { openshelf(shelf1, 1) }); // Fridge
+        new Spawner(9.61, 14.41, 1.35, 3.75, () => { openshelf(shelf2, 2) }); // Entrance Chips
+        new Spawner(15.4, 8.2, 3.3, 4.5, () => { openshelf(shelf3, 3) }); // Left shelf
+        new Spawner(22.9, 8.2, 3.3, 4.5, () => { openshelf(shelf4, 4) }); // Right Shelf
+
+        function openshelf(shelf: ShelfInventoryUI, shelfNum: number) {
+          if (sStore.inventories.shelves[shelfNum].count != 0) lInfo.hud?.toggleMode("otherContainer", shelf);
+          currshelf = shelf;
+        }
+
+        // When your inventory is full, tell the player to go talk to an NPC
+        sStore.inventories.player.main.onFull = () => {
+          lInfo.hud?.toggleMode("otherContainer", currshelf);
           let invenFull = new InspectSystem(Inspectable.HAWK_INVENTORY_FULL);
-          invenFull.openUi();
+          invenFull.open();
         };
       }
     }

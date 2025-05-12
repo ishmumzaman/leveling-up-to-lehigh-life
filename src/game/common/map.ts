@@ -3,11 +3,14 @@
 import { Actor, BoxBody, ImageSprite, stage } from "../../jetlag";
 import { centerBoundBox } from "./boundBox";
 
+/** The pixel-to-meter ratio of the TMX.*/
+export const PIXEL_TO_METER_RATIO = 50;
+
 /**
  * Creates a map with the specified width, height, and image.
- * 
+ *
  * [mfs]  What are the units for w and h?
- * 
+ *
  * @param w   The width of the map.
  * @param h   The height of the map.
  * @param img The image for the map.
@@ -15,8 +18,8 @@ import { centerBoundBox } from "./boundBox";
  */
 export function createMap(w: number, h: number, img: string) {
   // Calculate the center and dimensions of the map
-  let width = w / 50;
-  let height = h / 50;
+  let width = w / PIXEL_TO_METER_RATIO;
+  let height = h / PIXEL_TO_METER_RATIO;
   let cx = width / 2;
   let cy = height / 2;
   let map = new Actor({
