@@ -2,5 +2,5 @@
 
 /** An enum of all of the possible quests in the game */
 export enum QuestNames {
-    HawksQuest, FindRathBone
+    HawksQuest, FindRathBone, RoommateQuest
 }
