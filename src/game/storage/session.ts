@@ -59,7 +59,7 @@ export class SessionInfo {
   playerStat = new Stats(100);
 
   /** Quest data */
-  currQuest?: Quest = new HawksQuest();
+  currQuest?: Quest = undefined;
 
   /**
    * Information from the character customization screen, which we can use to

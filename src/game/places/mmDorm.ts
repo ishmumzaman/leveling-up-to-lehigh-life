@@ -20,6 +20,8 @@ import { Places } from "./places";
 import { spawnRegularNpc, NpcNames } from "../characters/NPC";
 import { Builder } from "../multiplayer/loginSystem";
 import { drawObjects } from "./walls";
+import { HawksQuest } from "../quests/hawksQuest";
+import { NpcBehavior } from "../characters/NPC";
 
 // [mfs]  I exported the tilemap as a json, so it can be imported like this.
 //        Note that I didn't do the furniture, because that might change...
@@ -76,6 +78,26 @@ export const mmDormBuilder: Builder = function (level: number) {
   });
 
   let jake = spawnRegularNpc(NpcNames.Jake, 2.1, 4.7, AnimationState.IDLE_E);
+  let questActivated = false;
+
+  // Define custom interaction logic
+  (jake.extra as NpcBehavior).onInteract = () => {
+    if (!questActivated) {
+      console.log("Interacting with Jake...");
+      
+      // Activate the quest
+      sStore.currQuest = new HawksQuest();
+      console.log("Quest changed to HawksQuest!");
+
+      // Update the level and NPC based on the new quest
+      sStore.currQuest?.onBuildPlace(Places.MM_DORM, level);
+      sStore.currQuest?.onMakeNpc(Places.MM_DORM, level, jake);
+
+      questActivated = true; // Mark the quest as activated
+    } else {
+      console.log("Jake has nothing new to say.");
+    }
+  };
 
   // Update the map and NPC based on the current quest, if any
   sStore.currQuest?.onBuildPlace(Places.MM_DORM, level);
