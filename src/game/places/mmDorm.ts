@@ -93,7 +93,10 @@ export const mmDormBuilder: Builder = function (level: number) {
       sStore.currQuest?.onBuildPlace(Places.MM_DORM, level);
       sStore.currQuest?.onMakeNpc(Places.MM_DORM, level, jake);
 
-      questActivated = true; // Mark the quest as activated
+      // Mark the quest as activated
+      questActivated = true; 
+      // Remove the interaction logic after quest activation
+      (jake.extra as NpcBehavior).onInteract = undefined; 
     } else {
       console.log("Jake has nothing new to say.");
     }
