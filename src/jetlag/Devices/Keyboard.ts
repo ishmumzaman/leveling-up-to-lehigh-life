@@ -22,6 +22,7 @@ export enum KeyCodes {
   KEY_N = 'KeyN', KEY_M = 'KeyM', KEY_COMMA = 'Comma', KEY_PERIOD = 'Period',
   KEY_SLASH = 'Slash', KEY_SPACE = 'Space', KEY_PAGEUP = 'PageUp', KEY_PAGEDOWN = 'PageDown',
   KEY_LEFT = 'ArrowLeft', KEY_UP = 'ArrowUp', KEY_DOWN = 'ArrowDown', KEY_RIGHT = 'ArrowRight',
+  KEY_SHIFT = 'ShiftLeft', KEY_SHIFT_RIGHT = 'ShiftRight'
 };
 
 /**
