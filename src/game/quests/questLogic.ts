@@ -3,6 +3,7 @@
 import { QuestNames } from "./questNames";
 import { Places } from "../places/places"
 import { Actor } from "../../jetlag";
+import { QuestStorage } from "../storage/questStorage";
 
 /** A step within an Objective */
 export class Step {
@@ -23,16 +24,47 @@ export class Step {
  */
 export class Objective {
   /** The index of the current step of the objective */
-  private currStep = 0;
+  private currStep: number;
 
   /**
    * Create an Objective
-   *
-   * @param name        The name of the objective.
-   * @param description The description of the objective.
-   * @param steps       All the steps required to complete the objective
+   * @param name - Objective name
+   * @param description - Objective description
+   * @param steps - Sequence of steps in this objective
+   * @param questName - Associated quest ID
+   * @param objectiveIndex - Index in the quest
+   * @param stepIndex - Step to start from (optional)
    */
-  constructor(readonly name: string, readonly description: string, private steps: Step[]) { }
+  constructor(
+    readonly name: string,
+    readonly description: string,
+    private steps: Step[],
+    private questName: string,
+    private objectiveIndex: number,
+    stepIndex: number = 0
+  ) {
+  this.currStep = stepIndex;
+  }
+
+  /** Saves the current step and objective index to storage */
+  public pause() {
+    QuestStorage.saveProgress(this.questName, {
+      objectiveIndex: this.objectiveIndex,
+      stepIndex: this.currStep,
+    });
+    QuestStorage.setStatus(this.questName, "Paused");
+  }
+
+  /**
+   * Starts this objective from a specific step.
+   * @param stepIndex - Step index to resume from
+   */
+  public startFrom(stepIndex: number) {
+    this.currStep = stepIndex;
+    if (this.steps[this.currStep]) {
+      this.steps[this.currStep].onReach();
+    }
+  }
 
   /** Starts the objective */
   public start() {
@@ -89,11 +121,28 @@ export abstract class Quest {
   constructor(readonly which: QuestNames, readonly name: string, readonly description: string, readonly objectives: Objective[], private startFunc?: () => void, private endFunc?: () => void, private rewardFunc?: () => void) {
   }
 
-  /** Start a quest */
+  /**
+   * Starts the quest from stored progress or from the beginning.
+   */
   public start() {
-    // [mfs] After a quest completes, can it be started again?
-    if (this.startFunc) this.startFunc();
-    this.objectives[this.currObjective].start();
+    const progress = QuestStorage.getProgressFor(this.name);
+    if (progress) {
+      const { objectiveIndex, stepIndex } = progress;
+      if (this.objectives[objectiveIndex]) {
+        this.objectives[objectiveIndex].startFrom(stepIndex);
+        return;
+      }
+    }
+
+    this.objectives[0].start();
+    QuestStorage.setStatus(this.name, "Active");
+  }
+
+  /**
+   * Pauses the currently active objective.
+   */
+  pause() {
+    this.objectives[this.currObjective].pause();
   }
 
   /**
