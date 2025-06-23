@@ -2,6 +2,8 @@ import { ItemType } from './../inventory/item';
 // Reviewed on 2024-09-27
 
 import { Quest } from '../quests/questLogic';
+import { QuestStatus, QuestProgress } from "./questStorage";
+import { QuestNames } from "../quests/questNames";
 import { Inventory } from "../inventory/inventory";
 import { CharacterAnimations } from '../characters/characterCustomization';
 import { PrepareInspectables } from "../interactions/inspectables"
@@ -60,6 +62,10 @@ export class SessionInfo {
 
   /** Quest data */
   currQuest?: Quest = undefined;
+
+  /** Quest state tracking fields */
+  questStatus: { [questName in QuestNames]?: QuestStatus } = {};
+  pausedQuests: { [questName in QuestNames]?: QuestProgress } = {};
 
   /**
    * Information from the character customization screen, which we can use to

@@ -2,9 +2,9 @@
  * @file questStorage.ts
  * @author Hamza Al Farsi
  * @description
- *   Handles persistent tracking of quest status and progress using browser sessionStorage.
- *   This module provides read/write utilities to manage each quest's active state and
- *   exact progression point across objectives and steps.
+ *   Provides a session-based interface for tracking quest progress and paused steps.
+ *   Internally uses the global `SessionInfo` object (`sStore`) from session.ts.
+ *   Quest status can be: "Not Active", "Active", "Paused", or "Completed".
  * 
  *   Used across the quest logic, NPC interactions, and world-building systems
  *   to enable advanced state tracking, pause/resume behavior, and scene-specific adaptations.
@@ -15,16 +15,19 @@
  * 
  * @exports QuestStatus
  * @exports QuestProgress
- * @exports QuestStorage
  */
+import { stage } from "../../jetlag/Stage";
+import { SessionInfo } from "./session";
+import { QuestNames } from "../quests/questNames";
 
 /**
- * Represents the status of a quest.
+ * Represents the possible status of a quest.
  */
 export type QuestStatus = "Not Active" | "Paused" | "Active" | "Completed";
 
 /**
- * Represents a paused quest's position.
+ * Represents the exact location where a quest was paused,
+ * allowing it to resume from the same objective and step.
  */
 export interface QuestProgress {
     objectiveIndex: number;
@@ -32,63 +35,55 @@ export interface QuestProgress {
 }
 
 /**
- * Manages quest progress and status using sessionStorage.
+ * Retrieves the current status of a quest.
+ *
+ * @param questName - The quest name (from QuestNames enum)
+ * @returns The current status, or "Not Active" if unset
  */
-export class QuestStorage {
-    private static statusKey = "questStatuses";
-    private static progressKey = "pausedProgress";
+export function getStatus(questName: QuestNames): QuestStatus {
+    const s = stage.storage.getSession("sStore") as SessionInfo;
+    return (s.questStatus[questName] ?? "Not Active") as QuestStatus;
+}
 
-    /**
-     * Returns the status of all quests.
-     */
-    static getStatuses(): Record<string, QuestStatus> {
-        const json = sessionStorage.getItem(this.statusKey);
-        return json ? JSON.parse(json) : {};
-    }
+/**
+ * Sets or updates the current status of a quest.
+ *
+ * @param questName - The quest name
+ * @param status - One of the defined QuestStatus values
+ */
+export function setStatus(questName: QuestNames, status: QuestStatus): void {
+    const s = stage.storage.getSession("sStore") as SessionInfo;
+    s.questStatus[questName] = status;
+}
 
-    /**
-     * Gets the status of a specific quest.
-     * @param questName - Name of the quest
-     */
-    static getStatus(questName: string): QuestStatus {
-        return this.getStatuses()[questName] ?? "Not Active";
-    }
+/**
+ * Saves the paused progress of a quest to session storage.
+ *
+ * @param questName - The quest name
+ * @param progress - The objective and step index to resume from
+ */
+export function setPausedProgress(questName: QuestNames, progress: QuestProgress): void {
+    const s = stage.storage.getSession("sStore") as SessionInfo;
+    s.pausedQuests[questName] = progress;
+}
 
-    /**
-     * Sets the status of a quest.
-     * @param questName - Name of the quest
-     * @param status - Status to assign
-     */
-    static setStatus(questName: string, status: QuestStatus): void {
-        const statuses = this.getStatuses();
-        statuses[questName] = status;
-        sessionStorage.setItem(this.statusKey, JSON.stringify(statuses));
-    }
+/**
+ * Retrieves the paused progress for a specific quest.
+ *
+ * @param questName - The quest name
+ * @returns QuestProgress object or undefined if not paused
+ */
+export function getPausedProgress(questName: QuestNames): QuestProgress | undefined {
+    const s = stage.storage.getSession("sStore") as SessionInfo;
+    return s.pausedQuests[questName];
+}
 
-    /**
-     * Returns all quest progress records.
-     */
-    static getProgress(): Record<string, QuestProgress> {
-        const json = sessionStorage.getItem(this.progressKey);
-        return json ? JSON.parse(json) : {};
-    }
-
-    /**
-     * Returns saved progress for a specific quest.
-     * @param questName - Name of the quest
-     */
-    static getProgressFor(questName: string): QuestProgress | null {
-        return this.getProgress()[questName] ?? null;
-    }
-
-    /**
-     * Saves the progress of a quest.
-     * @param questName - Name of the quest
-     * @param progress - Object with objectiveIndex and stepIndex
-     */
-    static saveProgress(questName: string, progress: QuestProgress): void {
-        const fullProgress = this.getProgress();
-        fullProgress[questName] = progress;
-        sessionStorage.setItem(this.progressKey, JSON.stringify(fullProgress));
-    }
+/**
+ * Removes the paused progress entry for a quest.
+ *
+ * @param questName - The quest name
+ */
+export function clearPausedProgress(questName: QuestNames): void {
+    const s = stage.storage.getSession("sStore") as SessionInfo;
+    delete s.pausedQuests[questName];
 }
