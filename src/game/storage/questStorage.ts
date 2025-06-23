@@ -4,10 +4,12 @@
  * @description
  *   Provides a session-based interface for tracking quest progress and paused steps.
  *   Internally uses the global `SessionInfo` object (`sStore`) from session.ts.
+ *   Can easily be switched to persistent storage in the future.
  *   Quest status can be: "Not Active", "Active", "Paused", or "Completed".
  * 
  *   Used across the quest logic, NPC interactions, and world-building systems
  *   to enable advanced state tracking, pause/resume behavior, and scene-specific adaptations.
+ * 
  * 
  * @module QuestStorage
  * @created June 2025
@@ -86,4 +88,10 @@ export function getPausedProgress(questName: QuestNames): QuestProgress | undefi
 export function clearPausedProgress(questName: QuestNames): void {
     const s = stage.storage.getSession("sStore") as SessionInfo;
     delete s.pausedQuests[questName];
+}
+
+export function resetAllQuestData(): void {
+    const s = stage.storage.getSession("sStore") as SessionInfo;
+    s.questStatus = {};
+    s.pausedQuests = {};
 }
