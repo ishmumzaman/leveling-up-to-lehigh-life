@@ -118,7 +118,11 @@ export class KeyboardHandler {
    * @param keyA the status of the A key
    * @param keyS the status of the S key
    * @param keyD the status of the D key
+<<<<<<< HEAD
    * @param keyShift the status of the Shift key
+=======
+   * @param keyShift the status of the shift key
+>>>>>>> 807aa651fdfab91ce33d9acb6ac732267faedd65
    * @param hero the hero to modify the movement of. Typically the main character
    *      // .01 seconds but rather every frame due to how jetlag works
    * @returns Nothing. Simply skip some checks if moving diagonally
@@ -127,7 +131,11 @@ export class KeyboardHandler {
     let sStore = stage.storage.getSession("sStore") as SessionInfo;
     let vX = 0; let vY = 0;
 
+<<<<<<< HEAD
     // Check if shift key is pressed for running
+=======
+    // Apply speed multiplier based on shift key
+>>>>>>> 807aa651fdfab91ce33d9acb6ac732267faedd65
     let speedMultiplier = keyShift ? 1.5 : 1.0;
 
     // Step 1:  If the hero collided with a diagonal wall, it might have an
@@ -174,8 +182,18 @@ export class KeyboardHandler {
       vX = 5 * speedMultiplier;
     }
 
+<<<<<<< HEAD
     // Update movement velocities (energy consideration removed for development)
     (hero.movement as ManualMovement).updateXVelocity(vX);
     (hero.movement as ManualMovement).updateYVelocity(vY);
+=======
+    // Update `hero`'s X velocity to `v`
+    let velX = sStore.playerStat.energy > 30 ? vX : vX * 0.7;
+    (hero.movement as ManualMovement).updateXVelocity(velX);
+
+    // Update `hero`'s Y velocity to `v`
+    let velY = sStore.playerStat.energy > 30 ? vY : vY * 0.7;
+    (hero.movement as ManualMovement).updateYVelocity(velY);
+>>>>>>> 807aa651fdfab91ce33d9acb6ac732267faedd65
   }
 }

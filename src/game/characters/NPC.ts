@@ -20,6 +20,7 @@ import { main_character_default } from '../interactions/mainCharDialogue';
 import { zay_default } from '../interactions/zayDlg';
 
 /** All of the NPCs in the game */
+
 export enum NpcNames {
   Alyssa,
   Emelia,
@@ -28,7 +29,10 @@ export enum NpcNames {
   Martina,
   Professor,
   Zay,
-  MainCharacter // Not really an NPC, but we need it like this
+  MainCharacter,
+  Roommate,
+  Gryphon,
+  LUPDOfficer
 }
 
 /**
