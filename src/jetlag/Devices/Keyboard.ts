@@ -21,17 +21,11 @@ export enum KeyCodes {
   KEY_SHIFT = 'ShiftLeft', KEY_SHIFT_RIGHT = 'ShiftRight',
   KEY_Z = 'KeyZ', KEY_X = 'KeyX', KEY_C = 'KeyC', KEY_V = 'KeyV', KEY_B = 'KeyB',
   KEY_N = 'KeyN', KEY_M = 'KeyM', KEY_COMMA = 'Comma', KEY_PERIOD = 'Period',
-<<<<<<< HEAD
   KEY_SLASH = 'Slash',
   KEY_CONTROL = 'ControlLeft', KEY_ALT = 'AltLeft', KEY_SPACE = 'Space',
   KEY_ARROWLEFT = 'ArrowLeft', KEY_ARROWUP = 'ArrowUp',
   KEY_ARROWRIGHT = 'ArrowRight', KEY_ARROWDOWN = 'ArrowDown',
   KEY_PAGEUP = 'PageUp', KEY_PAGEDOWN = 'PageDown',
-=======
-  KEY_SLASH = 'Slash', KEY_SPACE = 'Space', KEY_PAGEUP = 'PageUp', KEY_PAGEDOWN = 'PageDown',
-  KEY_LEFT = 'ArrowLeft', KEY_UP = 'ArrowUp', KEY_DOWN = 'ArrowDown', KEY_RIGHT = 'ArrowRight',
-  KEY_SHIFT = 'ShiftLeft', KEY_SHIFT_RIGHT = 'ShiftRight'
->>>>>>> 807aa651fdfab91ce33d9acb6ac732267faedd65
 };
 
 /**
