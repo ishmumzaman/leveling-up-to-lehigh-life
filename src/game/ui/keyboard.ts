@@ -48,20 +48,25 @@ export class KeyboardHandler {
     let keyA: boolean;
     let keyS: boolean;
     let keyD: boolean;
+    let keyShift: boolean;
     stage.keyboard.setKeyUpHandler(KeyCodes.KEY_W, () => { keyW = false; });
     stage.keyboard.setKeyUpHandler(KeyCodes.KEY_S, () => { keyS = false; });
     stage.keyboard.setKeyUpHandler(KeyCodes.KEY_A, () => { keyA = false; });
     stage.keyboard.setKeyUpHandler(KeyCodes.KEY_D, () => { keyD = false; });
+    stage.keyboard.setKeyUpHandler(KeyCodes.KEY_SHIFT, () => { keyShift = false; });
+    stage.keyboard.setKeyUpHandler(KeyCodes.KEY_SHIFT_RIGHT, () => { keyShift = false; });
     stage.keyboard.setKeyDownHandler(KeyCodes.KEY_W, () => { keyW = true; });
     stage.keyboard.setKeyDownHandler(KeyCodes.KEY_S, () => { keyS = true; });
     stage.keyboard.setKeyDownHandler(KeyCodes.KEY_A, () => { keyA = true; });
     stage.keyboard.setKeyDownHandler(KeyCodes.KEY_D, () => { keyD = true; });
+    stage.keyboard.setKeyDownHandler(KeyCodes.KEY_SHIFT, () => { keyShift = true; });
+    stage.keyboard.setKeyDownHandler(KeyCodes.KEY_SHIFT_RIGHT, () => { keyShift = true; });
 
     // Set up a timer event to adjust velocity based on keyboard state
     //
     // [mfs]  Could we use stage.world.repeatEvents instead of the tiny timer
     //        interval on stage.world.timer?      // .01 seconds but rather every frame due to how jetlag works
-    let event = new TimedEvent(0.01, true, () => { this.heroVelocityFixer(keyW, keyA, keyS, keyD, hero); });
+    let event = new TimedEvent(0.01, true, () => { this.heroVelocityFixer(keyW, keyA, keyS, keyD, keyShift, hero); });
     stage.world.timer.addEvent(event);
 
     // Set inventory and interaction keys
@@ -113,13 +118,17 @@ export class KeyboardHandler {
    * @param keyA the status of the A key
    * @param keyS the status of the S key
    * @param keyD the status of the D key
+   * @param keyShift the status of the Shift key
    * @param hero the hero to modify the movement of. Typically the main character
    *      // .01 seconds but rather every frame due to how jetlag works
    * @returns Nothing. Simply skip some checks if moving diagonally
    */
-  private heroVelocityFixer(keyW: boolean, keyA: boolean, keyS: boolean, keyD: boolean, hero: Actor) {
+  private heroVelocityFixer(keyW: boolean, keyA: boolean, keyS: boolean, keyD: boolean, keyShift: boolean, hero: Actor) {
     let sStore = stage.storage.getSession("sStore") as SessionInfo;
     let vX = 0; let vY = 0;
+
+    // Check if shift key is pressed for running
+    let speedMultiplier = keyShift ? 1.5 : 1.0;
 
     // Step 1:  If the hero collided with a diagonal wall, it might have an
     //          unintentional velocity.  If the corresponding key is not pressed,
@@ -134,44 +143,39 @@ export class KeyboardHandler {
     //          then normalize the velocity so that diagonal movement is not
     //          faster than forward movement.
     if (keyW && keyA) {
-      vY = -3.8;
-      vX = -3.8;
+      vY = -3.8 * speedMultiplier;
+      vX = -3.8 * speedMultiplier;
     }
     else if (keyW && keyD) {
-      vY = -3.8;
-      vX = 3.8;
+      vY = -3.8 * speedMultiplier;
+      vX = 3.8 * speedMultiplier;
     }
     else if (keyS && keyA) {
-      vY = 3.8;
-      vX = -3.8;
+      vY = 3.8 * speedMultiplier;
+      vX = -3.8 * speedMultiplier;
     }
     else if (keyS && keyD) {
-      vY = 3.8;
-      vX = 3.8;
+      vY = 3.8 * speedMultiplier;
+      vX = 3.8 * speedMultiplier;
     }
     // Step 3:  Otherwise, go forward in a single direction.  Note that if
     //          antagonistic keys are pressed (like up and down), this hard-codes
     //          a winner through the order of the conditions.  Up and Right win.
     else if (keyW) {
-      vY = -5;
+      vY = -5 * speedMultiplier;
     }
     else if (keyS) {
-      vY = 5;
+      vY = 5 * speedMultiplier;
     }
     else if (keyA) {
-      vX = -5;
+      vX = -5 * speedMultiplier;
     }
     else if (keyD) {
-      vX = 5;
+      vX = 5 * speedMultiplier;
     }
 
-    // Update `hero`'s X velocity to `v`
-    let velX = sStore.playerStat.energy > 30 ? vX : vX * 0.7;
-    (hero.movement as ManualMovement).updateXVelocity(velX);
-
-
-    // Update `hero`'s Y velocity to `v`
-    let velY = sStore.playerStat.energy > 30 ? vY : vY * 0.7;
-    (hero.movement as ManualMovement).updateYVelocity(velY);
+    // Update movement velocities (energy consideration removed for development)
+    (hero.movement as ManualMovement).updateXVelocity(vX);
+    (hero.movement as ManualMovement).updateYVelocity(vY);
   }
 }
