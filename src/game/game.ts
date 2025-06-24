@@ -22,7 +22,7 @@ import { loginBuilder } from "./multiplayer/loginSystem";
 //        to add tile map support first.
 let imageNames = [
   "fatalError.png", "overlay/inventory.png", "overlay/keyBackground.png",
-  "overlay/questMenu.json", "overlay/closeButton.png",
+  "overlay/questMenu.json", "overlay/closeButton.png", "overlay/pauseButton.png",
   "locBg/mvpLocs.json", "locBg/hawksPath.png", "icon/defaultImg.png",
   "empty.png", "statUI.png", "icon/questNoti.png", "icon/hudElements.json",
   "icon/wasd.png", "icon/e.png", "icon/qKeys.json",

@@ -3,7 +3,9 @@
 import { QuestNames } from "./questNames";
 import { Places } from "../places/places"
 import { Actor } from "../../jetlag";
-import { QuestStorage } from "../storage/questStorage";
+import {QuestStorage} from "../storage/questStorage";
+import { stage } from "../../jetlag/Stage";
+import { SessionInfo } from "../storage/session";
 
 /** A step within an Objective */
 export class Step {
@@ -39,7 +41,7 @@ export class Objective {
     readonly name: string,
     readonly description: string,
     private steps: Step[],
-    private questName: string,
+    private questName: QuestNames,
     private objectiveIndex: number,
     stepIndex: number = 0
   ) {
@@ -48,7 +50,9 @@ export class Objective {
 
   /** Saves the current step and objective index to storage */
   public pause() {
-    QuestStorage.saveProgress(this.questName, {
+    const s = stage.storage.getSession("sStore") as SessionInfo;
+    s.currQuest = undefined; // Clear the current quest to avoid confusion
+    QuestStorage.setPausedProgress(this.questName, {
       objectiveIndex: this.objectiveIndex,
       stepIndex: this.currStep,
     });
@@ -107,41 +111,40 @@ export abstract class Quest {
   /** The unread status of the class to determine the quest notification*/
   private unread = true;
 
+  public name: String; // For compatibility with older code
+
   /**
    * Creates a new Quest instance.
-   *
-   * @param which       The Id of the quest
-   * @param name        The display name of the quest
+   * @param questName   The name of the quest, used for storage and identification (from QuestNames enum)
    * @param description The description of the quest
    * @param objectives  The quest objectives array
    * @param startFunc   The function to be called when the quest starts.
    * @param endFunc     The function to be called when the quest is completed.
    * @param rewardFunc  The rewards of the quest.
    */
-  constructor(readonly which: QuestNames, readonly name: string, readonly description: string, readonly objectives: Objective[], private startFunc?: () => void, private endFunc?: () => void, private rewardFunc?: () => void) {
+  constructor(readonly questName: QuestNames, readonly description: string, readonly objectives: Objective[], private startFunc?: () => void, private endFunc?: () => void, private rewardFunc?: () => void) {
+    this.name = questName; // For compatibility with older code
   }
 
-  /**
-   * Starts the quest from stored progress or from the beginning.
-   */
+  /** Starts the quest from stored progress or from the beginning */
   public start() {
-    const progress = QuestStorage.getProgressFor(this.name);
+    const progress = QuestStorage.getPausedProgress(this.questName);
+    // If there is progress stored, resume from the last objective and step
     if (progress) {
       const { objectiveIndex, stepIndex } = progress;
       if (this.objectives[objectiveIndex]) {
         this.objectives[objectiveIndex].startFrom(stepIndex);
+        QuestStorage.clearPausedProgress(this.questName); // Clear the paused progress after restarting
         return;
       }
     }
-
+    // If no progress is stored, start from the beginning
     this.objectives[0].start();
-    QuestStorage.setStatus(this.name, "Active");
+    QuestStorage.setStatus(this.questName, "Active");
   }
 
-  /**
-   * Pauses the currently active objective.
-   */
-  pause() {
+  /** Pauses the currently active objective */
+  public pause() {
     this.objectives[this.currObjective].pause();
   }
 
