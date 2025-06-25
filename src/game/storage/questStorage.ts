@@ -93,6 +93,19 @@ export class QuestStorage {
     }
 
     /**
+     * Retrieves the currently active quest.
+     *
+     * @returns The active quest name or undefined if no quest is active
+     */
+    static getActiveQuest(): QuestNames | undefined {
+        const s = stage.storage.getSession("sStore") as SessionInfo;
+        if (s.currQuest) {
+            return s.currQuest.name as QuestNames;
+        }
+        return undefined;
+    }
+
+    /**
      * Resets all quest data in the session storage.
      * This clears the quest status and paused quests.
      */

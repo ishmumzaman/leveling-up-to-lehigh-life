@@ -21,7 +21,8 @@ import { spawnRegularNpc, NpcNames } from "../characters/NPC";
 import { Builder } from "../multiplayer/loginSystem";
 import { drawObjects } from "./walls";
 import { HawksQuest } from "../quests/hawksQuest";
-import { NpcBehavior } from "../characters/NPC";
+import { makeQuestStartingNpc } from "../quests/helper";
+import { jake_quest_starter, jake_busy, jake_default } from "../interactions/jakeDlg";
 
 // [mfs]  I exported the tilemap as a json, so it can be imported like this.
 //        Note that I didn't do the furniture, because that might change...
@@ -78,30 +79,19 @@ export const mmDormBuilder: Builder = function (level: number) {
   });
 
   let jake = spawnRegularNpc(NpcNames.Jake, 2.1, 4.7, AnimationState.IDLE_E);
-  let questActivated = false;
 
-  // Define custom interaction logic
-  (jake.extra as NpcBehavior).onInteract = () => {
-    if (!questActivated) {
-      console.log("Interacting with Jake...");
-      
-      // Activate the quest
-      sStore.currQuest = new HawksQuest();
-      console.log("Quest changed to HawksQuest!");
-
-      // Update the level and NPC based on the new quest
-      sStore.currQuest?.onBuildPlace(Places.MM_DORM, level);
-      sStore.currQuest?.onMakeNpc(Places.MM_DORM, level, jake);
-      /*
-      // Mark the quest as activated
-      questActivated = true; 
-      // Remove the interaction logic after quest activation
-      (jake.extra as NpcBehavior).onInteract = undefined; 
-      */
-    } else {
-      console.log("Jake has nothing new to say.");
-    }
-  };
+  makeQuestStartingNpc({
+    npc: jake,
+    quest: new HawksQuest(),
+    prestartDialogue: jake_quest_starter,
+    busyDialogue: jake_busy,
+    defaultDialogue: jake_default,
+    level: lInfo,
+    levelNumber: level,
+    place: Places.MM_DORM,
+    acceptFootprint: 1,
+    setAsCurrent: true
+  });
 
   // Update the map and NPC based on the current quest, if any
   sStore.currQuest?.onBuildPlace(Places.MM_DORM, level);

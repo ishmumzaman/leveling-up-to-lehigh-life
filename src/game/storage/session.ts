@@ -14,6 +14,7 @@ import { Actor, AnimationState } from '../../jetlag';
 import { defaultCharacter } from '../characters/makeCharacterBuilder';
 import { WorldClock } from '../common/clock';
 import { Stats } from '../characters/stats';
+import { FindRathBone } from '../quests/FindRathBone';
 
 
 /**

@@ -43,8 +43,8 @@ export class QuestMenuUI {
         rigidBody: new BoxBody({ cx: 4.4, cy: 6.4, width: 1.8, height: 1 }, { scene: stage.hud }),
         gestures: {
           tap: () => {
-            console.log(`Paused quest: ${this.quest.name}`);
-            this.quest.pause();
+            console.log(`Paused quest: ${this.quest?.name}`);
+            this.quest?.pause();
             return true;
           }
         }
