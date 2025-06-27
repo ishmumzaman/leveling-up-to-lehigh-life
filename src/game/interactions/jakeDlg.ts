@@ -44,8 +44,8 @@ export let jake_has_direction = new Map<string, Conversation>([
 ])
 
 export let jake_quest_starter = new Map<string, Conversation>([
-    ["start", new Conversation("Yo bro, I need help with something. You free?", [
-      new ConversationResponse("Yeah, I’m curious now.", "accept", 1),
+    ["start", new Conversation("Yo bro, I need help with something. Are you free?", [
+      new ConversationResponse("Yeah, sure what is going on?", "accept", 1),
       new ConversationResponse("Eh, maybe later.", "decline")
     ])],
     ["accept", new Conversation("Alright cool, listen up.", [])],
