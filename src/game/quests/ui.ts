@@ -35,6 +35,21 @@ export class QuestMenuUI {
         }
       }
     }));
+    // Temporary Pause button
+    // This button is only shown if there is a quest in progress
+    if (this.quest !== undefined) {
+      this.components.push(new Actor({
+        appearance: new ImageSprite({ width: 1.8, height: 1, img: "overlay/pauseButton.png", z: 2 }),
+        rigidBody: new BoxBody({ cx: 4.4, cy: 6.4, width: 1.8, height: 1 }, { scene: stage.hud }),
+        gestures: {
+          tap: () => {
+            console.log(`Paused quest: ${this.quest?.name}`);
+            this.quest?.pause();
+            return true;
+          }
+        }
+      }));
+    }
     // Quest overlay background
     this.components.push(new Actor({
       appearance: new ImageSprite({ width: 11, height: 5.5, img: "questOverlayBackground.png" }),

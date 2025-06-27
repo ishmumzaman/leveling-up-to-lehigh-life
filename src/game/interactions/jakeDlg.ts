@@ -6,6 +6,13 @@ export let jake_default = new Map<string, Conversation>([
     ["start", new Conversation("Yo what's up dude.", [])]
 ]);
 
+export const jake_busy = new Map<string, Conversation>([
+    ["start", new Conversation("You look like you’ve already got something on your plate.", [
+      new ConversationResponse("Yeah, I’ll catch you later.", "end")
+    ])],
+    ["end", new Conversation("Alright, don’t burn yourself out.", [])],
+]);
+
 export let jake_ask_direction = new Map<string, Conversation>([
     ["start", new Conversation("Hey, do you know where the Rathbone building is?", [
         new ConversationResponse("Let me go ask someone", "dontKnow")
@@ -35,6 +42,15 @@ export let give_jake_direction = new Map<string, Conversation>([
 export let jake_has_direction = new Map<string, Conversation>([
     ["start", new Conversation("I'm so excited to try Rathbone food", [])],
 ])
+
+export let jake_quest_starter = new Map<string, Conversation>([
+    ["start", new Conversation("Yo bro, I need help with something. Are you free?", [
+      new ConversationResponse("Yeah, sure what is going on?", "accept", 1),
+      new ConversationResponse("Eh, maybe later.", "decline")
+    ])],
+    ["accept", new Conversation("Alright cool, listen up.", [])],
+    ["decline", new Conversation("No worries. Come back when you are free.", [])]
+]);
 
 export let jake_dorm_cut_scene = new Map<string, Conversation>([
     ["start", new Conversation("You need some food in your system dude, what was that?", [

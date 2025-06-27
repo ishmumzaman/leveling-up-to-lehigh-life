@@ -49,13 +49,13 @@ export class HawksQuest extends Quest {
 
   /** The objectives of the quest */
   static objectives = [
-    new Objective("Go to Hawk's Nest", "Head East on University Drive and reach Hawk's Nest.", [new Step("Not there yet!"), new Step("You made it!")]),
-    new Objective("Get food", "Gather as much food as you can from the food shelves.", [new Step("You can still get more food."), new Step("Successfully hoarded food!")])
+    new Objective("Go to Hawk's Nest", "Head East on University Drive and reach Hawk's Nest.", [new Step("Not there yet!"), new Step("You made it!")], QuestNames.HawksQuest, 0),
+    new Objective("Get food", "Gather as much food as you can from the food shelves.", [new Step("You can still get more food."), new Step("Successfully hoarded food!")], QuestNames.HawksQuest, 1),
   ];
 
   /** Construct the quest for getting food from Hawks Nest */
   constructor() {
-    super(QuestNames.HawksQuest, "Quest 0", "The First of many", HawksQuest.objectives);
+    super(QuestNames.HawksQuest, "The First of many", HawksQuest.objectives);
   }
 
   /** Score data for Hawk's minigame */

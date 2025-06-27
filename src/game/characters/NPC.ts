@@ -105,6 +105,9 @@ export class NpcBehavior extends Extra {
   /** A spawner button, so that the NPC will be interactable */
   public staticSpawner: Spawner;
 
+  /** Custom interaction logic for the NPC */
+  public onInteract?: () => void;
+
   /**
    * Construct a normal NPC behavior
    *
@@ -122,7 +125,13 @@ export class NpcBehavior extends Extra {
     sStore.inventories.npcs.push(this.inventory);
 
     // give the NPC a hitbox for interactions
-    this.staticSpawner = new Spawner(3, 6, 0.6, 0.8, () => { this.nextDialogue() });
+    this.staticSpawner = new Spawner(3, 6, 0.6, 0.8, () => {
+      if (this.onInteract) {
+        this.onInteract(); // Run custom interaction logic
+      } else {
+        this.nextDialogue(); // Default behavior: proceed to the next dialogue
+      }
+    });
     this.staticSpawner.sensorOff();
     this.staticSpawner.obstacle.enabled = false;
   }

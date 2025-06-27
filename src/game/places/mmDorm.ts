@@ -20,6 +20,9 @@ import { Places } from "./places";
 import { spawnRegularNpc, NpcNames } from "../characters/NPC";
 import { Builder } from "../multiplayer/loginSystem";
 import { drawObjects } from "./walls";
+import { HawksQuest } from "../quests/hawksQuest";
+import { makeQuestStartingNpc } from "../quests/helper";
+import { jake_quest_starter, jake_busy, jake_default } from "../interactions/jakeDlg";
 
 // [mfs]  I exported the tilemap as a json, so it can be imported like this.
 //        Note that I didn't do the furniture, because that might change...
@@ -76,6 +79,19 @@ export const mmDormBuilder: Builder = function (level: number) {
   });
 
   let jake = spawnRegularNpc(NpcNames.Jake, 2.1, 4.7, AnimationState.IDLE_E);
+
+  makeQuestStartingNpc({
+    npc: jake,
+    quest: new HawksQuest(),
+    prestartDialogue: jake_quest_starter,
+    busyDialogue: jake_busy,
+    defaultDialogue: jake_default,
+    level: lInfo,
+    levelNumber: level,
+    place: Places.MM_DORM,
+    acceptFootprint: 1,
+    setAsCurrent: true
+  });
 
   // Update the map and NPC based on the current quest, if any
   sStore.currQuest?.onBuildPlace(Places.MM_DORM, level);
