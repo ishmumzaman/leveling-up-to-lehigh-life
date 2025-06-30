@@ -6,5 +6,6 @@ export enum Places {
     MM_STAIRS,
     HAWKS_NEST,
     RATHBONE,
+    RAUCH,
     THE_VOID
 }
