@@ -11,6 +11,7 @@ import { NpcBehavior, NpcNames, spawnRegularNpc } from '../characters/NPC';
 import { Spawner } from '../common/spawner';
 import { mmStairsBuilder } from './mmStairs';
 import { hawksNestBuilder } from './hawksNest';
+import { rauchBuilder } from './rauch'; 
 import { Inspectable } from "../interactions/inspectables";
 import { LevelInfo } from "../storage/level";
 import { getRegularDir, makeMainCharacter } from "../characters/character";
@@ -62,6 +63,9 @@ export const buildAsaPackerOutside: Builder = function (level: number) {
 
   //Temp spawner for rathbone when we implement it
   //new Spawner(97.5, 22, 2, 0.8, "empty.png", () => { sStore.locX = 32.7; sStore.locY = 34; stage.switchTo(rathboneBuilder, 1); });
+
+  //Temp spawner for rauch when we implement it
+  new Spawner(97.5, 22, 2, 0.8, () => { sStore.dir = getRegularDir(player); sStore.goToX = 4.7; sStore.goToY = 15.5; stage.switchTo(rauchBuilder, 1); });
 
   // Bush Spawnables
   let bush = new InspectSystem(Inspectable.ASA_BUSH);
