@@ -15,7 +15,6 @@ import { QuestNames } from "./questNames";
 import { Quest } from "./questLogic";
 import { QuestStorage } from "../storage/questStorage";
 import { SessionInfo } from "../storage/session";
-import { LevelInfo } from "../storage/level";
 import { stage } from "../../jetlag/Stage";
 import { Places } from "../places/places";
 import { Actor } from "../../jetlag";
@@ -72,11 +71,10 @@ export function chooseQuestDialogueDriver(options: {
  * - `prestartDialogue`: The dialogue shown before quest starts.
  * - `busyDialogue`: Dialogue if another quest is active.
  * - `defaultDialogue`: Dialogue shown once the quest is active.
- * - `level`: The LevelInfo (used for onMakeNpc/onMakeBuilder).
  * - `levelNumber`: The level's ID/number.
  * - `place`: The Place enum value the NPC is in.
  * - `acceptFootprint`: (optional) the footprint that triggers quest start.
- * - `setAsCurrent`: (optional) if true, sets `sStore.currQuest = quest`
+ * - `otherNPCs`: (optional) Array of other NPCs to run `onMakeNpc` for before quest starts.
  */
 export function makeQuestStartingNpc(options: {
   npc: Actor,
@@ -84,37 +82,53 @@ export function makeQuestStartingNpc(options: {
   prestartDialogue: ConversationMap,
   busyDialogue: ConversationMap,
   defaultDialogue: ConversationMap,
-  level: LevelInfo,
   levelNumber: number,
   place: Places,
   acceptFootprint?: number,
-  setAsCurrent?: boolean,
+  otherNPCs?: Actor[],
 }) {
-  const questName = options.quest.questName as QuestNames;
+  const npcBehavior = options.npc.extra as NpcBehavior;
+  const questName   = options.quest.questName as QuestNames;
 
-  (options.npc.extra as NpcBehavior).onInteract = () => {
+  // The “offer quest” logic
+  const offerQuest = () => {
     const driver = chooseQuestDialogueDriver({
       questName,
       dialogues: {
         prestart: options.prestartDialogue,
-        busy: options.busyDialogue,
-        default: options.defaultDialogue
+        busy:     options.busyDialogue,
+        default:  options.defaultDialogue,
       },
       prestartKey: "start",
-      acceptFootprint: options.acceptFootprint ?? 1,
-      onAccept: () => {
-        if (options.setAsCurrent) {
-          const s = stage.storage.getSession("sStore") as SessionInfo;
-          s.currQuest = options.quest;
-          options.quest.start();
+      acceptFootprint: options.acceptFootprint,
+      onAccept:        () => {
+        const s = stage.storage.getSession("sStore") as SessionInfo;
+        s.currQuest = options.quest;
+        // spawn NPCs & start quest…
+        for (const npc of options.otherNPCs ?? []) {
+          options.quest.onMakeNpc(options.place, options.levelNumber, npc);
         }
-
-        options.quest.onMakeNpc(options.place, options.levelNumber, options.npc);
+        options.quest.start();
         options.quest.onBuildPlace(options.place, options.levelNumber);
-      }
+        options.quest.onMakeNpc(options.place, options.levelNumber, options.npc);
+      },
     });
+    npcBehavior.setNextDialogue(driver);
+    npcBehavior.nextDialogue();
+  };
 
-    (options.npc.extra as NpcBehavior).setNextDialogue(driver);
-    (options.npc.extra as NpcBehavior).nextDialogue();
+  // Wrap onInteract so that *once* the quest is active we delete ourselves
+  npcBehavior.onInteract = () => {
+    const status = QuestStorage.getStatus(questName);
+
+    if (status === "Active") {
+      // 1) Remove our custom handler so the Spawner callback falls back to nextDialogue()
+      delete npcBehavior.onInteract;
+      // 2) Trigger the queued-up step-dialogue
+      npcBehavior.nextDialogue();
+    } else {
+      // Still offering/prestart or busy: run the helper logic
+      offerQuest();
+    }
   };
 }

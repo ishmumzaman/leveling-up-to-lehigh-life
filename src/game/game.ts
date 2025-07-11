@@ -23,7 +23,7 @@ import { loginBuilder } from "./multiplayer/loginSystem";
 let imageNames = [
   "fatalError.png", "overlay/inventory.png", "overlay/keyBackground.png",
   "overlay/questMenu.json", "overlay/closeButton.png", "overlay/pauseButton.png",
-  "locBg/mvpLocs.json", "locBg/hawksPath.png", "locBg/rauch.png", "icon/defaultImg.png",
+  "locBg/mvpLocs.json", "locBg/hawksPath.png", "locBg/rathbone.png", "locBg/rauch.png", "icon/defaultImg.png",
   "empty.png", "statUI.png", "icon/questNoti.png", "icon/hudElements.json",
   "icon/wasd.png", "icon/e.png", "icon/qKeys.json",
   "icon/indicator.json", "MVPDemo/POSMachine.png", "overlay/dialogueMenu.json",

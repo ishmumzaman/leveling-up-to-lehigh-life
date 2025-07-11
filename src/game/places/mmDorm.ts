@@ -86,11 +86,9 @@ export const mmDormBuilder: Builder = function (level: number) {
     prestartDialogue: jake_quest_starter,
     busyDialogue: jake_busy,
     defaultDialogue: jake_default,
-    level: lInfo,
     levelNumber: level,
     place: Places.MM_DORM,
     acceptFootprint: 1,
-    setAsCurrent: true
   });
 
   // Update the map and NPC based on the current quest, if any

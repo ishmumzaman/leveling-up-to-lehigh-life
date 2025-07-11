@@ -3,7 +3,7 @@
 import { QuestNames } from "./questNames";
 import { Places } from "../places/places"
 import { Actor } from "../../jetlag";
-import {QuestStorage} from "../storage/questStorage";
+import { QuestStorage } from "../storage/questStorage";
 import { stage } from "../../jetlag/Stage";
 import { SessionInfo } from "../storage/session";
 
@@ -171,6 +171,9 @@ export abstract class Quest {
       else {
         if (this.endFunc) this.endFunc();
         if (this.rewardFunc) this.rewardFunc();
+        QuestStorage.setStatus(this.questName, "Completed");
+        const s = stage.storage.getSession("sStore") as SessionInfo;
+        s.currQuest = undefined; // Clear the current quest to avoid confusion
       }
     }
     // Otherwise, just advance the current objective
