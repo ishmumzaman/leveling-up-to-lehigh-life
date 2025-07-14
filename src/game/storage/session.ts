@@ -2,6 +2,8 @@ import { ItemType, Items, GameItems } from './../inventory/item';
 // Reviewed on 2024-09-27
 
 import { Quest } from '../quests/questLogic';
+import { QuestStatus, QuestProgress } from "./questStorage";
+import { QuestNames } from "../quests/questNames";
 import { Inventory } from "../inventory/inventory";
 import { CharacterAnimations } from '../characters/characterCustomization';
 import { PrepareInspectables } from "../interactions/inspectables"
@@ -12,6 +14,7 @@ import { Actor, AnimationState } from '../../jetlag';
 import { defaultCharacter } from '../characters/makeCharacterBuilder';
 import { WorldClock } from '../common/clock';
 import { Stats } from '../characters/stats';
+import { FindRathBone } from '../quests/FindRathBone';
 
 
 /**
@@ -53,7 +56,15 @@ export class SessionInfo {
   playerStat = new Stats(100);
 
   /** Quest data */
+<<<<<<< HEAD
   currQuest?: Quest 
+=======
+  currQuest?: Quest = undefined;
+
+  /** Quest state tracking fields */
+  questStatus: { [questName in QuestNames]?: QuestStatus } = {};
+  pausedQuests: { [questName in QuestNames]?: QuestProgress } = {};
+>>>>>>> 8198f3d142608408fa8355f05baaec6366d11a17
 
   /**
    * Information from the character customization screen, which we can use to

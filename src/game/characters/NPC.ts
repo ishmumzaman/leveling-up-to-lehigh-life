@@ -18,21 +18,29 @@ import { hughyan_default } from '../interactions/hughYanDlg';
 import { jake_default } from '../interactions/jakeDlg';
 import { main_character_default } from '../interactions/mainCharDialogue';
 import { zay_default } from '../interactions/zayDlg';
+import { sofia_default } from '../interactions/sofiaDlg';
+import { advisor_default } from '../interactions/advisorDlg';
+import { nervousStudent_default } from '../interactions/nervousStudentDlg';
+import { erick_default } from '../interactions/erickDlg';
 
 /** All of the NPCs in the game */
 
 export enum NpcNames {
-  Alyssa,
-  Emelia,
-  HughYan,
-  Jake,
-  Martina,
-  Professor,
-  Zay,
-  MainCharacter,
-  Roommate,
-  Gryphon,
-  LUPDOfficer
+  Alyssa = "Alyssa",
+  Emelia = "Emelia",
+  HughYan = "Hugh Yan",
+  Jake = "Jake",
+  Martin = "Martina",
+  Professor = "Professor Parse",
+  Zay = "Zay",
+  MainCharacter = "Main Character",
+  Roommate = "Roommate",
+  Gryphon = "Gryphon",
+  LUPDOfficer = "LUPD Officer",
+  Advisor = "Advisor",
+  Sofia = "Sofia",
+  NervousStudent = "Hamza",
+  Erick = "Erick"
 }
 
 /**
@@ -79,7 +87,11 @@ export function makeNpcDirectory() {
     [NpcNames.Martina, new NpcConfig("Martina", "Martina", martina_default)],
     [NpcNames.Professor, new NpcConfig("Prof. Parse", "Professor", professor_default)],
     [NpcNames.Zay, new NpcConfig("Zay", "Zay", zay_default)],
-    [NpcNames.MainCharacter, new NpcConfig("You", "mainChar", main_character_default)]
+    [NpcNames.MainCharacter, new NpcConfig("You", "mainChar", main_character_default)],
+    [NpcNames.Sofia, new NpcConfig("Sofia", "Emelia", sofia_default)],
+    [NpcNames.Advisor, new NpcConfig("Advisor", "Professor", advisor_default)],
+    [NpcNames.NervousStudent, new NpcConfig("Hamza", "Zay", nervousStudent_default)],
+    [NpcNames.Erick, new NpcConfig("Erick", "Jake", erick_default)]
   ]);
 }
 
@@ -105,6 +117,9 @@ export class NpcBehavior extends Extra {
   /** A spawner button, so that the NPC will be interactable */
   public staticSpawner: Spawner;
 
+  /** Custom interaction logic for the NPC */
+  public onInteract?: () => void;
+
   /**
    * Construct a normal NPC behavior
    *
@@ -122,7 +137,13 @@ export class NpcBehavior extends Extra {
     sStore.inventories.npcs.push(this.inventory);
 
     // give the NPC a hitbox for interactions
-    this.staticSpawner = new Spawner(3, 6, 0.6, 0.8, () => { this.nextDialogue() });
+    this.staticSpawner = new Spawner(3, 6, 0.6, 0.8, () => {
+      if (this.onInteract) {
+        this.onInteract(); // Run custom interaction logic
+      } else {
+        this.nextDialogue(); // Default behavior: proceed to the next dialogue
+      }
+    });
     this.staticSpawner.sensorOff();
     this.staticSpawner.obstacle.enabled = false;
   }

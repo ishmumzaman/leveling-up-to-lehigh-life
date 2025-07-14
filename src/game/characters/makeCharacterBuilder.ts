@@ -7,6 +7,7 @@ import { Actor, AnimatedSprite, AnimationState, BoxBody, FilledBox, ImageSprite,
 import { Attribute, CharacterAnimations, CharacterConfig, CharacterPart, TxID } from "./characterCustomization";
 import { makeSimpleAnimation } from "./character";
 import { mmDormBuilder } from "../places/mmDorm";
+import { voidBuilder } from "../places/theVoid";
 import { FadingBlurFilter } from "../common/filter";
 import { attributeIconData as aData, optionIconData as oData, palletteIconData as pData } from "./constants";
 import { Builder } from '../multiplayer/loginSystem';
