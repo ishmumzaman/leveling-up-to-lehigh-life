@@ -25,7 +25,7 @@ import { NpcBehavior } from "../characters/NPC";
  *
  * @param options Configuration options:
  * - `questName`: The unique ID of the quest.
- * - `dialogues`: An object containing `prestart`, `default`, and `busy` ConversationMaps.
+ * - `dialogues`: An object containing `prestart`, `completed`, and `busy` ConversationMaps.
  * - `prestartKey`: The key to start the pre-quest dialogue.
  * - `onAccept`: Optional callback if the user accepts the quest.
  * - `acceptFootprint`: The footprint number that triggers the `onAccept` callback (default is 99).
@@ -36,7 +36,7 @@ export function chooseQuestDialogueDriver(options: {
   questName: QuestNames,
   dialogues: {
     prestart: ConversationMap,
-    default: ConversationMap,
+    completed: ConversationMap,
     busy: ConversationMap,
   },
   prestartKey: string,
@@ -59,7 +59,8 @@ export function chooseQuestDialogueDriver(options: {
     return new DialogueDriver(options.dialogues.busy, "start");
   }
 
-  return new DialogueDriver(options.dialogues.default, "start");
+
+  return new DialogueDriver(options.dialogues.completed, "start");
 }
 
 /**
@@ -81,7 +82,7 @@ export function makeQuestStartingNpc(options: {
   quest: Quest,
   prestartDialogue: ConversationMap,
   busyDialogue: ConversationMap,
-  defaultDialogue: ConversationMap,
+  completeDialogue: ConversationMap,
   levelNumber: number,
   place: Places,
   acceptFootprint?: number,
@@ -97,7 +98,7 @@ export function makeQuestStartingNpc(options: {
       dialogues: {
         prestart: options.prestartDialogue,
         busy:     options.busyDialogue,
-        default:  options.defaultDialogue,
+        completed:  options.completeDialogue,
       },
       prestartKey: "start",
       acceptFootprint: options.acceptFootprint,

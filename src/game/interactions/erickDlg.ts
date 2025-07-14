@@ -16,6 +16,14 @@ export const erick_busy = new Map<string, Conversation>([
     ["end", new Conversation("Alright, come back when you are free and do not burn yourself out!", [])]
 ]);
 
+// Busy dialogue for Erick when another quest is active
+export const erick_quest_completed = new Map<string, Conversation>([
+    ["start", new Conversation("I am glad you talked to your advisor bro!", [
+        new ConversationResponse("I'm glad too!", "end")
+    ])],
+    ["end", new Conversation("I am always here if you need anything. You can always find me around campus. See ya!", [])]
+]);
+
 // Quest starter dialogue for Erick
 export const erick_quest_starter = new Map<string, Conversation>([
     ["start", new Conversation("Hey there! Have you visited your advisor yet? He can answer all your questions. Want to go now?", [
