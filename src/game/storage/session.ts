@@ -1,4 +1,4 @@
-import { ItemType } from './../inventory/item';
+import { ItemType, Items, GameItems } from './../inventory/item';
 // Reviewed on 2024-09-27
 
 import { Quest } from '../quests/questLogic';
@@ -30,7 +30,7 @@ export class SessionInfo {
   multiplayerMode = false;
 
   /**
-   * Inventory data for the player, NPCs, and shelves
+   * A collection of inventories for this level
    *
    * [mfs] This needs to be split out a bit, but it's OK for now.
    */
@@ -40,13 +40,7 @@ export class SessionInfo {
     shelves: [] as Inventory[], // This should be in the quest object
   };
 
-  // Location data for player spawning
-  //
-  // TODO: Switch to a new system for player spawning
-  //
-  // [mfs]  I think it would suffice to have a way of knowing which builder and
-  //        which level the player is coming from, then the builder can decide
-  //        for itself.
+  // Players spawn position after switching to a new level
   goToX?: number;
   goToY?: number;
   dir = AnimationState.IDLE_S
@@ -59,7 +53,7 @@ export class SessionInfo {
   playerStat = new Stats(100);
 
   /** Quest data */
-  currQuest?: Quest = new HawksQuest();
+  currQuest?: Quest 
 
   /**
    * Information from the character customization screen, which we can use to
@@ -75,6 +69,22 @@ export class SessionInfo {
 
   /** World Clock */
   clock = new WorldClock();
+  
+  /** Array of placed objects in the world */
+  placedObjects?: Array<{ 
+    item: string, 
+    x: number, 
+    y: number,
+    room: string  // Track which room the object was placed in
+  }>;
+
+  lastAreaBefore: string = ""; // the area the player was in before dialogue/cutscene
+
+  constructor() {
+    // Add a test plate to the player's inventory
+    this.inventories.player.main.addItem(GameItems.getItem(Items.plate));
+    this.inventories.player.main.addItem(GameItems.getItem(Items.eCereal));
+  }
 
   /** Funtion that runs when an in-game minute (a second in real time if minute rate = 1) passes */
   onMinute() {

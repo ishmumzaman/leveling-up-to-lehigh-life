@@ -19,6 +19,10 @@ import { buildAsaPackerOutside } from "./asa_campus_outside";
 import { Places } from "./places";
 import { spawnFollowingNpc, NpcNames, FollowingNpcBehavior } from "../characters/NPC";
 import { Builder } from "../multiplayer/loginSystem";
+import { loadPlacedObjects } from "../interactions/pickupable";
+import { TimedEvent } from "../../jetlag";
+import { createPickupableObject } from "../interactions/pickupable";
+import { GameItems, Items } from "../inventory/item";
 
 /**
  * Create Hawks Nest portion of the game
@@ -31,6 +35,7 @@ export const hawksNestBuilder: Builder = function (level: number) {
 
   // Initialize level info
   let lInfo = new LevelInfo();
+  (lInfo as any).roomId = "hawksNest"; // [Ishmum Zaman]
   stage.storage.setLevel("levelInfo", lInfo);
   lInfo.hud = new HUD("Hawks Nest", "Food Court");
 
@@ -58,6 +63,13 @@ export const hawksNestBuilder: Builder = function (level: number) {
   cornerBoundBox(1.05, 9.69, 1.83, 11.42); // Left Checkout
   cornerBoundBox(10.65, 4.884, 11.425, 6.6); // Middle Checkout
 
+  createPickupableObject({
+    item: GameItems.getItem(Items.eCereal),
+    x: 7.15,
+    y: 1.35,
+    showIndicator: true
+  });
+
   // make the door, for exiting
   //
   // [mfs]  Do we want to have a way to disable the door so you can't leave
@@ -78,12 +90,16 @@ export const hawksNestBuilder: Builder = function (level: number) {
   let alyssa = spawnFollowingNpc(NpcNames.Alyssa, 3.4, 4.4, AnimationState.IDLE_N, lInfo.mainCharacter!);
   (alyssa.extra as FollowingNpcBehavior).setNPCInteraction(() => { (alyssa.extra as FollowingNpcBehavior).nextDialogue(); });
 
+  // Load any previously placed objects
+  stage.world.timer.addEvent(new TimedEvent(0,false, () => { loadPlacedObjects(); }));
+  
   // Notify the quest
   sStore.currQuest?.onBuildPlace(Places.HAWKS_NEST, level);
   sStore.currQuest?.onMakeNpc(Places.HAWKS_NEST, level, emelia);
   sStore.currQuest?.onMakeNpc(Places.HAWKS_NEST, level, hughYan);
   sStore.currQuest?.onMakeNpc(Places.HAWKS_NEST, level, zay);
   sStore.currQuest?.onMakeNpc(Places.HAWKS_NEST, level, alyssa);
+  
 }
 hawksNestBuilder.builderName = "hawksNest";
 hawksNestBuilder.playerLimit = 5;

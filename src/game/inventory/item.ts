@@ -34,6 +34,12 @@ export class Item {
   /** Config for drawing items in inventory */
   cfg: { w: number, h: number, ox: number, oy: number } = { w: 1, h: 1, ox: 0, oy: 0 };
 
+  /** Whether this item can be picked up from the world */
+  isPickupable: boolean = false;
+
+  /** The world position if this item is placed in the world */
+  worldPosition?: { x: number, y: number };
+
   /**
    * Creates an instance of the Item class.
     * @param type - The type of the item (e.g., food, clothing).
@@ -63,6 +69,8 @@ export class Item {
     item.setLocation(this.location.inv, this.location.row, this.location.col);
     item.charPart = this.charPart;
     item.cfg = this.cfg;
+    item.isPickupable = this.isPickupable;
+    item.worldPosition = this.worldPosition ? { ...this.worldPosition } : undefined;
     return item;
   }
 }
@@ -140,7 +148,7 @@ export function itemRender(item: Item, cx: number, cy: number, scale: number, to
 export enum Items {
   empty, water, coke, cokeBottle, orangeJuice, chips, kettleChips, eCereal,
   aCereal, kCereal, iCereal, pretzel, muffin, chocoPiece, chocoWafer, chocoBar,
-  pinkDonut, donutBox, iceCream, popsicle, lolipop, pie, snapback04 = TxID.Snapback04,
+  pinkDonut, donutBox, iceCream, popsicle, lolipop, pie, plate, snapback04 = TxID.Snapback04,
   outfit01 = TxID.Outfit01, outfit02 = TxID.Outfit02, outfit03 = TxID.Outfit03,
   outfit04 = TxID.Outfit04, outfit07 = TxID.Outfit07, outfit10 = TxID.Outfit10,
   outfit11 = TxID.Outfit11, outfit14 = TxID.Outfit14, beanie01 = TxID.Beanie01,
@@ -179,6 +187,7 @@ export class GameItems {
     [Items.popsicle, new Item(ItemType.Food, true, "Blueberry Popsicle", "Everyone's favorite flavor.", "popsicle.png")],
     [Items.lolipop, new Item(ItemType.Food, true, "Zootsie-Pop", "If you bite it an owl might attack you.", "lolipop.png")],
     [Items.pie, new Item(ItemType.Food, true, "Pie", "This pie is so good I could die!!", "pie.png")],
+    [Items.plate, new Item(ItemType.Food, true, "Plate", "A simple ceramic plate for serving food.", "cup.png")],
     // Clothing items
     [Items.snapback04, new Item(ItemType.Accessory, true, "Snapback", "Looking \"snappy\", yuh", "snapback04PTTalk0.png")],
     [Items.beanie01, new Item(ItemType.Accessory, true, "Beanie", "Looking \"snappy\", yuh", "beanie01PTTalk0.png")],
@@ -204,6 +213,13 @@ export class GameItems {
     if (item.type === ItemType.Accessory) { item.cfg.w = 1.2; item.cfg.h = 1.2; item.cfg.ox = 0.05; item.cfg.oy = 0.2; }
     if (item.type === ItemType.Outfit) { item.cfg.w = 0.8; item.cfg.h = 1.6; item.cfg.oy = -0.5; }
     if (item.type === ItemType.Food) { item.cfg.w = 0.7; item.cfg.h = 0.7; }
+    
+    // Make the plate pickupable
+    if (key === Items.plate) {
+      item.isPickupable = true;
+    }
+    if (item.type === ItemType.Food) item.isPickupable = true;
+    
     return item.clone();
   }
 

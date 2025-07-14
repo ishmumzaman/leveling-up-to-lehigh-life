@@ -15,6 +15,22 @@ export class KeyboardHandler {
 
   /** Code to run when "Q" is pressed */
   currInteraction: () => void = () => { };
+  
+  /** Debug name for the current interaction (optional) */
+  currInteractionName?: string;
+
+  /**
+   * Set the current interaction with an optional debug name
+   * @param func The function to run when Q is pressed
+   * @param name Optional debug name for the interaction
+   */
+  setInteraction(func: () => void, name?: string) {
+    this.currInteraction = func;
+    this.currInteractionName = name;
+    if (name) {
+      console.log(`Set interaction: ${name}`);
+    }
+  }
 
   /**
    * Construct a KeyboardHandler handler
@@ -118,11 +134,7 @@ export class KeyboardHandler {
    * @param keyA the status of the A key
    * @param keyS the status of the S key
    * @param keyD the status of the D key
-<<<<<<< HEAD
-   * @param keyShift the status of the Shift key
-=======
    * @param keyShift the status of the shift key
->>>>>>> 807aa651fdfab91ce33d9acb6ac732267faedd65
    * @param hero the hero to modify the movement of. Typically the main character
    *      // .01 seconds but rather every frame due to how jetlag works
    * @returns Nothing. Simply skip some checks if moving diagonally

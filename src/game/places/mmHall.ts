@@ -22,6 +22,9 @@ import { getRegularDir, makeMainCharacter } from "../characters/character";
 import { KeyboardHandler } from "../ui/keyboard";
 import { Places } from "./places";
 import { Builder } from "../multiplayer/loginSystem";
+import { spawnRegularNpc, NpcNames } from "../characters/NPC";
+import { loadPlacedObjects } from "../interactions/pickupable";
+import { TimedEvent } from "../../jetlag";
 
 /**
  * Build the hallway in M&M
@@ -32,6 +35,7 @@ export const mmHallBuilder: Builder = function (level: number) {
   let sStore = stage.storage.getSession("sStore") as SessionInfo;
 
   let lInfo = new LevelInfo();
+  (lInfo as any).roomId = "mmHall"; // [Ishmum Zaman] Tag for persistence system
   stage.storage.setLevel("levelInfo", lInfo);
 
   lInfo.hud = new HUD("M&M House", "Hallway");
@@ -52,7 +56,11 @@ export const mmHallBuilder: Builder = function (level: number) {
   new Spawner(2.9, 6.2, 1.5, 0.8, () => { sStore.dir = getRegularDir(player); sStore.goToX = 2.9; sStore.goToY = 2.9; stage.switchTo(mmStairsBuilder, 1); });
   new Spawner(10.6, 6.2, 1.5, 0.8, () => { sStore.dir = getRegularDir(player); sStore.goToX = 10.6; sStore.goToY = 2.9; stage.switchTo(mmStairsBuilder, 1); });
 
+  // Update the map and NPC based on the current quest, if any
   sStore.currQuest?.onBuildPlace(Places.MM_HALL, level);
+
+  // Load placed objects after one tick to ensure correct builder context
+  stage.world.timer.addEvent(new TimedEvent(0, false, () => { loadPlacedObjects(); })); // [Ishmum Zaman] load after builder completes
 }
 mmHallBuilder.builderName = "mmHall";
 mmHallBuilder.playerLimit = 5

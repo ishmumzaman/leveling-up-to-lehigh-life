@@ -11,6 +11,7 @@ import { ItemExtra, itemRender, ItemType } from "../inventory/item";
 import { LevelInfo } from "../storage/level";
 import { SessionInfo } from "../storage/session";
 import { fillShelvesPartial, Inventory } from "./inventory";
+import { startPlacementMode } from "./placement";
 
 /**
  * InventoryConfig is a helper class, so that we can avoid copy-and-paste of
@@ -103,6 +104,15 @@ export class PlayerInventoryUI extends InventoryUI {
 
   protected showing = false;
 
+  /**
+   * Temporarily hide the inventory UI components (for dragging visibility)
+   * @param hide Whether to hide (true) or show (false) the components
+   */
+  public setComponentsVisible(hide: boolean) {
+    for (let c of this.components)
+      c.enabled = hide;
+  }
+
   constructor() {
     super();
     // Get the inventory from the session storage
@@ -152,11 +162,16 @@ export class PlayerInventoryUI extends InventoryUI {
     //
     // NB:  This takes the coords of the drop, and the inventory index of the
     //      dragged item
-    itemDragGestures((x: number, y: number, fromLoc: { inv: Inventory | null, row: number, col: number }) => {
+    itemDragGestures((x: number, y: number, fromLoc: { inv: Inventory | null, row: number, col: number }, draggedItem: Actor | undefined) => {
+      // Check if we're dropping in the HUD (inventory swap) or outside (placement)
+      let actorsAtDrop = stage.hud!.physics!.actorsAt({ x, y });
+      let droppedInHud = false;
+      
       // Find the inventory slot where we're doing a drop, make sure it's not
       // the initial actor
-      for (let actor of stage.hud!.physics!.actorsAt({ x, y })) {
+      for (let actor of actorsAtDrop) {
         if ((actor.extra instanceof ItemExtra) && fromLoc != actor.extra.item.location) {
+          droppedInHud = true;
           // NB: Must make copies of both locations
           let from = { ...fromLoc };
           let to = { ...actor.extra.item.location };
@@ -184,6 +199,23 @@ export class PlayerInventoryUI extends InventoryUI {
           }
         }
       }
+      
+      // If we didn't drop in the HUD and have a valid item, start placement mode
+      if (!droppedInHud && fromLoc.inv && draggedItem) {
+        let item = fromLoc.inv.items[fromLoc.row * fromLoc.inv.cols + fromLoc.col];
+        if (item.type !== ItemType.Empty && item.isPickupable) {
+          // Remove from inventory
+          fromLoc.inv.removeAt({ row: fromLoc.row, col: fromLoc.col });
+          
+          // Remove the dragged actor from HUD (much simpler now)
+          draggedItem.remove();
+          
+          // Start placement mode using the refactored system
+          startPlacementMode(item, fromLoc as { inv: Inventory, row: number, col: number });
+          return;
+        }
+      }
+      
       // NB:  Even a bad drop needs redrawing
       // This check prevents the visual bug when the inventory is closed during item dragging
       if (this.showing) { this.rerenderInventory(); this.rerenderClothes(); }
@@ -302,7 +334,7 @@ export class ShelfInventoryUI extends InventoryUI {
 
     // Now we can render the inventory
     this.rerenderInventory();
-    itemDragGestures((x: number, y: number, fromLoc: { row: number, col: number }) => {
+    itemDragGestures((x: number, y: number, fromLoc: { inv: Inventory | null, row: number, col: number }, draggedItem: Actor | undefined) => {
       for (let actor of stage.hud!.physics!.actorsAt({ x: x, y: y })) {
         // Handle swapping within the shelf, making sure not to swap with self
         if ((actor.extra instanceof ItemExtra) && fromLoc != actor.extra.item.location) {
@@ -355,9 +387,16 @@ export class ShelfInventoryUI extends InventoryUI {
  *
  * @param onDrop Code to run when the drag ends
  */
-function itemDragGestures(onDrop: (x: number, y: number, fromLoc: { inv: Inventory | null, row: number, col: number }) => void) {
+function itemDragGestures(onDrop: (x: number, y: number, fromLoc: { inv: Inventory | null, row: number, col: number }, draggedItem: Actor | undefined) => void) {
   // the actor being dragged
   let foundActor: Actor | undefined;
+
+  // Get reference to the inventory UI for hiding during drag
+  let lInfo = stage.storage.getLevel("levelInfo") as LevelInfo;
+  let inventoryUI = lInfo.hud?.inventory;
+  
+  // Track if we're dragging for placement (outside HUD)
+  let isDraggingForPlacement = false;
 
   // Starting the pan leads to identifying an actor, if there is one
   let panStart = (_: Actor, hudCoords: { x: number; y: number }) => {
@@ -367,7 +406,14 @@ function itemDragGestures(onDrop: (x: number, y: number, fromLoc: { inv: Invento
       if ((actor.extra instanceof ItemExtra) && actor.extra.item.draggable) {
         foundActor = actor;
         foundActor.appearance[0].z = 2; // bring the item being dragged to the front
-        console.log(actor.extra.item.name)
+        console.log("Dragging:", actor.extra.item.name)
+        
+        // Close the inventory properly to remove blur and free up screen space
+        // Do NOT set showing=false manually - let toggleMode handle it properly
+        if (lInfo.hud?.getMode() === 'inventory') {
+          lInfo.hud.toggleMode('inventory');
+        }
+        
         return true;
       }
     }
@@ -380,15 +426,57 @@ function itemDragGestures(onDrop: (x: number, y: number, fromLoc: { inv: Invento
     let pixels = stage.hud!.camera.metersToScreen(hudCoords.x, hudCoords.y);
     let meters = stage.hud!.camera.screenToMeters(pixels.x, pixels.y);
     foundActor.rigidBody.setCenter(meters.x, meters.y); // move the actor
+    
+    // Check if we're dragging outside the HUD area (for potential placement)
+    let actorsUnderCursor = stage.hud!.physics!.actorsAt(meters);
+    isDraggingForPlacement = true; // Assume placement unless we find inventory slots
+    for (let actor of actorsUnderCursor) {
+      if ((actor.extra instanceof ItemExtra) && actor !== foundActor) {
+        isDraggingForPlacement = false; // Dragging over another inventory slot
+        break;
+      }
+    }
+    
     return true;
   };
 
   // Letting go calls onDrop
   let panStop = () => {
     if (!foundActor) return false;
-    // NB: Passing location by reference is dangerous, but it works for now...
-    onDrop(foundActor.rigidBody.getCenter().x, foundActor.rigidBody.getCenter().y, (foundActor.extra as ItemExtra).item.location);
+    
+    // Store reference before calling onDrop
+    let tempActor = foundActor;
+    let dropLocation = foundActor.rigidBody.getCenter();
+    let itemLocation = (foundActor.extra as ItemExtra).item.location;
+    
+    // Reset z-index of the dragged item
+    if (foundActor.appearance && foundActor.appearance[0]) {
+      foundActor.appearance[0].z = 0;
+    }
+    
+    // Check if this is actually a placement (dropping outside inventory slots)
+    let isPlacement = isDraggingForPlacement;
+    if (isPlacement && itemLocation.inv) {
+      let item = itemLocation.inv.items[itemLocation.row * itemLocation.inv.cols + itemLocation.col];
+      isPlacement = item.type !== ItemType.Empty && item.isPickupable;
+    }
+    
+    // Reset state
     foundActor = undefined;
+    isDraggingForPlacement = false;
+    
+    // Call onDrop with stored values
+    onDrop(dropLocation.x, dropLocation.y, itemLocation, tempActor);
+    
+    // If this was NOT a placement (item swap), reopen inventory
+    if (!isPlacement && lInfo.hud?.getMode() === 'none') {
+      setTimeout(() => {
+        if (lInfo.hud?.getMode() === 'none') {
+          lInfo.hud.toggleMode('inventory');
+        }
+      }, 50);
+    }
+    
     return true;
   };
 
