@@ -20,16 +20,15 @@ import { Places } from "./places";
 import { spawnRegularNpc, NpcNames } from "../characters/NPC";
 import { Builder } from "../multiplayer/loginSystem";
 import { drawObjects } from "./walls";
-<<<<<<< HEAD
+
 import { createPickupableObject } from "../interactions/pickupable";
 import { loadPlacedObjects } from "../interactions/pickupable";
 import { GameItems, Items } from "../inventory/item";
 import { TimedEvent } from "../../jetlag";
-=======
+
 import { HawksQuest } from "../quests/hawksQuest";
 import { makeQuestStartingNpc } from "../quests/helper";
 import { jake_quest_starter, jake_busy, jake_default } from "../interactions/jakeDlg";
->>>>>>> 8198f3d142608408fa8355f05baaec6366d11a17
 
 // [mfs]  I exported the tilemap as a json, so it can be imported like this.
 //        Note that I didn't do the furniture, because that might change...
@@ -96,10 +95,8 @@ export const mmDormBuilder: Builder = function (level: number) {
     showIndicator: true
   });
 
-<<<<<<< HEAD
   stage.world.timer.addEvent(new TimedEvent(0, false, () => { loadPlacedObjects(); })); // [Ishmum Zaman]
   
-=======
   makeQuestStartingNpc({
     npc: jake,
     quest: new HawksQuest(),
@@ -111,7 +108,6 @@ export const mmDormBuilder: Builder = function (level: number) {
     acceptFootprint: 1,
   });
 
->>>>>>> 8198f3d142608408fa8355f05baaec6366d11a17
   // Update the map and NPC based on the current quest, if any
   sStore.currQuest?.onBuildPlace(Places.MM_DORM, level);
   sStore.currQuest?.onMakeNpc(Places.MM_DORM, level, jake);

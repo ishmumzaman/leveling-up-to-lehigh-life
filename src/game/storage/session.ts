@@ -56,15 +56,13 @@ export class SessionInfo {
   playerStat = new Stats(100);
 
   /** Quest data */
-<<<<<<< HEAD
-  currQuest?: Quest 
-=======
+
   currQuest?: Quest = undefined;
 
   /** Quest state tracking fields */
   questStatus: { [questName in QuestNames]?: QuestStatus } = {};
   pausedQuests: { [questName in QuestNames]?: QuestProgress } = {};
->>>>>>> 8198f3d142608408fa8355f05baaec6366d11a17
+
 
   /**
    * Information from the character customization screen, which we can use to
