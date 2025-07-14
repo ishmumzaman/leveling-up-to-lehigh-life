@@ -49,6 +49,7 @@ let imageNames = [
   "characterSpriteSheets/Martina.json", "characterSpriteSheets/Jake.json",
   "characterCustomization/characterCustomizationUI.json", "missingMPChar.png",
   "characterSpriteSheets/Zay.json",
+  "locBg/DnkrReadRoom.png"
 ];
 
 /**

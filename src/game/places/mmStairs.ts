@@ -21,6 +21,9 @@ import { Places } from "./places";
 import { Builder } from "../multiplayer/loginSystem";
 import { DialogueDriver } from "../interactions/dialogue";
 import { martina_eminem_reference } from "../interactions/martinaDlg";
+import { loadPlacedObjects } from "../interactions/pickupable";
+import { TimedEvent } from "../../jetlag";
+
 
 /*** Build the stairs in M&M */
 export const mmStairsBuilder: Builder = function (level: number) {
@@ -29,6 +32,7 @@ export const mmStairsBuilder: Builder = function (level: number) {
   let sStore = stage.storage.getSession("sStore") as SessionInfo;
 
   let lInfo = new LevelInfo();
+  (lInfo as any).roomId = "mmStairs"; // [Ishmum Zaman] Unique identifier used for placed-object persistence
   stage.storage.setLevel("levelInfo", lInfo);
 
   lInfo.hud = new HUD("M&M House", "Stairs");
@@ -59,7 +63,12 @@ export const mmStairsBuilder: Builder = function (level: number) {
   new Spawner(2.9, 1.7, 1.5, 0.8, () => { sStore.dir = getRegularDir(player); sStore.goToX = 2.9; sStore.goToY = 5; stage.switchTo(mmHallBuilder, 1); });
   new Spawner(10.6, 1.7, 1.5, 0.8, () => { sStore.dir = getRegularDir(player); sStore.goToX = 10.5; sStore.goToY = 5; stage.switchTo(mmHallBuilder, 1); });
 
+  // Update the map based on the current quest, if any
   sStore.currQuest?.onBuildPlace(Places.MM_STAIRS, level);
+
+  // [Ishmum Zaman] Delay one tick so Stage switch completes before loading saved objects
+  stage.world.timer.addEvent(new TimedEvent(0, false, () => { loadPlacedObjects(); }));
+
   sStore.currQuest?.onMakeNpc(Places.MM_STAIRS, level, martina);
 
   // Check if after quests initilization, martina would still be using the default dialogue (no next dlg)

@@ -21,6 +21,9 @@ import { professor_first_time } from "../interactions/professorDlg";
 import { DialogueDriver } from "../interactions/dialogue";
 import { Places } from "./places";
 import { Builder } from "../multiplayer/loginSystem";
+import { loadPlacedObjects } from "../interactions/pickupable";
+import { TimedEvent } from "../../jetlag";
+import { DnkrReadRoomBuilder } from "./DnkrReadRoom";
 
 /**
  * Build the "outside world"
@@ -42,6 +45,7 @@ export const buildAsaPackerOutside: Builder = function (level: number) {
 
   // Initialize level info
   let lInfo = new LevelInfo();
+  (lInfo as any).roomId = "asaPackerOutside"; // [Ishmum Zaman]
   stage.storage.setLevel("levelInfo", lInfo);
   lInfo.hud = new HUD("Outdoors", "University Drive");
   lInfo.hud.showStats(false); // [mfs] For now...
@@ -61,7 +65,7 @@ export const buildAsaPackerOutside: Builder = function (level: number) {
   // Door Spawnables
   new Spawner(97.5, 19, 2, 0.8, () => { sStore.dir = getRegularDir(player); sStore.goToX = 6.7; sStore.goToY = 8.9; stage.switchTo(mmStairsBuilder, 1); });
   new Spawner(28.3, 47.9, 1, 1.5, () => { sStore.dir = getRegularDir(player); sStore.goToX = 4.7; sStore.goToY = 15.5; stage.switchTo(hawksNestBuilder, 1); });
-
+  new Spawner(22.43, 39.9, 1, 1.5, () => { sStore.dir = getRegularDir(player); sStore.goToX = 4.7; sStore.goToY = 15.5; stage.switchTo(DnkrReadRoomBuilder, 1); });
   //Temp spawner for rathbone when we implement it
   
   new Spawner(97.5, 22, 2, 0.8, () => { sStore.dir = getRegularDir(player); sStore.goToX = 32.7; sStore.goToY = 34; stage.switchTo(rathboneBuilder, 1); });
@@ -115,9 +119,12 @@ export const buildAsaPackerOutside: Builder = function (level: number) {
   new Spawner(20.5, 40.6, 1, 5, () => { blocked.open() });
   new Spawner(39.7, 49.7, 3, 1, () => { blocked.open() });
 
-  // Notify the quest that we built this place
+  // Update the map based on the current quest, if any
   sStore.currQuest?.onBuildPlace(Places.ASA_CAMPUS_OUTSIDE, level);
   sStore.currQuest?.onMakeNpc(Places.ASA_CAMPUS_OUTSIDE, level, professor);
+
+  // Load any previously placed objects for this room
+  stage.world.timer.addEvent(new TimedEvent(0,false, () => { loadPlacedObjects(); }));
 }
 buildAsaPackerOutside.builderName = "asaPackerOutside";
 buildAsaPackerOutside.playerLimit = 10;

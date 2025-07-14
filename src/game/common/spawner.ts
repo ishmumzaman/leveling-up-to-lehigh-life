@@ -86,11 +86,11 @@ export class Spawner {
           prompt.actor = lInfo.mainCharacter;
 
           // Set the code to run on "Q"
-          lInfo.keyboard!.currInteraction = this.func;
+          lInfo.keyboard!.setInteraction(this.func, `Spawner at (${this.cx}, ${this.cy})`);
 
           // Remove the prompt and indicator when the hero moves away
           (stage.world.physics as AdvancedCollisionService).addEndContactHandler(this.sensor!, lInfo.mainCharacter!, () => {
-            lInfo.keyboard!.currInteraction = () => { };
+            lInfo.keyboard!.setInteraction(() => { }, "Empty (left spawner)");
             // Remove the interaction prompt and indicator
             if (lInfo.mainCharacter && lInfo.mainCharacter.appearance.length > 1) {
               lInfo.mainCharacter.appearance.pop();
