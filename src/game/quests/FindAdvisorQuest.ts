@@ -103,9 +103,9 @@ export class FindAdvisorQuest extends Quest {
       return;
     }
     console.log("onBuildPlace: starting step for FindAdvisorQuest");
-    //setTimeout(() => {
-      //this.start();
-    //}, 0);
+    setTimeout(() => {
+      this.forceOnReach();
+    }, 0);
   }
 
   /**

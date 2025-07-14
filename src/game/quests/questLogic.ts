@@ -76,6 +76,11 @@ export class Objective {
     this.steps[this.currStep].onReach();
   }
 
+  /** Just fire onReach for the step you’re already in */
+  public forceOnReach() {
+    this.steps[this.currStep].onReach();
+  }
+
   /**
    * Advances the objective to the next step, which might end the objective.
    * Runs the appropriate function.
@@ -146,6 +151,12 @@ export abstract class Quest {
   /** Pauses the currently active objective */
   public pause() {
     this.objectives[this.currObjective].pause();
+  }
+
+  public forceOnReach() {
+    if (this.currObjective < this.objectives.length) {
+      this.objectives[this.currObjective].forceOnReach();
+    }
   }
 
   /**
