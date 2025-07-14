@@ -26,35 +26,22 @@ export class FindAdvisorQuest extends Quest {
       QuestNames.VisitAdvisor,
       "Drop by your advisor’s office and check in.",
       [
-        // Objective 0: Talk to Sofia
+        // Objective 0: Go to your advisor
         new Objective(
-          "Talk to Sofia",
-          "Hear from someone who just visited their advisor",
+          "Go to your advisor",
+          "Walk to your advisor's office in...",
           [
-            new Step("Talk to the student outside the building.", () => {
+            new Step("Talk to Sofia", () => {
               console.log("Reached Sofia step");
               if (!this.sofia) {
                 console.warn("Sofia actor not cached yet");
                 return;
               }
-              const map = this.activeObjectiveIndex() >= 2
-                ? sofia_postAdvisor
-                : sofia_questStart;
-              console.log("Binding Sofia dialogue:", map);
-              const driver = new DialogueDriver(map, "start", () => this.advance());
+              console.log("Binding Sofia dialogue:", sofia_questStart);
+              const driver = new DialogueDriver(sofia_questStart, "start", () => this.advance());
               (this.sofia.extra as NpcBehavior).setNextDialogue(driver);
-            })
-          ],
-          QuestNames.VisitAdvisor,
-          0
-        ),
-
-        // Objective 1: Reassure the nervous student
-        new Objective(
-          "Reassure a nervous student",
-          "Talk to the nervous student waiting outside",
-          [
-            new Step("Talk to the nervous student.", () => {
+            }),
+            new Step("Talk to the nervous Student", () => {
               console.log("Reached NervousStudent step");
               if (!this.nervousStudent) {
                 console.warn("NervousStudent actor not cached yet");
@@ -62,18 +49,8 @@ export class FindAdvisorQuest extends Quest {
               }
               const driver = new DialogueDriver(nervousStudent_quest, "start", () => this.advance());
               (this.nervousStudent.extra as NpcBehavior).setNextDialogue(driver);
-            })
-          ],
-          QuestNames.VisitAdvisor,
-          1
-        ),
-
-        // Objective 2: Check in with your advisor
-        new Objective(
-          "Check in with your advisor",
-          "Have a short conversation and ask questions",
-          [
-            new Step("Talk to your advisor.", () => {
+            }),
+            new Step("Have a conversation with your advisor", () => {
               console.log("Reached Advisor step");
               if (!this.advisor) {
                 console.warn("Advisor actor not cached yet");
@@ -84,13 +61,13 @@ export class FindAdvisorQuest extends Quest {
             })
           ],
           QuestNames.VisitAdvisor,
-          2
+          0
         ),
 
-        // Objective 3: Reflect with Erick
+        // Objective 1: Reflect on the Advisor Visit
         new Objective(
-          "Reflect with Erick",
-          "Tell Erick how it went at the quad",
+          "Reflect on the Advisor Visit",
+          "Talk to people about the advisor visit.",
           [
             new Step("Talk to Erick.", () => {
               console.log("Reached Erick step");
@@ -98,12 +75,15 @@ export class FindAdvisorQuest extends Quest {
                 console.warn("Erick actor not cached yet");
                 return;
               }
+              const driverExtra = new DialogueDriver(sofia_postAdvisor, "start");
+              (this.sofia?.extra as NpcBehavior).setNextDialogue(driverExtra);
+
               const driver = new DialogueDriver(erick_quest, "start", () => this.advance());
               (this.erick.extra as NpcBehavior).setNextDialogue(driver);
             })
           ],
           QuestNames.VisitAdvisor,
-          3
+          1
         ),
       ],
       /* startFunc  */ undefined,
