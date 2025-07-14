@@ -28,7 +28,7 @@ export class KeyboardHandler {
     this.currInteraction = func;
     this.currInteractionName = name;
     if (name) {
-      console.log(`Set interaction: ${name}`);
+      //console.log(`Set interaction: ${name}`);
     }
   }
 
