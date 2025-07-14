@@ -18,28 +18,28 @@ export const erick_busy = new Map<string, Conversation>([
 
 // Quest starter dialogue for Erick
 export const erick_quest_starter = new Map<string, Conversation>([
-    ["start", new Conversation("Hey there! Have you stopped by your advisor's office yet? There is some helpful info waiting. Want to check it out now?", [
+    ["start", new Conversation("Hey there! Have you visited your advisor yet? He can answer all your questions. Want to go now?", [
             new ConversationResponse("Yeah, lets go!", "accept", 1),
             new ConversationResponse("Maybe later.", "decline")
     ])],
-    ["accept", new Conversation("Great! Talk to Sofia by the academic building entrance; she will show you the way.", [])],
-    ["decline", new Conversation("No problem. Come find me when you’re ready!", [])]
+    ["accept", new Conversation("Great! Talk to Sofia; she will show you the way.", [])],
+    ["decline", new Conversation("No problem. Come find me when you are ready!", [])]
 ]);
 
 export const erick_quest = new Map<string, Conversation>([
     ["start", new Conversation("Hey! You checked in with your advisor, right? How did it go?",[
-        new ConversationResponse("I learned about some great resources.", "resources"),
-        new ConversationResponse("It was more personal than I expected.", "personal"),
-        new ConversationResponse("I’m still not sure it helped.", "doubt")
+        new ConversationResponse("I learned some great resources.", "resources"),
+        new ConversationResponse("It was surprisingly personal.", "personal"),
+        new ConversationResponse("I am not sure it helped.", "doubt")
     ])],
-    ["resources", new Conversation("Nice! They have tutoring, counseling, and research opportunities. Definitely a good first step.",[
+    ["resources", new Conversation("Nice! There are many great resources at Lehigh. This is only the first step.",[
         new ConversationResponse("I feel more confident now.", "end")
     ])],
-    ["personal", new Conversation("That’s the best part — advisors care about you, not just your schedule. Glad it felt genuine.",[
+    ["personal", new Conversation("That is the best part, advisors care about you, not just your schedule. Glad it felt genuine.",[
         new ConversationResponse("Yeah, it was humanizing.", "end")
     ])],
-    ["doubt", new Conversation("Sometimes it takes a visit to see the support network. Give it some time and you can always follow up.",[
-        new ConversationResponse("I’ll try again later.", "end")
+    ["doubt", new Conversation("Hey do not worry. At least now you know about a great support network.",[
+        new ConversationResponse("That is true.", "end")
     ])],
     ["end", new Conversation("Keep me posted if you need anything else!",[])]
 ]);
