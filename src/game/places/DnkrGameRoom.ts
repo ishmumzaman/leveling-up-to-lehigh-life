@@ -26,27 +26,27 @@ import { FindAdvisorQuest } from "../quests/FindAdvisorQuest";
 
 // [mfs]  I exported the tilemap as a json, so it can be imported like this.
 //        Note that I didn't do the furniture, because that might change...
-import * as hall_objects from "../../../tilemaps/TileMaps/rathbone.json"
+import * as hall_objects from "../../../tilemaps/TileMaps/DnkrGameRoom.json"
 
 /**
  * Build all levels occurring in rathbone
  *
  * @param level the level to build
  */
-export const rathboneBuilder: Builder = function (level: number) {
+export const DnkrGameRoomBuilder: Builder = function (level: number) {
   // Set up session and level storage
   if (!stage.storage.getSession("sStore")) stage.storage.setSession("sStore", new SessionInfo());
   let sStore = stage.storage.getSession("sStore") as SessionInfo;
   let lInfo = new LevelInfo();
-  (lInfo as any).roomId = "rathbone"; // [Ishmum Zaman]
+  (lInfo as any).roomId = "DnkrGameRoom"; // [Ishmum Zaman]
   stage.storage.setLevel("levelInfo", lInfo);
 
   // Draw the map, make the walls from the objects in the json
-  createMap(2305, 2305, "locBg/rathbone.png");
+  createMap(1440, 960, "locBg/DnkrGameRoom.png");
   hall_objects.layers.forEach(layer => drawObjects(50, layer.objects ?? []));
 
   // Set current location
-  lInfo.hud = new HUD("Rath", "The main dining hall");
+  lInfo.hud = new HUD("Drinker", "The game room");
 
   // Create player and keyboard handler
   let player = makeMainCharacter(10, 10, sStore.playerAppearance!, AnimationState.IDLE_W);
@@ -58,7 +58,7 @@ export const rathboneBuilder: Builder = function (level: number) {
   new Spawner(32.6, 34.6, 2, 0.8, () => { sStore.goToX = 97.5; sStore.goToY = 21.3; stage.switchTo(buildAsaPackerOutside, 1); });
 
   // Update the map based on the current quest, if any
-  sStore.currQuest?.onBuildPlace(Places.RATHBONE, level);
+  sStore.currQuest?.onBuildPlace(Places.DNKR_GAME_ROOM, level);
 
   // Load any previously placed objects for this room
   stage.world.timer.addEvent(new TimedEvent(0,false,() => { loadPlacedObjects(); }));
@@ -89,5 +89,5 @@ export const rathboneBuilder: Builder = function (level: number) {
     sStore.currQuest?.onMakeNpc(Places.RATHBONE, level, hamza);
 
 }
-rathboneBuilder.builderName = "rathbone";
-rathboneBuilder.playerLimit = 15
+DnkrGameRoomBuilder.builderName = "DnkrWashingRoom";
+DnkrGameRoomBuilder.playerLimit = 15
