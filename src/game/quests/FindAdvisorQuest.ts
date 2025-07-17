@@ -58,6 +58,10 @@ export class FindAdvisorQuest extends Quest {
               }
               const driver = new DialogueDriver(advisor_quest, "start", () => this.advance());
               (this.advisor.extra as NpcBehavior).setNextDialogue(driver);
+            }),
+            new Step("Objective complete!", () => {
+              console.log("First Objective complete!");
+              this.advance();
             })
           ],
           QuestNames.VisitAdvisor,
@@ -80,6 +84,10 @@ export class FindAdvisorQuest extends Quest {
 
               const driver = new DialogueDriver(erick_quest, "start", () => this.advance());
               (this.erick.extra as NpcBehavior).setNextDialogue(driver);
+            }),
+            new Step("Objective complete!", () => {
+              console.log("Second Objective complete!");
+              this.advance();
             })
           ],
           QuestNames.VisitAdvisor,
@@ -103,9 +111,9 @@ export class FindAdvisorQuest extends Quest {
       return;
     }
     console.log("onBuildPlace: starting step for FindAdvisorQuest");
-    //setTimeout(() => {
-      //this.start();
-    //}, 0);
+    setTimeout(() => {
+      this.forceOnReach();
+    }, 0);
   }
 
   /**

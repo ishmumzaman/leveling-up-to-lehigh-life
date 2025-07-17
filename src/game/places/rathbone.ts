@@ -21,7 +21,7 @@ import { loadPlacedObjects } from "../interactions/pickupable";
 import { TimedEvent } from "../../jetlag";
 import { spawnRegularNpc, NpcNames } from "../characters/NPC";
 import { makeQuestStartingNpc } from "../quests/helper";
-import { erick_quest_starter, erick_busy, erick_default } from "../interactions/erickDlg";
+import { erick_quest_starter, erick_busy, erick_default, erick_quest_completed } from "../interactions/erickDlg";
 import { FindAdvisorQuest } from "../quests/FindAdvisorQuest";
 
 // [mfs]  I exported the tilemap as a json, so it can be imported like this.
@@ -74,7 +74,7 @@ export const rathboneBuilder: Builder = function (level: number) {
       quest: new FindAdvisorQuest(),
       prestartDialogue: erick_quest_starter,
       busyDialogue: erick_busy,
-      defaultDialogue: erick_default,
+      completeDialogue: erick_quest_completed,
       levelNumber: level,
       place: Places.RATHBONE,
       acceptFootprint: 1,
