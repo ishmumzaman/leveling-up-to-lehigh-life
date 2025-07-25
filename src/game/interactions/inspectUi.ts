@@ -184,5 +184,4 @@ export class InspectSystem {
       this.showing = false;
     }
   }
-
 }

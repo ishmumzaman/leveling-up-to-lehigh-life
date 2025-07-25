@@ -96,14 +96,14 @@ export class FindAdvisorQuest extends Quest {
       ],
       /* startFunc  */ undefined,
       /* endFunc    */ () => {
-        // this runs immediately after the final Step of Objective #3 completes
+        // this runs immediately after the final Step of final Objectove completes
         console.log("FindAdvisorQuest complete!");
         // e.g. send a Journal entry, remove the quest NPC, spawn your reward, etc.
       },
     );
   }
 
-  // From QuestLogic: starts or resumes the current step, calling its onReach callback
+  // From QuestLogic: resumes the current step, calling its onReach callback
   public onBuildPlace(place: Places, level: number): void {
     const s = stage.storage.getSession("sStore") as SessionInfo;
     if (s.currQuest !== this) {
@@ -118,7 +118,6 @@ export class FindAdvisorQuest extends Quest {
 
   /**
    * Caches each Actor as they're instantiated by the level loader.
-   * HawksQuest does the same for its key NPCs (e.g. Jake in the dorm).
    */
   public onMakeNpc(place: Places, level: number, npc: Actor): void {
     const s = stage.storage.getSession("sStore") as SessionInfo;

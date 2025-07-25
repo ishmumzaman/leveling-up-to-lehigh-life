@@ -71,7 +71,7 @@ export const buildAsaPackerOutside: Builder = function (level: number) {
   new Spawner(97.5, 22, 2, 0.8, () => { sStore.dir = getRegularDir(player); sStore.goToX = 32.7; sStore.goToY = 34; stage.switchTo(rathboneBuilder, 1); });
 
   //Temp spawner for rauch when we implement it
-  //new Spawner(97.5, 22, 2, 0.8, () => { sStore.dir = getRegularDir(player); sStore.goToX = 4.7; sStore.goToY = 15.5; stage.switchTo(rauchBuilder, 1); });
+  new Spawner(101.25, 37.5, 2, 0.8, () => { sStore.dir = getRegularDir(player); sStore.goToX = 12.4; sStore.goToY = 74.88; stage.switchTo(rauchBuilder, 1); });
 
   // Bush Spawnables
   let bush = new InspectSystem(Inspectable.ASA_BUSH);

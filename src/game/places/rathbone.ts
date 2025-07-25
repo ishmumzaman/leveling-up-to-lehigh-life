@@ -19,10 +19,14 @@ import { drawObjects } from "./walls";
 import { Places } from "./places";
 import { loadPlacedObjects } from "../interactions/pickupable";
 import { TimedEvent } from "../../jetlag";
-import { spawnRegularNpc, NpcNames } from "../characters/NPC";
+import { InspectSystem } from '../interactions/inspectUi';
+import { Inspectable } from "../interactions/inspectables";
+import { spawnRegularNpc, NpcNames, NpcBehavior } from "../characters/NPC";
+import { DialogueDriver } from "../interactions/dialogue";
 import { makeQuestStartingNpc } from "../quests/helper";
-import { erick_quest_starter, erick_busy, erick_default, erick_quest_completed } from "../interactions/erickDlg";
-import { FindAdvisorQuest } from "../quests/FindAdvisorQuest";
+import { nino_first_interacion } from "../interactions/ninoDlg";
+import { maria_quest_starter, maria_busy, maria_quest_completed } from "../interactions/rathDeskLadyDlg";
+import { PerfectRathPlateQuest } from "../quests/PerfectRathPlateQuest";
 
 // [mfs]  I exported the tilemap as a json, so it can be imported like this.
 //        Note that I didn't do the furniture, because that might change...
@@ -57,37 +61,45 @@ export const rathboneBuilder: Builder = function (level: number) {
   //door to leave rathbone (Currently just takes back to temp spawner location in asa_campus_outside.ts)
   new Spawner(32.6, 34.6, 2, 0.8, () => { sStore.goToX = 97.5; sStore.goToY = 21.3; stage.switchTo(buildAsaPackerOutside, 1); });
 
-
-  // Update the map based on the current quest, if any
-  sStore.currQuest?.onBuildPlace(Places.RATHBONE, level);
-
   // Load any previously placed objects for this room
   stage.world.timer.addEvent(new TimedEvent(0,false,() => { loadPlacedObjects(); }));
 
-  let erick = spawnRegularNpc(NpcNames.Erick, 35, 24.4, AnimationState.IDLE_W);
-  let sofia = spawnRegularNpc(NpcNames.Sofia, 35, 26.4, AnimationState.IDLE_W);
-  let advisor = spawnRegularNpc(NpcNames.Advisor, 35, 28.4, AnimationState.IDLE_W);
-  let hamza = spawnRegularNpc(NpcNames.NervousStudent, 35, 30.4, AnimationState.IDLE_W);
+
+  // Spawn NPCs
+  let nino = spawnRegularNpc(NpcNames.Nino, 13.9, 12, AnimationState.IDLE_S);
+  (nino.extra as NpcBehavior).setNextDialogue(new DialogueDriver(nino_first_interacion, "start"));
+  let maria = spawnRegularNpc(NpcNames.Maria, 31.2,  27.15, AnimationState.IDLE_S, undefined, 3.6, 2.1);
+  let casey = spawnRegularNpc(NpcNames.Casey, 24.5,  28.3, AnimationState.IDLE_S);
+  let globowl = spawnRegularNpc(NpcNames.GLOBOWL, 11,  23, AnimationState.IDLE_E, undefined, 1.3, 2.68);
+  let diner = spawnRegularNpc(NpcNames.DINER, 32,  7.15, AnimationState.IDLE_W, undefined, 1.5, 4.3);
+  let simpleServings = spawnRegularNpc(NpcNames.SIMPLE_SERVINGS, 23.5,  22.56, AnimationState.IDLE_W, undefined, 1.3, 2.68);
+  let vegOut = spawnRegularNpc(NpcNames.VEG_OUT, 23.5,  25.38, AnimationState.IDLE_W, undefined, 1.3, 2.68);
+  let stacks = spawnRegularNpc(NpcNames.STACKS, 11.03,  9.7, AnimationState.IDLE_S, undefined, 3.8, 1.3);
   
+
+  // Set maria quest starting behavior
     makeQuestStartingNpc({
-      npc: erick,
-      quest: new FindAdvisorQuest(),
-      prestartDialogue: erick_quest_starter,
-      busyDialogue: erick_busy,
-      completeDialogue: erick_quest_completed,
+      npc: maria,
+      quest: new PerfectRathPlateQuest(),
+      prestartDialogue: maria_quest_starter,
+      busyDialogue: maria_busy,
+      completeDialogue: maria_quest_completed,
       levelNumber: level,
       place: Places.RATHBONE,
       acceptFootprint: 1,
-      otherNPCs: [sofia, advisor, hamza],
+      otherNPCs: [casey, globowl, diner, simpleServings, vegOut, stacks],
     });
-  
-    // Update the map and NPC based on the current quest, if any
-    sStore.currQuest?.onBuildPlace(Places.RATHBONE, level);
-    sStore.currQuest?.onMakeNpc(Places.RATHBONE, level, erick);
-    sStore.currQuest?.onMakeNpc(Places.RATHBONE, level, sofia);
-    sStore.currQuest?.onMakeNpc(Places.RATHBONE, level, advisor);
-    sStore.currQuest?.onMakeNpc(Places.RATHBONE, level, hamza);
 
+  // Update the map and NPC based on the current quest, if any
+  sStore.currQuest?.onBuildPlace(Places.RATHBONE, level);
+  sStore.currQuest?.onMakeNpc(Places.RATHBONE, level, nino);
+  sStore.currQuest?.onMakeNpc(Places.RATHBONE, level, maria);
+  sStore.currQuest?.onMakeNpc(Places.RATHBONE, level, casey);
+  sStore.currQuest?.onMakeNpc(Places.RATHBONE, level, globowl);
+  sStore.currQuest?.onMakeNpc(Places.RATHBONE, level, diner);
+  sStore.currQuest?.onMakeNpc(Places.RATHBONE, level, simpleServings);
+  sStore.currQuest?.onMakeNpc(Places.RATHBONE, level, vegOut);
+  sStore.currQuest?.onMakeNpc(Places.RATHBONE, level, stacks);
 }
 rathboneBuilder.builderName = "rathbone";
 rathboneBuilder.playerLimit = 15

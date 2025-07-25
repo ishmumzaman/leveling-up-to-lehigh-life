@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.1.1" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="48" tileheight="48" infinite="1" nextlayerid="17" nextobjectid="70">
+<map version="1.10" tiledversion="1.11.1.1" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="48" tileheight="48" infinite="1" nextlayerid="17" nextobjectid="73">
  <tileset firstgid="1" source="../TileSets/old/3DWalls.tsx"/>
  <tileset firstgid="1321" source="../TileSets/new/Bathroom.tsx"/>
  <tileset firstgid="2217" source="../TileSets/new/BirthdayParty.tsx"/>
@@ -400,7 +400,7 @@
 </chunk>
   </data>
  </layer>
- <layer id="5" name="NPCs" width="30" height="20">
+ <layer id="5" name="NPCs" width="30" height="20" visible="0">
   <data encoding="csv">
    <chunk x="0" y="16" width="16" height="16">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -974,5 +974,7 @@
   <object id="57" x="45.9581" y="206.633" width="146.179" height="353.44"/>
   <object id="58" x="1819.83" y="143.635" width="91.6895" height="434.175"/>
   <object id="59" x="1964.38" y="144.071" width="98.7969" height="560.922"/>
+  <object id="71" x="1591.52" y="1344.13" width="39.6132" height="88.9355"/>
+  <object id="72" x="1487.05" y="1373.26" width="103.693" height="59.4198"/>
  </objectgroup>
 </map>

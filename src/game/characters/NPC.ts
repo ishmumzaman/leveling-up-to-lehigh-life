@@ -22,6 +22,10 @@ import { sofia_default } from '../interactions/sofiaDlg';
 import { advisor_default } from '../interactions/advisorDlg';
 import { nervousStudent_default } from '../interactions/nervousStudentDlg';
 import { erick_default } from '../interactions/erickDlg';
+import { maria_default } from '../interactions/rathDeskLadyDlg';
+import { nino_default } from '../interactions/ninoDlg';
+import { casey_default } from '../interactions/caseyDlg';
+import { GLOBOWL_default, DINER_default, SIMPLE_SERVINGS_default, VEG_OUT_default, STACKS_default } from '../interactions/rathStationsDlg';
 
 /** All of the NPCs in the game */
 
@@ -30,7 +34,7 @@ export enum NpcNames {
   Emelia = "Emelia",
   HughYan = "Hugh Yan",
   Jake = "Jake",
-  Martin = "Martina",
+  Martina = "Martina",
   Professor = "Professor Parse",
   Zay = "Zay",
   MainCharacter = "Main Character",
@@ -40,7 +44,15 @@ export enum NpcNames {
   Advisor = "Advisor",
   Sofia = "Sofia",
   NervousStudent = "Hamza",
-  Erick = "Erick"
+  Erick = "Erick",
+  Nino = "Nino",
+  Maria = "Maria",
+  Casey = "Casey",
+  GLOBOWL = "GLOBOWL",
+  DINER = "Diner",
+  SIMPLE_SERVINGS = "Simple Servings",
+  VEG_OUT = "Veg Out",
+  STACKS = "Stacks"
 }
 
 /**
@@ -91,7 +103,15 @@ export function makeNpcDirectory() {
     [NpcNames.Sofia, new NpcConfig("Sofia", "Emelia", sofia_default)],
     [NpcNames.Advisor, new NpcConfig("Advisor", "Professor", advisor_default)],
     [NpcNames.NervousStudent, new NpcConfig("Hamza", "Zay", nervousStudent_default)],
-    [NpcNames.Erick, new NpcConfig("Erick", "Jake", erick_default)]
+    [NpcNames.Erick, new NpcConfig("Erick", "Jake", erick_default)],
+    [NpcNames.Maria, new NpcConfig("Maria", "Martina", maria_default)],
+    [NpcNames.Nino, new NpcConfig("Nino", "Emelia", nino_default)],
+    [NpcNames.Casey, new NpcConfig("Casey", "mainChar", casey_default)],
+    [NpcNames.GLOBOWL, new NpcConfig("GLOBOWL", "Jake", GLOBOWL_default)],
+    [NpcNames.DINER, new NpcConfig("Diner", "Jake", DINER_default)],
+    [NpcNames.SIMPLE_SERVINGS, new NpcConfig("SimpleServings", "Jake", SIMPLE_SERVINGS_default)],
+    [NpcNames.VEG_OUT, new NpcConfig("VegOut", "Jake", VEG_OUT_default)],
+    [NpcNames.STACKS, new NpcConfig("Stacks", "Jake", STACKS_default)]
   ]);
 }
 
@@ -125,7 +145,7 @@ export class NpcBehavior extends Extra {
    *
    * @param name The NPC type that is being created
    */
-  constructor(readonly name: NpcNames) {
+  constructor(readonly name: NpcNames, boxHight?: number, boxWidth?: number) {
     super();
     // Get the NPC config
     let sStore = stage.storage.getSession("sStore") as SessionInfo;
@@ -137,7 +157,7 @@ export class NpcBehavior extends Extra {
     sStore.inventories.npcs.push(this.inventory);
 
     // give the NPC a hitbox for interactions
-    this.staticSpawner = new Spawner(3, 6, 0.6, 0.8, () => {
+    this.staticSpawner = new Spawner(3, 6, boxWidth ? boxWidth : 0.6, boxHight ? boxHight : 0.8, () => {
       if (this.onInteract) {
         this.onInteract(); // Run custom interaction logic
       } else {
@@ -182,12 +202,15 @@ export class NpcBehavior extends Extra {
  * @param xPos      The NPC's X coordinate
  * @param yPos      The NPC's Y coordinate
  * @param direction The direction to face
+ * @param movement  An optional movement component to use for the NPC
+ * @param boxHight  The height of the NPC's interaction box (default: 0.6) 
+ * @param boxWidth  The width of the NPC's interactin box (default: 0.8)
  *
  * @returns An actor, with a NpcBehavior as its extra
  */
-export function spawnRegularNpc(which: NpcNames, xPos: number, yPos: number, direction: AnimationState, movement?: MovementComponent) {
+export function spawnRegularNpc(which: NpcNames, xPos: number, yPos: number, direction: AnimationState, movement?: MovementComponent, boxHight?: number, boxWidth?: number) {
   // Create an NpcBehavior and hook it up to an actor
-  let details = new NpcBehavior(which);
+  let details = new NpcBehavior(which, boxHight, boxWidth);
   let npcAnimation = makeNPCAnimation(details.config.spriteName);
   let npcActor = new Actor({
     appearance: new AnimatedSprite({ initialDir: direction, width: 0.8, height: 1.6, ...npcAnimation, offset: { dx: 0, dy: -0.6 } }),
@@ -202,6 +225,23 @@ export function spawnRegularNpc(which: NpcNames, xPos: number, yPos: number, dir
   details.staticSpawner.sensor.rigidBody.setCenter(xPos, yPos - 0.3);
 
   return npcActor;
+}
+
+/**
+ * Moves the NPC to a new location and updates its interaction hitbox.
+ *
+ * @param NPC  The NPC actor to move.
+ * @param xPos The new X coordinate for the NPC.
+ * @param yPos The new Y coordinate for the NPC.
+ * TO DO: Add direction parameter to change the NPC's facing direction.
+ */
+export function moveTo(NPC: Actor, xPos: number, yPos: number, direction?: AnimationState): void {
+
+  // Update the NPC's rigid body position
+  NPC.rigidBody.setCenter(xPos, yPos); 
+
+  // Adjust hitbox position
+  (NPC.extra as NpcBehavior).staticSpawner.sensor.rigidBody.setCenter(xPos, yPos - 0.3);
 }
 
 /**
