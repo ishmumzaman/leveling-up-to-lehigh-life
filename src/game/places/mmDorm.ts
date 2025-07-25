@@ -20,12 +20,10 @@ import { Places } from "./places";
 import { spawnRegularNpc, NpcNames } from "../characters/NPC";
 import { Builder } from "../multiplayer/loginSystem";
 import { drawObjects } from "./walls";
-
 import { createPickupableObject } from "../interactions/pickupable";
 import { loadPlacedObjects } from "../interactions/pickupable";
 import { GameItems, Items } from "../inventory/item";
 import { TimedEvent } from "../../jetlag";
-
 import { HawksQuest } from "../quests/hawksQuest";
 import { makeQuestStartingNpc } from "../quests/helper";
 import { jake_quest_starter, jake_busy, jake_default } from "../interactions/jakeDlg";

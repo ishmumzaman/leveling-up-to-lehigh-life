@@ -215,9 +215,8 @@ export class GameItems {
     if (item.type === ItemType.Food) { item.cfg.w = 0.7; item.cfg.h = 0.7; }
     
     // Make the plate pickupable
-    if (key === Items.plate) {
-      item.isPickupable = true;
-    }
+    if (key === Items.plate) item.isPickupable = true;
+    
     if (item.type === ItemType.Food) item.isPickupable = true;
     
     return item.clone();

@@ -1,0 +1,9 @@
+Draw or export a 48 × 48 (or similar) PNG.
+Copy it to an existing graphics folder
+Register the item in Enum in item.ts
+Register the item in the class gameItems Map in item.ts
+Inside item.ts in gameItem function, create a key with specific item and set it as pickable
+In session.ts find the constructor then add your item if you want to make it spawn in inventory
+If you want to spawn it on a certain point on a map, go to the level builder (like mmDorm) then create a "createPickupableObject" function 
+    with the specific item type
+

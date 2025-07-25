@@ -24,6 +24,9 @@ import { Builder } from "../multiplayer/loginSystem";
 import { loadPlacedObjects } from "../interactions/pickupable";
 import { TimedEvent } from "../../jetlag";
 import { DnkrReadRoomBuilder } from "./DnkrReadRoom";
+import { DnkrWashingRoomBuilder } from "./DnkrWashingRoom";
+import { DnkrGameRoomBuilder } from "./DnkrGameRoom";
+import { DnkrKitchenBuilder } from "./DnkrKitchen";
 
 /**
  * Build the "outside world"
@@ -66,10 +69,13 @@ export const buildAsaPackerOutside: Builder = function (level: number) {
   new Spawner(97.5, 19, 2, 0.8, () => { sStore.dir = getRegularDir(player); sStore.goToX = 6.7; sStore.goToY = 8.9; stage.switchTo(mmStairsBuilder, 1); });
   new Spawner(28.3, 47.9, 1, 1.5, () => { sStore.dir = getRegularDir(player); sStore.goToX = 4.7; sStore.goToY = 15.5; stage.switchTo(hawksNestBuilder, 1); });
   new Spawner(22.43, 39.9, 1, 1.5, () => { sStore.dir = getRegularDir(player); sStore.goToX = 4.7; sStore.goToY = 15.5; stage.switchTo(DnkrReadRoomBuilder, 1); });
+  new Spawner(103.44, 24.48, 1, 1.5, () => { sStore.dir = getRegularDir(player); sStore.goToX = 4.7; sStore.goToY = 15.5; stage.switchTo(DnkrWashingRoomBuilder, 1); });
+  new Spawner(103.52, 20.35, 1, 1.5, () => { sStore.dir = getRegularDir(player); sStore.goToX = 4.7; sStore.goToY = 15.5; stage.switchTo(DnkrGameRoomBuilder, 1); });
+  new Spawner(104.05, 26.85, 1, 1.5, () => { sStore.dir = getRegularDir(player); sStore.goToX = 4.7; sStore.goToY = 15.5; stage.switchTo(DnkrKitchenBuilder, 1); });
   //Temp spawner for rathbone when we implement it
   
   new Spawner(97.5, 22, 2, 0.8, () => { sStore.dir = getRegularDir(player); sStore.goToX = 32.7; sStore.goToY = 34; stage.switchTo(rathboneBuilder, 1); });
-
+  
   //Temp spawner for rauch when we implement it
   new Spawner(101.25, 37.5, 2, 0.8, () => { sStore.dir = getRegularDir(player); sStore.goToX = 12.4; sStore.goToY = 74.88; stage.switchTo(rauchBuilder, 1); });
 
