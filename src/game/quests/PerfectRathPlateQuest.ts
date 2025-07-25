@@ -87,7 +87,7 @@ export class PerfectRathPlateQuest extends Quest {
       console.log("onBuildPlace: not current quest");
       return;
     }
-    console.log("onBuildPlace: starting step for FindAdvisorQuest");
+    console.log("onBuildPlace: starting step for PerfectRathPlateQuest");
     setTimeout(() => {
       this.forceOnReach();
     }, 0);
