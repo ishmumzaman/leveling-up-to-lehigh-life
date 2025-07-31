@@ -29,6 +29,7 @@ let imageNames = [
   "icon/indicator.json", "MVPDemo/POSMachine.png", "overlay/dialogueMenu.json",
   "MVPDemo/HandSwiper.png", "icon/foodIcon.json", "MVPDemo/shelf.png",
   "MVPDemo/bag.png", "MVPDemo/bags.png", "MVPDemo/back.png", "MVPDemo/cart.png",
+  "RathQuestAssets/plate.png", "RathQuestAssets/back.png", "RathQuestAssets/shelf.png",
   "characterSpriteSheets/Alyssa.json", "characterSpriteSheets/Emelia.json",
   "characterSpriteSheets/HughYan.json", "characterSpriteSheets/body03.json",
   "characterSpriteSheets/eyes01.json", "characterSpriteSheets/hair01.json",
@@ -52,8 +53,21 @@ let imageNames = [
   "locBg/DnkrReadRoom.png",
   "locBg/DnkrWashingRoom.png",
   "locBg/DnkrGameRoom.png",
-  "locBg/DnkrKitchen.png"
-];
+  "locBg/DnkrKitchen.png",
+  "RathQuestAssets/RathFoodAssets/07_bread.png", "RathQuestAssets/RathFoodAssets/15_burger.png",  
+  "RathQuestAssets/RathFoodAssets/18_burrito.png", "RathQuestAssets/RathFoodAssets/24_cheesepuff.png",
+  "RathQuestAssets/RathFoodAssets/28_cookies.png", "RathQuestAssets/RathFoodAssets/33_curry_dish.png",
+  "RathQuestAssets/RathFoodAssets/38_friedegg.png", "RathQuestAssets/RathFoodAssets/40_eggsalad.png",
+  "RathQuestAssets/RathFoodAssets/42_eggtart.png", "RathQuestAssets/RathFoodAssets/44_frenchfries.png",
+  "RathQuestAssets/RathFoodAssets/48_garlicbread.png", "RathQuestAssets/RathFoodAssets/55_hotdog_sauce.png",
+  "RathQuestAssets/RathFoodAssets/62_jam_dish.png", "RathQuestAssets/RathFoodAssets/67_macncheese.png",
+  "RathQuestAssets/RathFoodAssets/70_meatball_dish.png", "RathQuestAssets/RathFoodAssets/72_nacho_dish.png",
+  "RathQuestAssets/RathFoodAssets/77_potatochips.png", "RathQuestAssets/RathFoodAssets/81_pizza.png", 
+  "RathQuestAssets/RathFoodAssets/85_roastedchicken.png", "RathQuestAssets/RathFoodAssets/88_salmon.png", 
+  "RathQuestAssets/RathFoodAssets/92_sandwich.png", "RathQuestAssets/RathFoodAssets/94_spaghetti.png", 
+  "RathQuestAssets/RathFoodAssets/95_steak.png", "RathQuestAssets/RathFoodAssets/99_taco.png"
+]
+  
 
 /**
  * Screen dimensions and other game configuration, such as the names of all
@@ -69,7 +83,7 @@ export class Config implements JetLagGameConfig {
   accelerometerMode = AccelerometerMode.DISABLED;
   // [mfs] This needs to be in a Lehigh domain eventually
   storageKey = "com.github.YassCoding.LUTLL";
-  hitBoxes = true;
+  hitBoxes = false;
   textFont = "kongtext";
   minuteRate = 1;
 

@@ -18,6 +18,8 @@ export enum ItemType {
   Outfit,
 
   Accessory,
+
+  RathboneFood,
 }
 
 /**
@@ -75,6 +77,68 @@ export class Item {
   }
 }
 
+/**
+ * RathboneDish extends the Item class and adds specific properties for taste and nutrition scores.
+ */
+export class RathboneDish extends Item {
+  /** The taste score of the dish */
+  public tasteScore: number;
+
+  /** The nutrition score of the dish */
+  public nutritionScore: number;
+
+  /**
+   * Creates an instance of RathboneDish.
+   *
+   * @param type - The type of the item (must be ItemType.RathboneFood).
+   * @param draggable - Indicates whether the item can be dragged.
+   * @param name - The name of the dish.
+   * @param desc - A description of the dish.
+   * @param img - The image associated with the dish.
+   * @param tasteScore - The taste score of the dish.
+   * @param nutritionScore - The nutrition score of the dish.
+   */
+  constructor(
+    type: ItemType = ItemType.RathboneFood,
+    draggable: boolean,
+    name: string = "Rathbone Dish",
+    desc: string = "A dish from Rathbone Dining Hall.",
+    img: string | PixiSprite = "icon/defaultDish.png",
+    tasteScore: number = 0,
+    nutritionScore: number = 0
+  ) {
+    super(type, draggable, name, desc, img); // Call the parent constructor
+    this.tasteScore = tasteScore;
+    this.nutritionScore = nutritionScore;
+  }
+
+  // Getters for taste and nutrition scores
+  public getTasteScore(): number { return this.tasteScore; }
+  public getNutritionScore(): number { return this.nutritionScore; }
+
+  /**
+   * Make a copy of this RathboneDish.
+   * @returns A new instance of RathboneDish with the same properties.
+   */
+  clone(): RathboneDish {
+    const dish = new RathboneDish(
+      this.type,
+      this.draggable,
+      this.name,
+      this.desc,
+      this.img,
+      this.tasteScore,
+      this.nutritionScore
+    );
+    dish.setLocation(this.location.inv, this.location.row, this.location.col);
+    dish.charPart = this.charPart;
+    dish.cfg = this.cfg;
+    dish.isPickupable = this.isPickupable;
+    dish.worldPosition = this.worldPosition ? { ...this.worldPosition } : undefined;
+    return dish;
+  }
+}
+
 /** A type for holding extra information attached to an Item */
 export class ItemExtra extends Extra {
   constructor(public item: Item) { super(); }
@@ -109,9 +173,17 @@ export function itemRender(item: Item, cx: number, cy: number, scale: number, to
     let newName = nameData.newText;
     let dyToolTip = nameData.totalLines * 0.2;
     let descData = textSlicer(20, item.desc);
+
+    let rath = 0;
+    // Check if the item is a RathboneDish and append taste/nutrition scores
     let newDesc = descData.newText;
+    if (item instanceof RathboneDish) {
+      newDesc += `\nTaste: ${item.tasteScore}\nNutrition: ${item.nutritionScore}`;
+      rath = 2; // Set rath to  if it's a RathboneDish
+    }
+
     let boxWidth = 3.5;
-    let boxHeight = dyToolTip + descData.totalLines * 0.2 + 0.3;
+    let boxHeight = dyToolTip + descData.totalLines * 0.2 + 0.3 + rath * 0.2; // Adjust height based on RathboneDish
     let boxXFix = cx + 2.2;
     let boxYFix = cy - 0.3;
 
@@ -148,7 +220,13 @@ export function itemRender(item: Item, cx: number, cy: number, scale: number, to
 export enum Items {
   empty, water, coke, cokeBottle, orangeJuice, chips, kettleChips, eCereal,
   aCereal, kCereal, iCereal, pretzel, muffin, chocoPiece, chocoWafer, chocoBar,
-  pinkDonut, donutBox, iceCream, popsicle, lolipop, pie, plate, snapback04 = TxID.Snapback04,
+  pinkDonut, donutBox, iceCream, popsicle, lolipop, pie, plate, 
+  
+  sandwich, burger, frenchfries, spaghetti, scrambledeggs, macncheese, steak, burrito,
+  pizza, taco, hotdog, salmon, roastedchicken, bread, friedegg, hashbrowns, nachos,
+  potatochips, meatballs, curry, jamtoast, garlicbread, eggtart, glutenfreecookies,
+  
+  snapback04 = TxID.Snapback04,
   outfit01 = TxID.Outfit01, outfit02 = TxID.Outfit02, outfit03 = TxID.Outfit03,
   outfit04 = TxID.Outfit04, outfit07 = TxID.Outfit07, outfit10 = TxID.Outfit10,
   outfit11 = TxID.Outfit11, outfit14 = TxID.Outfit14, beanie01 = TxID.Beanie01,
@@ -200,6 +278,31 @@ export class GameItems {
     [Items.outfit10, new Item(ItemType.Outfit, true, "Outfit", "Just something casual", "outfit10IdleS0.png")],
     [Items.outfit11, new Item(ItemType.Outfit, true, "Outfit", "Just something casual", "outfit11IdleS0.png")],
     [Items.outfit14, new Item(ItemType.Outfit, true, "Outfit", "Just something casual", "outfit14IdleS0.png")],
+    //rathbone dishes
+    [Items.bread, new RathboneDish(ItemType.RathboneFood, true, "Bread", "A loaf of bread", "RathQuestAssets/RathFoodAssets/07_bread.png", 3, 4)],
+    [Items.burger, new RathboneDish(ItemType.RathboneFood, true, "Burger", "A classic burger", "RathQuestAssets/RathFoodAssets/15_burger.png", 9, 2)],
+    [Items.burrito, new RathboneDish(ItemType.RathboneFood, true, "Burrito", "A delicious burrito", "RathQuestAssets/RathFoodAssets/18_burrito.png", 7, 6)],
+    [Items.hashbrowns, new RathboneDish(ItemType.RathboneFood, true, "Hash Browns", "A side of crispy hash browns", "RathQuestAssets/RathFoodAssets/24_cheesepuff.png", 8, 2)],
+    [Items.glutenfreecookies, new RathboneDish(ItemType.RathboneFood, true, "Gluten Free Cookies", "Delicious gluten free cookies", "RathQuestAssets/RathFoodAssets/28_cookies.png", 7, 4)],
+    [Items.curry, new RathboneDish(ItemType.RathboneFood, true, "Curry", "A plate of curry", "RathQuestAssets/RathFoodAssets/33_curry_dish.png", 7, 6)], 
+    [Items.friedegg, new RathboneDish(ItemType.RathboneFood, true, "Fried Egg", "A perfectly fried egg", "RathQuestAssets/RathFoodAssets/38_friedegg.png", 6, 6)],
+    [Items.scrambledeggs, new RathboneDish(ItemType.RathboneFood, true, "Scrambled Eggs", "A bowl of scrambled eggs", "RathQuestAssets/RathFoodAssets/40_eggsalad.png", 5, 7)],
+    [Items.eggtart, new RathboneDish(ItemType.RathboneFood, true, "Dairy-Free Egg Tart", "A delicious no dairy egg tart", "RathQuestAssets/RathFoodAssets/42_eggtart.png", 6, 5)], 
+    [Items.frenchfries, new RathboneDish(ItemType.RathboneFood, true, "French Fries", "A side of fries", "RathQuestAssets/RathFoodAssets/44_frenchfries.png", 8, 1)],
+    [Items.garlicbread, new RathboneDish(ItemType.RathboneFood, true, "Garlic Bread", "A slice of garlic bread", "RathQuestAssets/RathFoodAssets/48_garlicbread.png", 8, 2)], 
+    [Items.hotdog, new RathboneDish(ItemType.RathboneFood, true, "Hot Dog", "A classic hot dog", "RathQuestAssets/RathFoodAssets/55_hotdog_sauce.png", 8, 3)],
+    [Items.jamtoast, new RathboneDish(ItemType.RathboneFood, true, "Jam Toast", "A slice of toast with jam", "RathQuestAssets/RathFoodAssets/62_jam_dish.png", 6, 3)], 
+    [Items.macncheese, new RathboneDish(ItemType.RathboneFood, true, "Mac and Cheese", "A bowl of mac and cheese", "RathQuestAssets/RathFoodAssets/67_macncheese.png", 7, 3)],
+    [Items.meatballs, new RathboneDish(ItemType.RathboneFood, true, "Meatballs", "A plate of meatballs", "RathQuestAssets/RathFoodAssets/70_meatball_dish.png", 8, 6)], 
+    [Items.nachos, new RathboneDish(ItemType.RathboneFood, true, "Nachos", "A plate of nachos with vegan cheese", "RathQuestAssets/RathFoodAssets/72_nacho_dish.png", 7, 2)], 
+    [Items.potatochips, new RathboneDish(ItemType.RathboneFood, true, "Potato Chips", "Freshly made potato chips", "RathQuestAssets/RathFoodAssets/77_potatochips.png", 7, 3)], 
+    [Items.pizza, new RathboneDish(ItemType.RathboneFood, true, "Pizza", "A slice of pizza", "RathQuestAssets/RathFoodAssets/81_pizza.png", 9, 2)],
+    [Items.roastedchicken, new RathboneDish(ItemType.RathboneFood, true, "Roasted Chicken", "A whole roasted chicken", "RathQuestAssets/RathFoodAssets/85_roastedchicken.png", 6, 8)],
+    [Items.salmon, new RathboneDish(ItemType.RathboneFood, true, "Salmon", "A grilled salmon fillet", "RathQuestAssets/RathFoodAssets/88_salmon.png", 6, 10)],
+    [Items.sandwich, new RathboneDish(ItemType.RathboneFood, true, "Sandwich", "A turkey sancwich", "RathQuestAssets/RathFoodAssets/92_sandwich.png", 6, 6)],
+    [Items.spaghetti, new RathboneDish(ItemType.RathboneFood, true, "Spaghetti", "A plate of spaghetti", "RathQuestAssets/RathFoodAssets/94_spaghetti.png", 6, 5)],
+    [Items.steak, new RathboneDish(ItemType.RathboneFood, true, "Steak", "A juicy steak", "RathQuestAssets/RathFoodAssets/95_steak.png", 8, 6)],
+    [Items.taco, new RathboneDish(ItemType.RathboneFood, true, "Taco", "A tasty taco", "RathQuestAssets/RathFoodAssets/99_taco.png", 7, 4)],
   ]);
 
   /**
@@ -213,11 +316,13 @@ export class GameItems {
     if (item.type === ItemType.Accessory) { item.cfg.w = 1.2; item.cfg.h = 1.2; item.cfg.ox = 0.05; item.cfg.oy = 0.2; }
     if (item.type === ItemType.Outfit) { item.cfg.w = 0.8; item.cfg.h = 1.6; item.cfg.oy = -0.5; }
     if (item.type === ItemType.Food) { item.cfg.w = 0.7; item.cfg.h = 0.7; }
+    if (item.type === ItemType.RathboneFood) { item.cfg.w = 0.7; item.cfg.h = 0.7; }
     
     // Make the plate pickupable
     if (key === Items.plate) item.isPickupable = true;
     
     if (item.type === ItemType.Food) item.isPickupable = true;
+    if (item.type === ItemType.RathboneFood) item.isPickupable = true;
     
     return item.clone();
   }
@@ -232,4 +337,33 @@ export class GameItems {
 
   /** All Items that are drinks */
   static drinkTypes = [Items.water, Items.coke, Items.cokeBottle, Items.orangeJuice];
+
+  /** All Items that are Rathbone Dishes */
+
+  // GLOBOWL station dishes
+  static GLOBOWLDishes = [
+    Items.spaghetti, Items.macncheese, Items.roastedchicken, Items.curry, Items.pizza,
+  ];
+
+  // DINER station dishes
+  static DinerDishes = [
+    Items.burger, Items.frenchfries, Items.hotdog, Items.steak, Items.taco, 
+    Items.scrambledeggs, Items.friedegg, Items.hashbrowns, Items.garlicbread,
+  ];
+
+  // VEG_OUT station dishes
+  static SimpleServingsDishes = [
+    Items.salmon, Items.meatballs, Items.eggtart, Items.glutenfreecookies,
+  ];
+
+  // VEG_OUT station dishes
+  static VegOutDishes = [
+    Items.nachos, Items.potatochips, Items.bread, Items.jamtoast,
+  ];
+
+  // VEG_OUT station dishes
+  static StacksDishes = [
+    Items.sandwich, Items.burrito,
+  ];
 }
+

@@ -6,6 +6,7 @@ import { Actor } from "../../jetlag";
 import { QuestStorage } from "../storage/questStorage";
 import { stage } from "../../jetlag/Stage";
 import { SessionInfo } from "../storage/session";
+import { on } from "hammerjs";
 
 /** A step within an Objective */
 export class Step {
@@ -127,7 +128,7 @@ export abstract class Quest {
    * @param endFunc     The function to be called when the quest is completed.
    * @param rewardFunc  The rewards of the quest.
    */
-  constructor(readonly questName: QuestNames, readonly description: string, readonly objectives: Objective[], private startFunc?: () => void, private endFunc?: () => void, private rewardFunc?: () => void) {
+  constructor(readonly questName: QuestNames, readonly description: string, readonly objectives: Objective[], private startFunc?: () => void, private endFunc?: () => void, private rewardFunc?: () => void, private onResume?: () => void) {
     this.name = questName; // For compatibility with older code
   }
 
@@ -139,6 +140,7 @@ export abstract class Quest {
       const { objectiveIndex, stepIndex } = progress;
       if (this.objectives[objectiveIndex]) {
         this.objectives[objectiveIndex].startFrom(stepIndex);
+        this.onResume?.();
         QuestStorage.clearPausedProgress(this.questName); // Clear the paused progress after restarting
         return;
       }

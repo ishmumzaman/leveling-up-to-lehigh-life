@@ -21,6 +21,8 @@ export enum Inspectable {
     HAWK_ENTER_QUEST,
     HAWK_INVENTORY_FULL,
     HAWK_DONE_SHOPPING,
+    RATHBONE_OBJ0_DONE,
+    RATHBONE_PLATE_FULL,
 }
 
 /**
@@ -58,5 +60,7 @@ export function PrepareInspectables() {
     m.set(Inspectable.HAWK_ENTER_QUEST, new InspectableText("I should probably go order something at one of the checkout machines."));
     m.set(Inspectable.HAWK_INVENTORY_FULL, new InspectableText("Oh no, I can't carry anything else! I need to ask someone for help."));
     m.set(Inspectable.HAWK_DONE_SHOPPING, new InspectableText("Alright guys I think that will be all for today. Lets head out"));
+    m.set(Inspectable.RATHBONE_OBJ0_DONE, new InspectableText("Looks like I found the 5 stations! I should go talk to Casey now. He should be next to Stacks"));
+    m.set(Inspectable.RATHBONE_PLATE_FULL, new InspectableText("alright I filled up my plate, I should go talk to Casey now. He should be next to Stacks"));
     return m;
 }

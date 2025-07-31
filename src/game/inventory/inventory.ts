@@ -161,6 +161,22 @@ export class Inventory {
       if (to.addItem(this.items[i]))
         this.removeAt({ row: Math.floor(i / this.cols), col: i % this.cols });
   }
+
+  /**
+   * Clears all items from the inventory.
+   */
+  public clear() {
+    for (let i = 0; i < this.rows; i++) {
+      for (let j = 0; j < this.cols; j++) {
+        // Reset each slot to an empty item
+        this.items[i * this.cols + j] = GameItems.getItem(Items.empty);
+        this.items[i * this.cols + j].setLocation(this, i, j);
+      }
+    }
+    // Reset the item count and trigger onEmpty if defined
+    this.count = 0;
+    if (this.onEmpty) this.onEmpty();
+  }
 }
 
 /**

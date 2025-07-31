@@ -6,5 +6,5 @@ export enum QuestNames {
     FindRathBone = "findRathBone",
     RoommateQuest = "roommateQuest",
     VisitAdvisor = "visitAdvisor",
-    RathPlateQuest = "RathPlateQuest",
+    RathQuest = "RathQuest",
 }

@@ -245,6 +245,22 @@ export function moveTo(NPC: Actor, xPos: number, yPos: number, direction?: Anima
 }
 
 /**
+ * Adjust the hitbox of an NPC actor.
+ *
+ * @param NPC          The NPC actor whose hitbox is being adjusted
+ * @param reSizeScale  Optional scale factor to resize the hitbox
+ * @param xCenter      The new X center for the hitbox
+ * @param yCenter      The new Y center for the hitbox
+ */
+export function adjustHitBox(NPC: Actor, reSizeScale?: number, xCenter?: number, yCenter?: number): void {
+  // Adjust hitbox position
+  if (xCenter && yCenter) (NPC.extra as NpcBehavior).staticSpawner.sensor.rigidBody.setCenter(xCenter, yCenter - 0.3);
+  
+  // Resize the hitbox if a scale is provided
+  if (reSizeScale) (NPC.extra as NpcBehavior).staticSpawner.sensor.rigidBody.resize(reSizeScale);
+}
+
+/**
  * Configuration and behavior information for an NPC who also needs to follow
  * another actor.
  *

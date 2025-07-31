@@ -57,7 +57,7 @@ export abstract class InventoryUI {
   protected abstract close(): void;
 
   /** Render an inventory (clears and re-renders when needed) */
-  protected rerenderInventory() {
+  public rerenderInventory() {
     // Disable the actor of all inventory items
     while (this.items.length > 0)
       this.items.shift()?.remove();
@@ -379,6 +379,180 @@ export class ShelfInventoryUI extends InventoryUI {
 
     while (this.items.length > 0)
       this.items.shift()?.remove();
+  }
+}
+
+/**
+ * Create a HUD screen for the plate inventory.
+ *
+ * Allows dragging items to/from the StationInventoryUI.
+ */
+export class PlateInventoryUI extends InventoryUI {
+  protected inventory: Inventory;
+  protected currStation?: Inventory;
+  public cfg: InventoryConfig = new InventoryConfig(13, 4, 1.5, 1.5, 1.3); // Adjusted for plate layout
+  protected items: Actor[] = [];
+  protected components: Actor[] = [];
+  public showing = false;
+
+  constructor(plateInventory: Inventory, currStation?: Inventory) {
+    super();
+    this.inventory = plateInventory;
+    this.currStation = currStation;
+
+    // Image for the plate inventory UI
+    this.components.push(new Actor({
+      appearance: new ImageSprite({ width: 5, height: 5, img: "RathQuestAssets/plate.png" }),
+      rigidBody: new BoxBody({ cx: 13.75, cy: 4.9, width: 5, height: 5 }, { scene: stage.hud }),
+    }));
+
+    // Hide everything for now
+    for (let c of this.components)
+      c.enabled = false;
+  }
+
+  toggle() {
+    // If the inventory isn't showing, show the inventory
+    if (!this.showing) this.open();
+
+    // If the inventory is showing, turn it off.
+    else this.close();
+  }
+
+  public open() {
+    this.showing = true;
+    for (let c of this.components)
+      c.enabled = true;
+
+    // Render the plate inventory
+    this.rerenderInventory();
+  }
+
+  public close() {
+    this.showing = false;
+    for (let c of this.components)
+      c.enabled = false;
+
+    while (this.items.length > 0)
+      this.items.shift()?.remove();
+  }
+}
+
+/**
+ * Create an hud screen of a snack shelf
+ *
+ *
+ * @param stationInventory the inventory of the station to be rendered
+ * @param plateObject the plate inventory to be used for dragging items to
+ */
+export class StationInventoryUI extends InventoryUI {
+  private playerPlate: Inventory;
+  private plateUI: PlateInventoryUI;
+  protected inventory: Inventory;
+  protected cfg: InventoryConfig = new InventoryConfig(1.3, 2.4, 1.8, 2, 1.3);
+  protected items: Actor[] = [];
+  protected components: Actor[] = [];
+  protected showing = false;
+
+  constructor(stationInventory: Inventory, plateObject: Inventory) {
+    let lInfo = stage.storage.getLevel("levelInfo") as LevelInfo;
+    super();
+
+    this.inventory = stationInventory;
+    this.playerPlate = plateObject;
+
+    this.plateUI = new PlateInventoryUI(this.playerPlate, this.inventory);
+
+    // Image for the main inventory UI
+    this.components.push(new Actor({
+      appearance: new ImageSprite({ width: 11.34, height: 6.426, img: "RathQuestAssets/shelf.png" }),
+      rigidBody: new BoxBody({ cx: 5.8, cy: 4.9, width: 16, height: 9 }, { scene: stage.hud }),
+    }));
+
+    // Button for closing the inventory, must go through the HUD
+    this.components.push(new Actor({
+      appearance: new ImageSprite({ width: 1, height: 1, img: "RathQuestAssets/back.png" }),
+      rigidBody: new BoxBody({ cx: 1, cy: .8, width: 1, height: 1 }, { scene: stage.hud }),
+      gestures: { tap: () => { lInfo.hud?.toggleMode("otherContainer", this); return true; } },
+    }))
+
+    // Hide everything for now
+    for (let c of this.components)
+      c.enabled = false;
+  }
+
+  toggle() {
+    // If the inventory isn't showing, show the inventory
+    if (!this.showing && !this.plateUI.showing) this.open();
+
+    // If the inventory is showing, turn it off.
+    else { this.close(); }
+  }
+
+  protected open() {
+    this.showing = true;
+    for (let c of this.components)
+      c.enabled = true;
+
+    this.plateUI.open(); // Open the plate inventory UI
+    this.plateUI.showing = true
+
+    // Now we can render the inventory
+    this.rerenderInventory();
+    // Set up drag gestures
+    itemDragGestures((x: number, y: number, fromLoc: { inv: Inventory | null, row: number, col: number }, draggedItem: Actor | undefined) => {
+      for (let actor of stage.hud!.physics!.actorsAt({ x: x, y: y })) {
+        // Handle dragging to the plate inventory
+        if (actor.extra instanceof ItemExtra && actor.extra.item.location.inv === this.playerPlate) {
+          let from = { ...fromLoc };
+          let tempItem = this.inventory.items[from.row * this.inventory.cols + from.col];
+  
+          // Calculate the target slot in the plate inventory
+          let targetSlot = this.calculateTargetSlot(x, y, this.plateUI.cfg, this.playerPlate);
+          if (targetSlot && this.playerPlate.addItem(tempItem, targetSlot)) {
+            this.inventory.removeAt({ row: from.row, col: from.col });
+          }
+          break;
+        }
+      }
+      // Redraw both inventories
+      if (this.showing) this.rerenderInventory();
+      if (this.plateUI.showing) this.plateUI.rerenderInventory();
+    });
+  }
+
+  /**
+   * Calculate the target slot in the inventory based on the drop location.
+   *
+   * @param x The x-coordinate of the drop location.
+   * @param y The y-coordinate of the drop location.
+   * @param cfg The InventoryConfig of the target inventory.
+   * @param inventory The target inventory.
+   * @returns The row and column of the target slot, or null if invalid.
+   */
+  private calculateTargetSlot(x: number, y: number, cfg: InventoryConfig, inventory: Inventory): { row: number, col: number } | null {
+    // Convert the drop location to a slot index
+    let col = Math.floor((1 + x - cfg.xFix) / cfg.dx);
+    let row = Math.floor((1 + y - cfg.yFix) / cfg.dy);
+
+    // Validate the slot
+    if (row >= 0 && row < inventory.rows && col >= 0 && col < inventory.cols) {
+      return { row, col };
+    }
+
+    console.warn(`Invalid slot: row=${row}, col=${col}, x=${x}, y=${y}`);
+    return null; // Invalid slot
+  }
+
+  protected close() {
+    this.showing = false;
+    for (let c of this.components)
+      c.enabled = false;
+
+    while (this.items.length > 0)
+      this.items.shift()?.remove();
+
+    this.plateUI.close(); // Close the plate inventory UI
   }
 }
 

@@ -119,4 +119,19 @@ export class Spawner {
       if (lInfo.mainCharacter.appearance.length > 1) lInfo.mainCharacter.appearance.pop();
     }
   }
+
+  /**
+   * Removes the spawner by removing its obstacle and sensor from the game world.
+   */
+  public remove() {
+    // Remove the obstacle actor
+    if (this.obstacle) {
+      this.obstacle.remove();
+    }
+
+    // Remove the sensor actor
+    if (this.sensor) {
+      this.sensor.remove();
+    }
+  }
 }

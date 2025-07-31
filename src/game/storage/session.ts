@@ -8,7 +8,7 @@ import { Inventory } from "../inventory/inventory";
 import { CharacterAnimations } from '../characters/characterCustomization';
 import { PrepareInspectables } from "../interactions/inspectables"
 import { makeNpcDirectory } from '../characters/NPC';
-import { HawksQuest } from '../quests/hawksQuest';
+import { PerfectRathPlateQuest } from '../quests/PerfectRathPlateQuest';
 import { RemoteActor } from '../multiplayer/loginSystem';
 import { Actor, AnimationState } from '../../jetlag';
 import { defaultCharacter } from '../characters/makeCharacterBuilder';
@@ -40,7 +40,7 @@ export class SessionInfo {
   inventories = {
     player: { main: new Inventory(2, 6), outfit: new Inventory(1, 1, ItemType.Outfit), accessory: new Inventory(1, 1, ItemType.Accessory) },
     npcs: [] as Inventory[], // This should be in the quest object
-    shelves: [] as Inventory[], // This should be in the quest object
+    shelves: [] as Inventory[] // This should be in the quest object
   };
 
   // Players spawn position after switching to a new level

@@ -86,12 +86,13 @@ export const mmDormBuilder: Builder = function (level: number) {
   let jake = spawnRegularNpc(NpcNames.Jake, 2.1, 4.7, AnimationState.IDLE_E);
   
   // Add a test pickupable plate on the floor
-  createPickupableObject({
+  // [haa] I turned this off for the demo
+  /*createPickupableObject({
     item: GameItems.getItem(Items.plate),
     x: 3.5,
     y: 6.5,
     showIndicator: true
-  });
+  });*/
 
   stage.world.timer.addEvent(new TimedEvent(0, false, () => { loadPlacedObjects(); })); // [Ishmum Zaman]
   
@@ -100,7 +101,7 @@ export const mmDormBuilder: Builder = function (level: number) {
     quest: new HawksQuest(),
     prestartDialogue: jake_quest_starter,
     busyDialogue: jake_busy,
-    defaultDialogue: jake_default,
+    completeDialogue: jake_default,
     levelNumber: level,
     place: Places.MM_DORM,
     acceptFootprint: 1,

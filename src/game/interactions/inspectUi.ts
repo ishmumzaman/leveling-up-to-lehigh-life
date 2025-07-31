@@ -49,8 +49,9 @@ export class InspectSystem {
    * Creates an instance of InspectSystem
    *
    * @param inspectable An object with the text to show
+   * @param func An optional function to execute when the inspect box is closed
    */
-  constructor(inspectable: Inspectable) {
+  constructor(inspectable: Inspectable, public func: () => void = () => { }) {
     // Get the text from the map
     let sStore = stage.storage.getSession("sStore") as SessionInfo;
     this.fullText = sStore.inspectables.get(inspectable)!.text;
@@ -86,6 +87,8 @@ export class InspectSystem {
       rigidBody: new BoxBody({ cx: 8, cy: 7.3, width: 15, height: 3 }, { scene: stage.hud }),
       gestures: {
         tap: () => {
+          // If we have a function, call it
+          if (this.func) this.func();
           this.close();
           return true;
         }

@@ -10,7 +10,7 @@ export const casey_questObj0_start = new Map<string, Conversation>([
     ["start", new Conversation("Hey there, I am casey! What's up?", [
         new ConversationResponse("Tell me about the challange", "details"),
     ])],
-    ["details", new Conversation("Oh!!! \nWho told you about it?! \nIt was Maria wasn't it?", [
+    ["details", new Conversation("Oh!!! \nWho told you about it?! It was Maria wasn't it?", [
         new ConversationResponse("Yes...", "agree")
     ])],
     ["agree", new Conversation("I knew it! \nOh well. I promise to tell you more about the challange, but first I need you to do something.", [
@@ -19,7 +19,7 @@ export const casey_questObj0_start = new Map<string, Conversation>([
     ["more", new Conversation("I need you to visit the 5 stations in Rathbone. You will find a person behind every station.", [
         new ConversationResponse("That sounds easy enough.", "end")
     ])],
-    ["end", new Conversation("Alright bro! Come back once you've finished them all", [])],
+    ["end", new Conversation("Alright bro! Meet me to the left of Stacks once you've finished them all", [])],
 ]);
 
 // Dialogue when the player is mid objective 0
@@ -27,17 +27,23 @@ export const casey_questObj0_mid = new Map<string, Conversation>([
     ["start", new Conversation("Come on bro you got this! I am waiting for you to finish all 5 stations.", [])],
 ]);
 
-// Dialogue after completing the advisor check-in (Objective 2 completed)
-export const casey_postAdvisor = new Map<string, Conversation>([
-    ["start", new Conversation("Hey there! I saw you coming out of the advisor's office, how did it go?", [
-        new ConversationResponse("It was super helpful!", "positive"),
-        new ConversationResponse("I have more questions than before.", "followup")
+// Dialogue for the Rathbone quest (Objective 1)
+export const casey_questObj1_start = new Map<string, Conversation>([
+    ["start", new Conversation("Hello again bro! You must be hungry after all of those stations you visited.", [
+        new ConversationResponse("You bet I am!", "agree"),
     ])],
-    ["positive", new Conversation("That's fantastic! Advisors are really great to learn about support resources.", [ 
-        new ConversationResponse("I feel so much more confident.", "end") 
+    ["agree", new Conversation("Alright I will tell you about the challange now", [
+        new ConversationResponse("Yes please!", "more")
     ])],
-    ["followup", new Conversation("Don't worry, that's totally normal. You can always drop by again or send an email anytime.", [ 
-        new ConversationResponse("I will do that. Thanks!", "end") 
+    ["more", new Conversation("You need to fill up your plate with 4 food items, maximizing the taste and nutrition.", [
+        new ConversationResponse("Oh!", "continue")
     ])],
-    ["end", new Conversation("Glad to hear. Let me know if you need a study buddy or just want to chat again.", [])]
+    ["continue", new Conversation("I will then rate your plate and score it. Is everything clear?", [
+        new ConversationResponse("Yes. Let's start!", "end"),
+        new ConversationResponse("Can you repeat again", "repeat")
+    ])],
+    ["repeat", new Conversation("Sure! You just need to fill up your plate with 4 food items, maximizing the taste and nutrition.", [
+        new ConversationResponse("Alright.", "continue")
+    ])],
+    ["end", new Conversation("Alright come talk to me after you finish making your plate from the 5 stations.", [])],
 ]);

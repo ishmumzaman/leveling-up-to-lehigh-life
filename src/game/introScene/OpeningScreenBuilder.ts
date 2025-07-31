@@ -10,6 +10,7 @@ import { CharacterAnimations } from "../characters/characterCustomization";
 import { makeMainCharacter } from "../characters/character";
 import { KeyboardHandler } from "../ui/keyboard";
 import { Builder } from "../multiplayer/loginSystem";
+import { rathboneBuilder } from "../places/rathbone";
 
 /**
  * Create the opening scene, which consists of some instructions about the keys
