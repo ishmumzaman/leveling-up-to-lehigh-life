@@ -103,17 +103,17 @@ The game may take some time to load on a black screen. Be patient—it **will** 
 ## Authors
 
 Faculty Mentor  
-* [Mike Spear](emailto:mfs409@lehigh.edu)  
+* [Mike Spear]
 
 Student Developers  
-* [Anh Nguyen](emailto:ahn227@lehigh.edu)  
-* [Emma Valle](emailto:emv226@lehigh.edu)  
-* [Maureen Phelan](emailto:mcp227@lehigh.edu)  
-* [Yassine Rafih](emailto:yar227@lehigh.edu)  
-* [Hamza Al Farsi](emailto:haa428@lehigh.edu)  
-* [Karina Makhani](kamb26@lehigh.edu)  
+* [Anh Nguyen]
+* [Emma Valle]
+* [Maureen Phelan]
+* [Yassine Rafih]
+* [Hamza Al Farsi]
+* [Karina Makhani]
 * [Ishmum Zaman](isz228@lehigh.edu)  
-* [Nina Chau](nic627@lehigh.edu)  
+* [Nina Chau]
 
 ## Changelog
 
